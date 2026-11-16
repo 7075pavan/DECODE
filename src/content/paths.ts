@@ -1,0 +1,66 @@
+import { PathSummary, LessonSummary } from "@/types";
+
+export const INITIAL_PATHS: PathSummary[] = [
+  {
+    id: "reading-people",
+    order: 1,
+    title: "Reading People",
+    subtitle: "Path 1 · Recommended",
+    description: "Body language, baseline signals, and tone of voice.",
+    icon: "visibility",
+    completedLessons: 0,
+    totalLessons: 15,
+    isRecommended: true,
+  },
+  {
+    id: "detective-mind",
+    order: 2,
+    title: "Detective Mind",
+    subtitle: "Path 2",
+    description: "Critical thinking, deduction, and spotting cognitive bias.",
+    icon: "search",
+    completedLessons: 0,
+    totalLessons: 15,
+  },
+  {
+    id: "mind-and-mindset",
+    order: 3,
+    title: "Mind & Mindset",
+    subtitle: "Path 3",
+    description: "Emotional control, calm under fire, and mental clarity.",
+    icon: "psychology",
+    completedLessons: 0,
+    totalLessons: 15,
+  },
+  {
+    id: "influence-negotiation",
+    order: 4,
+    title: "Influence & Negotiation",
+    subtitle: "Path 4",
+    description: "Tactful persuasion, win-win bargaining, and leverage.",
+    icon: "handshake",
+    completedLessons: 0,
+    totalLessons: 15,
+  },
+  {
+    id: "money-wealth",
+    order: 5,
+    title: "Money & Wealth",
+    subtitle: "Path 5",
+    description: "Smart financial habits, risk awareness, and compounding logic.",
+    icon: "payments",
+    completedLessons: 0,
+    totalLessons: 15,
+  },
+];
+
+export const CURRENT_ACTIVE_LESSON: LessonSummary = {
+  id: "reading-people-1",
+  pathId: "reading-people",
+  unitTitle: "Reading People · Unit 1",
+  stepNumber: 1,
+  totalSteps: 6,
+  title: "Spotting Baselines",
+  description: "Learn how posture, eye contact, and tone reveal initial comfort and intent.",
+  estimatedMinutes: 3,
+};

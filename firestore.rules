@@ -1,0 +1,81 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // User document and all Milestone 4 subcollections
+    // Each user can ONLY read and write their own data
+    match /users/{userId} {
+      allow read, write: if isOwner(userId);
+
+      // Subcollection 1: Progress per unit
+      match /progress/{unitId} {
+        allow read, write: if isOwner(userId);
+      }
+
+      // Subcollection 2: Question answers submitted
+      match /answers/{answerId} {
+        allow read, write: if isOwner(userId);
+      }
+
+      // Subcollection 3: Leitner review queue items
+      match /reviewQueue/{conceptId} {
+        allow read, write: if isOwner(userId);
+      }
+
+      // Subcollection 4: Real-world mission logs
+      match /missions/{missionId} {
+        allow read, write: if isOwner(userId);
+      }
+
+      // Subcollection 5: Earned mastery badges
+      match /badges/{badgeId} {
+        allow read, write: if isOwner(userId);
+      }
+
+      // Any other nested user paths
+      match /{subcollection=**} {
+        allow read, write: if isOwner(userId);
+      }
+    }
+
+    // Public curriculum content (read-only for authenticated users)
+    match /paths/{pathId} {
+      allow read: if isAuthenticated();
+      allow write: if false;
+
+      match /{subcollection=**} {
+        allow read: if isAuthenticated();
+        allow write: if false;
+      }
+    }
+
+    match /lessons/{lessonId} {
+      allow read: if isAuthenticated();
+      allow write: if false;
+
+      match /{subcollection=**} {
+        allow read: if isAuthenticated();
+        allow write: if false;
+      }
+    }
+
+    match /dailyChallenges/{challengeId} {
+      allow read: if isAuthenticated();
+      allow write: if false;
+    }
+
+    // Default deny all other paths
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

@@ -1,0 +1,925 @@
+{
+  "unitId": "reading-people-unit-1",
+  "pathId": "reading-people",
+  "unitNumber": 1,
+  "title": "Baseline first",
+  "subtitle": "Reading People · Unit 1",
+  "estimatedMinutes": 8,
+  "xpReward": 60,
+  "description": "Master the foundational law of human observation: you cannot detect a lie, tension, or hidden intent until you first know what someone looks like when they are completely relaxed.",
+  "rulesSummary": [
+    "Baseline first: establish normal voice, eye contact, and posture before looking for tells.",
+    "Clusters, not single signals: never judge based on one isolated gesture.",
+    "Context decides meaning: cold rooms, physical fatigue, and cultural habits change everything.",
+    "Body language shows emotion, not proof of lying: tension is not deception.",
+    "Verify with a question: always confirm suspected shifts with neutral, calibrated inquiry."
+  ],
+  "learn": {
+    "title": "The Foundation: Baseline Calibration",
+    "cards": [
+      {
+        "id": "learn-1",
+        "step": "01 / 05",
+        "title": "What is a baseline?",
+        "subtitle": "The resting human state",
+        "icon": "tune",
+        "isKeyRule": false,
+        "content": "Every individual possesses a unique resting rhythm. Some naturally speak rapidly, wave their hands animatedly, and rarely hold steady eye contact. Others are quiet, stillness-oriented, and deliberate. A baseline is how someone behaves when there is zero psychological pressure and no perceived threat.",
+        "takeaway": "Never compare a person to an imaginary universal standard. Only compare them to their own resting baseline."
+      },
+      {
+        "id": "learn-2",
+        "step": "02 / 05",
+        "title": "Establishing the baseline",
+        "subtitle": "The first 2–3 minutes rule",
+        "icon": "schedule",
+        "isKeyRule": false,
+        "content": "Professional interrogators and master negotiators always spend the opening 120 to 180 seconds on low-stakes, neutral chit-chat. They ask about the commute, the weather, or recent sports. During this window, they quietly map three physical channels: normal vocal pitch, blink rate, and postural openness.",
+        "takeaway": "Always open meetings with neutral, harmless questions to record their natural conversational baseline."
+      },
+      {
+        "id": "learn-3",
+        "step": "03 / 05",
+        "title": "Spotting the deviation",
+        "subtitle": "The stimulus-response spike",
+        "icon": "trending_up",
+        "isKeyRule": false,
+        "content": "A 'tell' is never an isolated gesture—it is a sharp deviation from the baseline that happens within 3 to 5 seconds of a specific stimulus. If a calm person suddenly starts clearing their throat, touches their neck, and leans backward the moment a price or deadline is mentioned, that shift is your data point.",
+        "takeaway": "Look for the timing: what exact word or question triggered the sudden departure from their baseline?"
+      },
+      {
+        "id": "learn-4",
+        "step": "04 / 05",
+        "title": "Clusters, not single cues",
+        "subtitle": "The rule of three",
+        "icon": "hub",
+        "isKeyRule": false,
+        "content": "Crossing arms might just mean the air conditioner is set to 18°C. Looking away might just mean someone is visualizing a memory. Novices fixate on single body signals and make catastrophic misjudgments. Expert decoders search for clusters: at least 2 or 3 distinct non-verbal and vocal deviations occurring simultaneously.",
+        "takeaway": "Never reach a conclusion on one signal. Require a cluster of three concurrent shifts."
+      },
+      {
+        "id": "learn-5",
+        "step": "05 / 05",
+        "title": "The Golden Decryption Law",
+        "subtitle": "Master principle",
+        "icon": "bolt",
+        "isKeyRule": true,
+        "content": "Body language signals emotional arousal, stress, and cognitive load—it NEVER provides proof of lying. Tension can stem from fear of being doubted, personal trauma, or simple social anxiety. Context decides meaning, and you must always verify suspected deviations using a neutral, calibrated question.",
+        "takeaway": "Tension ≠ Deception. When you spot a deviation cluster, ask a non-accusatory question to test the water."
+      }
+    ]
+  },
+  "see": {
+    "title": "Worked Example: The Bangalore Pitch",
+    "scenarioTitle": "Commercial contract negotiation in Koramangala",
+    "scenarioDescription": "Observe Rohan (a SaaS agency founder) pitching an enterprise client VP, Vikram. Notice how Vikram's behavior shifts when the conversation moves from architecture to commercials.",
+    "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&auto=format&fit=crop&q=80",
+    "story": [
+      {
+        "type": "paragraph",
+        "text": "For the first fifteen minutes over filter coffee, Vikram was warm, relaxed, and talkative. He sat back in his ergonomic chair with an open posture, resting both forearms loosely on the conference table and maintaining easy eye contact while discussing their engineering team's current bottlenecks."
+      },
+      {
+        "type": "paragraph",
+        "text": "Then Rohan transitioned to Slide 14: the ₹28 Lakh quarterly retainer fee."
+      },
+      {
+        "type": "interactive_paragraph",
+        "segments": [
+          { "text": "The moment the slide appeared, Vikram's right heel " },
+          {
+            "clueId": "clue-1",
+            "text": "began rapidly tapping against the floor",
+            "isClue": true
+          },
+          { "text": ". He pulled both arms back against his chest. When Rohan asked if the numbers aligned with their budget, Vikram cleared his throat, touched the back of his neck, and said, 'Yes, the budget is well within range, we just need internal approval.' As he spoke, his voice " },
+          {
+            "clueId": "clue-2",
+            "text": "rose nearly an octave in pitch",
+            "isClue": true
+          },
+          { "text": ", and his gaze " },
+          {
+            "clueId": "clue-3",
+            "text": "broke downwards toward his notebook for four full seconds",
+            "isClue": true
+          },
+          { "text": ", even while nodding with a tight smile where his " },
+          {
+            "clueId": "clue-4",
+            "text": "lips were firmly pressed into a thin horizontal line",
+            "isClue": true
+          },
+          { "text": "." }
+        ]
+      }
+    ],
+    "clues": [
+      {
+        "id": "clue-1",
+        "phrase": "Began rapidly tapping his heel against the floor",
+        "strength": "Medium",
+        "category": "Kinetic Leakage",
+        "explanation": "Sudden foot and leg tapping is an involuntary release of sympathetic nervous system arousal. When upper-body motion is consciously suppressed in formal settings, stress leaks through the feet."
+      },
+      {
+        "id": "clue-2",
+        "phrase": "Vocal pitch rose nearly an octave",
+        "strength": "Strong",
+        "category": "Vocal Micro-Tension",
+        "explanation": "When an individual feels psychological threat or attempts to assert something contrary to their internal belief, the vocal cords constrict under stress, causing an involuntary frequency spike compared to resting baseline."
+      },
+      {
+        "id": "clue-3",
+        "phrase": "Broke gaze downward for four full seconds while answering",
+        "strength": "Strong",
+        "category": "Visual Disconnect & Cognitive Load",
+        "explanation": "Breaking eye contact downward immediately following a direct commercial question signals cognitive internal processing or masking, contrasting sharply with his initial relaxed, direct gaze."
+      },
+      {
+        "id": "clue-4",
+        "phrase": "Lips firmly pressed into a thin horizontal line",
+        "strength": "Medium",
+        "category": "Facial Compression",
+        "explanation": "Lip compression reflects emotional withholding and hesitation. While his words verbalized compliance ('the budget is well within range'), his mouth physically held back unspoken objections."
+      }
+    ],
+    "forensicTakeaway": "Vikram was not trying to scam Rohan. The deviation cluster (foot tapping + vocal pitch rise + gaze drop + lip compression) revealed acute pricing resistance. The correct tactical move was not to celebrate, but to ask: 'It feels like there might be certain milestones or structures in this number that feel heavy—what would make this frictionless for you?'"
+  },
+  "try": {
+    "title": "Interactive Practice: Decode the Shift",
+    "scenarios": [
+      {
+        "id": "try-scenario-1",
+        "contextTitle": "Case 1 · Client Pitch in Gurgaon",
+        "character": "Vikram (VP of Engineering)",
+        "imageUrl": "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=800&auto=format&fit=crop&q=80",
+        "story": "During an on-site product presentation in Cyber City, the client representative, Aarti, spent the initial introductions smiling, leaning forward, and joking about the Delhi traffic. Ten minutes in, when you outline a 6-month lock-in agreement, she abruptly leans back, crosses her legs away from you, and begins twirling her pen with rapid fingers while softly saying, 'That should work without problems.'",
+        "clues": [
+          {
+            "id": "c1-1",
+            "text": "Leaning back and angling legs away from the presenter",
+            "strength": "Medium",
+            "explanation": "Physical distancing immediately following commitment terms indicates psychological withdrawal."
+          },
+          {
+            "id": "c1-2",
+            "text": "Rapid pen twirling",
+            "strength": "Medium",
+            "explanation": "Sudden motor agitation pacifies internal anxiety."
+          },
+          {
+            "id": "c1-3",
+            "text": "Soft verbal agreement conflicting with closed posture",
+            "strength": "Strong",
+            "explanation": "Verbal compliance combined with physical retreat indicates a polite deflection rather than authentic commitment."
+          }
+        ],
+        "subSteps": [
+          {
+            "subStepType": "emotion",
+            "stepLabel": "Step 1 of 3 · Hidden emotion",
+            "question": "What is Aarti experiencing beneath her verbal agreement?",
+            "options": [
+              {
+                "id": "opt-1",
+                "text": "Genuine contentment and total agreement with the 6-month commitment",
+                "isCorrect": false,
+                "reason": "Her physical withdrawal and sudden pacifying pen twirling contradict true contentment."
+              },
+              {
+                "id": "opt-2",
+                "text": "Acute hesitation and discomfort regarding the lock-in clause",
+                "isCorrect": true,
+                "reason": "The sudden deviation from forward-leaning warmth to physical distancing and rapid fidgeting reflects clear internal conflict."
+              },
+              {
+                "id": "opt-3",
+                "text": "Boredom because the presentation has gone on for too long",
+                "isCorrect": false,
+                "reason": "The shift happened directly upon presenting the lock-in clause, demonstrating stimulus-linked tension rather than general fatigue."
+              }
+            ],
+            "forensicExplanation": "Aarti's sudden shift from forward warmth to physical distancing and rapid motor pacifying is a classic discomfort cluster triggered precisely by the lock-in clause."
+          },
+          {
+            "subStepType": "intent",
+            "stepLabel": "Step 2 of 3 · Likely intent",
+            "question": "What is her tactical motivation at this exact moment?",
+            "options": [
+              {
+                "id": "opt-4",
+                "text": "Politely deflecting to conclude the meeting without confronting the terms right now",
+                "isCorrect": true,
+                "reason": "Saying 'that should work' while pulling away is the quintessential polite corporate dismissal meant to avoid immediate conflict."
+              },
+              {
+                "id": "opt-5",
+                "text": "Attempting to rush through the slide to sign the deal immediately",
+                "isCorrect": false,
+                "reason": "Her physical signals show withdrawal, not urgency to execute."
+              },
+              {
+                "id": "opt-6",
+                "text": "Testing whether you will notice she dropped her pen",
+                "isCorrect": false,
+                "reason": "Pen twirling is autonomic nervous pacification, not a calculated game."
+              }
+            ],
+            "forensicExplanation": "When Indian corporate stakeholders feel uncomfortable with contract rigidity, they often offer polite verbal agreement in-person and kill the deal later via email silence."
+          },
+          {
+            "subStepType": "move",
+            "stepLabel": "Step 3 of 3 · Best next move",
+            "question": "What is your best tactical response to this baseline shift?",
+            "options": [
+              {
+                "id": "opt-7",
+                "text": "Immediately print the contract and ask her to sign while she is agreeable",
+                "isCorrect": false,
+                "reason": "Pushing for a signature when unspoken objections exist guarantees post-meeting cancellation or ghosting."
+              },
+              {
+                "id": "opt-8",
+                "text": "Pause the deck, acknowledge the tension neutrally, and invite her honest feedback on the lock-in period",
+                "isCorrect": true,
+                "reason": "A calibrated check like 'I sensed that 6 months might feel rigid on your side—how does your team normally test new vendors?' brings the real objection into the open."
+              },
+              {
+                "id": "opt-9",
+                "text": "Ignore the body language and accelerate into the next five slides",
+                "isCorrect": false,
+                "reason": "Plowing forward over unaddressed objections is the number one reason client pitches stall."
+              }
+            ],
+            "forensicExplanation": "Never pretend you didn't see the shift. Gracefully surface the objection while you are still in the room together."
+          }
+        ]
+      },
+      {
+        "id": "try-scenario-2",
+        "contextTitle": "Case 2 · International Video Call",
+        "character": "David (Client Director, London)",
+        "imageUrl": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&auto=format&fit=crop&q=80",
+        "story": "You are on a Zoom call with David, a UK-based client director. Throughout the kickoff, David was animated, making broad hand gestures and leaning close to the camera. When you ask if his internal engineering leads have given sign-off on the API migration, his shoulders stiffen, his hands disappear completely beneath the camera frame, and he blinks four times in rapid succession before replying, 'Yes, everyone is fully aligned.'",
+        "clues": [
+          {
+            "id": "c2-1",
+            "text": "Hands disappearing beneath camera frame",
+            "strength": "Strong",
+            "explanation": "Concealing hands removes transparency signals and often occurs during cognitive guarding."
+          },
+          {
+            "id": "c2-2",
+            "text": "Rapid burst of 4 blinks",
+            "strength": "Medium",
+            "explanation": "Blink rate spikes involuntarily when an individual experiences heightened stress or speaks against internal reality."
+          },
+          {
+            "id": "c2-3",
+            "text": "Shoulder rigidity and freeze reaction",
+            "strength": "Strong",
+            "explanation": "The evolutionary freeze response locks the shoulders when feeling caught off-guard."
+          }
+        ],
+        "subSteps": [
+          {
+            "subStepType": "emotion",
+            "stepLabel": "Step 1 of 3 · Hidden emotion",
+            "question": "What does David's freeze and blink spike signal?",
+            "options": [
+              {
+                "id": "opt-10",
+                "text": "Complete calm and pride in his team's alignment",
+                "isCorrect": false,
+                "reason": "The freeze response and blink spike are classic indicators of sudden sympathetic nervous tension."
+              },
+              {
+                "id": "opt-11",
+                "text": "Acute anxiety and internal conflict regarding his team's true readiness",
+                "isCorrect": true,
+                "reason": "The sudden transition from open hand gestures to hand concealment, stiffened shoulders, and rapid blinking reveals internal stress."
+              },
+              {
+                "id": "opt-12",
+                "text": "Eye strain caused by screen glare",
+                "isCorrect": false,
+                "reason": "Screen glare does not cause sudden shoulder freeze and hand withdrawal coordinated with that exact question."
+              }
+            ],
+            "forensicExplanation": "Sudden freezing and hiding hands upon a specific question is an evolutionary guarding cluster."
+          },
+          {
+            "subStepType": "intent",
+            "stepLabel": "Step 2 of 3 · Likely intent",
+            "question": "What is David trying to accomplish with his response?",
+            "options": [
+              {
+                "id": "opt-13",
+                "text": "Protecting his authority and preventing the project timeline from appearing at risk",
+                "isCorrect": true,
+                "reason": "He is smoothing over internal political friction so your agency doesn't panic or question his leadership."
+              },
+              {
+                "id": "opt-14",
+                "text": "Setting a trap to blame you later",
+                "isCorrect": false,
+                "reason": "Tension indicates vulnerability, not a calculated ambush."
+              },
+              {
+                "id": "opt-15",
+                "text": "Checking if his camera feed is lagging",
+                "isCorrect": false,
+                "reason": "His verbal answer was instantaneous, only his physical demeanor constricted."
+              }
+            ],
+            "forensicExplanation": "Managers frequently mask internal organizational doubts to project seamless competence to external vendors."
+          },
+          {
+            "subStepType": "move",
+            "stepLabel": "Step 3 of 3 · Best next move",
+            "question": "How should you proceed without cornering him?",
+            "options": [
+              {
+                "id": "opt-16",
+                "text": "Accuse him of bluffing and demand to see his internal Slack channels",
+                "isCorrect": false,
+                "reason": "Hostile accusations destroy commercial trust instantly."
+              },
+              {
+                "id": "opt-17",
+                "text": "Offer a collaborative safety net: 'That is great. Where do you foresee your engineering leads hitting potential friction when we integrate?'",
+                "isCorrect": true,
+                "reason": "This calibrated question allows him to share real risks without admitting he was withholding information."
+              },
+              {
+                "id": "opt-18",
+                "text": "Take his words at face value and commit all development resources immediately",
+                "isCorrect": false,
+                "reason": "Committing without de-risking will lead to massive project roadblocks when his unaligned team pushes back."
+              }
+            ],
+            "forensicExplanation": "Provide an honorable bridge: ask what challenges the team might face, rather than questioning his truthfulness."
+          }
+        ]
+      },
+      {
+        "id": "try-scenario-3",
+        "contextTitle": "Case 3 · Hostel Room Conflict",
+        "character": "Dev (Roommate / College Peer)",
+        "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=80",
+        "story": "You share a 2BHK flat near your university campus. For the past week, Dev has been cheerful and cracking jokes. When you bring up splitting the overdue electricity bill of ₹4,200, Dev's smile vanishes. He turns his torso completely sideways toward the kitchen counter, crosses his arms with tight fists, and mutters, 'Yeah bro, of course I'll PayTM you tonight, chill out.'",
+        "clues": [
+          {
+            "id": "c3-1",
+            "text": "Torso turned sideways away from you",
+            "strength": "Strong",
+            "explanation": "Ventral denial: shielding the front of the body turns away from an emotional stressor."
+          },
+          {
+            "id": "c3-2",
+            "text": "Arms crossed with clenched fists",
+            "strength": "Strong",
+            "explanation": "Tight fists tucked inside arms indicate suppressed frustration and defensive hostility."
+          },
+          {
+            "id": "c3-3",
+            "text": "Dismissive verbal phrase ('chill out') with dropped volume",
+            "strength": "Medium",
+            "explanation": "Aggressive minimization masks personal embarrassment."
+          }
+        ],
+        "subSteps": [
+          {
+            "subStepType": "emotion",
+            "stepLabel": "Step 1 of 3 · Hidden emotion",
+            "question": "What is the primary underlying driver of Dev's sudden defensive posture?",
+            "options": [
+              {
+                "id": "opt-19",
+                "text": "He genuinely forgot the bill and is completely relaxed",
+                "isCorrect": false,
+                "reason": "Clenched fists and ventral shielding are the opposite of relaxed behavior."
+              },
+              {
+                "id": "opt-20",
+                "text": "Acute embarrassment or cash flow stress masked as defensive irritation",
+                "isCorrect": true,
+                "reason": "Money friction among peers frequently triggers shame, which manifests physically as defensive withdrawal and anger."
+              },
+              {
+                "id": "opt-21",
+                "text": "He is planning to move out of the apartment tomorrow",
+                "isCorrect": false,
+                "reason": "Leaping to extreme speculation ignores the immediate financial trigger."
+              }
+            ],
+            "forensicExplanation": "When financial requests trigger immediate physical shielding and clenched fists, the root emotion is almost always acute shame."
+          },
+          {
+            "subStepType": "intent",
+            "stepLabel": "Step 2 of 3 · Likely intent",
+            "question": "Why did Dev say 'chill out' while turning his back?",
+            "options": [
+              {
+                "id": "opt-22",
+                "text": "To shut down further inquiry immediately so his lack of funds is not scrutinized",
+                "isCorrect": true,
+                "reason": "Pretending the other person is overreacting is a universal defense mechanism to escape immediate scrutiny."
+              },
+              {
+                "id": "opt-23",
+                "text": "Because he already transferred the money 5 minutes ago",
+                "isCorrect": false,
+                "reason": "If already transferred, he would have proudly shown his phone screen instead of turning away."
+              },
+              {
+                "id": "opt-24",
+                "text": "He wants to debate the tariff slabs of the electricity board",
+                "isCorrect": false,
+                "reason": "His reaction was purely emotional and evasive."
+              }
+            ],
+            "forensicExplanation": "Minimization ('chill out') is used to create conversational distance and avoid admitting financial vulnerability."
+          },
+          {
+            "subStepType": "move",
+            "stepLabel": "Step 3 of 3 · Best next move",
+            "question": "How do you recover the money while preserving the relationship?",
+            "options": [
+              {
+                "id": "opt-25",
+                "text": "Shout at him and threaten to cut his WiFi access",
+                "isCorrect": false,
+                "reason": "Cornering an embarrassed peer will escalate into permanent resentment and unpaid bills."
+              },
+              {
+                "id": "opt-26",
+                "text": "Lower personal tension and give him dignity: 'No stress on tonight bro. If you're waiting on a transfer, tell me when is easiest for you this week.'",
+                "isCorrect": true,
+                "reason": "Removing the humiliation allows him to un-clench his fists, acknowledge his timeline, and actually pay."
+              },
+              {
+                "id": "opt-27",
+                "text": "Say nothing and silently pay his share forever",
+                "isCorrect": false,
+                "reason": "Passive avoidance creates toxic festering resentment."
+              }
+            ],
+            "forensicExplanation": "Always grant an honorable exit. Dignity unlocks cooperation far faster than confrontation."
+          }
+        ]
+      },
+      {
+        "id": "try-scenario-4",
+        "contextTitle": "Case 4 · Final-Year Engineering Project",
+        "character": "Priya (Project Partner)",
+        "imageUrl": "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&auto=format&fit=crop&q=80",
+        "story": "During your college capstone project standup, Priya has consistently submitted clean code and actively participated. Today, when the group reviews the ML model integration due in 48 hours, she clutches her backpack strap tightly against her chest, speaks in clipped one-word answers, and constantly scans the lab exit door.",
+        "clues": [
+          {
+            "id": "c4-1",
+            "text": "Clutching backpack strap like a barrier across chest",
+            "strength": "Medium",
+            "explanation": "Creating a physical barrier with personal belongings is an instinctive comfort-seeking shielding behavior."
+          },
+          {
+            "id": "c4-2",
+            "text": "Clipped, flat monotone answers from an expressive student",
+            "strength": "Strong",
+            "explanation": "A sudden contraction in verbal expressive baseline signals cognitive overwhelm."
+          },
+          {
+            "id": "c4-3",
+            "text": "Gaze repeatedly checking the exit door",
+            "strength": "Strong",
+            "explanation": "Physical escape intent: eye orientation toward exits reveals an acute desire to flee the stressor."
+          }
+        ],
+        "subSteps": [
+          {
+            "subStepType": "emotion",
+            "stepLabel": "Step 1 of 3 · Hidden emotion",
+            "question": "What does Priya's barrier posture and exit scanning reveal?",
+            "options": [
+              {
+                "id": "opt-28",
+                "text": "Extreme panic and overwhelm regarding the upcoming deadline",
+                "isCorrect": true,
+                "reason": "The cluster of chest shielding, flat clipped speech, and door-scanning indicates flight arousal caused by feeling overwhelmed."
+              },
+              {
+                "id": "opt-29",
+                "text": "She thinks the project is already finished and perfect",
+                "isCorrect": false,
+                "reason": "Looking at the door and holding an object like a shield indicates distress, not confidence."
+              },
+              {
+                "id": "opt-30",
+                "text": "Disinterest because she has better job offers",
+                "isCorrect": false,
+                "reason": "Her previous baseline was diligent; this sudden panic is situational."
+              }
+            ],
+            "forensicExplanation": "When a normally reliable collaborator shields their chest and stares at the door, they are drowning in silent overwhelm."
+          },
+          {
+            "subStepType": "intent",
+            "stepLabel": "Step 2 of 3 · Likely intent",
+            "question": "What is Priya hoping happens in this meeting?",
+            "options": [
+              {
+                "id": "opt-31",
+                "text": "She wants the standup to end before someone discovers she is stuck on the code",
+                "isCorrect": true,
+                "reason": "Her clipped answers and escape glance are designed to minimize exposure."
+              },
+              {
+                "id": "opt-32",
+                "text": "She wants to volunteer to write all the remaining documentation",
+                "isCorrect": false,
+                "reason": "Her posture shows total contraction, not expansion."
+              },
+              {
+                "id": "opt-33",
+                "text": "She wants to start a fight with the team lead",
+                "isCorrect": false,
+                "reason": "Her behavior is defensive flight, not aggressive fight."
+              }
+            ],
+            "forensicExplanation": "Avoidance behavior seeks only one outcome: surviving the immediate interrogation without being exposed."
+          },
+          {
+            "subStepType": "move",
+            "stepLabel": "Step 3 of 3 · Best next move",
+            "question": "How should the team handle this bottleneck constructively?",
+            "options": [
+              {
+                "id": "opt-34",
+                "text": "Complain to the faculty advisor and remove her name from the project",
+                "isCorrect": false,
+                "reason": "Premature escalation destroys team cohesion and doesn't solve the immediate technical bottleneck."
+              },
+              {
+                "id": "opt-35",
+                "text": "Catch her privately after the standup: 'Hey, that ML module looks brutal. Let's break the integration into two parts and pair-program for an hour.'",
+                "isCorrect": true,
+                "reason": "Private safety removes the threat of public shame and turns panic into execution."
+              },
+              {
+                "id": "opt-36",
+                "text": "Put her on the spot in front of everyone and demand to see her GitHub commits",
+                "isCorrect": false,
+                "reason": "Public shaming causes immediate shutdown or defensive tears."
+              }
+            ],
+            "forensicExplanation": "True leaders decode stress early and offer private scaffolding before projects derail."
+          }
+        ]
+      },
+      {
+        "id": "try-scenario-5",
+        "contextTitle": "Case 5 · Co-founder Runway Discussion",
+        "character": "Varun (Co-founder, Operations)",
+        "imageUrl": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&auto=format&fit=crop&q=80",
+        "story": "You and your co-founder Varun are reviewing bank balances at a cafe in Indiranagar. Only 60 days of runway remain. Varun usually speaks loudly with confident, expansive hand gestures. When you propose that both of you invest ₹2 Lakhs each from personal savings to extend runway by two months, his hands drop under the table, his throat swallows dryly twice, and he whispers, 'Yeah, let me check my accounts tonight.'",
+        "clues": [
+          {
+            "id": "c5-1",
+            "text": "Hands drop abruptly under the table",
+            "strength": "Strong",
+            "explanation": "Loss of hand visibility when money is requested signals cognitive withholding or fear."
+          },
+          {
+            "id": "c5-2",
+            "text": "Audible double dry swallow",
+            "strength": "Strong",
+            "explanation": "Sympathetic nervous spike causes acute salivary gland dry mouth."
+          },
+          {
+            "id": "c5-3",
+            "text": "Volume drops from confident and loud to a whisper",
+            "strength": "Strong",
+            "explanation": "Dramatic volume drop represents psychological shrinkage and loss of conviction."
+          }
+        ],
+        "subSteps": [
+          {
+            "subStepType": "emotion",
+            "stepLabel": "Step 1 of 3 · Hidden emotion",
+            "question": "What did the dry swallow and volume drop reveal?",
+            "options": [
+              {
+                "id": "opt-37",
+                "text": "Acute fear and internal terror about committing his personal life savings",
+                "isCorrect": true,
+                "reason": "Sudden dry swallowing, loss of volume, and hiding hands is an unmistakable high-stakes fear cluster."
+              },
+              {
+                "id": "opt-38",
+                "text": "He is thirsty because the cafe chai was too spicy",
+                "isCorrect": false,
+                "reason": "The physiological shift correlated exactly with the ₹2 Lakh proposal."
+              },
+              {
+                "id": "opt-39",
+                "text": "He has millions in savings and cannot wait to transfer the money",
+                "isCorrect": false,
+                "reason": "Fear shrinkage is the opposite of eager investment."
+              }
+            ],
+            "forensicExplanation": "The physiological double swallow combined with vocal shrinkage reflects raw fear of personal financial ruin."
+          },
+          {
+            "subStepType": "intent",
+            "stepLabel": "Step 2 of 3 · Likely intent",
+            "question": "Why did he say 'let me check my accounts tonight'?",
+            "options": [
+              {
+                "id": "opt-40",
+                "text": "To buy time to consult his family or process his doubts away from pressure",
+                "isCorrect": true,
+                "reason": "He cannot bring himself to say 'I can't afford to lose this money' in the moment."
+              },
+              {
+                "id": "opt-41",
+                "text": "He is planning to steal the remaining startup funds",
+                "isCorrect": false,
+                "reason": "Fear is not malice."
+              },
+              {
+                "id": "opt-42",
+                "text": "He forgot his net banking password",
+                "isCorrect": false,
+                "reason": "Trivial logistical excuses mask emotional gravity."
+              }
+            ],
+            "forensicExplanation": "Buying time is the natural instinct when a person is faced with a demand they cannot bear to accept or refuse openly."
+          },
+          {
+            "subStepType": "move",
+            "stepLabel": "Step 3 of 3 · Best next move",
+            "question": "How do you navigate this existential startup moment?",
+            "options": [
+              {
+                "id": "opt-43",
+                "text": "Immediately open net banking on his phone and force him to transfer right there",
+                "isCorrect": false,
+                "reason": "Coercion destroys founder partnerships permanently."
+              },
+              {
+                "id": "opt-44",
+                "text": "Acknowledge the fear with deep empathy: 'Varun, putting personal savings on the line is terrifying. If this puts you in personal danger, tell me honestly. Let's look at bridge loans or revenue before we touch our savings.'",
+                "isCorrect": true,
+                "reason": "Validating the fear makes it safe to speak truth, preserving the company and friendship."
+              },
+              {
+                "id": "opt-45",
+                "text": "Pretend everything is fine and assume the ₹2 Lakhs will arrive tomorrow morning",
+                "isCorrect": false,
+                "reason": "False assumptions lead to company liquidation when the cash fails to materialize."
+              }
+            ],
+            "forensicExplanation": "Great partners name the elephant in the room with courage and warmth."
+          }
+        ]
+      }
+    ]
+  },
+  "prove": {
+    "title": "Mastery Assessment: 8 Forensic Questions",
+    "passingPercentage": 80,
+    "requiredCorrect": 7,
+    "totalQuestions": 8,
+    "questions": [
+      {
+        "id": "prove-1",
+        "question": "Why is it dangerous to interpret a crossed-arm gesture during the first 30 seconds of a meeting?",
+        "options": [
+          {
+            "id": "p1-a",
+            "text": "Because crossing arms is scientifically proven to always mean deception",
+            "isCorrect": false
+          },
+          {
+            "id": "p1-b",
+            "text": "Because you have not yet established their baseline, and environmental context like room temperature or habit could be the true cause",
+            "isCorrect": true
+          },
+          {
+            "id": "p1-c",
+            "text": "Because people never cross their arms in professional settings",
+            "isCorrect": false
+          },
+          {
+            "id": "p1-d",
+            "text": "Because arm crossing only applies to romantic relationships",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "Without establishing how someone rests comfortably, an isolated gesture has zero diagnostic value. Room temperature, chair ergonomics, or habit easily account for arm-crossing."
+      },
+      {
+        "id": "prove-2",
+        "question": "What is the recommended operational duration to establish a conversational baseline?",
+        "options": [
+          {
+            "id": "p2-a",
+            "text": "10 to 15 seconds of intense eye staring",
+            "isCorrect": false
+          },
+          {
+            "id": "p2-b",
+            "text": "2 to 3 minutes of neutral, low-stakes conversation",
+            "isCorrect": true
+          },
+          {
+            "id": "p2-c",
+            "text": "At least 45 minutes into the formal negotiation",
+            "isCorrect": false
+          },
+          {
+            "id": "p2-d",
+            "text": "Baselines can only be established through written psychological surveys",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "The first 2 to 3 minutes of informal pleasantries provide an organic window into their resting voice frequency, blink frequency, and posture."
+      },
+      {
+        "id": "prove-3",
+        "question": "Which of the following constitutes a true 'behavioral cluster'?",
+        "options": [
+          {
+            "id": "p3-a",
+            "text": "A person checking their watch twice in an hour",
+            "isCorrect": false
+          },
+          {
+            "id": "p3-b",
+            "text": "A sudden simultaneous spike in voice pitch, throat clearing, and downward gaze within 4 seconds of a price quote",
+            "isCorrect": true
+          },
+          {
+            "id": "p3-c",
+            "text": "Someone who always speaks with animated hand gestures",
+            "isCorrect": false
+          },
+          {
+            "id": "p3-d",
+            "text": "A client who asks for a glass of water",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "A cluster requires multiple independent non-verbal channels (vocal, respiratory, visual) shifting concurrently in direct reaction to a stimulus."
+      },
+      {
+        "id": "prove-4",
+        "question": "What does a sudden departure from resting baseline actually prove?",
+        "options": [
+          {
+            "id": "p4-a",
+            "text": "The person is 100% lying and committing fraud",
+            "isCorrect": false
+          },
+          {
+            "id": "p4-b",
+            "text": "The person has experienced sudden emotional arousal, cognitive load, or stress—not necessarily deception",
+            "isCorrect": true
+          },
+          {
+            "id": "p4-c",
+            "text": "The person has lost their memory",
+            "isCorrect": false
+          },
+          {
+            "id": "p4-d",
+            "text": "The person wants to terminate the conversation immediately",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "Body language measures autonomic nervous arousal. An innocent person accused of a mistake can exhibit massive stress out of fear of not being believed."
+      },
+      {
+        "id": "prove-5",
+        "question": "During an international video call with an American client, you notice their hands disappear beneath the desk and their blink rate doubles when asking about delivery dates. What is your best tactical action?",
+        "options": [
+          {
+            "id": "p5-a",
+            "text": "Accuse them of hiding something on their secondary screen",
+            "isCorrect": false
+          },
+          {
+            "id": "p5-b",
+            "text": "Test the deviation with a neutral calibrated question: 'It feels like delivery dates might be tighter than expected on your end—how does that timeline look to your stakeholders?'",
+            "isCorrect": true
+          },
+          {
+            "id": "p5-c",
+            "text": "End the Zoom call immediately",
+            "isCorrect": false
+          },
+          {
+            "id": "p5-d",
+            "text": "Assume they are totally satisfied and ignore the physical signals",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "Calibrated questions allow you to verify the observed tension without escalating defensiveness."
+      },
+      {
+        "id": "prove-6",
+        "question": "Why is context considered the ultimate decider of non-verbal meaning?",
+        "options": [
+          {
+            "id": "p6-a",
+            "text": "Because human psychology changes every ten minutes randomly",
+            "isCorrect": false
+          },
+          {
+            "id": "p6-b",
+            "text": "Because physical factors like room temperature, fatigue, back pain, or cultural customs can mimic stress signals",
+            "isCorrect": true
+          },
+          {
+            "id": "p6-c",
+            "text": "Because context only matters in written law, not body language",
+            "isCorrect": false
+          },
+          {
+            "id": "p6-d",
+            "text": "Because body language has no biological basis",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "If a room is freezing or a person has a sore neck, their posture mimics defensive tells. Context always governs physical expression."
+      },
+      {
+        "id": "prove-7",
+        "question": "In an Indian business meeting, a supplier smiles broadly while shaking their head side-to-side and pulling their hands inward. What principle should you apply?",
+        "options": [
+          {
+            "id": "p7-a",
+            "text": "Assume the head wobble is a negative rejection because head shaking means 'no' everywhere in the world",
+            "isCorrect": false
+          },
+          {
+            "id": "p7-b",
+            "text": "Account for cultural baseline expressions where the head nod/wobble signifies acknowledgment, and calibrate with verbal confirmation",
+            "isCorrect": true
+          },
+          {
+            "id": "p7-c",
+            "text": "Walk out of the meeting immediately",
+            "isCorrect": false
+          },
+          {
+            "id": "p7-d",
+            "text": "Sign the agreement without reading the terms",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "Cultural baseline gestures vary dramatically. Novice analysts misread Indian head nods as confusion or denial rather than acknowledgment."
+      },
+      {
+        "id": "prove-8",
+        "question": "What is the psychological purpose of self-pacifying behaviors like touching the collarbone, stroking the neck, or twirling a ring?",
+        "options": [
+          {
+            "id": "p8-a",
+            "text": "They are deliberate signs of physical dominance",
+            "isCorrect": false
+          },
+          {
+            "id": "p8-b",
+            "text": "They stimulate the vagus nerve and sensory receptors to self-soothe autonomic stress during moments of anxiety",
+            "isCorrect": true
+          },
+          {
+            "id": "p8-c",
+            "text": "They indicate that the person is hungry",
+            "isCorrect": false
+          },
+          {
+            "id": "p8-d",
+            "text": "They only happen when someone is telling a premeditated falsehood",
+            "isCorrect": false
+          }
+        ],
+        "explanation": "Self-touching behaviors release calming neurotransmitters to counter sudden cortisol and adrenaline surges triggered by uncomfortable stimuli."
+      }
+    ]
+  },
+  "apply": {
+    "title": "Field Mission: The 3-Minute Baseline Audit",
+    "subtitle": "Real-World Observation Exercise",
+    "missionPrompt": "In your very next interaction today (with a colleague, vendor, client, roommate, or friend), consciously establish their resting baseline before any business, requests, or emotional topics are brought up.",
+    "instructions": [
+      "Spend the first 2 minutes on harmless, neutral conversation (weather, lunch, transit, or daily routine).",
+      "Silently record their three baseline anchors: normal vocal pitch, blink rate, and physical posture/hand activity.",
+      "When the topic transitions to a task, money, a deadline, or a plan, watch for any deviation cluster within 5 seconds of the transition.",
+      "Write down your observations below to complete the unit."
+    ],
+    "reflectionQuestion": "What was their resting baseline, what topic caused a deviation (if any), and how did their physical cues shift?"
+  }
+}

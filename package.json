@@ -1,0 +1,38 @@
+{
+  "name": "decode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "vitest run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "autoprefixer": "^10.6.2",
+    "clsx": "^2.1.1",
+    "firebase": "^13.3.0",
+    "framer-motion": "^14.14.0",
+    "lucide-react": "^1.73.0",
+    "next": "^16.4.6",
+    "postcss": "^8.5.33",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "recharts": "^3.10.1",
+    "tailwind-merge": "^3.7.0",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^7.0.2",
+    "zustand": "^5.1.0"
+  },
+  "devDependencies": {
+    "vitest": "^5.1.0"
+  }
+}
