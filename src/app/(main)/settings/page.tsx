@@ -71,15 +71,17 @@ export default function SettingsPage() {
   };
 
   const handleLinkGoogle = async () => {
+    setErrorMessage(null);
     try {
-      setErrorMessage(null);
-      const res = await linkToGoogle();
+      const res = await linkToGoogle((reason) => {
+        console.log("[auth] Settings linking fallback notice:", reason);
+      });
       if (res === "REDIRECT_STARTED") {
         return;
       }
       setSuccessMessage("Account successfully linked with Google! Your progress is permanently secured.");
     } catch (err: any) {
-      console.error("[DECODE Auth Error] Account linking failed:", err);
+      console.error("[auth] Settings account linking failed:", err);
       const formatted = formatFirebaseAuthError(err);
       setErrorMessage(`[${formatted.code}] ${formatted.message}`);
     }

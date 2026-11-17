@@ -90,7 +90,29 @@ In the [Firebase Console](https://console.firebase.google.com/):
 3. Enable **Google** (allows seamless cross-device account continuation).
 4. **Authorize your deployment domain:** Navigate to **Authentication > Settings > Authorized domains** and click **Add domain**. Add your Vercel deployment domain (e.g. `decode-iota-one.vercel.app`) as well as `localhost`. Without this, Firebase will block Google sign-in with `auth/unauthorized-domain`.
 
-### 2. Initialize Cloud Firestore
+### 2. Same-Domain Authentication & Google Cloud Console Setup (Safari ITP Fix)
+Modern browsers (Safari on macOS and iOS) partition third-party storage (ITP), causing cross-domain redirects to lose authentication tokens. DECODE includes built-in same-domain auth rewrites in `next.config.ts`:
+- `/__/auth/:path*` proxies to `https://decode-be09a.firebaseapp.com/__/auth/:path*`
+- `/__/firebase/init.json` proxies to `https://decode-be09a.firebaseapp.com/__/firebase/init.json`
+
+To authorize your custom domain in Google Cloud Console:
+1. Open the [Google Cloud Console Credentials Page](https://console.cloud.google.com/apis/credentials).
+2. Select your Firebase project (e.g. `decode-be09a`).
+3. Under **OAuth 2.0 Client IDs**, click **Web client (auto created by Google Service)**.
+4. Under **Authorized JavaScript origins**, click **+ ADD URI** and add:
+   ```
+   https://decode-iota-one.vercel.app
+   ```
+5. Under **Authorized redirect URIs**, click **+ ADD URI** and add:
+   ```
+   https://decode-iota-one.vercel.app/__/auth/handler
+   ```
+6. Click **Save** at the bottom of the page.
+
+### 3. Diagnostics & Debugging
+Add `?debug=1` to any URL (e.g. `https://decode-iota-one.vercel.app/login?debug=1`) to view live telemetry including current hostname, active `authDomain`, Safari detection, and the latest error codes. Every authentication event is also logged to the browser console with an `[auth]` prefix.
+
+### 4. Initialize Cloud Firestore
 1. Navigate to **Build > Firestore Database** and click **Create database**.
 2. Select your preferred region (e.g., `us-central1`).
 3. Start in **Production mode**.

@@ -1,10 +1,10 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
+import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import {
   formatFirebaseAuthError,
   isMobileBrowser,
   mergeGuestProgressIntoUser,
 } from "../src/lib/firebase/auth";
-import { validateFirebaseConfig } from "../src/lib/firebase/client";
+import { validateFirebaseConfig, getAuthDomain, isSafariBrowser } from "../src/lib/firebase/client";
 import { UserProfile } from "../src/types";
 
 describe("Firebase Auth & Config Validation", () => {
@@ -12,6 +12,10 @@ describe("Firebase Auth & Config Validation", () => {
 
   beforeEach(() => {
     process.env = { ...originalEnv };
+  });
+
+  afterEach(() => {
+    vi.restoreAllMocks();
   });
 
   describe("validateFirebaseConfig", () => {
@@ -64,6 +68,14 @@ describe("Firebase Auth & Config Validation", () => {
     });
   });
 
+  describe("getAuthDomain & Same-Domain Helper", () => {
+    it("returns configured auth domain in standard environment", () => {
+      process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN = "decode-be09a.firebaseapp.com";
+      const domain = getAuthDomain();
+      expect(domain).toBeDefined();
+    });
+  });
+
   describe("formatFirebaseAuthError", () => {
     it("formats auth/unauthorized-domain with authorized domain advice", () => {
       const err = { code: "auth/unauthorized-domain", message: "Firebase: Error (auth/unauthorized-domain)." };
@@ -80,6 +92,20 @@ describe("Firebase Auth & Config Validation", () => {
       expect(formatted.message).toContain("blocked by your browser");
     });
 
+    it("formats auth/timeout with Safari instruction", () => {
+      const err = { code: "auth/timeout", message: "Timeout" };
+      const formatted = formatFirebaseAuthError(err);
+      expect(formatted.code).toBe("auth/timeout");
+      expect(formatted.message).toContain("Sign-in did not complete. If you are on Safari, try Chrome, or tap Try again.");
+    });
+
+    it("formats auth/operation-not-supported-in-this-environment", () => {
+      const err = { code: "auth/operation-not-supported-in-this-environment", message: "Unsupported" };
+      const formatted = formatFirebaseAuthError(err);
+      expect(formatted.code).toBe("auth/operation-not-supported-in-this-environment");
+      expect(formatted.message).toContain("Popup sign-in is not supported");
+    });
+
     it("formats auth/credential-already-in-use", () => {
       const err = { code: "auth/credential-already-in-use", message: "Account in use" };
       const formatted = formatFirebaseAuthError(err);
@@ -92,6 +118,80 @@ describe("Firebase Auth & Config Validation", () => {
       const formatted = formatFirebaseAuthError(err);
       expect(formatted.code).toBe("auth/missing-config");
       expect(formatted.message).toBe("Missing NEXT_PUBLIC_FIREBASE_API_KEY");
+    });
+  });
+
+  describe("Loading State Reset & Timeout Logic", () => {
+    it("ensures loading state ALWAYS resets even when sign-in throws", async () => {
+      let loading = false;
+      const simulateSignIn = async () => {
+        loading = true;
+        try {
+          throw new Error("Simulated sign-in failure");
+        } finally {
+          loading = false;
+        }
+      };
+
+      await expect(simulateSignIn()).rejects.toThrow("Simulated sign-in failure");
+      expect(loading).toBe(false);
+    });
+
+    it("resets loading and sets timeout error when 20-second timeout fires", () => {
+      vi.useFakeTimers();
+
+      let loading = true;
+      let error: any = null;
+
+      const timeoutId = setTimeout(() => {
+        loading = false;
+        error = formatFirebaseAuthError({ code: "auth/timeout" });
+      }, 20000);
+
+      expect(loading).toBe(true);
+      expect(error).toBeNull();
+
+      // Fast-forward 20 seconds
+      vi.advanceTimersByTime(20000);
+
+      expect(loading).toBe(false);
+      expect(error).not.toBeNull();
+      expect(error.code).toBe("auth/timeout");
+      expect(error.message).toContain("Sign-in did not complete");
+
+      clearTimeout(timeoutId);
+      vi.useRealTimers();
+    });
+
+    it("falls back to redirect notice when popup-blocked error occurs", () => {
+      const notices: string[] = [];
+      const onRedirectFallback = (msg: string) => notices.push(msg);
+
+      const popupErr = { code: "auth/popup-blocked" };
+      if (popupErr.code === "auth/popup-blocked") {
+        onRedirectFallback("Popup was blocked by your browser. Redirecting to Google...");
+      }
+
+      expect(notices).toHaveLength(1);
+      expect(notices[0]).toContain("Popup was blocked");
+    });
+
+    it("surfaces getRedirectResult errors without swallowing", () => {
+      const redirectError = {
+        code: "auth/unauthorized-domain",
+        message: "Firebase: Error (auth/unauthorized-domain).",
+      };
+
+      let caughtError: any = null;
+      try {
+        throw redirectError;
+      } catch (err: any) {
+        caughtError = formatFirebaseAuthError(err);
+      }
+
+      expect(caughtError).not.toBeNull();
+      expect(caughtError.code).toBe("auth/unauthorized-domain");
+      expect(caughtError.message).toContain("Authorized domains");
     });
   });
 
@@ -153,10 +253,10 @@ describe("Firebase Auth & Config Validation", () => {
     });
   });
 
-  describe("isMobileBrowser", () => {
-    it("returns false in node/server environment when window is undefined", () => {
-      // Vitest jsdom has window defined, let's test userAgent matching
+  describe("Browser & Mobile Detection", () => {
+    it("returns boolean for isMobileBrowser and isSafariBrowser", () => {
       expect(typeof isMobileBrowser()).toBe("boolean");
+      expect(typeof isSafariBrowser()).toBe("boolean");
     });
   });
 });

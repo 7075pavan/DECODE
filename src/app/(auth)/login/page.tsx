@@ -1,11 +1,17 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { useAuthStore } from "@/lib/stores/useAuthStore";
 import { Button } from "@/components/ui/Button";
 import { formatFirebaseAuthError, FormattedAuthError } from "@/lib/firebase/auth";
-import { firebaseConfigStatus } from "@/lib/firebase/client";
+import {
+  auth,
+  firebaseConfigStatus,
+  getAuthDomain,
+  isSafariBrowser,
+  ensureAuthPersistence,
+} from "@/lib/firebase/client";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -14,21 +20,56 @@ export default function LoginPage() {
   const [loadingGuest, setLoadingGuest] = useState(false);
   const [isProcessingRedirect, setIsProcessingRedirect] = useState(true);
   const [authError, setAuthError] = useState<FormattedAuthError | null>(null);
+  const [redirectNotice, setRedirectNotice] = useState<string | null>(null);
 
-  // Check for redirect result on mount (essential for mobile browser auth completion)
+  // Diagnostics state for ?debug=1
+  const [showDebug, setShowDebug] = useState(false);
+  const [debugInfo, setDebugInfo] = useState({
+    hostname: "",
+    authDomain: "",
+    isSafari: false,
+    userAgent: "",
+  });
+
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Check URL query parameters and initialize persistence on mount
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("debug") === "1") {
+        setShowDebug(true);
+        setDebugInfo({
+          hostname: window.location.hostname,
+          authDomain: getAuthDomain(),
+          isSafari: isSafariBrowser(),
+          userAgent: navigator.userAgent,
+        });
+      }
+
+      // Establish local persistence proactively on client mount
+      ensureAuthPersistence(auth);
+    }
+  }, []);
+
+  // Check for redirect result on mount (essential for Safari/Mobile when redirect was used)
   useEffect(() => {
     let isMounted = true;
 
     async function checkRedirect() {
+      console.log("[auth] Checking getRedirectResult on page load...");
       try {
         const profile = await handleRedirectAuth();
+        console.log("[auth] getRedirectResult check completed. Profile:", profile ? profile.uid : "null");
+
         if (profile && isMounted) {
+          console.log("[auth] Authenticated via redirect. Navigating...");
           router.replace(isOnboarded ? "/home" : "/onboarding");
           return;
         }
       } catch (err: any) {
         if (isMounted) {
-          console.error("[DECODE Auth Error] Redirect resolution failed:", err);
+          console.error("[auth] Redirect resolution failed on page load:", err);
           const formatted = formatFirebaseAuthError(err);
           setAuthError(formatted);
         }
@@ -43,39 +84,86 @@ export default function LoginPage() {
 
     return () => {
       isMounted = false;
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
     };
   }, [handleRedirectAuth, isOnboarded, router]);
 
   const handleGoogleAuth = async () => {
+    // DO NOT await anything before calling signInGoogle!
+    // Safari will block the popup if any microtask/await precedes window.open.
+    setAuthError(null);
+    setRedirectNotice(null);
+    setLoadingGoogle(true);
+
+    let isRedirecting = false;
+    let didTimeout = false;
+
+    // 20-second timeout: resets loading state and alerts user if sign-in hangs
+    timeoutRef.current = setTimeout(() => {
+      didTimeout = true;
+      console.error("[auth] Sign-in 20-second timeout triggered without completion");
+      setLoadingGoogle(false);
+      setRedirectNotice(null);
+      setAuthError({
+        code: "auth/timeout",
+        message: "Sign-in did not complete. If you are on Safari, try Chrome, or tap Try again.",
+        rawMessage: "Authentication timed out after 20 seconds.",
+      });
+    }, 20000);
+
     try {
-      setAuthError(null);
-      setLoadingGoogle(true);
-      const result = await signInGoogle();
+      console.log("[auth] Continue with Google tapped - calling popup directly...");
+      const result = await signInGoogle((reason) => {
+        console.log("[auth] Fallback to redirect notice:", reason);
+        setRedirectNotice(reason);
+      });
+
+      if (didTimeout) return;
 
       if (result === "REDIRECT_STARTED") {
-        // Navigation to Google sign-in initiated; keep spinner active
+        console.log("[auth] Redirect flow initiated; waiting for browser to leave page...");
+        isRedirecting = true;
+        // Keep loading state until navigation, but timeout protects against hang
         return;
       }
 
+      console.log("[auth] Google sign-in finished successfully via popup.");
       router.push(isOnboarded ? "/home" : "/onboarding");
     } catch (err: any) {
-      console.error("[DECODE Auth Error] Google authentication failed:", err);
-      const formatted = formatFirebaseAuthError(err);
-      setAuthError(formatted);
-      setLoadingGoogle(false);
+      if (!didTimeout) {
+        console.error("[auth] Google authentication error caught:", err);
+        const formatted = formatFirebaseAuthError(err);
+        setAuthError(formatted);
+      }
+    } finally {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
+      }
+      // Always reset loading unless redirect is actively in flight
+      if (!isRedirecting || didTimeout) {
+        setLoadingGoogle(false);
+      }
     }
   };
 
   const handleGuestAuth = async () => {
+    setAuthError(null);
+    setRedirectNotice(null);
+    setLoadingGuest(true);
+
     try {
-      setAuthError(null);
-      setLoadingGuest(true);
+      console.log("[auth] Continue as guest tapped");
       await signInGuest();
+      console.log("[auth] Guest session initialized");
       router.push("/onboarding");
     } catch (err: any) {
-      console.error("[DECODE Auth Error] Guest login failed:", err);
+      console.error("[auth] Guest login failed:", err);
       const formatted = formatFirebaseAuthError(err);
       setAuthError(formatted);
+    } finally {
       setLoadingGuest(false);
     }
   };
@@ -140,6 +228,28 @@ export default function LoginPage() {
         <p className="text-[18px] leading-[26px] text-[#94A3B8] mt-2 max-w-xs font-medium">
           Read people. Think clearly. Build wealth.
         </p>
+
+        {/* Diagnostics / Sign-in debug (visible with ?debug=1) */}
+        {showDebug && (
+          <div className="mt-4 p-3 rounded-xl bg-[#070A12] border border-[#22D3EE]/40 text-[12px] font-mono text-[#94A3B8] text-left w-full flex flex-col gap-1.5 animate-fadeIn">
+            <div className="text-[#22D3EE] font-bold text-[13px] flex items-center gap-1.5">
+              <span className="material-symbols-outlined text-[16px]">bug_report</span>
+              <span>Sign-in debug (?debug=1)</span>
+            </div>
+            <div>Hostname: <span className="text-[#F1F5F9] font-bold">{debugInfo.hostname || "local"}</span></div>
+            <div>authDomain in use: <span className="text-[#22D3EE] font-bold">{debugInfo.authDomain}</span></div>
+            <div>Browser: <span className="text-[#F1F5F9] font-bold">{debugInfo.isSafari ? "Safari (macOS/iOS)" : "Non-Safari"}</span></div>
+            <div>Last error code: <span className="text-[#F87171] font-bold">{authError?.code || "None"}</span></div>
+          </div>
+        )}
+
+        {/* Redirect In-flight fallback notice */}
+        {redirectNotice && (
+          <div className="mt-4 p-3 rounded-xl bg-[#22D3EE]/10 border border-[#22D3EE]/30 text-[#22D3EE] text-[13px] text-left w-full flex items-center gap-2">
+            <span className="w-4 h-4 rounded-full border border-current border-t-transparent animate-spin flex-shrink-0" />
+            <span>{redirectNotice}</span>
+          </div>
+        )}
 
         {/* Firebase Config Missing Warning */}
         {!firebaseConfigStatus.isConfigured && (

@@ -18,6 +18,19 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async rewrites() {
+    const firebaseHost = "decode-be09a.firebaseapp.com";
+    return [
+      {
+        source: "/__/auth/:path*",
+        destination: `https://${firebaseHost}/__/auth/:path*`,
+      },
+      {
+        source: "/__/firebase/init.json",
+        destination: `https://${firebaseHost}/__/firebase/init.json`,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

@@ -1,5 +1,10 @@
 import { initializeApp, getApps, getApp, FirebaseApp } from "firebase/app";
-import { getAuth, Auth } from "firebase/auth";
+import {
+  getAuth,
+  Auth,
+  setPersistence,
+  browserLocalPersistence,
+} from "firebase/auth";
 import {
   initializeFirestore,
   getFirestore,
@@ -21,6 +26,41 @@ export interface FirebaseConfigStatus {
   isConfigured: boolean;
   missingVariables: string[];
   errorMessage: string | null;
+}
+
+/**
+ * Determines the authDomain to use.
+ * In browser production, uses window.location.host if same-domain auth is enabled (default)
+ * to bypass Safari/ITP third-party cookie partitioning.
+ */
+export function getAuthDomain(): string {
+  if (typeof window !== "undefined") {
+    const isProduction =
+      window.location.hostname !== "localhost" &&
+      window.location.hostname !== "127.0.0.1";
+    const sameDomainEnv = process.env.NEXT_PUBLIC_USE_SAME_DOMAIN_AUTH;
+    // Default to same-domain auth in production when not explicitly set to "false"
+    const useSameDomain =
+      sameDomainEnv === "true" || (sameDomainEnv !== "false" && isProduction);
+
+    if (useSameDomain && isProduction) {
+      return window.location.host;
+    }
+  }
+
+  return (
+    process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN ||
+    "decode-be09a.firebaseapp.com"
+  );
+}
+
+/**
+ * Checks whether the current browser is Safari (macOS or iOS)
+ */
+export function isSafariBrowser(): boolean {
+  if (typeof window === "undefined") return false;
+  const ua = navigator.userAgent;
+  return /Safari/i.test(ua) && !/Chrome|CriOS|Chromium|Edg|OPR|Opera|FxiOS/i.test(ua);
 }
 
 export function validateFirebaseConfig(): FirebaseConfigStatus {
@@ -65,7 +105,7 @@ export const isFirebaseConfigured = firebaseConfigStatus.isConfigured;
 
 export const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  authDomain: getAuthDomain(),
   projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
   storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
   messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
@@ -76,15 +116,31 @@ let app: FirebaseApp | undefined;
 let auth: Auth | undefined;
 let db: Firestore | undefined;
 
+export async function ensureAuthPersistence(authInstance?: Auth | null): Promise<void> {
+  const targetAuth = authInstance || auth;
+  if (targetAuth) {
+    try {
+      await setPersistence(targetAuth, browserLocalPersistence);
+      console.log("[auth] browserLocalPersistence established successfully");
+    } catch (err) {
+      console.warn("[auth] setPersistence warning:", err);
+    }
+  }
+}
+
 if (typeof window !== "undefined") {
   if (!firebaseConfigStatus.isConfigured) {
     console.error(
-      `[Firebase Configuration Error] ${firebaseConfigStatus.errorMessage}`
+      `[auth] Firebase Configuration Error: ${firebaseConfigStatus.errorMessage}`
     );
   } else {
     try {
+      console.log("[auth] Initializing Firebase app with authDomain:", firebaseConfig.authDomain);
       app = getApps().length > 0 ? getApp() : initializeApp(firebaseConfig);
       auth = getAuth(app);
+
+      // Pre-configure local persistence immediately upon client load
+      ensureAuthPersistence(auth);
 
       // Initialize Firestore with Offline Persistence & Multi-Tab Synchronization
       try {
@@ -98,7 +154,7 @@ if (typeof window !== "undefined") {
         db = getFirestore(app);
       }
     } catch (error) {
-      console.error("[Firebase Initialization Error] Failed to initialize Firebase app:", error);
+      console.error("[auth] Failed to initialize Firebase app:", error);
     }
   }
 }

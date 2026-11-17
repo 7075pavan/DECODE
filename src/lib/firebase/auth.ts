@@ -12,7 +12,13 @@ import {
   UserCredential,
 } from "firebase/auth";
 import { doc, getDoc, setDoc } from "firebase/firestore";
-import { auth, db, isFirebaseConfigured, validateFirebaseConfig } from "./client";
+import {
+  auth,
+  db,
+  isFirebaseConfigured,
+  validateFirebaseConfig,
+  ensureAuthPersistence,
+} from "./client";
 import { UserProfile } from "../../types";
 import { getRankInfo } from "../scoring/scoringEngine";
 
@@ -49,13 +55,21 @@ export function formatFirebaseAuthError(error: any): FormattedAuthError {
   let plainMessage = "Sign-in failed. Please try again.";
 
   switch (code) {
+    case "auth/timeout":
+      plainMessage =
+        "Sign-in did not complete. If you are on Safari, try Chrome, or tap Try again.";
+      break;
+    case "auth/operation-not-supported-in-this-environment":
+      plainMessage =
+        "Popup sign-in is not supported in this browser environment. Falling back to redirect...";
+      break;
     case "auth/unauthorized-domain":
       plainMessage =
         "This domain is not authorized in Firebase Console. Go to Firebase Console > Authentication > Settings > Authorized domains and add this domain (e.g. decode-iota-one.vercel.app).";
       break;
     case "auth/popup-blocked":
       plainMessage =
-        "The authentication popup was blocked by your browser. Please allow popups or use redirect sign-in.";
+        "The authentication popup was blocked by your browser. Please allow popups for this site or tap Try again.";
       break;
     case "auth/popup-closed-by-user":
       plainMessage =
@@ -129,6 +143,7 @@ function createInitialProfile(
  * Fetches existing user profile from Firestore or initializes a new record
  */
 export async function fetchOrCreateUserProfile(user: FirebaseUser): Promise<UserProfile> {
+  console.log("[auth] fetchOrCreateUserProfile for UID:", user.uid);
   if (isFirebaseConfigured && db) {
     try {
       const userDocRef = doc(db, "users", user.uid);
@@ -160,10 +175,11 @@ export async function fetchOrCreateUserProfile(user: FirebaseUser): Promise<User
           earnedBadges: data.earnedBadges || [],
         };
         await setDoc(userDocRef, { lastActiveAt: new Date().toISOString() }, { merge: true });
+        console.log("[auth] Existing profile loaded for UID:", user.uid);
         return profile;
       }
     } catch (err) {
-      console.warn("[Auth] Failed to read user doc from Firestore:", err);
+      console.warn("[auth] Failed to read user doc from Firestore:", err);
     }
   }
 
@@ -179,8 +195,9 @@ export async function fetchOrCreateUserProfile(user: FirebaseUser): Promise<User
     try {
       const userDocRef = doc(db, "users", user.uid);
       await setDoc(userDocRef, newProfile, { merge: true });
+      console.log("[auth] New profile stored in Firestore for UID:", user.uid);
     } catch (err) {
-      console.warn("[Auth] Failed to write initial user doc to Firestore:", err);
+      console.warn("[auth] Failed to write initial user doc to Firestore:", err);
     }
   }
 
@@ -195,6 +212,7 @@ export async function mergeGuestProgressIntoUser(
   guestProfile: UserProfile | null
 ): Promise<UserProfile> {
   const googleUid = googleUser.uid;
+  console.log("[auth] Merging guest progress into Google user UID:", googleUid);
   let existingGoogleData: any = null;
 
   if (isFirebaseConfigured && db) {
@@ -205,7 +223,7 @@ export async function mergeGuestProgressIntoUser(
         existingGoogleData = userDocSnap.data();
       }
     } catch (err) {
-      console.warn("[Auth] Failed to fetch Google user data for merge:", err);
+      console.warn("[auth] Failed to fetch Google user data for merge:", err);
     }
   }
 
@@ -270,8 +288,9 @@ export async function mergeGuestProgressIntoUser(
     try {
       const userDocRef = doc(db, "users", googleUid);
       await setDoc(userDocRef, mergedProfile, { merge: true });
+      console.log("[auth] Merged profile persisted to Firestore for UID:", googleUid);
     } catch (err) {
-      console.warn("[Auth] Failed to persist merged profile to Firestore:", err);
+      console.warn("[auth] Failed to persist merged profile to Firestore:", err);
     }
   }
 
@@ -282,20 +301,24 @@ export async function mergeGuestProgressIntoUser(
  * Initiates guest mode ONLY when the user explicitly taps "Continue as Guest"
  */
 export async function loginAsGuest(): Promise<UserProfile> {
+  console.log("[auth] loginAsGuest invoked");
   if (isFirebaseConfigured && auth) {
+    await ensureAuthPersistence(auth);
     const cred = await signInAnonymously(auth);
+    console.log("[auth] Anonymous user signed in with UID:", cred.user.uid);
     const profile = createInitialProfile(cred.user.uid, "Guest Learner", true, null);
     if (db) {
       try {
         await setDoc(doc(db, "users", cred.user.uid), profile, { merge: true });
       } catch (err) {
-        console.warn("[Auth] Failed to store guest profile in Firestore:", err);
+        console.warn("[auth] Failed to store guest profile in Firestore:", err);
       }
     }
     return profile;
   }
 
   // Local fallback if running in offline dev mode without Firebase
+  console.log("[auth] Offline local mock guest profile created");
   const mockUid = "guest_" + Math.random().toString(36).substring(2, 9);
   return createInitialProfile(mockUid, "Guest Learner", true, null);
 }
@@ -307,47 +330,38 @@ export type GoogleLoginResult = {
 
 /**
  * Authenticates with Google.
- * On mobile: uses signInWithRedirect / linkWithRedirect.
- * On desktop: uses signInWithPopup and falls back to redirect if popup is blocked.
- * If user is already a guest, links the account or merges progress if Google account already exists.
- * NEVER silently falls back to guest mode.
+ * POPUP FIRST for both Desktop and Mobile:
+ * Calls signInWithPopup (or linkWithPopup) directly inside the click event
+ * without any preceding await, ensuring Safari user-gesture tokens remain intact.
+ * Falls back to redirect ONLY when the popup is blocked or unsupported.
  */
-export async function loginWithGoogle(guestProfile?: UserProfile | null): Promise<GoogleLoginResult> {
+export async function loginWithGoogle(
+  guestProfile?: UserProfile | null,
+  onRedirectFallback?: (reason: string) => void
+): Promise<GoogleLoginResult> {
   const envCheck = validateFirebaseConfig();
   if (!envCheck.isConfigured || !auth) {
     const error: any = new Error(envCheck.errorMessage || "Firebase configuration missing.");
     error.code = "auth/missing-config";
-    console.error("[DECODE Auth Error] Firebase is not properly configured:", error);
+    console.error("[auth] Firebase configuration missing:", error);
     throw error;
   }
 
   const isCurrentGuest = Boolean(auth.currentUser && auth.currentUser.isAnonymous);
-  const isMobile = isMobileBrowser();
 
-  // Scenario 1: User is already an anonymous Firebase guest
+  // Scenario 1: User is already an anonymous Firebase guest -> Link with popup first
   if (isCurrentGuest && auth.currentUser) {
-    if (isMobile) {
-      console.log("[Auth] Mobile browser detected. Linking guest account via linkWithRedirect...");
-      await linkWithRedirect(auth.currentUser, googleProvider);
-      return { redirectStarted: true };
-    }
-
+    console.log("[auth] Calling linkWithPopup directly as first action...");
     try {
-      console.log("[Auth] Desktop detected. Linking guest account via linkWithPopup...");
       const cred = await linkWithPopup(auth.currentUser, googleProvider);
+      console.log("[auth] linkWithPopup succeeded for UID:", cred.user.uid);
       const profile = await fetchOrCreateUserProfile(cred.user);
       return { profile };
     } catch (popupErr: any) {
-      console.warn("[Auth] linkWithPopup encountered an error:", popupErr);
-
-      if (popupErr?.code === "auth/popup-blocked") {
-        console.log("[Auth] Popup blocked on desktop, falling back to linkWithRedirect...");
-        await linkWithRedirect(auth.currentUser, googleProvider);
-        return { redirectStarted: true };
-      }
+      console.warn("[auth] linkWithPopup caught error:", popupErr?.code || popupErr);
 
       if (popupErr?.code === "auth/credential-already-in-use") {
-        console.log("[Auth] Google account already exists. Signing in and merging guest progress...");
+        console.log("[auth] Google account already exists. Signing in and merging guest progress...");
         const credential = GoogleAuthProvider.credentialFromError(popupErr);
         let googleCred: UserCredential;
         if (credential) {
@@ -359,38 +373,51 @@ export async function loginWithGoogle(guestProfile?: UserProfile | null): Promis
         return { profile };
       }
 
-      console.error("[DECODE Auth Error] linkWithPopup failed:", popupErr);
+      if (
+        popupErr?.code === "auth/popup-blocked" ||
+        popupErr?.code === "auth/operation-not-supported-in-this-environment"
+      ) {
+        console.log("[auth] Popup was blocked or unsupported; falling back to linkWithRedirect...");
+        if (onRedirectFallback) {
+          onRedirectFallback("Popup was blocked by your browser. Redirecting to Google...");
+        }
+        await linkWithRedirect(auth.currentUser, googleProvider);
+        return { redirectStarted: true };
+      }
+
+      console.error("[auth] linkWithPopup failed:", popupErr);
       throw popupErr;
     }
   }
 
-  // Scenario 2: Standard Google sign-in (not currently an anonymous Firebase user)
-  if (isMobile) {
-    console.log("[Auth] Mobile browser detected. Signing in via signInWithRedirect...");
-    await signInWithRedirect(auth, googleProvider);
-    return { redirectStarted: true };
-  }
-
+  // Scenario 2: Standard Google sign-in -> signInWithPopup directly as first action
+  console.log("[auth] Calling signInWithPopup directly as first action...");
   try {
-    console.log("[Auth] Desktop detected. Signing in via signInWithPopup...");
     const cred = await signInWithPopup(auth, googleProvider);
+    console.log("[auth] signInWithPopup succeeded for UID:", cred.user.uid);
     if (guestProfile) {
-      console.log("[Auth] Merging local guest progress into signed-in Google account...");
+      console.log("[auth] Merging guest profile into signed in user...");
       const profile = await mergeGuestProgressIntoUser(cred.user, guestProfile);
       return { profile };
     }
     const profile = await fetchOrCreateUserProfile(cred.user);
     return { profile };
   } catch (popupErr: any) {
-    console.warn("[Auth] signInWithPopup encountered an error:", popupErr);
+    console.warn("[auth] signInWithPopup caught error:", popupErr?.code || popupErr);
 
-    if (popupErr?.code === "auth/popup-blocked") {
-      console.log("[Auth] Popup blocked on desktop, falling back to signInWithRedirect...");
+    if (
+      popupErr?.code === "auth/popup-blocked" ||
+      popupErr?.code === "auth/operation-not-supported-in-this-environment"
+    ) {
+      console.log("[auth] Popup blocked or unsupported; falling back to signInWithRedirect...");
+      if (onRedirectFallback) {
+        onRedirectFallback("Popup was blocked by your browser. Redirecting to Google...");
+      }
       await signInWithRedirect(auth, googleProvider);
       return { redirectStarted: true };
     }
 
-    console.error("[DECODE Auth Error] signInWithPopup failed:", popupErr);
+    console.error("[auth] signInWithPopup failed:", popupErr);
     throw popupErr;
   }
 }
@@ -405,24 +432,27 @@ export async function handleRedirectResult(guestProfile?: UserProfile | null): P
     return null;
   }
 
+  console.log("[auth] Awaiting getRedirectResult(auth)...");
   try {
     const result = await getRedirectResult(auth);
+    console.log("[auth] getRedirectResult returned:", result ? `UID: ${result.user?.uid}` : "null");
+
     if (!result || !result.user) {
       return null;
     }
 
-    console.log("[Auth] getRedirectResult completed successfully for UID:", result.user.uid);
     if (guestProfile) {
+      console.log("[auth] Redirect result: merging guest profile...");
       return await mergeGuestProgressIntoUser(result.user, guestProfile);
     }
     return await fetchOrCreateUserProfile(result.user);
   } catch (err: any) {
-    console.error("[DECODE Auth Error] Redirect authentication failed:", err);
+    console.error("[auth] getRedirectResult error encountered:", err);
 
     if (err?.code === "auth/credential-already-in-use") {
       const credential = GoogleAuthProvider.credentialFromError(err);
       if (credential) {
-        console.log("[Auth] Credential already in use from redirect. Signing in with credential...");
+        console.log("[auth] Redirect credential already in use. Signing in with credential...");
         const userCred = await signInWithCredential(auth, credential);
         return await mergeGuestProgressIntoUser(userCred.user, guestProfile || null);
       }
@@ -436,30 +466,33 @@ export async function handleRedirectResult(guestProfile?: UserProfile | null): P
  * Links an active guest session to Google from Settings
  */
 export async function linkGuestWithGoogle(
-  currentUserProfile: UserProfile
+  currentUserProfile: UserProfile,
+  onRedirectFallback?: (reason: string) => void
 ): Promise<GoogleLoginResult> {
   const envCheck = validateFirebaseConfig();
   if (!envCheck.isConfigured || !auth) {
     const error: any = new Error(envCheck.errorMessage || "Firebase configuration missing.");
     error.code = "auth/missing-config";
-    console.error("[DECODE Auth Error] Cannot link account:", error);
+    console.error("[auth] Cannot link account:", error);
     throw error;
   }
 
-  const isMobile = isMobileBrowser();
-
   if (auth.currentUser) {
-    if (isMobile) {
-      await linkWithRedirect(auth.currentUser, googleProvider);
-      return { redirectStarted: true };
-    }
-
+    console.log("[auth] Calling linkWithPopup directly from settings...");
     try {
       const cred = await linkWithPopup(auth.currentUser, googleProvider);
       const profile = await mergeGuestProgressIntoUser(cred.user, currentUserProfile);
       return { profile };
     } catch (popupErr: any) {
-      if (popupErr?.code === "auth/popup-blocked") {
+      console.warn("[auth] Settings linkWithPopup caught error:", popupErr?.code || popupErr);
+      if (
+        popupErr?.code === "auth/popup-blocked" ||
+        popupErr?.code === "auth/operation-not-supported-in-this-environment"
+      ) {
+        console.log("[auth] Popup blocked in settings; falling back to linkWithRedirect...");
+        if (onRedirectFallback) {
+          onRedirectFallback("Popup was blocked by your browser. Redirecting to Google...");
+        }
         await linkWithRedirect(auth.currentUser, googleProvider);
         return { redirectStarted: true };
       }
@@ -476,7 +509,7 @@ export async function linkGuestWithGoogle(
         return { profile };
       }
 
-      console.error("[DECODE Auth Error] linkGuestWithGoogle failed:", popupErr);
+      console.error("[auth] Settings linkWithPopup failed:", popupErr);
       throw popupErr;
     }
   }
@@ -487,6 +520,7 @@ export async function linkGuestWithGoogle(
 }
 
 export async function logout(): Promise<void> {
+  console.log("[auth] Signing out user...");
   if (isFirebaseConfigured && auth) {
     await signOut(auth);
   }

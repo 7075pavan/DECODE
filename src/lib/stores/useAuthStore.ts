@@ -22,8 +22,8 @@ interface AuthState {
   levelUpEvent: LevelUpEvent | null;
 
   signInGuest: () => Promise<void>;
-  signInGoogle: () => Promise<"REDIRECT_STARTED" | void>;
-  linkToGoogle: () => Promise<"REDIRECT_STARTED" | void>;
+  signInGoogle: (onRedirectFallback?: (reason: string) => void) => Promise<"REDIRECT_STARTED" | void>;
+  linkToGoogle: (onRedirectFallback?: (reason: string) => void) => Promise<"REDIRECT_STARTED" | void>;
   handleRedirectAuth: () => Promise<UserProfile | null>;
   signOut: () => Promise<void>;
   setDailyGoal: (minutes: 5 | 10 | 15) => void;
@@ -58,11 +58,11 @@ export const useAuthStore = create<AuthState>()(
         }
       },
 
-      signInGoogle: async () => {
+      signInGoogle: async (onRedirectFallback) => {
         set({ isLoading: true });
         try {
           const currentGuest = get().user?.isAnonymous ? get().user : null;
-          const result = await loginWithGoogle(currentGuest);
+          const result = await loginWithGoogle(currentGuest, onRedirectFallback);
           if (result.redirectStarted) {
             return "REDIRECT_STARTED";
           }
@@ -79,12 +79,12 @@ export const useAuthStore = create<AuthState>()(
         }
       },
 
-      linkToGoogle: async () => {
+      linkToGoogle: async (onRedirectFallback) => {
         const currentUser = get().user;
         if (!currentUser) return;
         set({ isLoading: true });
         try {
-          const result = await linkGuestWithGoogle(currentUser);
+          const result = await linkGuestWithGoogle(currentUser, onRedirectFallback);
           if (result.redirectStarted) {
             return "REDIRECT_STARTED";
           }
