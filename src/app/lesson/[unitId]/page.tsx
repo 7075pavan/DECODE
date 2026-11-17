@@ -167,7 +167,7 @@ export default function LessonUnitPage() {
             <span className="material-symbols-outlined text-[18px]">close</span>
             <span className="hidden sm:inline">Exit lesson</span>
           </button>
-          <span className="font-mono text-[13px] text-[#22D3EE] font-semibold truncate max-w-[200px] sm:max-w-none">
+          <span className="font-mono text-[13px] text-[#22D3EE] font-semibold text-center">
             {unitData.title}
           </span>
           <div className="w-10" />

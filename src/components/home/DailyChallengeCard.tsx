@@ -100,7 +100,7 @@ export function DailyChallengeCard() {
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
           <span className="w-2.5 h-2.5 rounded-full bg-[#22D3EE] animate-pulse" />
-          <span className="text-[12px] font-mono text-[#22D3EE] font-bold tracking-wider uppercase">
+          <span className="text-[13px] font-mono text-[#22D3EE] font-bold tracking-wider uppercase">
             Daily Forensic Challenge
           </span>
           <Chip variant="amber" size="sm">
@@ -108,7 +108,7 @@ export function DailyChallengeCard() {
           </Chip>
         </div>
 
-        <div className="flex items-center gap-1.5 text-[12px] font-mono text-[#94A3B8]">
+        <div className="flex items-center gap-1.5 text-[13px] font-mono text-[#94A3B8]">
           <span className="material-symbols-outlined text-[16px]">timer</span>
           <span>Resets in {timeLeft}</span>
         </div>
@@ -139,7 +139,7 @@ export function DailyChallengeCard() {
                   }`}
                 >
                   <span
-                    className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-[12px] font-mono font-bold mt-0.5 ${
+                    className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-[13px] font-mono font-bold mt-0.5 ${
                       isSelected
                         ? "bg-[#22D3EE] text-[#0B0F1A]"
                         : "bg-[#0B0F1A] border border-[#263047] text-[#94A3B8]"
@@ -202,7 +202,7 @@ export function DailyChallengeCard() {
             {feedback?.explanation}
           </p>
 
-          <span className="text-[12px] font-mono text-[#22D3EE] text-center pt-1">
+          <span className="text-[13px] font-mono text-[#22D3EE] text-center pt-1">
             Challenge solved for today. Come back tomorrow for the next diagnostic.
           </span>
         </div>

@@ -37,7 +37,7 @@ export const TabBar: React.FC = () => {
                   {tab.icon}
                 </span>
                 {tab.badge !== undefined && tab.badge > 0 && (
-                  <span className="absolute -top-1 -right-2 bg-[#22D3EE] text-[#0B0F1A] text-[11px] font-bold rounded-full h-4 min-w-[16px] px-1 flex items-center justify-center">
+                  <span className="absolute -top-1 -right-2 bg-[#22D3EE] text-[#0B0F1A] text-[13px] font-bold rounded-full h-4 min-w-[16px] px-1 flex items-center justify-center">
                     {tab.badge}
                   </span>
                 )}

@@ -73,7 +73,7 @@ export function SkillRadarChart({ completedUnits = [], totalXP = 0 }: SkillRadar
             Mastery distribution across all 5 cognitive disciplines.
           </span>
         </div>
-        <span className="text-[12px] font-mono text-[#22D3EE] font-bold">
+        <span className="text-[13px] font-mono text-[#22D3EE] font-bold">
           5 Pillars
         </span>
       </div>

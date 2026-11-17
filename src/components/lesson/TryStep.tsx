@@ -180,7 +180,7 @@ export const TryStep: React.FC<TryStepProps> = ({ tryData, onComplete, onExit })
           <span className="text-[14px] font-medium text-[#94A3B8] font-body">
             Question {scenarioIndex + 1} of {scenarios.length} · {currentSubStep.stepLabel}
           </span>
-          <span className="text-[12px] font-mono text-[#22D3EE]">
+          <span className="text-[13px] font-mono text-[#22D3EE]">
             Case: {currentScenario.character}
           </span>
         </div>

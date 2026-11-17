@@ -170,7 +170,7 @@ export default function PathDetailPage() {
 
                     <div className="flex flex-col">
                       <div className="flex items-center gap-2">
-                        <span className="text-[12px] font-mono text-[#94A3B8]">
+                        <span className="text-[13px] font-mono text-[#94A3B8]">
                           Unit {unit.unitNumber}
                         </span>
                         {unit.isMasteryShield && (
@@ -185,7 +185,7 @@ export default function PathDetailPage() {
                       <p className="text-[13px] text-[#94A3B8] mt-1 leading-relaxed">
                         {unit.description}
                       </p>
-                      <span className="text-[12px] font-mono text-[#22D3EE] mt-2">
+                      <span className="text-[13px] font-mono text-[#22D3EE] mt-2">
                         {unit.estimatedMinutes} min · {unit.xpReward} XP
                       </span>
                     </div>
@@ -201,7 +201,7 @@ export default function PathDetailPage() {
                         {isCompleted ? "Review" : "Start"}
                       </Button>
                     ) : (
-                      <span className="text-[12px] font-mono text-[#64748B] px-3 py-1.5 rounded-lg bg-[#1A2233] border border-[#263047]">
+                      <span className="text-[13px] font-mono text-[#64748B] px-3 py-1.5 rounded-lg bg-[#1A2233] border border-[#263047]">
                         {unit.isPlayable ? "Locked" : "Coming Soon"}
                       </span>
                     )}

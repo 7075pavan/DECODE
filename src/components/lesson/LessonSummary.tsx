@@ -50,7 +50,7 @@ export const LessonSummary: React.FC<LessonSummaryProps> = ({
           <span className="text-[20px] font-bold text-[#F59E0B] font-mono mt-1">
             +{stats.totalXPEarned}
           </span>
-          <span className="text-[12px] text-[#94A3B8] font-mono mt-0.5">Total XP</span>
+          <span className="text-[13px] text-[#94A3B8] font-mono mt-0.5">Total XP</span>
         </Card>
 
         {/* Accuracy */}
@@ -59,7 +59,7 @@ export const LessonSummary: React.FC<LessonSummaryProps> = ({
           <span className="text-[20px] font-bold text-[#34D399] font-mono mt-1">
             {stats.accuracy}%
           </span>
-          <span className="text-[12px] text-[#94A3B8] font-mono mt-0.5">Accuracy</span>
+          <span className="text-[13px] text-[#94A3B8] font-mono mt-0.5">Accuracy</span>
         </Card>
 
         {/* Calibration Match */}
@@ -68,7 +68,7 @@ export const LessonSummary: React.FC<LessonSummaryProps> = ({
           <span className="text-[20px] font-bold text-[#22D3EE] font-mono mt-1">
             {stats.calibrationMatchPercent}%
           </span>
-          <span className="text-[12px] text-[#94A3B8] font-mono mt-0.5">Calibration</span>
+          <span className="text-[13px] text-[#94A3B8] font-mono mt-0.5">Calibration</span>
         </Card>
       </div>
 

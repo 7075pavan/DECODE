@@ -102,7 +102,7 @@ export default function HomePage() {
                 <span className="text-[15px] font-bold text-[#F1F5F9]">
                   {dueReviewCount} Forensic {dueReviewCount === 1 ? "Cue" : "Cues"} Due for Review
                 </span>
-                <span className="bg-[#22D3EE] text-[#0B0F1A] text-[11px] font-mono font-bold px-1.5 py-0.2 rounded-full">
+                <span className="bg-[#22D3EE] text-[#0B0F1A] text-[13px] font-mono font-bold px-1.5 py-0.2 rounded-full">
                   Due Now
                 </span>
               </div>
@@ -220,7 +220,7 @@ export default function HomePage() {
             <span className="text-[20px] font-bold font-mono text-[#F1F5F9] block">
               {freezeTokens} Available
             </span>
-            <span className="text-[12px] text-[#94A3B8] leading-tight block mt-0.5">
+            <span className="text-[13px] text-[#94A3B8] leading-tight block mt-0.5">
               Protects streak on missed days
             </span>
           </div>
@@ -229,7 +229,7 @@ export default function HomePage() {
             type="button"
             disabled={freezeTokens <= 0}
             onClick={handleUseFreeze}
-            className="w-full py-1.5 px-2 rounded-lg bg-[#1A2233] border border-[#263047] hover:border-[#22D3EE]/40 text-[12px] font-mono text-[#22D3EE] disabled:opacity-50 transition-colors cursor-pointer"
+            className="w-full py-1.5 px-2 rounded-lg bg-[#1A2233] border border-[#263047] hover:border-[#22D3EE]/40 text-[13px] font-mono text-[#22D3EE] disabled:opacity-50 transition-colors cursor-pointer"
           >
             {freezeTokens > 0 ? "Use freeze token" : "No freeze left"}
           </button>

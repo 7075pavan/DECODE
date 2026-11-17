@@ -171,7 +171,7 @@ export function BadgesGallery({ earnedBadges = [] }: BadgesGalleryProps) {
               <span className="text-[13px] font-bold text-[#F1F5F9] leading-tight">
                 {badge.title}
               </span>
-              <span className="text-[11px] font-mono text-[#94A3B8] mt-0.5">
+              <span className="text-[13px] font-mono text-[#94A3B8] mt-0.5">
                 {badge.path}
               </span>
             </div>

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Sora, Inter, JetBrains_Mono } from "next/font/google";
 import { PWARegister } from "@/components/pwa/PWARegister";
+import { OfflineBanner } from "@/components/ui/OfflineBanner";
 import "./globals.css";
 
 const sora = Sora({
@@ -65,6 +66,7 @@ export default function RootLayout({
       </head>
       <body className="bg-[#0B0F1A] text-[#F1F5F9] font-body min-h-screen flex flex-col antialiased selection:bg-[#22D3EE]/20 selection:text-[#22D3EE]">
         <PWARegister />
+        <OfflineBanner />
         {children}
       </body>
     </html>

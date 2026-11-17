@@ -125,7 +125,7 @@ export function WindingPath({
                 )}
 
                 {/* Floating Unit Number Pill */}
-                <span className="absolute -bottom-2 px-2 py-0.5 rounded-full bg-[#0B0F1A] border border-[#263047] text-[11px] font-mono text-[#94A3B8]">
+                <span className="absolute -bottom-2 px-2 py-0.5 rounded-full bg-[#0B0F1A] border border-[#263047] text-[13px] font-mono text-[#94A3B8]">
                   U{unit.unitNumber}
                 </span>
               </button>
@@ -135,11 +135,11 @@ export function WindingPath({
                 <span className="text-[14px] font-bold text-[#F1F5F9] leading-tight">
                   {unit.title}
                 </span>
-                <span className="text-[12px] text-[#94A3B8] font-mono mt-0.5">
+                <span className="text-[13px] text-[#94A3B8] font-mono mt-0.5">
                   {unit.estimatedMinutes} min · {unit.xpReward} XP
                 </span>
                 {isShield && (
-                  <span className="mt-1 px-2 py-0.5 rounded text-[10px] font-mono font-bold tracking-wider uppercase bg-[#F59E0B]/10 text-[#F59E0B] border border-[#F59E0B]/30">
+                  <span className="mt-1 px-2 py-0.5 rounded text-[13px] font-mono font-bold tracking-wider uppercase bg-[#F59E0B]/10 text-[#F59E0B] border border-[#F59E0B]/30">
                     Mastery Shield
                   </span>
                 )}
@@ -252,7 +252,7 @@ export function WindingPath({
                           {item.name}
                         </span>
                       </div>
-                      <span className="text-[12px] text-[#94A3B8] truncate">
+                      <span className="text-[13px] text-[#94A3B8] leading-relaxed">
                         {item.desc}
                       </span>
                     </div>

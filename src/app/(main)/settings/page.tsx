@@ -162,7 +162,7 @@ export default function SettingsPage() {
               }`}
             >
               <span className="font-mono text-[16px] block">{mins} min</span>
-              <span className="text-[11px] font-mono text-[#94A3B8] block mt-0.5">
+              <span className="text-[13px] font-mono text-[#94A3B8] block mt-0.5">
                 {mins === 5 ? "Casual" : mins === 10 ? "Standard" : "Intense"}
               </span>
             </button>
@@ -191,7 +191,7 @@ export default function SettingsPage() {
                 <span className="text-[14px] font-bold text-[#F1F5F9] block">
                   Sound Effects
                 </span>
-                <span className="text-[12px] text-[#94A3B8]">
+                <span className="text-[13px] text-[#94A3B8]">
                   Play subtle biometric clicks and confirmation tones.
                 </span>
               </div>
@@ -220,7 +220,7 @@ export default function SettingsPage() {
                 <span className="text-[14px] font-bold text-[#F1F5F9] block">
                   Haptic Feedback
                 </span>
-                <span className="text-[12px] text-[#94A3B8]">
+                <span className="text-[13px] text-[#94A3B8]">
                   Trigger micro-vibrations on slider adjustments and button taps.
                 </span>
               </div>
@@ -261,21 +261,21 @@ export default function SettingsPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[13px] font-mono">
           <div className="p-3 rounded-xl bg-[#1A2233] border border-[#263047]">
-            <span className="text-[#94A3B8] block text-[11px]">ACTIVE DEVICE</span>
-            <span className="text-[#F1F5F9] font-bold mt-0.5 block truncate">
+            <span className="text-[#94A3B8] block text-[13px]">ACTIVE DEVICE</span>
+            <span className="text-[#F1F5F9] font-bold mt-0.5 block">
               {device.deviceName}
             </span>
-            <span className="text-[#64748B] text-[10px] truncate block">
+            <span className="text-[#64748B] text-[13px] break-all block">
               ID: {device.deviceId}
             </span>
           </div>
 
           <div className="p-3 rounded-xl bg-[#1A2233] border border-[#263047]">
-            <span className="text-[#94A3B8] block text-[11px]">LAST SYNC STATUS</span>
+            <span className="text-[#94A3B8] block text-[13px]">LAST SYNC STATUS</span>
             <span className="text-[#22D3EE] font-bold mt-0.5 block">
               {lastSync}
             </span>
-            <span className="text-[#64748B] text-[10px] block">
+            <span className="text-[#64748B] text-[13px] block">
               Protocol: Firestore onSnapshot
             </span>
           </div>
@@ -352,7 +352,7 @@ export default function SettingsPage() {
                 <span className="text-[14px] font-bold text-[#F1F5F9] block">
                   Google Account Connected
                 </span>
-                <span className="text-[12px] font-mono text-[#94A3B8]">
+                <span className="text-[13px] font-mono text-[#94A3B8]">
                   {user?.email}
                 </span>
               </div>

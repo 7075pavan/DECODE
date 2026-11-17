@@ -240,7 +240,7 @@ export const ProveStep: React.FC<ProveStepProps> = ({ proveData, onPass, onExit 
                 <span className="text-[13px] font-mono text-[#F87171] uppercase tracking-wider font-bold">
                   Weak Concepts Identified ({totalQuestions - correctCount})
                 </span>
-                <span className="text-[12px] font-mono text-[#94A3B8]">
+                <span className="text-[13px] font-mono text-[#94A3B8]">
                   Queued in Leitner Review
                 </span>
               </div>

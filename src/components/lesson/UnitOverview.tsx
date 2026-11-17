@@ -80,7 +80,7 @@ export const UnitOverview: React.FC<UnitOverviewProps> = ({ onStart, unitData })
                 <span className="text-[14px] font-semibold text-[#F1F5F9] leading-tight">
                   Step {s.num}: {s.name}
                 </span>
-                <span className="text-[12px] text-[#94A3B8] leading-tight mt-0.5">
+                <span className="text-[13px] text-[#94A3B8] leading-tight mt-0.5">
                   {s.desc}
                 </span>
               </div>

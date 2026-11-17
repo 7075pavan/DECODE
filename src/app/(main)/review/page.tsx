@@ -59,7 +59,7 @@ export default function ReviewPage() {
           <span className="text-[18px] font-bold font-mono text-[#F87171]">
             {box1.length}
           </span>
-          <span className="text-[12px] font-mono text-[#94A3B8] mt-0.5">
+          <span className="text-[13px] font-mono text-[#94A3B8] mt-0.5">
             Box 1 (1d)
           </span>
         </div>
@@ -67,7 +67,7 @@ export default function ReviewPage() {
           <span className="text-[18px] font-bold font-mono text-[#F59E0B]">
             {box2.length}
           </span>
-          <span className="text-[12px] font-mono text-[#94A3B8] mt-0.5">
+          <span className="text-[13px] font-mono text-[#94A3B8] mt-0.5">
             Box 2 (3d)
           </span>
         </div>
@@ -75,7 +75,7 @@ export default function ReviewPage() {
           <span className="text-[18px] font-bold font-mono text-[#22D3EE]">
             {box3.length}
           </span>
-          <span className="text-[12px] font-mono text-[#94A3B8] mt-0.5">
+          <span className="text-[13px] font-mono text-[#94A3B8] mt-0.5">
             Box 3 (7d)
           </span>
         </div>
@@ -83,7 +83,7 @@ export default function ReviewPage() {
           <span className="text-[18px] font-bold font-mono text-[#34D399]">
             {box4.length}
           </span>
-          <span className="text-[12px] font-mono text-[#94A3B8] mt-0.5">
+          <span className="text-[13px] font-mono text-[#94A3B8] mt-0.5">
             Mastered
           </span>
         </div>
@@ -116,7 +116,7 @@ export default function ReviewPage() {
                 <span className="text-[13px] font-mono text-[#22D3EE] uppercase tracking-wider font-semibold">
                   {currentItem.conceptTitle}
                 </span>
-                <span className="text-[12px] font-mono text-[#94A3B8]">
+                <span className="text-[13px] font-mono text-[#94A3B8]">
                   Tap card to {isFlipped ? "hide" : "reveal"} answer
                 </span>
               </div>
@@ -181,7 +181,7 @@ export default function ReviewPage() {
           </div>
           <div className="flex flex-col gap-1">
             <h2 className="font-headline text-[22px] font-bold text-[#F1F5F9]">
-              Queue Clear!
+              All caught up
             </h2>
             <p className="text-[15px] text-[#94A3B8] max-w-sm">
               All due concepts have been reviewed. Items will return automatically in 1, 3, or 7 days according to your retention pace.
@@ -220,10 +220,10 @@ export default function ReviewPage() {
               </div>
 
               <div className="flex flex-col items-end flex-shrink-0">
-                <span className="text-[12px] font-mono text-[#22D3EE]">
+                <span className="text-[13px] font-mono text-[#22D3EE]">
                   Next: {item.nextReviewDate}
                 </span>
-                <span className="text-[11px] font-mono text-[#94A3B8] mt-0.5">
+                <span className="text-[13px] font-mono text-[#94A3B8] mt-0.5">
                   {item.intervalDays}d interval
                 </span>
               </div>

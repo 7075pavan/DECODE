@@ -69,7 +69,7 @@ export const Sidebar: React.FC = () => {
                   <span className="text-[15px]">{item.name}</span>
                 </div>
                 {item.badge !== undefined && item.badge > 0 && (
-                  <span className="bg-[#22D3EE] text-[#0B0F1A] text-[11px] font-bold rounded-full h-5 min-w-[20px] px-1.5 flex items-center justify-center">
+                  <span className="bg-[#22D3EE] text-[#0B0F1A] text-[13px] font-bold rounded-full h-5 min-w-[20px] px-1.5 flex items-center justify-center">
                     {item.badge}
                   </span>
                 )}
@@ -125,7 +125,7 @@ export const Sidebar: React.FC = () => {
                 {user?.currentRank || "Rookie"}
               </span>
               {user?.isAnonymous && (
-                <span className="text-[11px] bg-[#263047] text-[#94A3B8] px-1.5 py-0.5 rounded font-mono">
+                <span className="text-[13px] bg-[#263047] text-[#94A3B8] px-1.5 py-0.5 rounded font-mono">
                   Guest
                 </span>
               )}

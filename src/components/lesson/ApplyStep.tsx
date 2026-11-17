@@ -137,7 +137,7 @@ export const ApplyStep: React.FC<ApplyStepProps> = ({
               placeholder="e.g. During my call with our developer, his normal voice was energetic and warm. When I brought up the Monday release date, his voice dropped, he paused for 4 seconds, and cleared his throat twice..."
               className="w-full rounded-xl bg-[#121826] border border-[#263047] focus:border-[#22D3EE] focus:ring-1 focus:ring-[#22D3EE] text-[#F1F5F9] p-4 text-[15px] leading-relaxed outline-none transition-all placeholder:text-[#859397]/60"
             />
-            <div className="flex items-center justify-between text-[12px] font-mono text-[#94A3B8]">
+            <div className="flex items-center justify-between text-[13px] font-mono text-[#94A3B8]">
               <span>Minimum 15 characters required</span>
               <span className={isValid ? "text-[#34D399]" : "text-[#94A3B8]"}>
                 {reflection.trim().length} chars
@@ -190,14 +190,14 @@ export const ApplyStep: React.FC<ApplyStepProps> = ({
                 <span className="text-[20px] font-bold text-[#F59E0B] font-mono leading-tight">
                   +60 XP
                 </span>
-                <span className="text-[12px] text-[#94A3B8] font-mono">Total Award</span>
+                <span className="text-[13px] text-[#94A3B8] font-mono">Total Award</span>
               </div>
               <div className="flex-1 flex flex-col items-center bg-[#121826] border border-[#263047] p-3 rounded-xl">
                 <span className="text-[20px] font-bold text-[#F59E0B] font-mono leading-tight flex items-center gap-1">
                   <span className="material-symbols-outlined text-[18px]">local_fire_department</span>
                   +1
                 </span>
-                <span className="text-[12px] text-[#94A3B8] font-mono">Streak Active</span>
+                <span className="text-[13px] text-[#94A3B8] font-mono">Streak Active</span>
               </div>
             </div>
           </Card>

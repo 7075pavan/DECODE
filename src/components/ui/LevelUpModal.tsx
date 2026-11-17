@@ -59,7 +59,7 @@ export const LevelUpModal: React.FC = () => {
 
         {/* Text Details */}
         <div className="flex flex-col gap-1 relative z-10">
-          <span className="text-[12px] font-mono font-bold text-[#F59E0B] uppercase tracking-widest">
+          <span className="text-[13px] font-mono font-bold text-[#F59E0B] uppercase tracking-widest">
             Rank Promotion
           </span>
           <h2 className="font-headline text-[26px] font-bold text-[#F1F5F9]">
@@ -74,7 +74,7 @@ export const LevelUpModal: React.FC = () => {
         </div>
 
         {/* Previous Rank Tag */}
-        <div className="flex items-center gap-2 bg-[#121826] border border-[#263047] px-3 py-1.5 rounded-full text-[12px] font-mono text-[#94A3B8] relative z-10">
+        <div className="flex items-center gap-2 bg-[#121826] border border-[#263047] px-3 py-1.5 rounded-full text-[13px] font-mono text-[#94A3B8] relative z-10">
           <span>{levelUpEvent.oldRank}</span>
           <span className="material-symbols-outlined text-[14px] text-[#22D3EE]">
             arrow_forward

@@ -35,7 +35,7 @@ export function CalibrationChart() {
             Confidence wagers vs observed accuracy (Brier score alignment).
           </span>
         </div>
-        <div className="flex items-center gap-1.5 text-[12px] font-mono text-[#10B981]">
+        <div className="flex items-center gap-1.5 text-[13px] font-mono text-[#10B981]">
           <span className="w-2 h-2 rounded-full bg-[#10B981]" />
           <span>Well Calibrated</span>
         </div>
@@ -96,7 +96,7 @@ export function CalibrationChart() {
         </ResponsiveContainer>
       </div>
 
-      <div className="mt-2 p-3 rounded-xl bg-[#0B0F1A] border border-[#263047] flex items-center justify-between text-[12px] font-mono text-[#94A3B8]">
+      <div className="mt-2 p-3 rounded-xl bg-[#0B0F1A] border border-[#263047] flex items-center justify-between text-[13px] font-mono text-[#94A3B8]">
         <span>Brier Score: <strong className="text-[#22D3EE]">0.12 (Elite)</strong></span>
         <span>Ideal diagonal match: <strong className="text-[#10B981]">94%</strong></span>
       </div>

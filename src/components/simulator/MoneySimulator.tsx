@@ -241,7 +241,7 @@ export function MoneySimulator() {
                       <h3 className="font-headline text-[15px] font-bold text-[#F1F5F9]">
                         {choice.title}
                       </h3>
-                      <span className="text-[12px] font-mono text-[#94A3B8]">
+                      <span className="text-[13px] font-mono text-[#94A3B8]">
                         {choice.subtitle}
                       </span>
                     </div>
@@ -262,7 +262,7 @@ export function MoneySimulator() {
 
               {/* Slider Controller */}
               <div className="mt-4 pt-3 border-t border-[#263047] flex flex-col gap-1.5">
-                <div className="flex justify-between text-[12px] font-mono text-[#94A3B8]">
+                <div className="flex justify-between text-[13px] font-mono text-[#94A3B8]">
                   <span>Allocation</span>
                   <span className="text-[#F1F5F9] font-bold">
                     ₹{currentAmount.toLocaleString("en-IN")}/mo
@@ -298,7 +298,7 @@ export function MoneySimulator() {
           </div>
 
           <div className="flex items-center gap-3">
-            <div className="flex items-center gap-1.5 text-[12px] font-mono text-[#22D3EE]">
+            <div className="flex items-center gap-1.5 text-[13px] font-mono text-[#22D3EE]">
               <span className="w-2.5 h-2.5 rounded-full bg-[#22D3EE]" />
               <span>Projected Net Worth</span>
             </div>
@@ -316,7 +316,7 @@ export function MoneySimulator() {
               key={item.label}
               className="p-3 rounded-xl bg-[#0B0F1A] border border-[#263047] text-center"
             >
-              <span className="text-[12px] font-mono text-[#94A3B8] block">
+              <span className="text-[13px] font-mono text-[#94A3B8] block">
                 {item.label}
               </span>
               <span className="text-[16px] md:text-[20px] font-mono font-bold text-[#22D3EE] mt-0.5 block">
@@ -378,7 +378,7 @@ export function MoneySimulator() {
             <span className="material-symbols-outlined text-[18px]">lightbulb</span>
           </div>
           <div className="flex flex-col">
-            <span className="text-[12px] font-mono font-bold uppercase tracking-wider text-[#F59E0B]">
+            <span className="text-[13px] font-mono font-bold uppercase tracking-wider text-[#F59E0B]">
               Cognitive Financial Insight
             </span>
             <p className="text-[14px] text-[#F1F5F9] mt-1 leading-relaxed font-sans">
@@ -390,7 +390,7 @@ export function MoneySimulator() {
 
       {/* Mandatory Disclaimer Note */}
       <div className="p-3 rounded-xl bg-[#0B0F1A] border border-[#263047] text-center">
-        <span className="text-[12px] font-mono text-[#64748B]">
+        <span className="text-[13px] font-mono text-[#64748B]">
           Note: This interactive model is for educational purposes only and does not constitute financial or investment advice.
         </span>
       </div>
