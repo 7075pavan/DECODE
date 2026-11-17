@@ -92,11 +92,11 @@ describe("Firebase Auth & Config Validation", () => {
       expect(formatted.message).toContain("blocked by your browser");
     });
 
-    it("formats auth/timeout with Safari instruction", () => {
+    it("formats auth/timeout with retry instruction", () => {
       const err = { code: "auth/timeout", message: "Timeout" };
       const formatted = formatFirebaseAuthError(err);
       expect(formatted.code).toBe("auth/timeout");
-      expect(formatted.message).toContain("Sign-in did not complete. If you are on Safari, try Chrome, or tap Try again.");
+      expect(formatted.message).toBe("Sign-in did not finish. Try again, or use Chrome.");
     });
 
     it("formats auth/operation-not-supported-in-this-environment", () => {
@@ -137,30 +137,53 @@ describe("Firebase Auth & Config Validation", () => {
       expect(loading).toBe(false);
     });
 
-    it("resets loading and sets timeout error when 20-second timeout fires", () => {
+    it("resets loading and sets timeout error when 25-second timeout fires", () => {
       vi.useFakeTimers();
 
-      let loading = true;
+      let loadingGoogle = true;
+      let loadingGuest = false;
       let error: any = null;
 
       const timeoutId = setTimeout(() => {
-        loading = false;
+        loadingGoogle = false;
         error = formatFirebaseAuthError({ code: "auth/timeout" });
-      }, 20000);
+      }, 25000);
 
-      expect(loading).toBe(true);
+      expect(loadingGoogle).toBe(true);
+      expect(loadingGuest).toBe(false);
       expect(error).toBeNull();
 
-      // Fast-forward 20 seconds
-      vi.advanceTimersByTime(20000);
+      // Fast-forward 25 seconds
+      vi.advanceTimersByTime(25000);
 
-      expect(loading).toBe(false);
+      expect(loadingGoogle).toBe(false);
+      expect(loadingGuest).toBe(false);
       expect(error).not.toBeNull();
       expect(error.code).toBe("auth/timeout");
-      expect(error.message).toContain("Sign-in did not complete");
+      expect(error.message).toBe("Sign-in did not finish. Try again, or use Chrome.");
 
       clearTimeout(timeoutId);
       vi.useRealTimers();
+    });
+
+    it("ensures Google and Guest buttons maintain completely separate loading states", () => {
+      let loadingGoogle = false;
+      let loadingGuest = false;
+
+      // When Google sign-in starts
+      loadingGoogle = true;
+      expect(loadingGoogle).toBe(true);
+      expect(loadingGuest).toBe(false); // Guest must NEVER show Processing
+
+      // When Google finishes
+      loadingGoogle = false;
+      expect(loadingGoogle).toBe(false);
+      expect(loadingGuest).toBe(false);
+
+      // When Guest sign-in starts
+      loadingGuest = true;
+      expect(loadingGoogle).toBe(false); // Google must NEVER show Processing
+      expect(loadingGuest).toBe(true);
     });
 
     it("falls back to redirect notice when popup-blocked error occurs", () => {

@@ -30,20 +30,17 @@ export interface FirebaseConfigStatus {
 
 /**
  * Determines the authDomain to use.
- * In browser production, uses window.location.host if same-domain auth is enabled (default)
- * to bypass Safari/ITP third-party cookie partitioning.
+ * In the browser, uses window.location.host so requests route to the same domain (bypassing Safari ITP storage partitioning).
+ * Falls back to NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN on the server and on localhost.
  */
 export function getAuthDomain(): string {
   if (typeof window !== "undefined") {
-    const isProduction =
-      window.location.hostname !== "localhost" &&
-      window.location.hostname !== "127.0.0.1";
-    const sameDomainEnv = process.env.NEXT_PUBLIC_USE_SAME_DOMAIN_AUTH;
-    // Default to same-domain auth in production when not explicitly set to "false"
-    const useSameDomain =
-      sameDomainEnv === "true" || (sameDomainEnv !== "false" && isProduction);
+    const isLocalhost =
+      window.location.hostname === "localhost" ||
+      window.location.hostname === "127.0.0.1" ||
+      window.location.hostname.endsWith(".local");
 
-    if (useSameDomain && isProduction) {
+    if (!isLocalhost && window.location.host) {
       return window.location.host;
     }
   }

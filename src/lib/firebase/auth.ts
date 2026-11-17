@@ -57,7 +57,7 @@ export function formatFirebaseAuthError(error: any): FormattedAuthError {
   switch (code) {
     case "auth/timeout":
       plainMessage =
-        "Sign-in did not complete. If you are on Safari, try Chrome, or tap Try again.";
+        "Sign-in did not finish. Try again, or use Chrome.";
       break;
     case "auth/operation-not-supported-in-this-environment":
       plainMessage =
@@ -330,14 +330,14 @@ export type GoogleLoginResult = {
 
 /**
  * Authenticates with Google.
- * POPUP FIRST for both Desktop and Mobile:
- * Calls signInWithPopup (or linkWithPopup) directly inside the click event
- * without any preceding await, ensuring Safari user-gesture tokens remain intact.
- * Falls back to redirect ONLY when the popup is blocked or unsupported.
+ * PRIMARY: Uses signInWithRedirect + getRedirectResult on all browsers (desktop and mobile).
+ * This works reliably across browsers with same-domain proxying (/__/auth/*) and eliminates
+ * Safari ITP cross-domain storage partitioning hangs.
+ * Falls back to signInWithPopup only if signInWithRedirect throws.
  */
 export async function loginWithGoogle(
   guestProfile?: UserProfile | null,
-  onRedirectFallback?: (reason: string) => void
+  onPopupFallback?: (reason: string) => void
 ): Promise<GoogleLoginResult> {
   const envCheck = validateFirebaseConfig();
   if (!envCheck.isConfigured || !auth) {
@@ -347,78 +347,74 @@ export async function loginWithGoogle(
     throw error;
   }
 
+  // Ensure local persistence before any sign-in
+  await ensureAuthPersistence(auth);
+
   const isCurrentGuest = Boolean(auth.currentUser && auth.currentUser.isAnonymous);
 
-  // Scenario 1: User is already an anonymous Firebase guest -> Link with popup first
+  // Scenario 1: User is already an anonymous Firebase guest -> linkWithRedirect as PRIMARY
   if (isCurrentGuest && auth.currentUser) {
-    console.log("[auth] Calling linkWithPopup directly as first action...");
+    console.log("[auth] Active guest user detected. PRIMARY: calling linkWithRedirect...");
     try {
-      const cred = await linkWithPopup(auth.currentUser, googleProvider);
-      console.log("[auth] linkWithPopup succeeded for UID:", cred.user.uid);
-      const profile = await fetchOrCreateUserProfile(cred.user);
-      return { profile };
-    } catch (popupErr: any) {
-      console.warn("[auth] linkWithPopup caught error:", popupErr?.code || popupErr);
+      await linkWithRedirect(auth.currentUser, googleProvider);
+      console.log("[auth] linkWithRedirect initiated, browser redirecting...");
+      return { redirectStarted: true };
+    } catch (redirectErr: any) {
+      console.warn("[auth] linkWithRedirect threw, attempting linkWithPopup fallback:", redirectErr);
+      if (onPopupFallback) {
+        onPopupFallback("Redirect failed. Falling back to popup window...");
+      }
 
-      if (popupErr?.code === "auth/credential-already-in-use") {
-        console.log("[auth] Google account already exists. Signing in and merging guest progress...");
-        const credential = GoogleAuthProvider.credentialFromError(popupErr);
-        let googleCred: UserCredential;
-        if (credential) {
-          googleCred = await signInWithCredential(auth, credential);
-        } else {
-          googleCred = await signInWithPopup(auth, googleProvider);
-        }
-        const profile = await mergeGuestProgressIntoUser(googleCred.user, guestProfile || null);
+      try {
+        const cred = await linkWithPopup(auth.currentUser, googleProvider);
+        console.log("[auth] linkWithPopup succeeded for UID:", cred.user.uid);
+        const profile = await fetchOrCreateUserProfile(cred.user);
         return { profile };
-      }
-
-      if (
-        popupErr?.code === "auth/popup-blocked" ||
-        popupErr?.code === "auth/operation-not-supported-in-this-environment"
-      ) {
-        console.log("[auth] Popup was blocked or unsupported; falling back to linkWithRedirect...");
-        if (onRedirectFallback) {
-          onRedirectFallback("Popup was blocked by your browser. Redirecting to Google...");
+      } catch (popupErr: any) {
+        if (popupErr?.code === "auth/credential-already-in-use") {
+          console.log("[auth] Credential in use. Signing in and merging guest progress...");
+          const credential = GoogleAuthProvider.credentialFromError(popupErr);
+          let googleCred: UserCredential;
+          if (credential) {
+            googleCred = await signInWithCredential(auth, credential);
+          } else {
+            googleCred = await signInWithPopup(auth, googleProvider);
+          }
+          const profile = await mergeGuestProgressIntoUser(googleCred.user, guestProfile || null);
+          return { profile };
         }
-        await linkWithRedirect(auth.currentUser, googleProvider);
-        return { redirectStarted: true };
+        console.error("[auth] Fallback linkWithPopup also failed:", popupErr);
+        throw popupErr;
       }
-
-      console.error("[auth] linkWithPopup failed:", popupErr);
-      throw popupErr;
     }
   }
 
-  // Scenario 2: Standard Google sign-in -> signInWithPopup directly as first action
-  console.log("[auth] Calling signInWithPopup directly as first action...");
+  // Scenario 2: Standard Google sign-in -> signInWithRedirect as PRIMARY on all browsers
+  console.log("[auth] PRIMARY: calling signInWithRedirect on all browsers...");
   try {
-    const cred = await signInWithPopup(auth, googleProvider);
-    console.log("[auth] signInWithPopup succeeded for UID:", cred.user.uid);
-    if (guestProfile) {
-      console.log("[auth] Merging guest profile into signed in user...");
-      const profile = await mergeGuestProgressIntoUser(cred.user, guestProfile);
-      return { profile };
+    await signInWithRedirect(auth, googleProvider);
+    console.log("[auth] signInWithRedirect initiated, browser redirecting...");
+    return { redirectStarted: true };
+  } catch (redirectErr: any) {
+    console.warn("[auth] signInWithRedirect threw, falling back to signInWithPopup:", redirectErr);
+    if (onPopupFallback) {
+      onPopupFallback("Redirect failed. Falling back to popup window...");
     }
-    const profile = await fetchOrCreateUserProfile(cred.user);
-    return { profile };
-  } catch (popupErr: any) {
-    console.warn("[auth] signInWithPopup caught error:", popupErr?.code || popupErr);
 
-    if (
-      popupErr?.code === "auth/popup-blocked" ||
-      popupErr?.code === "auth/operation-not-supported-in-this-environment"
-    ) {
-      console.log("[auth] Popup blocked or unsupported; falling back to signInWithRedirect...");
-      if (onRedirectFallback) {
-        onRedirectFallback("Popup was blocked by your browser. Redirecting to Google...");
+    try {
+      console.log("[auth] Fallback: calling signInWithPopup...");
+      const cred = await signInWithPopup(auth, googleProvider);
+      console.log("[auth] signInWithPopup succeeded for UID:", cred.user.uid);
+      if (guestProfile) {
+        const profile = await mergeGuestProgressIntoUser(cred.user, guestProfile);
+        return { profile };
       }
-      await signInWithRedirect(auth, googleProvider);
-      return { redirectStarted: true };
+      const profile = await fetchOrCreateUserProfile(cred.user);
+      return { profile };
+    } catch (popupErr: any) {
+      console.error("[auth] Fallback signInWithPopup also failed:", popupErr);
+      throw popupErr;
     }
-
-    console.error("[auth] signInWithPopup failed:", popupErr);
-    throw popupErr;
   }
 }
 
@@ -463,11 +459,11 @@ export async function handleRedirectResult(guestProfile?: UserProfile | null): P
 }
 
 /**
- * Links an active guest session to Google from Settings
+ * Links an active guest session to Google from Settings (PRIMARY: linkWithRedirect)
  */
 export async function linkGuestWithGoogle(
   currentUserProfile: UserProfile,
-  onRedirectFallback?: (reason: string) => void
+  onPopupFallback?: (reason: string) => void
 ): Promise<GoogleLoginResult> {
   const envCheck = validateFirebaseConfig();
   if (!envCheck.isConfigured || !auth) {
@@ -477,40 +473,39 @@ export async function linkGuestWithGoogle(
     throw error;
   }
 
+  await ensureAuthPersistence(auth);
+
   if (auth.currentUser) {
-    console.log("[auth] Calling linkWithPopup directly from settings...");
+    console.log("[auth] Settings: PRIMARY linkWithRedirect...");
     try {
-      const cred = await linkWithPopup(auth.currentUser, googleProvider);
-      const profile = await mergeGuestProgressIntoUser(cred.user, currentUserProfile);
-      return { profile };
-    } catch (popupErr: any) {
-      console.warn("[auth] Settings linkWithPopup caught error:", popupErr?.code || popupErr);
-      if (
-        popupErr?.code === "auth/popup-blocked" ||
-        popupErr?.code === "auth/operation-not-supported-in-this-environment"
-      ) {
-        console.log("[auth] Popup blocked in settings; falling back to linkWithRedirect...");
-        if (onRedirectFallback) {
-          onRedirectFallback("Popup was blocked by your browser. Redirecting to Google...");
-        }
-        await linkWithRedirect(auth.currentUser, googleProvider);
-        return { redirectStarted: true };
+      await linkWithRedirect(auth.currentUser, googleProvider);
+      return { redirectStarted: true };
+    } catch (redirectErr: any) {
+      console.warn("[auth] Settings linkWithRedirect failed, falling back to popup:", redirectErr);
+      if (onPopupFallback) {
+        onPopupFallback("Redirect failed. Falling back to popup window...");
       }
 
-      if (popupErr?.code === "auth/credential-already-in-use") {
-        const credential = GoogleAuthProvider.credentialFromError(popupErr);
-        let googleCred: UserCredential;
-        if (credential) {
-          googleCred = await signInWithCredential(auth, credential);
-        } else {
-          googleCred = await signInWithPopup(auth, googleProvider);
-        }
-        const profile = await mergeGuestProgressIntoUser(googleCred.user, currentUserProfile);
+      try {
+        const cred = await linkWithPopup(auth.currentUser, googleProvider);
+        const profile = await mergeGuestProgressIntoUser(cred.user, currentUserProfile);
         return { profile };
-      }
+      } catch (popupErr: any) {
+        if (popupErr?.code === "auth/credential-already-in-use") {
+          const credential = GoogleAuthProvider.credentialFromError(popupErr);
+          let googleCred: UserCredential;
+          if (credential) {
+            googleCred = await signInWithCredential(auth, credential);
+          } else {
+            googleCred = await signInWithPopup(auth, googleProvider);
+          }
+          const profile = await mergeGuestProgressIntoUser(googleCred.user, currentUserProfile);
+          return { profile };
+        }
 
-      console.error("[auth] Settings linkWithPopup failed:", popupErr);
-      throw popupErr;
+        console.error("[auth] Settings link fallback also failed:", popupErr);
+        throw popupErr;
+      }
     }
   }
 

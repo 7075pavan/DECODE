@@ -100,18 +100,18 @@ export default function LoginPage() {
     let isRedirecting = false;
     let didTimeout = false;
 
-    // 20-second timeout: resets loading state and alerts user if sign-in hangs
+    // 25-second timeout: resets loading state and alerts user if sign-in hangs
     timeoutRef.current = setTimeout(() => {
       didTimeout = true;
-      console.error("[auth] Sign-in 20-second timeout triggered without completion");
+      console.error("[auth] Sign-in 25-second timeout triggered without completion");
       setLoadingGoogle(false);
       setRedirectNotice(null);
       setAuthError({
         code: "auth/timeout",
-        message: "Sign-in did not complete. If you are on Safari, try Chrome, or tap Try again.",
-        rawMessage: "Authentication timed out after 20 seconds.",
+        message: "Sign-in did not finish. Try again, or use Chrome.",
+        rawMessage: "Authentication timed out after 25 seconds.",
       });
-    }, 20000);
+    }, 25000);
 
     try {
       console.log("[auth] Continue with Google tapped - calling popup directly...");
@@ -238,8 +238,7 @@ export default function LoginPage() {
             </div>
             <div>Hostname: <span className="text-[#F1F5F9] font-bold">{debugInfo.hostname || "local"}</span></div>
             <div>authDomain in use: <span className="text-[#22D3EE] font-bold">{debugInfo.authDomain}</span></div>
-            <div>Browser: <span className="text-[#F1F5F9] font-bold">{debugInfo.isSafari ? "Safari (macOS/iOS)" : "Non-Safari"}</span></div>
-            <div>Last error code: <span className="text-[#F87171] font-bold">{authError?.code || "None"}</span></div>
+            <div>Last auth error code: <span className="text-[#F87171] font-bold">{authError?.code || "None"}</span></div>
           </div>
         )}
 
