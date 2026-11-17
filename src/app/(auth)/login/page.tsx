@@ -1,41 +1,81 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useAuthStore } from "@/lib/stores/useAuthStore";
 import { Button } from "@/components/ui/Button";
+import { formatFirebaseAuthError, FormattedAuthError } from "@/lib/firebase/auth";
+import { firebaseConfigStatus } from "@/lib/firebase/client";
 
 export default function LoginPage() {
   const router = useRouter();
-  const { signInGoogle, signInGuest } = useAuthStore();
+  const { signInGoogle, signInGuest, handleRedirectAuth, isOnboarded } = useAuthStore();
   const [loadingGoogle, setLoadingGoogle] = useState(false);
   const [loadingGuest, setLoadingGuest] = useState(false);
-  const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  const [isProcessingRedirect, setIsProcessingRedirect] = useState(true);
+  const [authError, setAuthError] = useState<FormattedAuthError | null>(null);
+
+  // Check for redirect result on mount (essential for mobile browser auth completion)
+  useEffect(() => {
+    let isMounted = true;
+
+    async function checkRedirect() {
+      try {
+        const profile = await handleRedirectAuth();
+        if (profile && isMounted) {
+          router.replace(isOnboarded ? "/home" : "/onboarding");
+          return;
+        }
+      } catch (err: any) {
+        if (isMounted) {
+          console.error("[DECODE Auth Error] Redirect resolution failed:", err);
+          const formatted = formatFirebaseAuthError(err);
+          setAuthError(formatted);
+        }
+      } finally {
+        if (isMounted) {
+          setIsProcessingRedirect(false);
+        }
+      }
+    }
+
+    checkRedirect();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [handleRedirectAuth, isOnboarded, router]);
 
   const handleGoogleAuth = async () => {
     try {
-      setErrorMsg(null);
+      setAuthError(null);
       setLoadingGoogle(true);
-      await signInGoogle();
-      router.push("/onboarding");
+      const result = await signInGoogle();
+
+      if (result === "REDIRECT_STARTED") {
+        // Navigation to Google sign-in initiated; keep spinner active
+        return;
+      }
+
+      router.push(isOnboarded ? "/home" : "/onboarding");
     } catch (err: any) {
-      console.error(err);
-      setErrorMsg("Sign in was cancelled or failed. Please try again.");
-    } finally {
+      console.error("[DECODE Auth Error] Google authentication failed:", err);
+      const formatted = formatFirebaseAuthError(err);
+      setAuthError(formatted);
       setLoadingGoogle(false);
     }
   };
 
   const handleGuestAuth = async () => {
     try {
-      setErrorMsg(null);
+      setAuthError(null);
       setLoadingGuest(true);
       await signInGuest();
       router.push("/onboarding");
     } catch (err: any) {
-      console.error(err);
-      setErrorMsg("Guest sign-in failed. Please try again.");
-    } finally {
+      console.error("[DECODE Auth Error] Guest login failed:", err);
+      const formatted = formatFirebaseAuthError(err);
+      setAuthError(formatted);
       setLoadingGuest(false);
     }
   };
@@ -49,7 +89,7 @@ export default function LoginPage() {
       <div className="w-full h-8" />
 
       {/* Center Brand Identity */}
-      <div className="w-full max-w-[420px] mx-auto flex flex-col items-center text-center my-auto">
+      <div className="w-full max-w-[440px] mx-auto flex flex-col items-center text-center my-auto">
         {/* Aperture / Fingerprint Logo */}
         <div className="relative flex items-center justify-center mb-6">
           <div className="absolute inset-0 rounded-full bg-[#22D3EE]/25 blur-lg scale-110" />
@@ -101,9 +141,48 @@ export default function LoginPage() {
           Read people. Think clearly. Build wealth.
         </p>
 
-        {errorMsg && (
-          <div className="mt-4 p-3 rounded-lg bg-[#93000A]/30 border border-[#F87171]/40 text-[#F87171] text-[13px]">
-            {errorMsg}
+        {/* Firebase Config Missing Warning */}
+        {!firebaseConfigStatus.isConfigured && (
+          <div className="mt-4 p-3.5 rounded-xl bg-[#F59E0B]/15 border border-[#F59E0B]/40 text-[#F59E0B] text-[13px] text-left w-full flex flex-col gap-1.5">
+            <div className="flex items-center gap-1.5 font-bold">
+              <span className="material-symbols-outlined text-[16px]">warning</span>
+              <span>Firebase Incomplete Setup</span>
+            </div>
+            <p className="text-[13px] leading-relaxed text-[#FDE68A]">
+              Missing environment variables:{" "}
+              <code className="text-[#F59E0B] font-mono break-all font-semibold">
+                {firebaseConfigStatus.missingVariables.join(", ")}
+              </code>
+            </p>
+          </div>
+        )}
+
+        {/* Auth Error Display: exact Firebase error code + friendly message */}
+        {authError && (
+          <div className="mt-4 p-3.5 rounded-xl bg-[#93000A]/30 border border-[#F87171]/50 text-[#F87171] text-[13px] text-left w-full flex flex-col gap-1.5 animate-fadeIn">
+            <div className="flex items-center gap-1.5 font-mono font-bold text-[#FCA5A5]">
+              <span className="material-symbols-outlined text-[18px]">error</span>
+              <span>[{authError.code}]</span>
+            </div>
+            <p className="text-[13px] leading-relaxed text-[#FEE2E2]">
+              {authError.message}
+            </p>
+            {authError.code === "auth/unauthorized-domain" && typeof window !== "undefined" && (
+              <div className="mt-1 p-2 rounded bg-[#0B0F1A]/80 border border-[#F87171]/30 font-mono text-[12px] text-[#CBD5E1]">
+                Authorized domain needed:{" "}
+                <span className="text-[#22D3EE] font-bold select-all">
+                  {window.location.hostname}
+                </span>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Redirecting In-flight Indicator */}
+        {isProcessingRedirect && (
+          <div className="mt-3 flex items-center gap-2 text-[13px] font-mono text-[#22D3EE]">
+            <span className="w-3 h-3 rounded-full border border-current border-t-transparent animate-spin" />
+            <span>Verifying session state...</span>
           </div>
         )}
       </div>

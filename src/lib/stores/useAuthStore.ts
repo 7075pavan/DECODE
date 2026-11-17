@@ -2,7 +2,13 @@ import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 import { UserProfile, Rank } from "@/types";
 import { getRankInfo } from "@/lib/scoring/scoringEngine";
-import { loginAsGuest, loginWithGoogle, linkGuestWithGoogle, logout as firebaseLogout } from "@/lib/firebase/auth";
+import {
+  loginAsGuest,
+  loginWithGoogle,
+  linkGuestWithGoogle,
+  handleRedirectResult,
+  logout as firebaseLogout,
+} from "@/lib/firebase/auth";
 
 interface LevelUpEvent {
   oldRank: Rank;
@@ -16,8 +22,9 @@ interface AuthState {
   levelUpEvent: LevelUpEvent | null;
 
   signInGuest: () => Promise<void>;
-  signInGoogle: () => Promise<void>;
-  linkToGoogle: () => Promise<void>;
+  signInGoogle: () => Promise<"REDIRECT_STARTED" | void>;
+  linkToGoogle: () => Promise<"REDIRECT_STARTED" | void>;
+  handleRedirectAuth: () => Promise<UserProfile | null>;
   signOut: () => Promise<void>;
   setDailyGoal: (minutes: 5 | 10 | 15) => void;
   completeOnboarding: () => void;
@@ -41,24 +48,11 @@ export const useAuthStore = create<AuthState>()(
         try {
           const profile = await loginAsGuest();
           set({
-            user: {
-              ...profile,
-              currentRank: "Rookie",
-              streak: {
-                current: 1,
-                longest: 1,
-                lastActiveDate: new Date().toISOString().split("T")[0],
-                freezeTokens: 1,
-              },
-              dailyMinutesToday: 0,
-              completedUnits: [],
-              unlockedUnits: ["reading-people-unit-1"],
-              earnedBadges: [],
-            },
+            user: profile,
             isLoading: false,
           });
         } catch (error) {
-          console.error("Guest login failed:", error);
+          console.error("[useAuthStore] Guest login failed:", error);
           set({ isLoading: false });
           throw error;
         }
@@ -67,26 +61,19 @@ export const useAuthStore = create<AuthState>()(
       signInGoogle: async () => {
         set({ isLoading: true });
         try {
-          const profile = await loginWithGoogle();
-          set({
-            user: {
-              ...profile,
-              currentRank: getRankInfo(profile.totalXP).currentRank,
-              streak: {
-                current: profile.streak.current || 3,
-                longest: profile.streak.longest || 3,
-                lastActiveDate: new Date().toISOString().split("T")[0],
-                freezeTokens: 1,
-              },
-              dailyMinutesToday: 3,
-              completedUnits: [],
-              unlockedUnits: ["reading-people-unit-1"],
-              earnedBadges: [],
-            },
-            isLoading: false,
-          });
+          const currentGuest = get().user?.isAnonymous ? get().user : null;
+          const result = await loginWithGoogle(currentGuest);
+          if (result.redirectStarted) {
+            return "REDIRECT_STARTED";
+          }
+          if (result.profile) {
+            set({
+              user: result.profile,
+              isLoading: false,
+            });
+          }
         } catch (error) {
-          console.error("Google login failed:", error);
+          console.error("[useAuthStore] Google login failed:", error);
           set({ isLoading: false });
           throw error;
         }
@@ -97,16 +84,37 @@ export const useAuthStore = create<AuthState>()(
         if (!currentUser) return;
         set({ isLoading: true });
         try {
-          const upgraded = await linkGuestWithGoogle(currentUser as any);
-          set({
-            user: {
-              ...currentUser,
-              ...upgraded,
-            },
-            isLoading: false,
-          });
+          const result = await linkGuestWithGoogle(currentUser);
+          if (result.redirectStarted) {
+            return "REDIRECT_STARTED";
+          }
+          if (result.profile) {
+            set({
+              user: result.profile,
+              isLoading: false,
+            });
+          }
         } catch (error) {
-          console.error("Account linking failed:", error);
+          console.error("[useAuthStore] Account linking failed:", error);
+          set({ isLoading: false });
+          throw error;
+        }
+      },
+
+      handleRedirectAuth: async () => {
+        const currentGuest = get().user?.isAnonymous ? get().user : null;
+        try {
+          const profile = await handleRedirectResult(currentGuest);
+          if (profile) {
+            set({
+              user: profile,
+              isLoading: false,
+            });
+            return profile;
+          }
+          return null;
+        } catch (error) {
+          console.error("[useAuthStore] handleRedirectAuth failed:", error);
           set({ isLoading: false });
           throw error;
         }

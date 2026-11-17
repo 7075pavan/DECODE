@@ -8,10 +8,11 @@ import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Chip } from "@/components/ui/Chip";
 import { getDeviceInfo, getLastSyncTime } from "@/lib/sync/syncEngine";
+import { formatFirebaseAuthError } from "@/lib/firebase/auth";
 
 export default function SettingsPage() {
   const router = useRouter();
-  const { user, linkToGoogle, setDailyGoal, signOut } = useAuthStore();
+  const { user, linkToGoogle, handleRedirectAuth, setDailyGoal, signOut } = useAuthStore();
 
   const [soundEnabled, setSoundEnabled] = useState(true);
   const [hapticsEnabled, setHapticsEnabled] = useState(true);
@@ -25,6 +26,17 @@ export default function SettingsPage() {
   useEffect(() => {
     setDevice(getDeviceInfo());
     setLastSync(getLastSyncTime());
+
+    handleRedirectAuth()
+      .then((profile) => {
+        if (profile) {
+          setSuccessMessage("Account successfully linked with Google! Your progress is permanently secured.");
+        }
+      })
+      .catch((err) => {
+        const formatted = formatFirebaseAuthError(err);
+        setErrorMessage(`[${formatted.code}] ${formatted.message}`);
+      });
 
     if (typeof window !== "undefined") {
       setIsOnline(navigator.onLine);
@@ -61,10 +73,15 @@ export default function SettingsPage() {
   const handleLinkGoogle = async () => {
     try {
       setErrorMessage(null);
-      await linkToGoogle();
+      const res = await linkToGoogle();
+      if (res === "REDIRECT_STARTED") {
+        return;
+      }
       setSuccessMessage("Account successfully linked with Google! Your progress is permanently secured.");
     } catch (err: any) {
-      setErrorMessage("Google account linking was cancelled or failed.");
+      console.error("[DECODE Auth Error] Account linking failed:", err);
+      const formatted = formatFirebaseAuthError(err);
+      setErrorMessage(`[${formatted.code}] ${formatted.message}`);
     }
   };
 

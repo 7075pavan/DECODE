@@ -83,11 +83,12 @@ npm run build
 
 ## 🔥 Firebase Setup Guide
 
-### 1. Enable Authentication Providers
+### 1. Enable Authentication Providers & Add Authorized Domains
 In the [Firebase Console](https://console.firebase.google.com/):
 1. Navigate to **Build > Authentication > Sign-in method**.
 2. Enable **Anonymous** (allows instant guest onboarding without friction).
 3. Enable **Google** (allows seamless cross-device account continuation).
+4. **Authorize your deployment domain:** Navigate to **Authentication > Settings > Authorized domains** and click **Add domain**. Add your Vercel deployment domain (e.g. `decode-iota-one.vercel.app`) as well as `localhost`. Without this, Firebase will block Google sign-in with `auth/unauthorized-domain`.
 
 ### 2. Initialize Cloud Firestore
 1. Navigate to **Build > Firestore Database** and click **Create database**.
