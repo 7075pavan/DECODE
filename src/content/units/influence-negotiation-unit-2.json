@@ -1,0 +1,471 @@
+{
+  "unitId": "influence-negotiation-unit-2",
+  "pathId": "influence-negotiation",
+  "unitNumber": 2,
+  "title": "Anchoring & Frame Control",
+  "subtitle": "Influence & Negotiation · Unit 2",
+  "estimatedMinutes": 8,
+  "xpReward": 60,
+  "description": "Control cognitive baselines with extreme anchors, master range offers, defuse aggressive anchoring attacks, and own the conceptual frame.",
+  "rulesSummary": [
+    "The first number on the table anchors the entire cognitive possibility space.",
+    "Range anchoring works when structured strategically: offer your ideal price as the baseline of a bracket.",
+    "Defuse extreme anchors immediately: do not validate or negotiate against an absurd baseline.",
+    "Frame control: whoever controls the definition of the problem controls the final price.",
+    "Price is meaningless without context: shift from cost-plus framing to value-created framing."
+  ],
+  "learn": {
+    "title": "Psychological Anchoring & Frame Architecture",
+    "cards": [
+      {
+        "id": "in2-learn-1",
+        "step": "01 / 05",
+        "title": "The Anchoring Heuristic",
+        "subtitle": "The cognitive gravity of the first number",
+        "icon": "anchor",
+        "isKeyRule": false,
+        "content": "Daniel Kahneman and Amos Tversky proved that when people estimate an unknown quantity, their minds cling to whatever initial number is presented—even if that number is completely random. In negotiation, the opening anchor establishes the psychological baseline against which all subsequent concessions are measured.",
+        "takeaway": "The first number dropped pulls all subsequent offers into its gravitational orbit."
+      },
+      {
+        "id": "in2-learn-2",
+        "step": "02 / 05",
+        "title": "Range Anchoring (Bracketing)",
+        "subtitle": "The Columbia Business School protocol",
+        "icon": "tune",
+        "isKeyRule": false,
+        "content": "Columbia researchers discovered that presenting a range (e.g. '₹12 to ₹15 Lakhs') is far more effective than a single point anchor ('₹12 Lakhs'). When the range is constructed with your target price as the BOTTOM (e.g. target is ₹12 Lakhs, so quote '₹12 to ₹15 Lakhs'), counterparts focus on negotiating down to the bottom of your range, feeling like they won.",
+        "takeaway": "Set your target price as the floor of a realistic range: 'Between ₹12L and ₹15L depending on scope.'"
+      },
+      {
+        "id": "in2-learn-3",
+        "step": "03 / 05",
+        "title": "Defusing an Aggressive Anchor",
+        "subtitle": "How to destroy absurd low-balls",
+        "icon": "close",
+        "isKeyRule": false,
+        "content": "If a counterpart opens with an offensive low-ball (e.g. offering ₹2 Lakhs for a ₹10 Lakh system), never counter-offer with ₹8 Lakhs. Making a counter-offer legitimizes their anchor as a valid baseline. You must explicitly reject the anchor before introducing a new frame: 'That number lives in a different reality; let us set that aside completely.'",
+        "takeaway": "Never counter an offensive anchor. Explicitly disqualify it before resetting the conversation."
+      },
+      {
+        "id": "in2-learn-4",
+        "step": "04 / 05",
+        "title": "Value vs Cost-Plus Framing",
+        "subtitle": "The ROI frame",
+        "icon": "currency_exchange",
+        "isKeyRule": false,
+        "content": "Amateurs frame pricing around their costs: 'I spend 40 hours at ₹2,000/hr, so it costs ₹80,000.' This invites the client to micromanage your hours and hourly rate. Master negotiators frame around value created or loss prevented: 'This checkout optimization recovers ₹40 Lakhs in abandoned cart revenue annually. Our implementation fee is ₹8 Lakhs.'",
+        "takeaway": "Anchor to the revenue generated or catastrophic loss prevented, never your internal labor cost."
+      },
+      {
+        "id": "in2-learn-5",
+        "step": "05 / 05",
+        "title": "The Frame Dominance Axiom",
+        "subtitle": "Master frame rule",
+        "icon": "bolt",
+        "isKeyRule": true,
+        "content": "In every human interaction, two frames clash: the prize frame vs the supplicant frame. The supplicant seeks validation ('Please hire me, look how cheap I am'); the prize frame determines who qualifies ('We only take on 3 clients per quarter whose infrastructure can support rapid scaling'). Whoever maintains the prize frame commands the deal.",
+        "takeaway": "Position yourself as the discerning prize, not the needy vendor begging for work."
+      }
+    ]
+  },
+  "see": {
+    "title": "Worked Example: The Enterprise SaaS Defusal",
+    "scenarioTitle": "Conference Room 4B, Cyber City, Gurugram",
+    "scenarioDescription": "A retail conglomerate's procurement director attempts to crush a ₹50 Lakh annual analytics contract by aggressively anchoring at ₹12 Lakhs.",
+    "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&auto=format&fit=crop&q=80",
+    "story": [
+      {
+        "type": "paragraph",
+        "text": "The procurement director slaps his pen on the mahogany table and says: 'Look, we have an alternative vendor offering cloud analytics for ₹12 Lakhs. That is our ceiling. Take it or leave it.'"
+      },
+      {
+        "type": "paragraph",
+        "text": "The SaaS VP, Ananya, knows that making a counter-offer of ₹35 Lakhs would anchor negotiations around his low number."
+      },
+      {
+        "type": "interactive_paragraph",
+        "segments": [
+          {
+            "text": "Ananya smiles gently, shakes her head, and states: "
+          },
+          {
+            "clueId": "in2-clue-1",
+            "text": "'If ₹12 Lakhs is the budget, you should 100% sign with that alternative vendor today.'",
+            "isClue": true
+          },
+          {
+            "text": " She lets three seconds of silence hang. She then applies frame control: "
+          },
+          {
+            "clueId": "in2-clue-2",
+            "text": "'That vendor is selling basic dashboard reporting. Our platform is predictive inventory allocation that prevented ₹6.2 Crores in stockouts for Trent last year.'",
+            "isClue": true
+          },
+          {
+            "text": " She sets a new value anchor: "
+          },
+          {
+            "clueId": "in2-clue-3",
+            "text": "'In a business doing ₹400 Crores in apparel, would you risk ₹6 Crores in inventory blindness to save ₹38 Lakhs on software?'",
+            "isClue": true
+          },
+          {
+            "text": " The procurement director pauses, adjusts his glasses, and says: "
+          },
+          {
+            "clueId": "in2-clue-4",
+            "text": "'Okay, let us look at the multi-year implementation tier at ₹44 Lakhs.'",
+            "isClue": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      }
+    ],
+    "clues": [
+      {
+        "id": "in2-clue-1",
+        "phrase": "You should 100% sign with that vendor today",
+        "strength": "Strong",
+        "category": "Extreme Anchor Disqualification",
+        "explanation": "Refusing to fight the low-ball anchor destroyed its psychological hold immediately."
+      },
+      {
+        "id": "in2-clue-2",
+        "phrase": "Prevented ₹6.2 Crores in stockouts",
+        "strength": "Strong",
+        "category": "Value-Creation Frame",
+        "explanation": "Reframed the purchase from software cost to catastrophic inventory loss prevention."
+      },
+      {
+        "id": "in2-clue-3",
+        "phrase": "Would you risk ₹6 Crores in stockouts to save ₹38 Lakhs?",
+        "strength": "Strong",
+        "category": "Loss-Aversion Anchoring",
+        "explanation": "Comparing ₹38L savings against a ₹6 Cr loss made the software fee look negligible."
+      },
+      {
+        "id": "in2-clue-4",
+        "phrase": "Agrees to multi-year tier at ₹44 Lakhs",
+        "strength": "Medium",
+        "category": "Target Realization",
+        "explanation": "Closed within 12% of the initial ₹50L target rather than collapsing to ₹12L."
+      }
+    ]
+  },
+  "try": {
+    "title": "Scenario Practice: Anchoring & Frame Maneuvers",
+    "description": "Detect the anchor trap, establish frame control, and execute the value-based close.",
+    "cases": [
+      {
+        "id": "in2-case-1",
+        "caseNumber": 1,
+        "scenario": "You are quoting for a UI/UX redesign of an Indian D2C brand's mobile app. Your target price is ₹6 Lakhs.",
+        "context": "The client asks: 'What is your budget estimate for this project?'",
+        "steps": [
+          {
+            "id": "in2-c1-s1",
+            "stepType": "emotion",
+            "title": "Selecting the Anchor Format",
+            "question": "How should you present your opening anchor to maximize leverage?",
+            "options": [
+              "Say: 'I can do it for ₹3 Lakhs if you are on a budget.'",
+              "Use a bracketed range with your target at the bottom: 'For a redesign of this scope, engagements typically fall between ₹6.5 Lakhs and ₹8.5 Lakhs depending on user testing rounds.'",
+              "Say: 'Pay me whatever you think is fair after it's done.'",
+              "Quote ₹50 Lakhs just to scare them"
+            ],
+            "correctIndex": 1,
+            "explanation": "Bracketing with your target at the bottom anchors high while giving the client room to negotiate down to your real goal (₹6L - ₹6.5L).",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "in2-c1-s2",
+            "stepType": "intent",
+            "title": "Value Justification",
+            "question": "How do you frame that ₹6.5L - ₹8.5L bracket?",
+            "options": [
+              "Explain that you need to buy a new laptop",
+              "Anchor to commercial impact: 'Your mobile app currently converts at 1.8%. A 0.4% conversion lift on your monthly volume represents ₹75 Lakhs in annual incremental GMV.'",
+              "Show them your personal rent receipts",
+              "Tell them UI design is an ancient sacred art"
+            ],
+            "correctIndex": 1,
+            "explanation": "Comparing a ₹6.5L fee against ₹75L in incremental GMV makes the fee look like an obvious 10x ROI investment.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "in2-c1-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "The client says: 'We only have ₹5.5 Lakhs allocated.' How do you close?",
+            "options": [
+              "Accept ₹5.5 Lakhs and do all the original work",
+              "Agree to ₹5.5 Lakhs by trimming scope: 'We can make ₹5.5 Lakhs work by keeping the core redesign and having your in-house team handle the user survey recruiting.'",
+              "Refuse to speak to them again",
+              "Drop the price to ₹4 Lakhs"
+            ],
+            "correctIndex": 1,
+            "explanation": "Always trade concessions: never drop price without removing a corresponding piece of scope to maintain value integrity.",
+            "clueStrength": "Medium"
+          }
+        ]
+      },
+      {
+        "id": "in2-case-2",
+        "caseNumber": 2,
+        "scenario": "You are buying a lightly used 2022 MacBook Pro M1 Max. The seller lists it on OLX for ₹1,80,000, which is ₹30,000 above fair market value.",
+        "context": "The listing has been up for 45 days with zero offers.",
+        "steps": [
+          {
+            "id": "in2-c2-s1",
+            "stepType": "emotion",
+            "title": "Diagnosing the Seller's Anchor",
+            "question": "Why is the listing unsold after 45 days?",
+            "options": [
+              "OLX is completely broken",
+              "The seller's ₹1,80,000 anchor is unrealistically high, anchoring them in cognitive loss aversion while market buyers move on",
+              "Nobody in India uses MacBooks",
+              "Laptops lose all value after 1 week"
+            ],
+            "correctIndex": 1,
+            "explanation": "Over-anchored sellers get stuck in emotional endowment bias while their listing decays in liquidity.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "in2-c2-s2",
+            "stepType": "intent",
+            "title": "Setting the Counter-Anchor",
+            "question": "How do you introduce a fair market counter-anchor (₹1,35,000) without offending them?",
+            "options": [
+              "Message: 'Your price is a joke, I will give you ₹50,000.'",
+              "Anchor with objective market comps: 'I see your post has been up for a month. Verified Cashify/CeX buyback rates for this spec are ₹1,30,000. I can do ₹1,35,000 immediate UPI transfer today with pickup.'",
+              "Offer ₹1,80,000 with fake currency",
+              "Wait another year for the price to drop"
+            ],
+            "correctIndex": 1,
+            "explanation": "Anchoring to objective third-party liquidity platforms (Cashify) removes personal friction and offers instant cash certainty.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "in2-c2-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "The seller counters with: 'Lowest I can go is ₹1,45,000.' How do you close?",
+            "options": [
+              "Walk away angrily",
+              "Split the difference at ₹1,40,000 provided they include the original MagSafe charger, box, and an Apple leather sleeve",
+              "Agree to ₹1,70,000",
+              "Threaten them"
+            ],
+            "correctIndex": 1,
+            "explanation": "Splitting the difference while extracting high-value accessories closes the deal at a favorable effective price.",
+            "clueStrength": "Medium"
+          }
+        ]
+      },
+      {
+        "id": "in2-case-3",
+        "caseNumber": 3,
+        "scenario": "During an initial client intake call, a prospective enterprise client says: 'Pitch us your agency. Why should we choose you over the other 4 agencies we are interviewing?'",
+        "context": "The client is setting a 'Supplicant Frame', forcing you to audition.",
+        "steps": [
+          {
+            "id": "in2-c3-s1",
+            "stepType": "emotion",
+            "title": "Diagnosing the Frame Trap",
+            "question": "What trap is the client setting with 'Why should we choose you?'",
+            "options": [
+              "A fair and neutral inquiry",
+              "A Supplicant Trap: forcing you to beg and justify your existence, stripping you of all pricing power before scope is even discussed",
+              "An illegal interview technique",
+              "A sign that you have already won the deal"
+            ],
+            "correctIndex": 1,
+            "explanation": "Answering the audition prompt directly surrenders frame control and positions you as a commoditized vendor.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "in2-c3-s2",
+            "stepType": "intent",
+            "title": "Executing the Frame Flip",
+            "question": "How does a prize-frame operator respond?",
+            "options": [
+              "Deliver a 45-minute monologue bragging about your awards",
+              "Politely flip the frame: 'To be completely transparent, I don't know if you should choose us yet. We only work with teams where our technical architecture can produce a measurable 5x ROI. Could you tell me about your deployment bottlenecks first?'",
+              "Say: 'Because we are the cheapest in Bengaluru.'",
+              "Hang up the phone immediately"
+            ],
+            "correctIndex": 1,
+            "explanation": "Disqualifying yourself conditionally flips the frame, establishing that you are a selective partner evaluating them as well.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "in2-c3-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "What does the frame flip accomplish?",
+            "options": [
+              "The client gets offended and leaves",
+              "The client shifts from judging you to justifying why their business is worthy of your agency's attention, cementing your high status",
+              "You work for free",
+              "The client offers to buy your company"
+            ],
+            "correctIndex": 1,
+            "explanation": "True high-status authority makes the other party qualify themselves to you.",
+            "clueStrength": "Medium"
+          }
+        ]
+      }
+    ]
+  },
+  "prove": {
+    "title": "Mastery Check: Anchoring & Frame Control",
+    "subtitle": "Score 80%+ (7 of 8 correct) to master this unit.",
+    "passingScorePercent": 80,
+    "totalQuestions": 8,
+    "questions": [
+      {
+        "id": "in2-q1",
+        "number": 1,
+        "conceptId": "anchoring-tversky",
+        "scenario": "Why does the anchoring effect operate even when subjects know the anchor is arbitrary?",
+        "options": [
+          "Because people have zero mathematical intelligence",
+          "Cognitive adjustment heuristic: the mind starts at the anchor and makes insufficient adjustments away from it due to cognitive fatigue",
+          "Because anchors are legally binding",
+          "Because computers force anchors into brains"
+        ],
+        "correctIndex": 1,
+        "explanation": "Insufficient adjustment: human brains anchor to the reference point and adjust away incrementally until plausible, stopping prematurely."
+      },
+      {
+        "id": "in2-q2",
+        "number": 2,
+        "conceptId": "bracketed-range",
+        "scenario": "How should a bracketed range offer be constructed to hit a target price of ₹10 Lakhs?",
+        "options": [
+          "Quote 'Between ₹7 Lakhs and ₹10 Lakhs'",
+          "Quote 'Between ₹10 Lakhs and ₹12.5 Lakhs depending on deliverables'",
+          "Quote 'Between ₹1 Lakh and ₹20 Lakhs'",
+          "Quote 'Exactly ₹10 Lakhs with zero flexibility'"
+        ],
+        "correctIndex": 1,
+        "explanation": "Positioning your target as the floor of the range allows the client to negotiate down to your target while feeling victorious."
+      },
+      {
+        "id": "in2-q3",
+        "number": 3,
+        "conceptId": "disarming-lowball",
+        "scenario": "What is the single worst mistake when confronted with an absurd low-ball opening offer?",
+        "options": [
+          "Laughing politely",
+          "Immediately making a counter-offer in the middle, which legitimizes the low-ball as a valid mathematical anchor",
+          "Asking what data supports their number",
+          "Taking a 5-minute break"
+        ],
+        "correctIndex": 1,
+        "explanation": "Countering a low-ball validates it as a legitimate pole of the negotiation spectrum."
+      },
+      {
+        "id": "in2-q4",
+        "number": 4,
+        "conceptId": "value-vs-cost",
+        "scenario": "Why does value-based pricing command significantly higher fees than cost-plus billing?",
+        "options": [
+          "Because cost-plus billing is illegal in software",
+          "Cost-plus invites clients to scrutinize your hourly effort; value-based pricing anchors your fee to the economic wealth or risk mitigation delivered",
+          "Because value-based pricing requires no work",
+          "Because clients love paying more"
+        ],
+        "correctIndex": 1,
+        "explanation": "Value-based pricing decouples compensation from time, anchoring your fee to enterprise ROI."
+      },
+      {
+        "id": "in2-q5",
+        "number": 5,
+        "conceptId": "prize-frame",
+        "scenario": "In Oren Klaff's frame control framework, what is the 'Prize Frame'?",
+        "options": [
+          "Winning an actual trophy at an awards ceremony",
+          "Positioning yourself as the high-demand, selective prize that the client must qualify to work with, rather than a needy petitioner",
+          "Offering prizes to anyone who attends your pitch",
+          "Giving discounts to win customers"
+        ],
+        "correctIndex": 1,
+        "explanation": "The prize frame reverses psychological roles: the client must prove they are worthy of your expertise."
+      },
+      {
+        "id": "in2-q6",
+        "number": 6,
+        "conceptId": "precise-numbers",
+        "scenario": "Why does quoting an exact figure like ₹4,87,500 often perform better than a round ₹5,000,000?",
+        "options": [
+          "People like complicated math",
+          "Precise numbers signal rigorous, granular mathematical calculation, making counterparts assume you have tight cost controls and little room to discount",
+          "Round numbers are bad luck in Indian culture",
+          "Precise numbers confuse accountants"
+        ],
+        "correctIndex": 1,
+        "explanation": "Granular precision implies careful, non-arbitrary cost modeling, discouraging aggressive arbitrary discounts."
+      },
+      {
+        "id": "in2-q7",
+        "number": 7,
+        "conceptId": "concession-rule",
+        "scenario": "What is the inviolable rule of making price concessions?",
+        "options": [
+          "Always concede 50% immediately to show friendliness",
+          "Never give a concession without taking something back (reducing scope, requiring faster payment, or extending contract duration)",
+          "Never concede under any circumstance even if the deal dies",
+          "Ask your boss for permission every 5 minutes"
+        ],
+        "correctIndex": 1,
+        "explanation": "Unilateral concessions signal that your initial price was inflated and encourage endless further demands."
+      },
+      {
+        "id": "in2-q8",
+        "number": 8,
+        "conceptId": "time-frame",
+        "scenario": "How does setting an explicit decision deadline create frame control?",
+        "options": [
+          "It forces people to act before cognitive loss aversion sets in, preventing indefinite bureaucratic delays",
+          "It lets you go on vacation sooner",
+          "It proves you have no patience",
+          "It cancels all previous legal contracts"
+        ],
+        "correctIndex": 0,
+        "explanation": "Definite expiration windows prevent prospective clients from keeping you in perpetual limbo as an unpaid consultant."
+      }
+    ]
+  },
+  "apply": {
+    "title": "Field Mission: The Bracketed Anchor Proposal",
+    "missionCodename": "OPERATION ANCHOR BRACKET",
+    "difficulty": "Intermediate",
+    "timeRequired": "15 minutes",
+    "briefing": "In your next proposal, freelance quote, or timeline estimate, do not give a single flat number. Deploy a Columbia-style bracketed range with your target at the bottom.",
+    "actionSteps": [
+      "Determine your true target compensation or timeline (e.g. ₹50,000 or 3 weeks).",
+      "Construct a bracket with that target as the floor: e.g. '₹50,000 to ₹65,000 depending on revisions' or '3 to 4.5 weeks'.",
+      "Anchor the range to a high-value outcome (e.g. 'This tier includes end-to-end load testing and mobile responsive audit').",
+      "Observe if the client accepts the bottom anchor without pushing below it."
+    ],
+    "reflectionPrompt": "What was your target, how did you construct the bracket, and how did the counterpart react to the range?",
+    "rubric": [
+      {
+        "criterion": "Target-as-Floor",
+        "target": "Constructed bracket with true target at the lower boundary"
+      },
+      {
+        "criterion": "Value-Linked Variable",
+        "target": "Explicitly linked the upper range to optional scope elements"
+      },
+      {
+        "criterion": "Zero Unilateral Cuts",
+        "target": "Preserved pricing integrity without unreciprocated discounts"
+      }
+    ]
+  }
+}

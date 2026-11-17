@@ -1,0 +1,471 @@
+{
+  "unitId": "detective-mind-unit-2",
+  "pathId": "detective-mind",
+  "unitNumber": 2,
+  "title": "First-Principle Forensics",
+  "subtitle": "Detective Mind · Unit 2",
+  "estimatedMinutes": 8,
+  "xpReward": 60,
+  "description": "Strip problems down to their fundamental physics and resource constraints, master the 5 Whys, and separate correlation from true causality.",
+  "rulesSummary": [
+    "Boil reality down to fundamental truths: reasoning by analogy creates blind consensus.",
+    "The 5 Whys must trace causal physics, not personal blame.",
+    "Correlation is a clue, never a cause: third variables and reverse causality are everywhere.",
+    "Map immutable constraints vs discretionary choices.",
+    "Counterfactual test: if X had not happened, would Y still have occurred?"
+  ],
+  "learn": {
+    "title": "Deconstruction to First Principles",
+    "cards": [
+      {
+        "id": "dm2-learn-1",
+        "step": "01 / 05",
+        "title": "Reasoning from First Principles",
+        "subtitle": "Axiomatic vs analogical thinking",
+        "icon": "foundation",
+        "isKeyRule": false,
+        "content": "Most people reason by analogy: 'We do it this way because everyone else does.' First-principle thinking strips away conventions and boils the problem down to fundamental, immutable truths (physics, economics, code execution) and builds upward from there.",
+        "takeaway": "Reject 'industry best practice' until you have verified the underlying fundamental physics."
+      },
+      {
+        "id": "dm2-learn-2",
+        "step": "02 / 05",
+        "title": "The Causal 5 Whys",
+        "subtitle": "Drilling beneath human error",
+        "icon": "schema",
+        "isKeyRule": false,
+        "content": "When a failure occurs, novices stop at 'operator error' ('Ramesh forgot to run the migration'). A forensic thinker asks Why five times: Why did Ramesh forget? Because the checklist was manual. Why manual? Because there was no automated CI/CD guardrail. Why no guardrail? Because deployment velocity was prioritized over testing. The root cause is organizational architecture, not Ramesh.",
+        "takeaway": "Never stop at human error. Human error is a symptom of systemic architectural failure."
+      },
+      {
+        "id": "dm2-learn-3",
+        "step": "03 / 05",
+        "title": "Correlation vs Causality",
+        "subtitle": "The lurking confounder",
+        "icon": "call_split",
+        "isKeyRule": false,
+        "content": "Ice cream sales and shark attacks correlate heavily. Does ice cream attract sharks? No: summer heat increases both beach swimming and ice cream purchases. In business, rising ad spend might correlate with higher revenue, but the true driver might be a seasonal Diwali shopping surge.",
+        "takeaway": "Always search for the lurking third variable driving both correlated metrics."
+      },
+      {
+        "id": "dm2-learn-4",
+        "step": "04 / 05",
+        "title": "Counterfactual Reasoning",
+        "subtitle": "The 'What If' falsifier",
+        "icon": "shuffle",
+        "isKeyRule": false,
+        "content": "To prove A caused B, you must demonstrate the counterfactual: in a parallel universe where everything else remained identical but A was removed, would B still occur? If B would still have happened, A is not the causal driver.",
+        "takeaway": "Test causality with the counterfactual: if A never happened, would B still have occurred?"
+      },
+      {
+        "id": "dm2-learn-5",
+        "step": "05 / 05",
+        "title": "The Constraint Axiom",
+        "subtitle": "Master first-principle rule",
+        "icon": "bolt",
+        "isKeyRule": true,
+        "content": "Every system is limited by its single tightest constraint—whether that is server memory bandwidth, available cash runway, or human cognitive throughput. Adding resources to non-bottlenecks creates zero improvement. Locate the true constraint first.",
+        "takeaway": "Locate the single binding constraint; optimizing anything else is an expensive illusion."
+      }
+    ]
+  },
+  "see": {
+    "title": "Worked Example: The Startup Burn Rate Spike",
+    "scenarioTitle": "SaaS Startup Post-Mortem, Koramangala",
+    "scenarioDescription": "A fintech startup's AWS bill surged from ₹4 Lakhs/month to ₹19 Lakhs/month over 60 days. The CTO assumed traffic had increased 5x, but active users had only grown 12%.",
+    "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80",
+    "story": [
+      {
+        "type": "paragraph",
+        "text": "The executive team prepared to raise emergency bridge funding, believing high infrastructure costs were an unavoidable consequence of scaling."
+      },
+      {
+        "type": "paragraph",
+        "text": "A forensic systems engineer was brought in to decompose the cost down to raw compute and network physics."
+      },
+      {
+        "type": "interactive_paragraph",
+        "segments": [
+          {
+            "text": "Decomposing the AWS invoice revealed that 78% of the cost came from "
+          },
+          {
+            "clueId": "dm2-clue-1",
+            "text": "cross-region data transfer fees between us-east-1 and ap-south-1",
+            "isClue": true
+          },
+          {
+            "text": ". Tracing database queries showed an analytics worker was "
+          },
+          {
+            "clueId": "dm2-clue-2",
+            "text": "querying the raw uncompressed production database every 30 seconds across regions",
+            "isClue": true
+          },
+          {
+            "text": ". When testing the counterfactual, shutting down that single background worker "
+          },
+          {
+            "clueId": "dm2-clue-3",
+            "text": "dropped daily billings by 76% within two hours with zero user-facing impact",
+            "isClue": true
+          },
+          {
+            "text": ", proving the cost had "
+          },
+          {
+            "clueId": "dm2-clue-4",
+            "text": "zero correlation with actual customer transaction volume",
+            "isClue": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      }
+    ],
+    "clues": [
+      {
+        "id": "dm2-clue-1",
+        "phrase": "Cross-region data transfer fees",
+        "strength": "Strong",
+        "category": "Resource Bottleneck",
+        "explanation": "Breaking down the bill to line items exposed that compute wasn't the driver—unoptimized inter-region bandwidth was."
+      },
+      {
+        "id": "dm2-clue-2",
+        "phrase": "Querying raw database every 30 seconds across regions",
+        "strength": "Strong",
+        "category": "Architectural Leak",
+        "explanation": "A rogue un-indexed cron job polling gigabytes of data across continents was burning cash invisibly."
+      },
+      {
+        "id": "dm2-clue-3",
+        "phrase": "Dropped daily billings by 76% with zero impact",
+        "strength": "Strong",
+        "category": "Counterfactual Proof",
+        "explanation": "Terminating the script proved the counterfactual: costs vanished while production functionality remained 100% stable."
+      },
+      {
+        "id": "dm2-clue-4",
+        "phrase": "Zero correlation with customer volume",
+        "strength": "Medium",
+        "category": "Causal Decoupling",
+        "explanation": "Disproved the executive assumption that 'higher bills mean we are growing.'"
+      }
+    ]
+  },
+  "try": {
+    "title": "Scenario Practice: First-Principle Forensics",
+    "description": "Break the problem into first-principles, identify root causality, and execute the intervention.",
+    "cases": [
+      {
+        "id": "dm2-case-1",
+        "caseNumber": 1,
+        "scenario": "An ed-tech mobile app suffers a 60% drop in user signups right after releasing an update. Product managers blame 'seasonal summer exam holidays.'",
+        "context": "The update was pushed to the Google Play Store on Tuesday morning.",
+        "steps": [
+          {
+            "id": "dm2-c1-s1",
+            "stepType": "emotion",
+            "title": "Core Flaw in Narrative",
+            "question": "Why is 'exam holidays' an unverified analogical excuse?",
+            "options": [
+              "Students never take exams in summer",
+              "A sharp 60% step-function collapse occurring within 60 minutes of a code release is an acute technical failure, not a gradual seasonal holiday trend",
+              "Ed-tech apps are never affected by seasons",
+              "Google Play never allows buggy updates"
+            ],
+            "correctIndex": 1,
+            "explanation": "Step-function cliffs locked to deployment timestamps point directly to code or integration bugs, not cultural shifts.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "dm2-c1-s2",
+            "stepType": "intent",
+            "title": "Likely Mechanism",
+            "question": "Forensic analysis of the authentication pipeline reveals the SMS OTP provider's webhook timed out on Android 14 devices. What is the root cause?",
+            "options": [
+              "Students stopped buying smartphones",
+              "A deprecated Android permission in the new build silently blocked incoming SMS auto-read, preventing OTP verification",
+              "The telecom towers across India shut down",
+              "The marketing team stopped running Instagram ads"
+            ],
+            "correctIndex": 1,
+            "explanation": "First-principle user funnel tracing: users could not receive or read OTPs, so signups mechanically stalled.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "dm2-c1-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "What is the immediate first-principles fix?",
+            "options": [
+              "Launch a 50% discount marketing campaign",
+              "Roll back the Play Store build immediately to the last stable APK, fix the SMS permissions, and add automated OTP integration tests",
+              "Wait 2 months for exams to end",
+              "Blame the telecom provider on Twitter"
+            ],
+            "correctIndex": 1,
+            "explanation": "Rollback restores baseline funnel physics immediately while the root permission defect is patched.",
+            "clueStrength": "Strong"
+          }
+        ]
+      },
+      {
+        "id": "dm2-case-2",
+        "caseNumber": 2,
+        "scenario": "A food delivery startup in Pune finds that driver delivery times increased by 14 minutes during peak dinner hours. Operations assumes 'drivers are getting lazy.'",
+        "context": "GPS tracking shows drivers reach restaurants quickly but remain stationary inside for 18 minutes.",
+        "steps": [
+          {
+            "id": "dm2-c2-s1",
+            "stepType": "emotion",
+            "title": "Core Flaw in Narrative",
+            "question": "What does the GPS stationary data prove about the 'lazy driver' theory?",
+            "options": [
+              "Drivers are playing video games in their cars",
+              "The delay occurs while waiting at the restaurant kitchen, proving the bottleneck is kitchen prep time, not driver transit speed",
+              "Drivers have broken motorcycles",
+              "Pune traffic is completely non-existent"
+            ],
+            "correctIndex": 1,
+            "explanation": "Data shows drivers reach the pickup point swiftly; the stationary time inside proves the constraint is kitchen throughput.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "dm2-c2-s2",
+            "stepType": "intent",
+            "title": "Likely Mechanism",
+            "question": "Why are partner restaurants taking 18 minutes to hand over food?",
+            "options": [
+              "Chefs are on strike",
+              "The app's dispatch algorithm dispatches drivers the moment an order is placed, instead of waiting for the food's actual 15-minute preparation window",
+              "Restaurants refuse to cook dinner food",
+              "Customers are ordering too much Biryani"
+            ],
+            "correctIndex": 1,
+            "explanation": "Dispatching prematurely forces drivers to wait through the cooking cycle instead of arriving just-in-time.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "dm2-c2-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "How do you solve this using first-principles system optimization?",
+            "options": [
+              "Deduct pay from drivers who wait too long",
+              "Implement dynamic predictive kitchen readiness dispatch: send the driver only 3 minutes before the meal is estimated to leave the tandoor/stove",
+              "Cancel all dinner deliveries",
+              "Double the customer delivery fee"
+            ],
+            "correctIndex": 1,
+            "explanation": "Aligning arrival time with kitchen physics eliminates driver idle time and maximizes delivery capacity.",
+            "clueStrength": "Medium"
+          }
+        ]
+      },
+      {
+        "id": "dm2-case-3",
+        "caseNumber": 3,
+        "scenario": "A remote software agency finds employee turnover increased 40% after introducing mandatory daily time-tracking software with webcam screenshots.",
+        "context": "Leadership claims 'Gen-Z has poor work ethic and doesn't want to be held accountable.'",
+        "steps": [
+          {
+            "id": "dm2-c3-s1",
+            "stepType": "emotion",
+            "title": "Core Flaw in Narrative",
+            "question": "What is the psychological reality behind the spike in resignations?",
+            "options": [
+              "Engineers dislike getting paid",
+              "Invasive surveillance destroys psychological safety, signaling zero trust and triggering high-performing talent to seek dignified employers",
+              "Webcams consume too much domestic electricity",
+              "Everyone wanted to become YouTube creators"
+            ],
+            "correctIndex": 1,
+            "explanation": "Surveillance creates a high-distrust environment that repels the top 20% of performers who have outside options.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "dm2-c3-s2",
+            "stepType": "intent",
+            "title": "Likely Mechanism",
+            "question": "What behavior did the screenshot surveillance actually incentivize among remaining employees?",
+            "options": [
+              "10x higher innovation and deep architectural thought",
+              "Vanity keyboard-jiggling and low-value surface activity rather than thoughtful asynchronous problem solving",
+              "Complete mastery of algorithms",
+              "Zero software bugs"
+            ],
+            "correctIndex": 1,
+            "explanation": "Goodhart's Law: when a measure (mouse movement/screen activity) becomes a target, it ceases to be a good measure.",
+            "clueStrength": "Medium"
+          },
+          {
+            "id": "dm2-c3-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "How should leadership redesign performance measurement?",
+            "options": [
+              "Add keystroke loggers to catch mouse-jigglers",
+              "Scrap surveillance software and measure objective deliverables (shipped pull requests, velocity, code review quality, SLA resolution)",
+              "Force everyone to relocate to an office in Gurgaon",
+              "Triple the number of daily standup calls"
+            ],
+            "correctIndex": 1,
+            "explanation": "Focus on output metrics (shipped value) rather than proxy inputs (screen time), restoring trust and high performance.",
+            "clueStrength": "Strong"
+          }
+        ]
+      }
+    ]
+  },
+  "prove": {
+    "title": "Mastery Check: First-Principle Forensics",
+    "subtitle": "Score 80%+ (7 of 8 correct) to master this unit.",
+    "passingScorePercent": 80,
+    "totalQuestions": 8,
+    "questions": [
+      {
+        "id": "dm2-q1",
+        "number": 1,
+        "conceptId": "first-principles-definition",
+        "scenario": "How does reasoning from first principles differ from reasoning by analogy?",
+        "options": [
+          "First principles is slower and always uses math",
+          "Analogy copies prior forms with slight variations; first principles decomposes a problem to immutable truths and reasons upward",
+          "Analogy is only used in literature",
+          "First principles is exclusively for quantum physicists"
+        ],
+        "correctIndex": 1,
+        "explanation": "First principles breaks concepts down to elemental facts rather than copying existing conventions."
+      },
+      {
+        "id": "dm2-q2",
+        "number": 2,
+        "conceptId": "five-whys-trap",
+        "scenario": "What is the common fatal flaw when teams conduct a 5 Whys root cause analysis?",
+        "options": [
+          "They ask too many questions",
+          "They stop as soon as they identify an individual person to blame rather than drilling into process and architecture",
+          "They use sticky notes instead of whiteboards",
+          "They invite too many engineers"
+        ],
+        "correctIndex": 1,
+        "explanation": "Stopping at personal blame masks systemic defects and guarantees the failure will recur."
+      },
+      {
+        "id": "dm2-q3",
+        "number": 3,
+        "conceptId": "goodharts-law",
+        "scenario": "What does Goodhart's Law state regarding metrics and incentives?",
+        "options": [
+          "Every metric will eventually reach zero",
+          "When a measure becomes a target, it ceases to be a good measure because people optimize to game the metric",
+          "Metrics are always better than subjective opinions",
+          "Financial metrics never lie"
+        ],
+        "correctIndex": 1,
+        "explanation": "People optimize to satisfy the specific measurement formula, decoupling the metric from the intended underlying goal."
+      },
+      {
+        "id": "dm2-q4",
+        "number": 4,
+        "conceptId": "counterfactual-test",
+        "scenario": "How does the counterfactual test conclusively establish causality?",
+        "options": [
+          "By asking experts for their opinions",
+          "By assessing whether the outcome would still have occurred in the absence of the candidate cause while keeping all else constant",
+          "By running the experiment 1,000 times",
+          "By consulting company policy documents"
+        ],
+        "correctIndex": 1,
+        "explanation": "Causality requires that removing the cause prevents the effect; if the effect still happens, the candidate is not the cause."
+      },
+      {
+        "id": "dm2-q5",
+        "number": 5,
+        "conceptId": "binding-constraint",
+        "scenario": "According to the Theory of Constraints, what happens when you invest heavily to optimize a non-bottleneck station in a pipeline?",
+        "options": [
+          "Total throughput increases proportionally",
+          "Inventory and work-in-progress pile up before the true bottleneck, creating waste with zero increase in system throughput",
+          "The company doubles its profit margin",
+          "The bottleneck automatically fixes itself"
+        ],
+        "correctIndex": 1,
+        "explanation": "System capacity is dictated exclusively by the tightest bottleneck; speeding up non-bottlenecks merely creates bottlenecks elsewhere."
+      },
+      {
+        "id": "dm2-q6",
+        "number": 6,
+        "conceptId": "spurious-correlation",
+        "scenario": "A study shows people who drink green tea live 3 years longer. Why is concluding green tea directly causes longevity a logical error?",
+        "options": [
+          "Green tea contains zero water",
+          "Confounding variables: green tea drinkers also tend to exercise more, smoke less, and have higher socioeconomic status",
+          "Longevity cannot be measured in years",
+          "Tea leaves are poisonous"
+        ],
+        "correctIndex": 1,
+        "explanation": "Healthier lifestyle and higher income confound the correlation between green tea consumption and lifespan."
+      },
+      {
+        "id": "dm2-q7",
+        "number": 7,
+        "conceptId": "second-order-effects",
+        "scenario": "What is a second-order consequence of instituting strict zero-tolerance penalties for any bugs in code deployment?",
+        "options": [
+          "Bugs disappear forever",
+          "Engineers stop releasing innovative features, delay deployments for months, and conceal minor defects to avoid punishment",
+          "Servers become 10x faster",
+          "Customers celebrate rapid improvements"
+        ],
+        "correctIndex": 1,
+        "explanation": "Second-order effects: extreme risk aversion and secrecy emerge to protect employees from draconian zero-defect mandates."
+      },
+      {
+        "id": "dm2-q8",
+        "number": 8,
+        "conceptId": "chestertons-fence",
+        "scenario": "What does the principle of 'Chesterton's Fence' teach before removing an annoying legacy rule or system?",
+        "options": [
+          "Never change anything under any circumstances",
+          "Do not remove a fence or rule until you fully understand why it was built in the first place and what problem it was solving",
+          "Always tear down fences to move faster",
+          "Only lawyers are allowed to touch fences"
+        ],
+        "correctIndex": 1,
+        "explanation": "Before dismantling an established convention, understand the original problem it solved to avoid reviving dormant disasters."
+      }
+    ]
+  },
+  "apply": {
+    "title": "Field Mission: The 5 Whys Root Cause Decomposition",
+    "missionCodename": "OPERATION FIVE WHYS",
+    "difficulty": "Intermediate",
+    "timeRequired": "15 minutes",
+    "briefing": "Select a real, recurring frustration in your work, study habits, or project workflow (e.g. 'I was late to my morning standup' or 'Our build failed on master'). Trace it through 5 consecutive Whys without assigning personal blame.",
+    "actionSteps": [
+      "State the primary problem clearly as an objective fact.",
+      "Ask Why #1: What immediate physical/digital trigger caused it?",
+      "Ask Whys #2 through #5, focusing exclusively on environment, tooling, and process design.",
+      "Formulate one systemic guardrail that makes the error mechanically impossible in the future."
+    ],
+    "reflectionPrompt": "What was the initial problem, what was the 5th Why root cause, and what architectural safeguard will you install?",
+    "rubric": [
+      {
+        "criterion": "Blame-Free Trajectory",
+        "target": "Zero human blame in levels 3, 4, and 5"
+      },
+      {
+        "criterion": "Systemic Depth",
+        "target": "Reached environmental or procedural root constraint"
+      },
+      {
+        "criterion": "Mechanical Prevention",
+        "target": "Designed an automated or procedural guardrail"
+      }
+    ]
+  }
+}

@@ -1,0 +1,471 @@
+{
+  "unitId": "money-wealth-unit-1",
+  "pathId": "money-wealth",
+  "unitNumber": 1,
+  "title": "Foundations of Wealth Behavior",
+  "subtitle": "Money & Wealth · Unit 1",
+  "estimatedMinutes": 8,
+  "xpReward": 60,
+  "description": "Master the foundational behavioral algorithms of wealth: spend less than you earn, pay yourself first, eliminate lifestyle creep, practice delayed gratification, and construct your emergency fund fortress.",
+  "rulesSummary": [
+    "Wealth = Income minus Ego: saving money is the gap between your ego and your cash flow.",
+    "Pay yourself first: automate 20%+ of your income into savings on Day 1 before paying a single bill.",
+    "Lifestyle creep is financial cancer: spending salary hikes on luxury EMIs keeps you permanently trapped.",
+    "Delayed gratification is the ultimate economic moat: patience is rewarded with exponential compounding.",
+    "Emergency fund fortress: keep 6 months of non-negotiable living expenses liquid to prevent forced asset sales."
+  ],
+  "learn": {
+    "title": "Behavioral Economics & Wealth Foundations",
+    "cards": [
+      {
+        "id": "mw1-learn-1",
+        "step": "01 / 05",
+        "title": "Spend Less Than You Earn",
+        "subtitle": "The non-negotiable law of wealth",
+        "icon": "account_balance_wallet",
+        "isKeyRule": false,
+        "content": "Morgan Housel observed that wealth is what you don't see: the nice cars not purchased, the luxury watches unbought, the first-class upgrades declined. Wealth is financial options not yet spent. No level of high income can outrun a lifestyle that mechanically spends 102% of what it earns. The gap between your income and your consumption is your freedom engine.",
+        "takeaway": "Wealth is created by the delta between what you make and what you spend. Maximize the gap."
+      },
+      {
+        "id": "mw1-learn-2",
+        "step": "02 / 05",
+        "title": "Pay Yourself First",
+        "subtitle": "The Day-1 automated skim",
+        "icon": "savings",
+        "isKeyRule": false,
+        "content": "Most people spend money using this flawed formula: Income minus Expenses = Savings. Whatever crumbs remain at month-end get saved. The wealth formula inverts this entirely: Income minus Automated Savings (20-30%) = Spending Budget. On the day your paycheck lands, automate a standing instruction transferring capital into your investment fortress before you see it.",
+        "takeaway": "Automate a 20%+ transfer into investments on salary day; live on whatever remains."
+      },
+      {
+        "id": "mw1-learn-3",
+        "step": "03 / 05",
+        "title": "Defeating Lifestyle Creep",
+        "subtitle": "The hedonic treadmill trap",
+        "icon": "trending_up",
+        "isKeyRule": false,
+        "content": "When income rises from ₹6 LPA to ₹18 LPA, lifestyle creep whispers that you 'deserve' a luxury apartment in Indiranagar, daily ₹400 artisanal coffees, and a German car on a 7-year EMI. Within 6 months, your savings rate is back to zero. Defeat lifestyle creep with the 50% Rule: whenever you receive a raise or bonus, allocate at least 50% directly into wealth engines.",
+        "takeaway": "Bank at least 50% of every salary raise or bonus before upgrading your living standard."
+      },
+      {
+        "id": "mw1-learn-4",
+        "step": "04 / 05",
+        "title": "Delayed Gratification as a Superpower",
+        "subtitle": "The marshmallow test of adulthood",
+        "icon": "hourglass_top",
+        "isKeyRule": false,
+        "content": "The ability to resist an immediate sensory impulse in pursuit of a vastly superior future reward is the highest predictor of economic sovereignty. Buying depreciating status symbols on credit is trading your future freedom for temporary social validation from strangers you don't even respect.",
+        "takeaway": "Delaying gratification purchases future sovereignty; instant gratification sells your future for temporary dopamine."
+      },
+      {
+        "id": "mw1-learn-5",
+        "step": "05 / 05",
+        "title": "The Emergency Fortress",
+        "subtitle": "Master wealth foundation rule",
+        "icon": "bolt",
+        "isKeyRule": true,
+        "content": "Before investing a single rupee in the stock market or speculative crypto, build your Emergency Fund Fortress: 6 months of non-negotiable survival expenses (rent, food, insurance, debt service) parked in high-yield liquid instruments. This is not investment capital; it is sleep-at-night psychological armor that prevents you from panic-selling equities during market crashes.",
+        "takeaway": "Secure 6 months of liquid living expenses before taking market risks. Peace of mind is the ultimate asset."
+      }
+    ]
+  },
+  "see": {
+    "title": "Worked Example: The Bengaluru Salary Jump",
+    "scenarioTitle": "Two Tech Engineers in Koramangala, Bengaluru",
+    "scenarioDescription": "Rohan and Priya both graduate from college and land software developer roles at ₹12 LPA. At year 3, both receive promotions to ₹24 LPA.",
+    "imageUrl": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&auto=format&fit=crop&q=80",
+    "story": [
+      {
+        "type": "paragraph",
+        "text": "With their monthly post-tax pay jumping from ₹75,000 to ₹1,55,000, Rohan immediately upgrades to a luxury high-rise flat (₹55,000 rent) and finances a BMW 310 motorcycle and weekend clubbing, maintaining a 4% savings rate."
+      },
+      {
+        "type": "paragraph",
+        "text": "Priya decides to apply behavioral wealth architecture."
+      },
+      {
+        "type": "interactive_paragraph",
+        "segments": [
+          {
+            "text": "Priya keeps her comfortable shared apartment (₹18,000 rent) and "
+          },
+          {
+            "clueId": "mw1-clue-1",
+            "text": "automates a ₹65,000 monthly auto-debit on Day 1 into an index fund and liquid emergency fund",
+            "isClue": true
+          },
+          {
+            "text": ". She locks down "
+          },
+          {
+            "clueId": "mw1-clue-2",
+            "text": "₹3.5 Lakhs in a liquid fund as her 6-month non-negotiable emergency fortress",
+            "isClue": true
+          },
+          {
+            "text": ". When the tech sector faces widespread layoffs in year 4, Rohan is "
+          },
+          {
+            "clueId": "mw1-clue-3",
+            "text": "three weeks away from default on his credit cards and vehicle EMI",
+            "isClue": true
+          },
+          {
+            "text": ", while Priya has "
+          },
+          {
+            "clueId": "mw1-clue-4",
+            "text": "18 months of complete living runway and ₹14 Lakhs compounding in market assets",
+            "isClue": true
+          },
+          {
+            "text": ", giving her total career leverage to negotiate a 40% higher role without panic."
+          }
+        ]
+      }
+    ],
+    "clues": [
+      {
+        "id": "mw1-clue-1",
+        "phrase": "Automates ₹65,000 Day-1 debit into wealth engines",
+        "strength": "Strong",
+        "category": "Pay Yourself First",
+        "explanation": "Automating savings before discretionary spending removed emotional willpower from the wealth-building equation."
+      },
+      {
+        "id": "mw1-clue-2",
+        "phrase": "₹3.5 Lakhs 6-month liquid emergency fortress",
+        "strength": "Strong",
+        "category": "Liquidity Armor",
+        "explanation": "Having guaranteed cash reserves eliminated panic and preserved market investments intact during downturns."
+      },
+      {
+        "id": "mw1-clue-3",
+        "phrase": "Three weeks away from EMI default",
+        "strength": "Medium",
+        "category": "Lifestyle Creep Vulnerability",
+        "explanation": "High income coupled with zero margin of safety created acute fragility despite a ₹24 LPA salary."
+      },
+      {
+        "id": "mw1-clue-4",
+        "phrase": "18 months runway and ₹14L compounding",
+        "strength": "Strong",
+        "category": "Financial Sovereignty",
+        "explanation": "Patience and delayed gratification purchased career independence and immunity to corporate panic."
+      }
+    ]
+  },
+  "try": {
+    "title": "Scenario Practice: Wealth Foundations",
+    "description": "Analyze the financial impulse, detect the behavioral bias, and select the wealth-maximizing move.",
+    "cases": [
+      {
+        "id": "mw1-case-1",
+        "caseNumber": 1,
+        "scenario": "You receive an unexpected annual performance bonus of ₹2,50,000 post-tax in your bank account.",
+        "context": "Your Instagram feed is filled with friends traveling to Bali and buying luxury gadgets.",
+        "steps": [
+          {
+            "id": "mw1-c1-s1",
+            "stepType": "emotion",
+            "title": "Behavioral Impulse Detection",
+            "question": "You feel an immediate urge to spend ₹1,50,000 on the newest iPhone Pro and a luxury weekend resort. What psychological mechanism is firing?",
+            "options": [
+              "Sensible capital allocation",
+              "Hyperbolic discounting and status signaling: overvaluing immediate social status and sensory dopamine while discounting your future freedom",
+              "Deep spiritual enlightenment",
+              "A legal requirement to spend bonuses"
+            ],
+            "correctIndex": 1,
+            "explanation": "Windfalls trigger mental accounting bias, where found money is treated as 'free to burn' rather than compounding fuel.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mw1-c1-s2",
+            "stepType": "intent",
+            "title": "The 50/50 Calibration",
+            "question": "How does the wealth architecture protocol handle unexpected windfalls?",
+            "options": [
+              "Spend 100% on lottery tickets",
+              "Allocate at least 70% (₹1,75,000) directly into your emergency fortress or index investments, and dedicate the remaining 30% (₹75,000) to guilt-free celebratory enjoyment",
+              "Lock yourself in a dark room and feel guilty forever",
+              "Lend the entire amount to a high-risk friend"
+            ],
+            "correctIndex": 1,
+            "explanation": "Allowing a planned 30% joy allocation honors human psychology while ensuring 70% permanently accelerates wealth compounding.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mw1-c1-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "What is your physical execution order today?",
+            "options": [
+              "Go to the Apple store first and invest later if money remains",
+              "Execute the investment transfer within 60 seconds of receiving the bonus notification, so the capital is locked before impulse spending can occur",
+              "Post a screenshot of your bank balance on Twitter",
+              "Withdraw all cash and keep it under your mattress"
+            ],
+            "correctIndex": 1,
+            "explanation": "Friction works in your favor: transferring funds immediately removes the temptation to spend from checking.",
+            "clueStrength": "Medium"
+          }
+        ]
+      },
+      {
+        "id": "mw1-case-2",
+        "caseNumber": 2,
+        "scenario": "A 24-year-old friend has ₹1,00,000 in credit card debt carrying 42% annual interest, but wants to invest ₹25,000 in an IPO because 'stocks make you rich.'",
+        "context": "Credit card minimum payment is ₹5,000/month.",
+        "steps": [
+          {
+            "id": "mw1-c2-s1",
+            "stepType": "emotion",
+            "title": "Diagnosing the Mathematical Delusion",
+            "question": "Why is investing in the stock market while holding 42% credit card debt a catastrophic financial error?",
+            "options": [
+              "Stocks are illegal for credit card holders",
+              "Reverse compounding: the stock market averages 12-14% long-term returns, while the 42% credit card interest is a guaranteed negative return that mathematically wipes out any equity gains",
+              "IPOs never allocate shares to 24-year-olds",
+              "Credit cards are free money"
+            ],
+            "correctIndex": 1,
+            "explanation": "Paying off 42% debt is mathematically equivalent to generating a 100% risk-free, tax-free 42% return on your money.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mw1-c2-s2",
+            "stepType": "intent",
+            "title": "Analyzing Debt Psychology",
+            "question": "Why do people prioritize exciting stock bets over paying off boring credit card debt?",
+            "options": [
+              "Because debt payoff gives no social status or thrilling dopamine spikes, while stock trading satisfies gambling impulses",
+              "Because credit card companies forgive debt every December",
+              "Because interest rates don't matter in India",
+              "Because banks prefer you never pay"
+            ],
+            "correctIndex": 0,
+            "explanation": "The brain craves the lottery dopamine of speculative gains and ignores the invisible bleed of compound interest debt.",
+            "clueStrength": "Medium"
+          },
+          {
+            "id": "mw1-c2-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "What is the non-negotiable debt avalanche prescription?",
+            "options": [
+              "Apply for 3 more credit cards",
+              "Direct 100% of available free cash flow to extinguish the 42% credit card balance immediately, freeze credit card usage, and only begin investing once debt is zero",
+              "Invest ₹50,000 in crypto to pay off the debt with winnings",
+              "Ignore credit card collection calls"
+            ],
+            "correctIndex": 1,
+            "explanation": "Eliminating toxic high-interest debt is the highest-ROI investment available anywhere in the financial universe.",
+            "clueStrength": "Strong"
+          }
+        ]
+      },
+      {
+        "id": "mw1-case-3",
+        "caseNumber": 3,
+        "scenario": "You are considering buying an entry-level luxury sedan on a 7-year loan. The monthly EMI is 38% of your take-home salary.",
+        "context": "You commute 15 minutes to work via metro.",
+        "steps": [
+          {
+            "id": "mw1-c3-s1",
+            "stepType": "emotion",
+            "title": "Lifestyle Creep Forensic Audit",
+            "question": "Beyond the 38% EMI, what hidden liabilities does purchasing this status vehicle bring?",
+            "options": [
+              "Zero other costs",
+              "Depreciation (losing 20% value upon driving off the lot), insurance premiums, fuel, maintenance, parking, and massive opportunity cost of lost compounding",
+              "The car will appreciate like fine gold",
+              "The dealership will pay your fuel costs"
+            ],
+            "correctIndex": 1,
+            "explanation": "Cars are depreciating liabilities that actively consume cash flow through insurance, maintenance, and interest.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mw1-c3-s2",
+            "stepType": "intent",
+            "title": "Calculating the Compounding Opportunity Cost",
+            "question": "If that ₹35,000 monthly EMI were invested in a broad market index at 12% annual returns for 7 years instead, what would that capital be worth?",
+            "options": [
+              "Approximately ₹2 Lakhs",
+              "Over ₹45 Lakhs in wealth created, compared to an 8-year-old car worth ₹8 Lakhs",
+              "Zero, because markets crash every 7 years",
+              "Exactly the same as the car"
+            ],
+            "correctIndex": 1,
+            "explanation": "Opportunity cost: the delta between ₹45 Lakhs in compounding assets vs an ₹8 Lakh depreciated metal asset is the price of status ego.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mw1-c3-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "What is the sovereign wealth decision?",
+            "options": [
+              "Buy the car on an 8-year loan to lower the EMI",
+              "Stick to the metro and cab rides, invest the ₹35,000 monthly difference into productive assets, and buy vehicles in cash once your net worth generates passive dividends",
+              "Borrow money from your parents for the down payment",
+              "Steal a car"
+            ],
+            "correctIndex": 1,
+            "explanation": "Choosing cash-flow freedom over vehicle status allows your money to work for you rather than working for the bank.",
+            "clueStrength": "Medium"
+          }
+        ]
+      }
+    ]
+  },
+  "prove": {
+    "title": "Mastery Check: Foundations of Wealth Behavior",
+    "subtitle": "Score 80%+ (7 of 8 correct) to master this unit.",
+    "passingScorePercent": 80,
+    "totalQuestions": 8,
+    "questions": [
+      {
+        "id": "mw1-q1",
+        "number": 1,
+        "conceptId": "wealth-vs-income",
+        "scenario": "How does Morgan Housel define the difference between being 'rich' and being 'wealthy'?",
+        "options": [
+          "Rich people have credit cards; wealthy people have debit cards",
+          "Richness is current income and visible spending (cars, houses, status); wealth is financial options, equity, and unspent assets that grant freedom",
+          "There is zero difference; both mean having money",
+          "Richness is measured in dollars; wealth is measured in euros"
+        ],
+        "correctIndex": 1,
+        "explanation": "Rich is what you spend to show status; wealth is the hidden balance sheet that purchases freedom and sovereignty."
+      },
+      {
+        "id": "mw1-q2",
+        "number": 2,
+        "conceptId": "pay-yourself-first",
+        "scenario": "Why does the 'Pay Yourself First' automation protocol outperform manual monthly budgeting?",
+        "options": [
+          "Because computers don't need electricity",
+          "It exploits behavioral default bias and removes willpower from the loop: savings occur on Day 1 before lifestyle spending can consume it",
+          "Because banks give 50% bonuses on automated transfers",
+          "Manual budgeting is illegal in modern finance"
+        ],
+        "correctIndex": 1,
+        "explanation": "Automating savings removes human emotional friction, ensuring capital accumulation occurs unconditionally."
+      },
+      {
+        "id": "mw1-q3",
+        "number": 3,
+        "conceptId": "lifestyle-creep-mechanism",
+        "scenario": "What biological phenomenon causes people to feel equally broke even after their salary doubles?",
+        "options": [
+          "Hyperthyroidism",
+          "Hedonic adaptation: the human brain quickly resets its baseline of comfort, turning former luxuries into non-negotiable baseline necessities",
+          "Tax brackets take 99% of all salary hikes",
+          "Supermarkets increase prices when you walk in"
+        ],
+        "correctIndex": 1,
+        "explanation": "Hedonic adaptation normalizes higher living standards, resetting subjective happiness and swallowing income gains."
+      },
+      {
+        "id": "mw1-q4",
+        "number": 4,
+        "conceptId": "emergency-fund-size",
+        "scenario": "What is the recommended size of an emergency fund fortress for an Indian working professional?",
+        "options": [
+          "₹5,000 in your pocket",
+          "3 to 6 months of non-negotiable living expenses (rent, food, insurance, debt obligations) kept in low-risk, highly liquid instruments",
+          "5 years of luxury vacation budget",
+          "Zero; you should keep 100% in volatile cryptocurrencies"
+        ],
+        "correctIndex": 1,
+        "explanation": "A 3-6 month liquid fortress protects against sudden job loss, health shocks, and forced liquidation of long-term investments."
+      },
+      {
+        "id": "mw1-q5",
+        "number": 5,
+        "conceptId": "delayed-gratification-moat",
+        "scenario": "Why is delayed gratification considered a durable economic moat in modern society?",
+        "options": [
+          "Because nobody else knows how to save money",
+          "Modern algorithmic social media constantly pushes hyper-convenience and instant status consumption, making patience an increasingly rare and rewarded arbitrage",
+          "Because patience increases bank interest rates automatically",
+          "Because stores give discounts to people who wait 10 years"
+        ],
+        "correctIndex": 1,
+        "explanation": "In an economy optimized for impulsive consumption, the disciplined ability to delay gratification is an extraordinary competitive edge."
+      },
+      {
+        "id": "mw1-q6",
+        "number": 6,
+        "conceptId": "high-interest-debt-drag",
+        "scenario": "Why is carrying high-interest consumer credit card debt (36-44% APR) described as 'financial cancer'?",
+        "options": [
+          "It makes your credit card turn black",
+          "It harnesses compound interest in reverse: interest compounds against you faster than almost any asset class on Earth can generate returns",
+          "Because credit cards expire every 3 years",
+          "It prevents you from flying on airplanes"
+        ],
+        "correctIndex": 1,
+        "explanation": "Reverse compounding at 40%+ interest creates an exponential mathematical trap that consumes future earnings."
+      },
+      {
+        "id": "mw1-q7",
+        "number": 7,
+        "conceptId": "opportunity-cost-definition",
+        "scenario": "In economic decision-making, what is 'opportunity cost'?",
+        "options": [
+          "The fee an investment broker charges for executing a trade",
+          "The potential gain or value forfeited from the next best alternative when making a financial choice",
+          "The cost of printing paper rupee notes",
+          "The price of taking a college entrance exam"
+        ],
+        "correctIndex": 1,
+        "explanation": "Spending ₹10 Lakhs on a status car doesn't just cost ₹10 Lakhs; it costs the millions that capital would have produced over decades."
+      },
+      {
+        "id": "mw1-q8",
+        "number": 8,
+        "conceptId": "50-percent-windfall-rule",
+        "scenario": "What does the 50% Rule advise whenever an individual receives an unexpected bonus or pay increase?",
+        "options": [
+          "Give 50% away to strangers",
+          "Allocate at least 50% directly into long-term investments/debt payoff before upgrading lifestyle with the remaining portion",
+          "Spend 50% on food and 50% on clothing",
+          "Decline the raise from your employer"
+        ],
+        "correctIndex": 1,
+        "explanation": "The 50% rule captures half of every raise for compounding while permitting healthy, guilt-free lifestyle enhancement."
+      }
+    ]
+  },
+  "apply": {
+    "title": "Field Mission: The Automated Wealth Protocol",
+    "missionCodename": "OPERATION DAY-ONE HARVEST",
+    "difficulty": "Beginner",
+    "timeRequired": "15 minutes",
+    "briefing": "Conduct an unsparing audit of your last 30 days of bank account outflows. Calculate your exact baseline savings rate, identify one lifestyle creep leak, and automate your Day-1 wealth transfer.",
+    "actionSteps": [
+      "Log into your bank app and tally your total inflows vs outflows over the previous calendar month.",
+      "Calculate your Savings Rate: (Inflows - Outflows) ÷ Inflows × 100.",
+      "Identify one recurring 'Lifestyle Creep' subscription or luxury expense that provides zero long-term fulfillment and cancel it.",
+      "Set up a recurring standing instruction or SIP that triggers 24 hours after salary/income arrival to Pay Yourself First."
+    ],
+    "reflectionPrompt": "What was your current savings rate, what leak did you plug, and what automated transfer did you schedule for Day 1?",
+    "rubric": [
+      {
+        "criterion": "Mathematical Rigor",
+        "target": "Calculated exact savings rate percentage based on real bank data"
+      },
+      {
+        "criterion": "Via Negativa Elimination",
+        "target": "Terminated at least one redundant recurring expense"
+      },
+      {
+        "criterion": "Systemic Automation",
+        "target": "Scheduled automated Day-1 wealth accumulation instruction"
+      }
+    ]
+  }
+}

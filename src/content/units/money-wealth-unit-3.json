@@ -1,0 +1,471 @@
+{
+  "unitId": "money-wealth-unit-3",
+  "pathId": "money-wealth",
+  "unitNumber": 3,
+  "title": "Compounding, Assets & Founder Economics",
+  "subtitle": "Money & Wealth · Unit 3",
+  "estimatedMinutes": 8,
+  "xpReward": 60,
+  "description": "Master the mechanics of exponential compounding, assets vs liabilities, high-income skills, founder economics (pricing power, cash flow, runway, equity), and trust as wealth.",
+  "rulesSummary": [
+    "Assets put cash in your pocket; liabilities take cash out. Categorize ruthlessly.",
+    "Compounding is the 8th wonder of the world: 95% of returns arrive in the final third of your time horizon.",
+    "High-income skills are the initial propellant: you cannot compound zero capital.",
+    "Founder Money: pricing power is marketing; cash flow is oxygen; runway is lifespan; equity is wealth.",
+    "Trust is the supreme currency: high integrity creates zero-friction deal flow that outlasts market cycles."
+  ],
+  "learn": {
+    "title": "Compounding Mechanics & Founder Economics",
+    "cards": [
+      {
+        "id": "mw3-learn-1",
+        "step": "01 / 05",
+        "title": "Assets vs Liabilities",
+        "subtitle": "The Kiyosaki demarcation",
+        "icon": "account_tree",
+        "isKeyRule": false,
+        "content": "Accountants have complicated definitions, but behavioral wealth is simple: an asset puts cash into your pocket with minimal active labor (rental cash flow, index dividends, SaaS software, royalties, business equity). A liability takes cash out of your pocket through upkeep, interest, insurance, and depreciation. Most people buy liabilities thinking they are assets.",
+        "takeaway": "True assets generate cash flow; liabilities consume it. Stack cash-flowing assets relentlessly."
+      },
+      {
+        "id": "mw3-learn-2",
+        "step": "02 / 05",
+        "title": "The Exponential Law of Compounding",
+        "subtitle": "Why the start is boring and the end is explosive",
+        "icon": "show_chart",
+        "isKeyRule": false,
+        "content": "Compounding mathematics ($A = P(1+r/n)^{nt}$) is non-intuitive because human brains evolve linearly. 99% of Warren Buffett's wealth was accumulated after his 50th birthday. If you invest ₹10,000 monthly at 12%, you accumulate ₹23 Lakhs in 10 years, ₹1 Crore in 20 years, and ₹3.5 Crores in 30 years. Time in the market is vastly more powerful than timing the market.",
+        "takeaway": "The magic of compounding is heavily backloaded. Never interrupt the compounding curve unnecessarily."
+      },
+      {
+        "id": "mw3-learn-3",
+        "step": "03 / 05",
+        "title": "High-Income Skills: The Primary Catalyst",
+        "subtitle": "You cannot compound peanuts",
+        "icon": "psychology",
+        "isKeyRule": false,
+        "content": "If you earn ₹20,000 a month, saving 50% yields only ₹10,000. But if you build high-income skills (enterprise sales, distributed systems engineering, copywriting, capital allocation) and raise income to ₹3,00,000 a month, your surplus capital expands 20x. Your primary compounding asset in your 20s is your own earning capacity.",
+        "takeaway": "In early career, invest aggressively in high-income skills to maximize the raw capital feeding your wealth engine."
+      },
+      {
+        "id": "mw3-learn-4",
+        "step": "04 / 05",
+        "title": "Founder Economics: Pricing, Cash Flow & Runway",
+        "subtitle": "The survival triangle",
+        "icon": "rocket_launch",
+        "isKeyRule": false,
+        "content": "In venture entrepreneurship, three numbers dictate reality: 1) Pricing Power: if you have to pray before raising prices by 10%, you have a terrible business; 2) Cash Flow: profit is an accounting opinion, cash flow is physical oxygen; 3) Runway: Liquid Cash divided by Monthly Net Burn. If your runway drops below 6 months, you enter existential panic. Protect equity at all costs.",
+        "takeaway": "Charge premium prices, maintain at least 18 months runway, and protect your equity dilution."
+      },
+      {
+        "id": "mw3-learn-5",
+        "step": "05 / 05",
+        "title": "Trust as Sovereign Wealth",
+        "subtitle": "Master wealth principle",
+        "icon": "bolt",
+        "isKeyRule": true,
+        "content": "Money is merely a portable token of trust. Naval Ravikant observed that high-integrity individuals operate with zero friction: when people know your word is an unbreakable bond, deals close on a handshake, top talent joins your venture with zero recruiter fees, and capital seeks you out during crises. Trust is the ultimate compound interest.",
+        "takeaway": "Reputation and trust are ultimate capital: integrity creates frictionless, compounding wealth."
+      }
+    ]
+  },
+  "see": {
+    "title": "Worked Example: The Indiranagar SaaS Tale",
+    "scenarioTitle": "Two Founders in 100ft Road, Indiranagar, Bengaluru",
+    "scenarioDescription": "Founder A raises a $2M seed round at high valuation; Founder B bootstraps with premium pricing and extreme cash flow discipline.",
+    "imageUrl": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&auto=format&fit=crop&q=80",
+    "story": [
+      {
+        "type": "paragraph",
+        "text": "Founder A rents a luxury glass office in Koramangala, hires 25 developers, and prices his CRM at ₹999/month to 'capture market share.' His monthly burn rate is ₹35 Lakhs with 4 months of runway."
+      },
+      {
+        "type": "paragraph",
+        "text": "Founder B operates out of a modest co-working space with 4 elite senior engineers."
+      },
+      {
+        "type": "interactive_paragraph",
+        "segments": [
+          {
+            "text": "Founder B applies founder economics: he prices his enterprise solution at "
+          },
+          {
+            "clueId": "mw3-clue-1",
+            "text": "₹4.5 Lakhs per year with annual upfront payments, generating immediate positive cash flow",
+            "isClue": true
+          },
+          {
+            "text": ". He keeps his monthly burn rate at ₹6 Lakhs, giving his company "
+          },
+          {
+            "clueId": "mw3-clue-2",
+            "text": "28 months of unshakeable cash runway",
+            "isClue": true
+          },
+          {
+            "text": ". When venture funding freezes nationwide, Founder A is "
+          },
+          {
+            "clueId": "mw3-clue-3",
+            "text": "forced into a toxic down-round that wipes out 80% of his personal founder equity",
+            "isClue": true
+          },
+          {
+            "text": ", while Founder B's company reaches "
+          },
+          {
+            "clueId": "mw3-clue-4",
+            "text": "₹8 Crores ARR while retaining 88% founder equity and pristine enterprise trust",
+            "isClue": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      }
+    ],
+    "clues": [
+      {
+        "id": "mw3-clue-1",
+        "phrase": "₹4.5L annual upfront payments creating positive cash flow",
+        "strength": "Strong",
+        "category": "Pricing Power & Working Capital",
+        "explanation": "Upfront enterprise billing funds growth through customer revenue rather than dilutive external venture debt."
+      },
+      {
+        "id": "mw3-clue-2",
+        "phrase": "28 months of unshakeable cash runway",
+        "strength": "Strong",
+        "category": "Runway Sovereignty",
+        "explanation": "Deep runway granted total psychological calm and immunity to macroeconomic downturns."
+      },
+      {
+        "id": "mw3-clue-3",
+        "phrase": "Forced down-round wiping out 80% equity",
+        "strength": "Medium",
+        "category": "Vanity Burn Vulnerability",
+        "explanation": "High burn coupled with shallow runway forces catastrophic equity surrender during market contractions."
+      },
+      {
+        "id": "mw3-clue-4",
+        "phrase": "₹8 Crores ARR retaining 88% founder equity",
+        "strength": "Strong",
+        "category": "Generational Wealth Engine",
+        "explanation": "Owning 88% of a profitable compounding business is vastly superior to owning 5% of a subsidized unicorn."
+      }
+    ]
+  },
+  "try": {
+    "title": "Scenario Practice: Compounding & Founder Economics",
+    "description": "Analyze the capital structure, calculate the runway, and make the founder decision.",
+    "cases": [
+      {
+        "id": "mw3-case-1",
+        "caseNumber": 1,
+        "scenario": "You run a B2B SaaS startup. You currently charge ₹12,000/year and have 100 customers. Your customer churn is nearly 0%, and customers frequently tell you your tool is indispensable.",
+        "context": "You are working 70 hours a week and cannot afford to hire senior engineering talent.",
+        "steps": [
+          {
+            "id": "mw3-c1-s1",
+            "stepType": "emotion",
+            "title": "Diagnosing the Pricing Fear Trap",
+            "question": "Why are you terrified of raising prices to ₹36,000/year?",
+            "options": [
+              "Because software must always be cheap",
+              "Founder Impostor Syndrome and loss aversion: fearing that raising prices will make all 100 customers cancel overnight, despite near-zero churn and high utility",
+              "Indian law forbids price hikes over 5%",
+              "Because competitors will sue you"
+            ],
+            "correctIndex": 1,
+            "explanation": "Founders chronically underprice their products due to personal fear, starving their business of engineering capital.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mw3-c1-s2",
+            "stepType": "intent",
+            "title": "Calculating the Pricing Math",
+            "question": "If you triple the price to ₹36,000 for new customers, what happens even if conversion drops by 30%?",
+            "options": [
+              "Revenue collapses by 90%",
+              "Revenue more than doubles (2.1x) while customer support volume drops, freeing up massive gross margin to hire elite developers",
+              "The company goes bankrupt",
+              "You have to pay 3x more taxes"
+            ],
+            "correctIndex": 1,
+            "explanation": "Pricing power math: 70 customers paying ₹36k generates ₹25.2 Lakhs vs 100 customers paying ₹12k generating ₹12 Lakhs.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mw3-c1-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "How do you roll out the new pricing without alienating early champions?",
+            "options": [
+              "Triple the price on existing customers without warning",
+              "Grandfather existing 100 champions at their current rate for life as a thank-you, and introduce the ₹36,000 tier for all new incoming signups with enhanced SLA",
+              "Shut down the company",
+              "Offer a 90% discount on Black Friday"
+            ],
+            "correctIndex": 1,
+            "explanation": "Grandfathering honors existing trust capital while immediately capturing high willingness to pay from new enterprise customers.",
+            "clueStrength": "Medium"
+          }
+        ]
+      },
+      {
+        "id": "mw3-case-2",
+        "caseNumber": 2,
+        "scenario": "Your startup has ₹36 Lakhs in the bank. Your monthly revenue is ₹4 Lakhs, and your monthly expenses are ₹10 Lakhs.",
+        "context": "An angel investor offers ₹50 Lakhs but demands 35% of the company's equity.",
+        "steps": [
+          {
+            "id": "mw3-c2-s1",
+            "stepType": "emotion",
+            "title": "Runway Calculation",
+            "question": "What is your exact net monthly burn and remaining runway in months?",
+            "options": [
+              "Net burn ₹10 Lakhs, runway 3.6 months",
+              "Net monthly burn is ₹6 Lakhs (₹10L expenses - ₹4L revenue), meaning you have exactly 6.0 months of runway remaining",
+              "You have infinite runway",
+              "Runway cannot be calculated"
+            ],
+            "correctIndex": 1,
+            "explanation": "Net Burn = Expenses minus Revenue = ₹6 Lakhs/month. Runway = ₹36L ÷ ₹6L = exactly 6.0 months.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mw3-c2-s2",
+            "stepType": "intent",
+            "title": "Evaluating the 35% Dilution Offer",
+            "question": "Why is giving up 35% equity for ₹50 Lakhs an exploitative trap?",
+            "options": [
+              "It is an excellent deal you must take today",
+              "Surrendering 35% at the seed stage creates a damaged, 'uninvestable' cap table for Series A venture rounds, leaving founders demoralized employees in their own startup",
+              "Because angel investors are illegal",
+              "Because ₹50 Lakhs is too much cash"
+            ],
+            "correctIndex": 1,
+            "explanation": "Early seed dilution should rarely exceed 10-15%. Giving up 35% in one tranche ruins founder incentives and cap table architecture.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mw3-c2-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "How do you extend your runway without selling 35% equity?",
+            "options": [
+              "Give up and close the business",
+              "Trim non-essential expenses by ₹2 Lakhs, push annual upfront enterprise deals to increase monthly revenue to ₹7 Lakhs, shrinking net burn to ₹1 Lakh and extending runway to 36 months",
+              "Take a 40% personal loan from a loan shark",
+              "Hire 10 more marketing interns"
+            ],
+            "correctIndex": 1,
+            "explanation": "Cash flow hygiene and operational efficiency buy freedom without surrendering the equity cap table.",
+            "clueStrength": "Medium"
+          }
+        ]
+      },
+      {
+        "id": "mw3-case-3",
+        "caseNumber": 3,
+        "scenario": "A prospective client offers to pay you ₹15 Lakhs in cash under the table if you agree not to declare the revenue on your official company invoices.",
+        "context": "Your startup is in its first year and could use the immediate cash.",
+        "steps": [
+          {
+            "id": "mw3-c3-s1",
+            "stepType": "emotion",
+            "title": "Diagnosing the Trust vs Cash Trade",
+            "question": "Why is accepting undocumented illicit cash fatal to long-term wealth creation?",
+            "options": [
+              "It is a brilliant tax optimization strategy",
+              "It destroys your unblemished regulatory integrity, exposes you to criminal extortion, and permanently ruins institutional audit compliance needed for future IPOs or acquisitions",
+              "Because banks don't accept paper rupees",
+              "It makes your company too famous"
+            ],
+            "correctIndex": 1,
+            "explanation": "Compounding requires institutional trust and clean auditability; cutting corners introduces catastrophic asymmetric tail risk.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mw3-c3-s2",
+            "stepType": "intent",
+            "title": "Trust as Economic Leverage",
+            "question": "What is the true economic value of an impeccable ethical reputation?",
+            "options": [
+              "It has zero economic value",
+              "Supreme reputation liquidity: clients, banks, and enterprise buyers execute high-value deals with zero friction because your integrity is a proven guarantee",
+              "It lets you get free coffee in Bengaluru",
+              "It allows you to bypass income tax"
+            ],
+            "correctIndex": 1,
+            "explanation": "Trust is high-leverage social capital that creates compound deal flow that shady competitors can never access.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mw3-c3-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "What is your response to the client?",
+            "options": [
+              "Agree to the cash deal",
+              "State calmly: 'Our company policy requires 100% compliant GST invoicing on all commercial contracts. We cannot accept cash. We are happy to proceed on official terms.'",
+              "Blackmail the client",
+              "Flee the country"
+            ],
+            "correctIndex": 1,
+            "explanation": "Calm, non-negotiable adherence to legal and moral standards preserves your enterprise value and filters out toxic clients.",
+            "clueStrength": "Medium"
+          }
+        ]
+      }
+    ]
+  },
+  "prove": {
+    "title": "Mastery Check: Compounding, Assets & Founder Economics",
+    "subtitle": "Score 80%+ (7 of 8 correct) to master this unit.",
+    "passingScorePercent": 80,
+    "totalQuestions": 8,
+    "questions": [
+      {
+        "id": "mw3-q1",
+        "number": 1,
+        "conceptId": "compounding-tail",
+        "scenario": "Why do the vast majority of investment returns in an exponential compounding model occur in the final years?",
+        "options": [
+          "Because governments inject subsidies into older accounts",
+          "The mathematical nature of exponential growth ($A = P(1+r)^t$): interest earns interest on previous accumulated interest, causing the slope to become nearly vertical over time",
+          "Because stock exchanges reward loyalty",
+          "Because inflation drops to zero after 20 years"
+        ],
+        "correctIndex": 1,
+        "explanation": "Compound interest is non-linear; the returns on prior accumulated gains dwarf the initial principal in later stages."
+      },
+      {
+        "id": "mw3-q2",
+        "number": 2,
+        "conceptId": "asset-definition",
+        "scenario": "In behavioral wealth architecture, what qualifies an acquisition as a true asset?",
+        "options": [
+          "Anything that was expensive to purchase",
+          "Any vehicle or holding that puts positive net cash flow into your account or demonstrates verifiable real appreciation above inflation",
+          "Designer clothing with high brand recognition",
+          "A consumer electronics device"
+        ],
+        "correctIndex": 1,
+        "explanation": "Assets produce cash flow or store inflation-beating value; liabilities drain recurring cash."
+      },
+      {
+        "id": "mw3-q3",
+        "number": 3,
+        "conceptId": "pricing-power-buffett",
+        "scenario": "Why does Warren Buffett consider 'pricing power' the single most important decision in evaluating a business?",
+        "options": [
+          "It allows you to put price tags on products",
+          "If a business can raise prices by 10% without losing customers to competitors, it possesses a deep competitive moat and produces superior return on equity",
+          "Because high prices are always respected",
+          "Because low prices are illegal for public companies"
+        ],
+        "correctIndex": 1,
+        "explanation": "Pricing power indicates pricing elasticity and customer loyalty—the ultimate hallmark of a wide economic moat."
+      },
+      {
+        "id": "mw3-q4",
+        "number": 4,
+        "conceptId": "runway-formula",
+        "scenario": "How is a startup's operational cash runway mathematically defined?",
+        "options": [
+          "Total Revenue multiplied by 12",
+          "Total Liquid Cash Balance divided by Net Monthly Cash Burn Rate (Monthly Expenses minus Monthly Cash Inflows)",
+          "The number of employees in the company",
+          "The valuation given by venture capitalists"
+        ],
+        "correctIndex": 1,
+        "explanation": "Runway = Total Cash ÷ Net Monthly Burn Rate, representing the exact survival lifespan in months."
+      },
+      {
+        "id": "mw3-q5",
+        "number": 5,
+        "conceptId": "equity-wealth-vehicle",
+        "scenario": "Why is equity ownership the primary historical vehicle for creating generational wealth?",
+        "options": [
+          "Because salaries are capped at 40 hours per week of human labor, whereas equity ownership participates in scalable enterprise value and capital compounding",
+          "Because equity is tax-free in all countries",
+          "Because stock certificates are made of expensive paper",
+          "Because employees cannot own bank accounts"
+        ],
+        "correctIndex": 0,
+        "explanation": "Salaries trade linear time for money; equity captures non-linear enterprise leverage and compounding scale."
+      },
+      {
+        "id": "mw3-q6",
+        "number": 6,
+        "conceptId": "high-income-skill-leverage",
+        "scenario": "Why should an early-career individual prioritize developing high-income skills over hyper-optimizing micro-spending?",
+        "options": [
+          "Because spending cannot be reduced below zero, but earning capacity through high-leverage skills has uncapped upside potential",
+          "Because saving money is completely useless",
+          "Because skills never take time to learn",
+          "Because employers pay bonuses for bad habits"
+        ],
+        "correctIndex": 0,
+        "explanation": "You can only cut spending to zero (a bounded finite floor), but skill-based earning power is practically uncapped."
+      },
+      {
+        "id": "mw3-q7",
+        "number": 7,
+        "conceptId": "cash-flow-vs-profit",
+        "scenario": "Why do fast-growing, highly 'profitable' companies frequently go bankrupt?",
+        "options": [
+          "They forget where their office is",
+          "Accrual accounting profit does not equal cash: if clients take 120 days to pay while payroll must be paid on the 1st of each month, the company dies of cash asphyxiation",
+          "Because profit is illegal in India",
+          "Because banks close during monsoons"
+        ],
+        "correctIndex": 1,
+        "explanation": "Working capital lags: delivering uncollected revenue while meeting hard payroll obligations kills cash-starved businesses."
+      },
+      {
+        "id": "mw3-q8",
+        "number": 8,
+        "conceptId": "trust-as-wealth",
+        "scenario": "According to Naval Ravikant, why is high ethical trust the ultimate economic asset?",
+        "options": [
+          "Because nice people get free meals",
+          "High trust eliminates transaction friction, contract negotiation drag, and verification costs, compounding long-term deal flow with elite partners",
+          "Because trust guarantees stock prices will rise",
+          "Because banks give 0% interest loans to honest people"
+        ],
+        "correctIndex": 1,
+        "explanation": "Trust is a social technology that minimizes transaction overhead and fosters lucrative long-term relationships."
+      }
+    ]
+  },
+  "apply": {
+    "title": "Field Mission: The Founder Runway & Asset Audit",
+    "missionCodename": "OPERATION RUNWAY FORTRESS",
+    "difficulty": "Advanced",
+    "timeRequired": "15 minutes",
+    "briefing": "Calculate your personal or business Cash Runway, categorize your holdings into true Assets vs Liabilities, and identify your #1 high-income skill propellant.",
+    "actionSteps": [
+      "Calculate your exact Runway: Total Liquid Cash ÷ Net Monthly Burn Rate.",
+      "List your top 3 holdings and ruthlessly label each as a Cash-Flow Asset (+₹) or a Consumption Liability (-₹).",
+      "Identify your primary high-income skill: what high-leverage capability will 2x your earning capacity over the next 18 months?",
+      "Audit your pricing or salary: identify where fear of rejection is causing you to undercharge for your labor or product."
+    ],
+    "reflectionPrompt": "What is your current runway in months, what asset/liability ratio did you uncover, and how will you elevate your pricing or skill leverage this quarter?",
+    "rubric": [
+      {
+        "criterion": "Runway Precision",
+        "target": "Explicit numerical runway calculation based on actual cash burn"
+      },
+      {
+        "criterion": "Asset/Liability Honesty",
+        "target": "Classified all holdings by net cash flow generation"
+      },
+      {
+        "criterion": "Skill Leverage Blueprint",
+        "target": "Identified a concrete high-income skill development trajectory"
+      }
+    ]
+  }
+}

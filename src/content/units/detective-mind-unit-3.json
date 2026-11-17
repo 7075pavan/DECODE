@@ -1,0 +1,471 @@
+{
+  "unitId": "detective-mind-unit-3",
+  "pathId": "detective-mind",
+  "unitNumber": 3,
+  "title": "Bias Breakers & Occam's Razor",
+  "subtitle": "Detective Mind · Unit 3",
+  "estimatedMinutes": 8,
+  "xpReward": 60,
+  "description": "Neutralize confirmation bias, apply Hanlon's and Occam's Razors, and deploy red-teaming to stress-test your conclusions.",
+  "rulesSummary": [
+    "Confirmation bias is default human neurology: we actively collect proof for what we already believe.",
+    "Occam's Razor: among competing hypotheses, prefer the one with the fewest unproven assumptions.",
+    "Hanlon's Razor: never attribute to malice that which is adequately explained by incompetence or exhaustion.",
+    "Red-team your own theory: build the strongest possible counter-case before committing.",
+    "The availability heuristic tricks memory: dramatic events feel frequent; quiet constants are ignored."
+  ],
+  "learn": {
+    "title": "Cognitive Bias Neutralization & Parsimony",
+    "cards": [
+      {
+        "id": "dm3-learn-1",
+        "step": "01 / 05",
+        "title": "The Confirmation Trap",
+        "subtitle": "The brain's lawyer",
+        "icon": "search_off",
+        "isKeyRule": false,
+        "content": "The human mind does not operate like an impartial judge weighing evidence. It operates like a defense attorney searching for any shred of evidence to support its pre-existing verdict while ignoring mountains of contradictory data. Master detectives actively search for evidence that would DISPROVE their theory.",
+        "takeaway": "Spend 80% of your energy searching for evidence that would prove you wrong."
+      },
+      {
+        "id": "dm3-learn-2",
+        "step": "02 / 05",
+        "title": "Occam's Razor in Practice",
+        "subtitle": "The law of parsimony",
+        "icon": "content_cut",
+        "isKeyRule": false,
+        "content": "When evaluating two competing explanations that both account for the facts, choose the one requiring the fewest unproven entities and complex assumptions. If your laptop won't turn on, it is far more likely the battery drained than an overseas state-sponsored cyber-espionage unit installed rootkits.",
+        "takeaway": "Prefer hypotheses with the fewest unverified moving parts and assumptions."
+      },
+      {
+        "id": "dm3-learn-3",
+        "step": "03 / 05",
+        "title": "Hanlon's Razor",
+        "subtitle": "The incompetence antidote",
+        "icon": "psychology_alt",
+        "isKeyRule": false,
+        "content": "Never attribute to malice that which is adequately explained by stupidity, fatigue, or communication breakdown. When a colleague doesn't reply to your urgent email, novices imagine a deliberate insult. Forensic thinkers recognize they simply have 400 unread emails, a crying child, and an overflowing inbox.",
+        "takeaway": "Assume fatigue, oversight, or bandwidth limits before assuming conspiracy or malice."
+      },
+      {
+        "id": "dm3-learn-4",
+        "step": "04 / 05",
+        "title": "The Availability Heuristic",
+        "subtitle": "The vividness distortion",
+        "icon": "auto_awesome",
+        "isKeyRule": false,
+        "content": "We estimate the likelihood of an event based on how easily vivid examples come to mind. Airplane crashes dominate headlines, making air travel feel terrifying, while routine car accidents claim 100x more lives without a second thought. Base decisions on actuarial base rates, not vivid memories.",
+        "takeaway": "Base rates beat vivid memories: just because an example is dramatic doesn't mean it is common."
+      },
+      {
+        "id": "dm3-learn-5",
+        "step": "05 / 05",
+        "title": "The Red-Team Mandate",
+        "subtitle": "Master bias rule",
+        "icon": "bolt",
+        "isKeyRule": true,
+        "content": "Before executing any major business decision, hire or assign someone the specific role of the Red Team: their sole mandate is to construct the strongest, most coherent argument for why your plan will fail. If your theory cannot survive an intelligent red-team assault, it is fragile fiction.",
+        "takeaway": "Appoint an active red-team to systematically attack your cherished assumptions."
+      }
+    ]
+  },
+  "see": {
+    "title": "Worked Example: The Alleged PR Sabotage",
+    "scenarioTitle": "Engineering Discord Dispute, Whitefield, Bengaluru",
+    "scenarioDescription": "A senior frontend engineer, Varun, publicly accuses a junior backend developer, Tanya, of intentionally approving a broken pull request to sabotage Varun's sprint velocity score.",
+    "imageUrl": "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&auto=format&fit=crop&q=80",
+    "story": [
+      {
+        "type": "paragraph",
+        "text": "Varun presented a 5-page timeline of Slack messages showing that Tanya had argued with him during a design review two weeks ago, claiming this proved malice."
+      },
+      {
+        "type": "paragraph",
+        "text": "The engineering VP convened a post-mortem to evaluate whether sabotage or standard cognitive error was at play."
+      },
+      {
+        "type": "interactive_paragraph",
+        "segments": [
+          {
+            "text": "Git logs showed Tanya approved the pull request at "
+          },
+          {
+            "clueId": "dm3-clue-1",
+            "text": "2:47 AM on a Sunday after 14 hours of continuous deployment debugging",
+            "isClue": true
+          },
+          {
+            "text": ". In total, she approved "
+          },
+          {
+            "clueId": "dm3-clue-2",
+            "text": "19 other pull requests within that same 15-minute window",
+            "isClue": true
+          },
+          {
+            "text": ", including three of her own team's PRs that also "
+          },
+          {
+            "clueId": "dm3-clue-3",
+            "text": "contained identical broken unit test mocks",
+            "isClue": true
+          },
+          {
+            "text": ". When applying Occam's and Hanlon's Razors, the hypothesis of "
+          },
+          {
+            "clueId": "dm3-clue-4",
+            "text": "sleep-deprived rubber-stamping perfectly explained all 20 PR approvals",
+            "isClue": true
+          },
+          {
+            "text": " without requiring a complex personal revenge conspiracy."
+          }
+        ]
+      }
+    ],
+    "clues": [
+      {
+        "id": "dm3-clue-1",
+        "phrase": "Approved at 2:47 AM on Sunday",
+        "strength": "Strong",
+        "category": "Cognitive Fatigue",
+        "explanation": "Extreme late-night timestamps indicate severe cognitive exhaustion and diminished error checking."
+      },
+      {
+        "id": "dm3-clue-2",
+        "phrase": "19 other PRs approved in 15 minutes",
+        "strength": "Strong",
+        "category": "Habitual Rubber-Stamping",
+        "explanation": "Approving 20 PRs in 15 minutes equates to 45 seconds per PR, proving bulk unread approvals rather than targeted sabotage."
+      },
+      {
+        "id": "dm3-clue-3",
+        "phrase": "Contained identical broken test mocks across her own team",
+        "strength": "Strong",
+        "category": "Impartial Failure",
+        "explanation": "Breaking her own team's builds disproves targeted malice toward Varun."
+      },
+      {
+        "id": "dm3-clue-4",
+        "phrase": "Sleep-deprived rubber-stamping explains all cases",
+        "strength": "Strong",
+        "category": "Occam's Parsimony",
+        "explanation": "A single fatigue mechanism accounts for 100% of the evidence without inventing conspiratorial motives."
+      }
+    ]
+  },
+  "try": {
+    "title": "Scenario Practice: Bias Breaking in Action",
+    "description": "Identify the cognitive bias, apply the appropriate razor, and execute the calibrated resolution.",
+    "cases": [
+      {
+        "id": "dm3-case-1",
+        "caseNumber": 1,
+        "scenario": "An e-commerce founder sees three angry customer tweets complaining about slow deliveries in Jaipur and immediately prepares to fire their primary logistics partner.",
+        "context": "The platform fulfilled 42,000 orders across India that same week.",
+        "steps": [
+          {
+            "id": "dm3-c1-s1",
+            "stepType": "emotion",
+            "title": "Core Cognitive Bias",
+            "question": "What cognitive trap is blinding the founder?",
+            "options": [
+              "Hindsight bias",
+              "Availability heuristic: vivid, emotionally distressing complaints on Twitter are overshadowing the 99.8% on-time delivery base rate across 42,000 orders",
+              "Sunk cost fallacy",
+              "Curse of knowledge"
+            ],
+            "correctIndex": 1,
+            "explanation": "Vivid, emotionally charged tweets make rare defects feel ubiquitous, distorting objective statistical reality.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "dm3-c1-s2",
+            "stepType": "intent",
+            "title": "Likely Mechanism",
+            "question": "Upon checking Jaipur specifically, why did those 3 shipments stall?",
+            "options": [
+              "The delivery drivers stole the goods",
+              "Heavy unseasonal monsoon waterlogging blocked the main transport artery into Jaipur for 24 hours, affecting all couriers",
+              "The customers gave fake addresses",
+              "The logistics partner went bankrupt"
+            ],
+            "correctIndex": 1,
+            "explanation": "Checking objective physical constraints (Jaipur floods) reveals an external environmental cause rather than systemic partner failure.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "dm3-c1-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "How should the founder respond?",
+            "options": [
+              "Cancel the logistics contract and lose all shipping capacity",
+              "Apologize publicly on Twitter, explain the weather constraint, issue credit vouchers to the 3 customers, and monitor base-rate delivery SLAs",
+              "Block the customers on Twitter",
+              "Ignore all logistics data forever"
+            ],
+            "correctIndex": 1,
+            "explanation": "Address the acute customer experience while relying on base-rate statistical metrics to evaluate partner health.",
+            "clueStrength": "Medium"
+          }
+        ]
+      },
+      {
+        "id": "dm3-case-2",
+        "caseNumber": 2,
+        "scenario": "You sent a detailed WhatsApp pitch to a prospective client who read it (blue ticks) at 10 AM, but has not replied by 6 PM. You assume they hated the proposal and are disrespecting you.",
+        "context": "The client is the CEO of a 200-person logistics firm.",
+        "steps": [
+          {
+            "id": "dm3-c2-s1",
+            "stepType": "emotion",
+            "title": "Core Cognitive Bias",
+            "question": "Which mental model should you deploy to reframe this silence?",
+            "options": [
+              "Hanlon's Razor: never attribute to malice or disrespect that which is explained by executive cognitive overload and a packed calendar",
+              "Parkinson's Law",
+              "Peter Principle",
+              "Dunbar's Number"
+            ],
+            "correctIndex": 0,
+            "explanation": "CEOs handle hundreds of operational crises daily; delayed replies almost always stem from bandwidth limits, not personal malice.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "dm3-c2-s2",
+            "stepType": "intent",
+            "title": "Likely Mechanism",
+            "question": "What actually happened when they opened the WhatsApp message at 10 AM?",
+            "options": [
+              "They laughed and forwarded it to friends to mock you",
+              "They opened it while walking into an executive board meeting, got pulled into discussions, and meant to review it later",
+              "They deleted WhatsApp permanently",
+              "They decided to hire your biggest competitor out of spite"
+            ],
+            "correctIndex": 1,
+            "explanation": "Routine interruption: message opened in transit, buried under subsequent incoming chats.",
+            "clueStrength": "Medium"
+          },
+          {
+            "id": "dm3-c2-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "What is the optimal professional follow-up?",
+            "options": [
+              "Send angry messages asking why they left you on 'seen'",
+              "Wait 24 hours, then send a polite, low-friction bump: 'Hi Vikram, know your schedule is packed. Did you want to connect for 10 mins Thursday, or should we revisit next month?'",
+              "Call them 15 times until they pick up",
+              "Delete your WhatsApp account"
+            ],
+            "correctIndex": 1,
+            "explanation": "A graceful 24-hour bump acknowledging their busyness gives a low-friction opportunity to re-engage.",
+            "clueStrength": "Strong"
+          }
+        ]
+      },
+      {
+        "id": "dm3-case-3",
+        "caseNumber": 3,
+        "scenario": "An angel investor is convinced that an AI startup will succeed simply because the founder graduated from IIT Bombay and worked at Google.",
+        "context": "The startup is building an enterprise sales CRM with zero paying pilots after 18 months.",
+        "steps": [
+          {
+            "id": "dm3-c3-s1",
+            "stepType": "emotion",
+            "title": "Core Cognitive Bias",
+            "question": "What bias is misleading the investor?",
+            "options": [
+              "Halo effect & survivorship bias: attributing generalized competence to pedigree while blinding themselves to lack of product-market traction",
+              "Gambler's fallacy",
+              "Loss aversion",
+              "Hyperbolic discounting"
+            ],
+            "correctIndex": 0,
+            "explanation": "The Halo Effect assumes elite credentials automatically translate to entrepreneurial execution and customer acquisition.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "dm3-c3-s2",
+            "stepType": "intent",
+            "title": "Likely Mechanism",
+            "question": "What is the underlying business reality behind the zero paying pilots?",
+            "options": [
+              "Customers hate Indian founders",
+              "The founder is building technology in a vacuum without validating enterprise customer pain, relying on pedigree rather than customer discovery",
+              "Enterprise software is completely obsolete",
+              "Google forbade them from making sales"
+            ],
+            "correctIndex": 1,
+            "explanation": "Credentials don't create customer demand; deep problem validation and distribution execution do.",
+            "clueStrength": "Medium"
+          },
+          {
+            "id": "dm3-c3-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "How should an investment committee member evaluate this deal?",
+            "options": [
+              "Wire ₹50 Lakhs immediately because IIT alumni never fail",
+              "Condition any investment on verified customer letters of intent (LOIs) and 3 completed reference calls with actual enterprise pilot buyers",
+              "Reject the deal only because the founder went to Google",
+              "Ask for a 90% equity stake"
+            ],
+            "correctIndex": 1,
+            "explanation": "Anchor the valuation to objective customer proof (LOIs, pilot usage) rather than academic credentials.",
+            "clueStrength": "Strong"
+          }
+        ]
+      }
+    ]
+  },
+  "prove": {
+    "title": "Mastery Check: Bias Breakers & Occam's Razor",
+    "subtitle": "Score 80%+ (7 of 8 correct) to master this unit.",
+    "passingScorePercent": 80,
+    "totalQuestions": 8,
+    "questions": [
+      {
+        "id": "dm3-q1",
+        "number": 1,
+        "conceptId": "occams-razor",
+        "scenario": "What is the fundamental thesis of Occam's Razor?",
+        "options": [
+          "The most complicated explanation is always the most sophisticated",
+          "Plurality should not be posited without necessity: prefer the theory that makes the fewest assumptions to explain the evidence",
+          "Always cut your budget in half",
+          "First impressions are 100% accurate"
+        ],
+        "correctIndex": 1,
+        "explanation": "Parsimony demands that we do not introduce unnecessary entities or assumptions when a simpler mechanism fits all facts."
+      },
+      {
+        "id": "dm3-q2",
+        "number": 2,
+        "conceptId": "hanlons-razor",
+        "scenario": "When someone cuts you off in traffic or fails to reply to an email, what does Hanlon's Razor advise?",
+        "options": [
+          "They are an enemy targeted on destroying your day",
+          "Assume distraction, poor driving skill, or overwhelming fatigue before assuming intentional malice toward you",
+          "Retaliate immediately to preserve honor",
+          "Assume they have a high-IQ plan"
+        ],
+        "correctIndex": 1,
+        "explanation": "Most social frictions arise from human limitation, distraction, and cognitive overload, rarely calculated hostility."
+      },
+      {
+        "id": "dm3-q3",
+        "number": 3,
+        "conceptId": "confirmation-bias-hunting",
+        "scenario": "How does a professional forecaster protect themselves from confirmation bias?",
+        "options": [
+          "By never changing their mind once decided",
+          "By proactively writing down what evidence would prove their thesis false and actively hunting for that disconfirming data",
+          "By reading only news sources that share their ideology",
+          "By deleting all criticism from their inbox"
+        ],
+        "correctIndex": 1,
+        "explanation": "Deliberate disconfirmation hunting breaks the brain's natural bias to hoard confirmatory proof."
+      },
+      {
+        "id": "dm3-q4",
+        "number": 4,
+        "conceptId": "survivorship-bias",
+        "scenario": "During WWII, Abraham Wald analyzed armor placement on returning bombers covered in bullet holes. Where did he advise adding armor?",
+        "options": [
+          "Where the bullet holes were densest (wings and fuselage)",
+          "Where there were NO bullet holes (the engines), because planes hit in the engines never survived to return for inspection",
+          "Nowhere, because armor adds weight",
+          "On the pilot's helmet only"
+        ],
+        "correctIndex": 1,
+        "explanation": "Survivorship bias: inspecting only survivors hides the fate of the perished. Missing bullet holes revealed fatal vulnerability."
+      },
+      {
+        "id": "dm3-q5",
+        "number": 5,
+        "conceptId": "red-teaming",
+        "scenario": "What makes a Red Team exercise genuinely effective?",
+        "options": [
+          "Making fun of junior employees",
+          "Giving competent analysts explicit psychological safety and incentives to aggressively attack and expose flaws in leadership's plan",
+          "Agreeing with everything the CEO says",
+          "Limiting the review to 2 minutes"
+        ],
+        "correctIndex": 1,
+        "explanation": "Effective red teaming requires uncompromised independence and psychological safety to dismantle leadership assumptions."
+      },
+      {
+        "id": "dm3-q6",
+        "number": 6,
+        "conceptId": "base-rate-neglect",
+        "scenario": "Why do startup investors lose money when they neglect base rates?",
+        "options": [
+          "They forget what year it is",
+          "They fixate on an exciting founder story while ignoring that 90% of early-stage startups fail due to unit economics and distribution",
+          "Because all startups succeed",
+          "Because interest rates never change"
+        ],
+        "correctIndex": 1,
+        "explanation": "Neglecting base rates means ignoring the historical statistical probability of failure in a category."
+      },
+      {
+        "id": "dm3-q7",
+        "number": 7,
+        "conceptId": "fundamental-attribution-error",
+        "scenario": "What is the Fundamental Attribution Error in psychology?",
+        "options": [
+          "Overestimating situational factors for others while blaming ourselves",
+          "Attributing other people's actions to their character/personality while attributing our own actions to situational circumstances",
+          "Believing computers are smarter than humans",
+          "Thinking everyone likes the same music"
+        ],
+        "correctIndex": 1,
+        "explanation": "We blame others' flaws on their character ('he is lazy'), but justify our own identical flaws by circumstances ('traffic was bad')."
+      },
+      {
+        "id": "dm3-q8",
+        "number": 8,
+        "conceptId": "steelmanning",
+        "scenario": "What does 'steelmanning' an opponent's argument entail?",
+        "options": [
+          "Building a weak strawman to easily defeat in debate",
+          "Constructing the strongest, most compelling, and persuasive version of their argument before attempting to address it",
+          "Insulting their education level",
+          "Shouting louder than them in a meeting"
+        ],
+        "correctIndex": 1,
+        "explanation": "Steelmanning ensures you defeat the most robust version of a counter-hypothesis, resulting in antifragile conclusions."
+      }
+    ]
+  },
+  "apply": {
+    "title": "Field Mission: The Red-Team Challenge",
+    "missionCodename": "OPERATION STEEL SHIELD",
+    "difficulty": "Advanced",
+    "timeRequired": "15 minutes",
+    "briefing": "Identify a plan, strategy, or conviction you are currently 100% certain about (e.g., your career path, an investment choice, or a project architecture). Put on the Red Team hat and write a ruthless 1-page takedown of your own thesis.",
+    "actionSteps": [
+      "State your core hypothesis clearly in one sentence.",
+      "Identify 3 hidden assumptions that MUST be true for your plan to succeed.",
+      "Construct the single strongest reason why your plan will suffer a catastrophic failure.",
+      "Apply Hanlon's and Occam's Razors to eliminate any conspiratorial thinking in your critique."
+    ],
+    "reflectionPrompt": "What was your core thesis, what fatal vulnerability did your Red Team audit expose, and what hedge or safeguard will you introduce?",
+    "rubric": [
+      {
+        "criterion": "Ruthless Objectivity",
+        "target": "Exposed genuine vulnerabilities without defensive rationalization"
+      },
+      {
+        "criterion": "Assumption Audit",
+        "target": "Identified at least two unverified dependency assumptions"
+      },
+      {
+        "criterion": "Hedging Strategy",
+        "target": "Designed a tangible countermeasure or backup plan"
+      }
+    ]
+  }
+}

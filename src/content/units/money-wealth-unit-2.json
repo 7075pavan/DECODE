@@ -1,0 +1,471 @@
+{
+  "unitId": "money-wealth-unit-2",
+  "pathId": "money-wealth",
+  "unitNumber": 2,
+  "title": "The Psychology of Money & Biases",
+  "subtitle": "Money & Wealth · Unit 2",
+  "estimatedMinutes": 8,
+  "xpReward": 60,
+  "description": "Decode the behavioral flaws that destroy fortunes: Kahneman's loss aversion, the scarcity vs abundance trap, herd mania bubbles, and the crucial boundary between calculated risk and casino gambling.",
+  "rulesSummary": [
+    "Loss aversion: the emotional agony of losing ₹10,000 is 2.5x more intense than the joy of making ₹10,000.",
+    "Scarcity mindset breeds myopic panic; abundance mindset focuses on positive-sum long-term engines.",
+    "The Herd Effect: when everyone in your WhatsApp group is buying an asset, the bubble is near its peak.",
+    "Risk vs Gambling: calculated risk has positive expected value (+EV); gambling has negative expected value (-EV).",
+    "High-interest debt is an anchor on your future: never use borrowed leverage on depreciating consumer assets."
+  ],
+  "learn": {
+    "title": "Behavioral Finance & Cognitive Traps",
+    "cards": [
+      {
+        "id": "mw2-learn-1",
+        "step": "01 / 05",
+        "title": "The Agony of Loss Aversion",
+        "subtitle": "Kahneman & Tversky's Prospect Theory",
+        "icon": "sentiment_very_dissatisfied",
+        "isKeyRule": false,
+        "content": "Humans are biologically asymmetric: losing ₹1 Lakh triggers approximately 2.5 times more psychological anguish than gaining ₹1 Lakh produces joy. This evolutionary wiring causes investors to panic-sell at market bottoms to stop the pain, and hoard losing stocks hoping to break even, while cutting winning positions too early.",
+        "takeaway": "Loss aversion makes you panic at the bottom. Master your biological asymmetry before trading."
+      },
+      {
+        "id": "mw2-learn-2",
+        "step": "02 / 05",
+        "title": "Scarcity vs Abundance Mindset",
+        "subtitle": "Zero-sum vs positive-sum worlds",
+        "icon": "all_inclusive",
+        "isKeyRule": false,
+        "content": "A scarcity mindset views wealth as a fixed-size pizza: for you to get a slice, someone else must starve. This leads to hoarding, jealousy, and cutthroat penny-pinching. An abundance mindset recognizes that wealth can be created out of thin air through innovation, technology, and mutual trade. Focus on baking a 100x larger pizza.",
+        "takeaway": "Scarcity mindsets fight over existing scraps; abundance mindsets invent new value through technology."
+      },
+      {
+        "id": "mw2-learn-3",
+        "step": "03 / 05",
+        "title": "The Herd Effect & FOMO Bubbles",
+        "subtitle": "The madness of crowds",
+        "icon": "groups",
+        "isKeyRule": false,
+        "content": "When taxi drivers, gym trainers, and family WhatsApp groups start giving stock or cryptocurrency tips, the herd effect is in full mania. Fear Of Missing Out (FOMO) bypasses risk analysis. Remember Warren Buffett's golden filter: 'Be fearful when others are greedy, and greedy when others are fearful.' The crowd buys high and sells low.",
+        "takeaway": "When the mainstream crowd is euphoric, danger is near. Never buy an asset because everyone is talking about it."
+      },
+      {
+        "id": "mw2-learn-4",
+        "step": "04 / 05",
+        "title": "Calculated Risk vs Casino Gambling",
+        "subtitle": "The Expected Value (+EV) equation",
+        "icon": "casino",
+        "isKeyRule": false,
+        "content": "Gambling (lottery, roulette, fantasy sports apps, intraday penny options) is designed with mathematically negative expected value (-EV)—the house always wins over time. Calculated risk (starting a business, buying broad market index funds, investing in high-income skills) carries temporary volatility but strongly positive expected value (+EV).",
+        "takeaway": "Only take bets with positive expected value (+EV); reject lottery tickets and negative-sum gambling."
+      },
+      {
+        "id": "mw2-learn-5",
+        "step": "05 / 05",
+        "title": "The Debt Cancer Law",
+        "subtitle": "Master behavioral bias rule",
+        "icon": "bolt",
+        "isKeyRule": true,
+        "content": "Debt is borrowing money from your future self, plus interest. Good debt pays for an asset that produces cash flow exceeding the debt service (e.g. productive machinery, cash-flow real estate). Bad debt pays for consumption and depreciation (credit cards, luxury vacations, designer clothes). Bad debt turns you into an economic indentured servant.",
+        "takeaway": "Never use debt to fund lifestyle consumption. Only deploy debt if the asset generates more cash than the interest."
+      }
+    ]
+  },
+  "see": {
+    "title": "Worked Example: The WhatsApp Crypto Mania",
+    "scenarioTitle": "Startup Cafeteria, Indiranagar, Bengaluru",
+    "scenarioDescription": "During the 2021 bull run, an anonymous meme token called 'ShibaRocket' surges 800% in two weeks. An entire marketing team begins pooling their personal savings.",
+    "imageUrl": "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?w=800&auto=format&fit=crop&q=80",
+    "story": [
+      {
+        "type": "paragraph",
+        "text": "Kabir, a digital marketing associate, watches his desk-mate make ₹3 Lakhs on paper in 4 days. Kabir feels intense FOMO and nausea: 'I am an idiot leaving my money in boring mutual funds while everyone is getting rich.'"
+      },
+      {
+        "type": "paragraph",
+        "text": "Kabir consults a senior engineering architect, Deepak, who audits the token's economics."
+      },
+      {
+        "type": "interactive_paragraph",
+        "segments": [
+          {
+            "text": "Deepak shows Kabir that "
+          },
+          {
+            "clueId": "mw2-clue-1",
+            "text": "four anonymous whale wallets own 68% of the entire token supply",
+            "isClue": true
+          },
+          {
+            "text": ", meaning the asset has "
+          },
+          {
+            "clueId": "mw2-clue-2",
+            "text": "zero productive cash flow and relies purely on greater-fool herd mania",
+            "isClue": true
+          },
+          {
+            "text": ". Kabir controls his loss aversion and declines to invest. Three weeks later, the whales dump their tokens on decentralized exchanges: "
+          },
+          {
+            "clueId": "mw2-clue-3",
+            "text": "the token plunges 94% in 36 hours, wiping out ₹18 Lakhs across the marketing team",
+            "isClue": true
+          },
+          {
+            "text": ", while Kabir's disciplined index allocation "
+          },
+          {
+            "clueId": "mw2-clue-4",
+            "text": "grows steadily by 13% annualized without a single sleepless night",
+            "isClue": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      }
+    ],
+    "clues": [
+      {
+        "id": "mw2-clue-1",
+        "phrase": "Four whale wallets own 68% of supply",
+        "strength": "Strong",
+        "category": "Structural Risk Audit",
+        "explanation": "Extreme asset concentration exposed that late buyers were exit liquidity for early insiders."
+      },
+      {
+        "id": "mw2-clue-2",
+        "phrase": "Zero productive cash flow, pure greater-fool mania",
+        "strength": "Strong",
+        "category": "Negative EV Gambling",
+        "explanation": "Without underlying earnings or dividends, the asset was an unhedged speculative casino."
+      },
+      {
+        "id": "mw2-clue-3",
+        "phrase": "Plunges 94% in 36 hours wiping out ₹18 Lakhs",
+        "strength": "Strong",
+        "category": "Bubble Collapse",
+        "explanation": "The inevitable mathematical outcome when herd euphoria exhausts marginal incoming buyers."
+      },
+      {
+        "id": "mw2-clue-4",
+        "phrase": "Grows steadily by 13% without sleepless nights",
+        "strength": "Medium",
+        "category": "Calculated Positive EV",
+        "explanation": "Patience and asset quality triumph over temporary casino dopamine."
+      }
+    ]
+  },
+  "try": {
+    "title": "Scenario Practice: Cognitive Traps in Finance",
+    "description": "Identify the cognitive distortion, evaluate the expected value, and execute the rational decision.",
+    "cases": [
+      {
+        "id": "mw2-case-1",
+        "caseNumber": 1,
+        "scenario": "The Nifty 50 stock market index drops 18% in three weeks due to geopolitical tension. Your equity portfolio shows an unrealized loss of ₹1,40,000.",
+        "context": "You have an investment horizon of 15 years and a secure corporate job.",
+        "steps": [
+          {
+            "id": "mw2-c1-s1",
+            "stepType": "emotion",
+            "title": "Diagnosing Loss Aversion Panic",
+            "question": "You feel an overwhelming impulse to sell all your mutual funds to 'prevent further losses.' What cognitive bias is manipulating you?",
+            "options": [
+              "Rational risk hedging",
+              "Myopic Loss Aversion: acute emotional pain from temporary paper drawdowns tricks you into converting temporary volatility into permanent realized capital destruction",
+              "Supreme investment genius",
+              "A technical signal to buy government bonds"
+            ],
+            "correctIndex": 1,
+            "explanation": "Myopic loss aversion causes investors to abandon long-term compounding strategies during routine temporary market corrections.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mw2-c1-s2",
+            "stepType": "intent",
+            "title": "Historical Base-Rate Calibration",
+            "question": "Historically, what happens to diversified broad market indices after an 18-20% geopolitical correction over a 5-to-10 year window?",
+            "options": [
+              "The market drops to absolute zero and never recovers",
+              "Broad market indices historically recover 100% of corrections and proceed to make new all-time highs as the economy grows",
+              "The stock exchange permanently closes",
+              "Only foreign investors make money"
+            ],
+            "correctIndex": 1,
+            "explanation": "Over modern market history, broad market indices have a 100% long-term recovery rate following temporary panic sell-offs.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mw2-c1-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "What is the counter-intuitive master move during a 20% market sale?",
+            "options": [
+              "Sell everything immediately",
+              "Maintain your automated SIPs, treat the 18% drop as a temporary discount on Indian corporate earnings, and deploy spare dry powder into broad indices",
+              "Check your portfolio every 5 minutes and panic",
+              "Complain to the finance minister"
+            ],
+            "correctIndex": 1,
+            "explanation": "Greedy when others are fearful: buying high-quality productive assets at a discount accelerates long-term compounding.",
+            "clueStrength": "Medium"
+          }
+        ]
+      },
+      {
+        "id": "mw2-case-2",
+        "caseNumber": 2,
+        "scenario": "Your college batchmate launches a consumer electronics startup and raises a ₹10 Crore seed round. You feel bitter jealousy and believe 'there is no room left for my ideas.'",
+        "context": "You have 5 years of domain expertise in cloud software architecture.",
+        "steps": [
+          {
+            "id": "mw2-c2-s1",
+            "stepType": "emotion",
+            "title": "Scarcity Mindset Diagnosis",
+            "question": "What psychological fallacy is creating this sense of bitterness?",
+            "options": [
+              "Objective market analysis",
+              "Zero-Sum Scarcity Mindset: falsely believing another person's success reduces the total amount of opportunity, capital, or achievement available to you",
+              "A sign you should retire today",
+              "Healthy competitive paranoia"
+            ],
+            "correctIndex": 1,
+            "explanation": "A scarcity mindset views success as a zero-sum pie, creating useless resentment instead of inspiration.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mw2-c2-s2",
+            "stepType": "intent",
+            "title": "Shifting to the Abundance Lens",
+            "question": "How does an abundance mindset interpret your batchmate's ₹10 Crore raise?",
+            "options": [
+              "Assume his investors were bribed",
+              "Proof of concept that early-stage capital is actively flowing to young Indian founders, expanding the overall tech ecosystem and creating adjacent opportunities for B2B infrastructure",
+              "Proof that hardware is better than software",
+              "A reason to unfriend him on LinkedIn"
+            ],
+            "correctIndex": 1,
+            "explanation": "Ecosystem expansion: successful peers validate market liquidity and open up upstream and downstream partner opportunities.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mw2-c2-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "How do you turn this peer milestone into mutual leverage?",
+            "options": [
+              "Post negative anonymous comments on their product launch",
+              "Send him a sincere, warm congratulatory note, offer to help test their cloud architecture, and build a high-trust alliance with a well-funded peer",
+              "Demand that he give you 10% of his company",
+              "Ignore him completely"
+            ],
+            "correctIndex": 1,
+            "explanation": "Celebrating peer wins and offering genuine value transforms potential envy into an invaluable professional alliance.",
+            "clueStrength": "Medium"
+          }
+        ]
+      },
+      {
+        "id": "mw2-case-3",
+        "caseNumber": 3,
+        "scenario": "An online gaming platform offers 'predictive algorithmic cricket betting' with 'guaranteed 3x payouts on your stakes.'",
+        "context": "You have ₹20,000 in discretionary weekend spending cash.",
+        "steps": [
+          {
+            "id": "mw2-c3-s1",
+            "stepType": "emotion",
+            "title": "Expected Value (+EV vs -EV) Audit",
+            "question": "What is the mathematical reality of consumer sports betting apps?",
+            "options": [
+              "A legitimate high-yield investment vehicle",
+              "Strictly negative expected value (-EV): the house takes an 8-15% rake on every match, mathematically guaranteeing long-term ruin for participants",
+              "A risk-free arbitrage opportunity",
+              "A charitable trust for cricket players"
+            ],
+            "correctIndex": 1,
+            "explanation": "The house rake guarantees negative expected value; no betting algorithm can overcome persistent negative mathematical odds.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mw2-c3-s2",
+            "stepType": "intent",
+            "title": "The Illusion of Control",
+            "question": "Why do sports fans believe they can consistently beat cricket betting odds?",
+            "options": [
+              "They have direct access to cricket pitches",
+              "The Illusion of Control bias: confusing factual knowledge of cricket statistics with the ability to forecast random probabilistic physical events",
+              "Because cricket is completely predictable",
+              "Because the betting app wants them to win"
+            ],
+            "correctIndex": 1,
+            "explanation": "Domain knowledge does not eliminate inherent stochastic variance, creating an illusion of forecasting mastery.",
+            "clueStrength": "Medium"
+          },
+          {
+            "id": "mw2-c3-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "How should you deploy that ₹20,000 for true asymmetric upside?",
+            "options": [
+              "Bet it all on the final match",
+              "Invest the ₹20,000 into a high-level technical certification, domain workshop, or high-yield equity fund with positive expected value (+EV)",
+              "Lend it to an unlicensed bookmaker",
+              "Spend it on lottery scratch cards"
+            ],
+            "correctIndex": 1,
+            "explanation": "Investing in income-generating human capital has infinitely positive expected value compared to negative-sum gambling.",
+            "clueStrength": "Strong"
+          }
+        ]
+      }
+    ]
+  },
+  "prove": {
+    "title": "Mastery Check: The Psychology of Money & Biases",
+    "subtitle": "Score 80%+ (7 of 8 correct) to master this unit.",
+    "passingScorePercent": 80,
+    "totalQuestions": 8,
+    "questions": [
+      {
+        "id": "mw2-q1",
+        "number": 1,
+        "conceptId": "prospect-theory-ratio",
+        "scenario": "According to Kahneman and Tversky's Prospect Theory, what is the approximate psychological ratio of loss aversion?",
+        "options": [
+          "Gains and losses feel exactly equal (1:1)",
+          "Losses are felt approximately 2 to 2.5 times more intensely than equivalent monetary gains",
+          "Gains feel 10 times stronger than losses",
+          "Losses have zero psychological impact"
+        ],
+        "correctIndex": 1,
+        "explanation": "Empirical behavioral economics proves human neurology experiences the pain of financial loss ~2.5x more acutely than gains."
+      },
+      {
+        "id": "mw2-q2",
+        "number": 2,
+        "conceptId": "scarcity-vs-abundance",
+        "scenario": "How does a scarcity mindset directly damage an entrepreneur's earning potential?",
+        "options": [
+          "It makes them spend too much on advertising",
+          "It traps them in zero-sum paranoia, preventing them from forming high-trust partnerships, delegating tasks, and investing in scalable long-term engines",
+          "It forces them to register with SEBI",
+          "It gives them too many customers"
+        ],
+        "correctIndex": 1,
+        "explanation": "Scarcity paranoia repels talented partners and traps founders in micromanaging low-value scraps."
+      },
+      {
+        "id": "mw2-q3",
+        "number": 3,
+        "conceptId": "herd-effect-top",
+        "scenario": "Why is widespread mainstream retail excitement a reliable contrarian indicator of a market bubble?",
+        "options": [
+          "Because retail investors are legally prohibited from making profits",
+          "When marginal, uninformed retail buyers enter en masse due to social proof, the pool of potential future buyers is nearly exhausted, setting up a liquidity vacuum",
+          "Because banks deliberately crash markets on Tuesdays",
+          "Because companies stop selling products during bubbles"
+        ],
+        "correctIndex": 1,
+        "explanation": "When everyone has bought in, there are no marginal buyers left to push prices higher, leaving the market vulnerable to collapse."
+      },
+      {
+        "id": "mw2-q4",
+        "number": 4,
+        "conceptId": "expected-value-math",
+        "scenario": "What mathematically distinguishes an investment from gambling?",
+        "options": [
+          "Whether you do it in an office or a casino",
+          "An investment has positive mathematical expected value (+EV) over time; gambling has negative expected value (-EV) designed to enrich the house",
+          "Investing requires a tie; gambling requires sunglasses",
+          "Gambling is always tax-free"
+        ],
+        "correctIndex": 1,
+        "explanation": "Expected value (+EV vs -EV): positive-sum endeavors expand capital across trials; negative-sum games mathematically drain it."
+      },
+      {
+        "id": "mw2-q5",
+        "number": 5,
+        "conceptId": "sunk-cost-investing",
+        "scenario": "What is the 'Disposition Effect' in retail stock trading?",
+        "options": [
+          "Selling everything at 9:15 AM",
+          "The behavioral tendency to prematurely sell winning stocks to lock in small gains while holding on to losing stocks for years hoping they break even",
+          "Donating all profits to charity",
+          "Buying stocks recommended by television anchors"
+        ],
+        "correctIndex": 1,
+        "explanation": "Driven by loss aversion: investors avoid realizing losses to protect ego, while cutting winners that could have compounded."
+      },
+      {
+        "id": "mw2-q6",
+        "number": 6,
+        "conceptId": "mental-accounting",
+        "scenario": "What is Richard Thaler's concept of 'Mental Accounting'?",
+        "options": [
+          "Doing calculus in your head",
+          "Treating money differently depending on its source (e.g. spending a tax refund or lottery win recklessly while treating hard-earned salary conservatively)",
+          "Opening 50 bank accounts with the same bank",
+          "Forgetting your ATM PIN"
+        ],
+        "correctIndex": 1,
+        "explanation": "Money is completely fungible; mental accounting irrationally compartmentalizes dollars based on subjective origins."
+      },
+      {
+        "id": "mw2-q7",
+        "number": 7,
+        "conceptId": "fomo-mechanics",
+        "scenario": "Why does Fear Of Missing Out (FOMO) cause catastrophic financial decisions?",
+        "options": [
+          "It makes your phone battery drain faster",
+          "It activates social status comparison circuits, triggering impulsive entry into overvalued assets at peak euphoria without risk management",
+          "It forces people to read too many financial reports",
+          "It lowers stock exchange transaction fees"
+        ],
+        "correctIndex": 1,
+        "explanation": "FOMO transforms investing from an analytical exercise into an emotional panic to match the social status of peers."
+      },
+      {
+        "id": "mw2-q8",
+        "number": 8,
+        "conceptId": "buffett-axiom",
+        "scenario": "What is the operational meaning of 'Be fearful when others are greedy, and greedy when others are fearful'?",
+        "options": [
+          "Yell at people on Wall Street",
+          "Contrarian discipline: avoid paying inflated premiums during speculative herd mania, and deploy capital when market panic creates deep discounts",
+          "Only buy stocks on Halloween",
+          "Never invest money under any circumstances"
+        ],
+        "correctIndex": 1,
+        "explanation": "Contrarian value investing: risk is highest when market sentiment is euphoric; reward is highest when sentiment is depressed."
+      }
+    ]
+  },
+  "apply": {
+    "title": "Field Mission: The Cognitive Bias & Debt Dissection",
+    "missionCodename": "OPERATION BIAS ZERO",
+    "difficulty": "Intermediate",
+    "timeRequired": "15 minutes",
+    "briefing": "Conduct a forensic review of your personal financial portfolio, debts, or recent impulse purchases. Identify one instance where Loss Aversion, FOMO, or Mental Accounting influenced your actions.",
+    "actionSteps": [
+      "Identify one financial decision from the past 12 months you regret (e.g. buying a hyped coin/stock, an impulse gadget, holding a loser).",
+      "Diagnose the specific cognitive bias that governed the choice (Loss Aversion, FOMO Herd Effect, or Mental Accounting).",
+      "Calculate the true financial or opportunity cost of that decision.",
+      "Write down an explicit immutable rule (e.g. 'Never buy an asset that surged over 100% in 14 days' or 'No purchases over ₹5,000 without a 48-hour cooling period')."
+    ],
+    "reflectionPrompt": "What was the decision, which bias drove it, and what personal rule will prevent it in the future?",
+    "rubric": [
+      {
+        "criterion": "Honest Attribution",
+        "target": "Identified genuine internal cognitive bias rather than blaming bad luck"
+      },
+      {
+        "criterion": "Opportunity Cost Calculation",
+        "target": "Quantified the financial impact of the behavioral error"
+      },
+      {
+        "criterion": "Personal Invariant Rule",
+        "target": "Formulated an actionable, non-negotiable decision rule"
+      }
+    ]
+  }
+}

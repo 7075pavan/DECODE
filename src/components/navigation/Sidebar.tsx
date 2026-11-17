@@ -16,8 +16,10 @@ export const Sidebar: React.FC = () => {
   const navItems = [
     { name: "Home", href: "/home", icon: "radar" },
     { name: "Paths", href: "/paths", icon: "alt_route" },
+    { name: "Simulator", href: "/simulator", icon: "trending_up" },
     { name: "Review", href: "/review", icon: "psychology", badge: dueCount },
     { name: "Profile", href: "/profile", icon: "shield" },
+    { name: "Settings", href: "/settings", icon: "settings" },
   ];
 
   return (

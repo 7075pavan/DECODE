@@ -30,6 +30,12 @@ export const ApplyStep: React.FC<ApplyStepProps> = ({
   const [isCompleted, setIsCompleted] = useState(false);
   const [checkedItems, setCheckedItems] = useState<Record<number, boolean>>({});
 
+  const title = applyData.title || "Field Mission";
+  const subtitle = applyData.subtitle || (applyData as any).missionCodename || "Real-World Application";
+  const missionPrompt = applyData.missionPrompt || (applyData as any).briefing || "";
+  const instructions = (applyData.instructions || (applyData as any).actionSteps || []) as string[];
+  const reflectionQuestion = applyData.reflectionQuestion || (applyData as any).reflectionPrompt || "What did you notice?";
+
   const toggleCheck = (idx: number) => {
     setCheckedItems((prev) => ({ ...prev, [idx]: !prev[idx] }));
   };
@@ -60,13 +66,13 @@ export const ApplyStep: React.FC<ApplyStepProps> = ({
           {/* Mission Header */}
           <div className="flex flex-col gap-1">
             <span className="text-[13px] font-mono text-[#22D3EE]">
-              {applyData.subtitle}
+              {subtitle}
             </span>
             <h1 className="font-headline text-[24px] md:text-[28px] font-bold text-[#F1F5F9]">
-              {applyData.title}
+              {title}
             </h1>
             <p className="text-[15px] text-[#94A3B8] leading-relaxed mt-1">
-              {applyData.missionPrompt}
+              {missionPrompt}
             </p>
           </div>
 
@@ -76,7 +82,7 @@ export const ApplyStep: React.FC<ApplyStepProps> = ({
               Field Checkpoints
             </span>
             <div className="flex flex-col gap-2.5">
-              {applyData.instructions.map((inst, idx) => {
+              {instructions.map((inst, idx) => {
                 const isChecked = Boolean(checkedItems[idx]);
                 return (
                   <div
@@ -121,7 +127,7 @@ export const ApplyStep: React.FC<ApplyStepProps> = ({
               What did you notice?
             </label>
             <p className="text-[13px] text-[#94A3B8]">
-              {applyData.reflectionQuestion}
+              {reflectionQuestion}
             </p>
             <textarea
               id="reflection-input"

@@ -20,7 +20,7 @@ interface TryStepProps {
 
 export const TryStep: React.FC<TryStepProps> = ({ tryData, onComplete, onExit }) => {
   const { addMissedConcept } = useReviewStore();
-  const scenarios = tryData.scenarios.slice(0, 3);
+  const scenarios = (tryData.scenarios || tryData.cases || []).slice(0, 3);
 
   const [scenarioIndex, setScenarioIndex] = useState(0);
   const [subStepIndex, setSubStepIndex] = useState(0);
@@ -39,8 +39,32 @@ export const TryStep: React.FC<TryStepProps> = ({ tryData, onComplete, onExit })
   const [showSummary, setShowSummary] = useState(false);
   const [finalStats, setFinalStats] = useState<SessionStats | null>(null);
 
-  const currentScenario = scenarios[scenarioIndex];
-  const currentSubStep = currentScenario.subSteps[subStepIndex];
+  const currentScenario = scenarios[scenarioIndex] || { subSteps: [] };
+  const rawSubSteps = currentScenario.subSteps || currentScenario.steps || [];
+  const normalizedSubSteps = rawSubSteps.map((s: any, sIdx: number) => {
+    const rawOptions = s.options || [];
+    const normalizedOptions = rawOptions.map((opt: any, optIdx: number) => {
+      if (typeof opt === "string") {
+        return {
+          id: `opt-${optIdx}`,
+          text: opt,
+          isCorrect: optIdx === s.correctIndex,
+          reason: s.explanation || "",
+        };
+      }
+      return opt;
+    });
+
+    return {
+      ...s,
+      subStepType: s.subStepType || s.stepType || "emotion",
+      stepLabel: s.stepLabel || s.title || `Step ${sIdx + 1} of 3`,
+      forensicExplanation: s.forensicExplanation || s.explanation || "",
+      options: normalizedOptions,
+    };
+  });
+
+  const currentSubStep = normalizedSubSteps[subStepIndex] || { options: [] };
   const selectedOption = currentSubStep.options.find((o: any) => o.id === selectedOptionId);
   const isCorrect = selectedOption?.isCorrect ?? false;
 
@@ -88,7 +112,7 @@ export const TryStep: React.FC<TryStepProps> = ({ tryData, onComplete, onExit })
     setSelectedOptionId(null);
     setConfidence(80);
 
-    const isLastSubStep = subStepIndex === currentScenario.subSteps.length - 1;
+    const isLastSubStep = subStepIndex === normalizedSubSteps.length - 1;
     const isLastScenario = scenarioIndex === scenarios.length - 1;
 
     if (isLastSubStep) {

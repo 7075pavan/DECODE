@@ -1,0 +1,471 @@
+{
+  "unitId": "influence-negotiation-unit-1",
+  "pathId": "influence-negotiation",
+  "unitNumber": 1,
+  "title": "Tactical Empathy & Mirroring",
+  "subtitle": "Influence & Negotiation · Unit 1",
+  "estimatedMinutes": 8,
+  "xpReward": 60,
+  "description": "Master Chris Voss's tactical empathy, late-night FM DJ tone, the 3-word mirror, and emotional labeling to disarm adversarial negotiators.",
+  "rulesSummary": [
+    "Tactical empathy is not agreement; it is the deliberate vocalization of the other side's emotional perspective.",
+    "The Mirror: repeat the last 1 to 3 critical words with an upward question inflection to trigger elaboration.",
+    "Emotional Labeling: neutralize negative emotion by calling it out ('It sounds like you feel unappreciated here').",
+    "The Late-Night FM DJ voice: calm, slow, resonant, downward-inflecting cadence that triggers neurochemical safety.",
+    "Aim for 'That's Right', never 'You're Right': 'You're right' is a polite brush-off; 'That's right' is true breakthrough."
+  ],
+  "learn": {
+    "title": "Tactical Empathy & Behavioral Mirroring",
+    "cards": [
+      {
+        "id": "in1-learn-1",
+        "step": "01 / 05",
+        "title": "Empathy as a Weapon of Influence",
+        "subtitle": "Seeing through their lens without agreeing",
+        "icon": "hearing",
+        "isKeyRule": false,
+        "content": "Empathy is often confused with compassion or surrender. In negotiation, tactical empathy is purely observational: understanding their feelings, fears, and worldview so completely that you can articulate it better than they can. When an adversary feels 100% understood, their biological defenses collapse.",
+        "takeaway": "Empathy does not mean conceding; it means demonstrating that you understand their exact reality."
+      },
+      {
+        "id": "in1-learn-2",
+        "step": "02 / 05",
+        "title": "The 3-Word Mirror",
+        "subtitle": "The FBI interrogation tool",
+        "icon": "content_copy",
+        "isKeyRule": false,
+        "content": "Mirroring is simplicity itself: repeat the last 1 to 3 words (or the critical essence) of what the counterpart said, using a gentle, curious upward question inflection. When they say 'Our budget cannot support this retainer', you simply mirror: 'Cannot support this retainer?' and fall silent. The human brain cannot resist elaborating on mirrors.",
+        "takeaway": "Repeat their last 3 words as a question, then go completely silent. They will fill the void with data."
+      },
+      {
+        "id": "in1-learn-3",
+        "step": "03 / 05",
+        "title": "Affective Labeling",
+        "subtitle": "Deactivating the amygdala with words",
+        "icon": "label",
+        "isKeyRule": false,
+        "content": "Neuroscience proves that when an emotion is verbally labeled, activity in the amygdala drops and the prefrontal cortex reactivates. Use neutral diagnostic prefixes: 'It seems like...', 'It sounds like...', 'It looks like...'. Never say 'I think you feel'—that centers yourself. 'It sounds like you are worried our team will miss the Diwali deadline.'",
+        "takeaway": "Use 'It sounds like...' or 'It seems like...' to name their hidden fears and disarm tension."
+      },
+      {
+        "id": "in1-learn-4",
+        "step": "04 / 05",
+        "title": "The Late-Night FM DJ Voice",
+        "subtitle": "Acoustic neuro-regulation",
+        "icon": "record_voice_over",
+        "isKeyRule": false,
+        "content": "Tone dictates perception. Pitch that rises at sentence ends communicates submissiveness and uncertainty. Shouting conveys loss of control. The late-night FM DJ voice is deep, slow, calm, and inflects downward at the period. It projects absolute authority and subconsciously induces calm in the listener.",
+        "takeaway": "Lower your voice register, slow down your speed by 30%, and drop the pitch at the end of sentences."
+      },
+      {
+        "id": "in1-learn-5",
+        "step": "05 / 05",
+        "title": "The 'That's Right' Epiphany",
+        "subtitle": "Master negotiation rule",
+        "icon": "bolt",
+        "isKeyRule": true,
+        "content": "When someone says 'You're right', they are trying to shut you up and make you go away. But when you summarize their world, their grievances, and their constraints so thoroughly that they look at you and say 'That's right', a psychological breakthrough occurs. 'That's right' signals total mutual calibration and unblocks agreements.",
+        "takeaway": "Never accept 'You're right'. Negotiate until they look at your summary and say 'That's right.'"
+      }
+    ]
+  },
+  "see": {
+    "title": "Worked Example: The Bengaluru Rent Standoff",
+    "scenarioTitle": "Apartment Balcony, HSR Layout Sector 2, Bengaluru",
+    "scenarioDescription": "Siddharth's landlord, Mr. Reddy, arrives unannounced demanding a 25% rent increase (from ₹36,000 to ₹45,000) citing prevailing tech corridor rental inflation.",
+    "imageUrl": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop&q=80",
+    "story": [
+      {
+        "type": "paragraph",
+        "text": "Mr. Reddy stands with folded arms and barks: 'Every flat in HSR is going for ₹50,000. If you cannot pay ₹45,000, vacate by end of the month.'"
+      },
+      {
+        "type": "paragraph",
+        "text": "Instead of arguing about legal lease clauses or market fairness, Siddharth adopts a calm late-night FM DJ voice."
+      },
+      {
+        "type": "interactive_paragraph",
+        "segments": [
+          {
+            "text": "Siddharth mirrors in a gentle upward tone: "
+          },
+          {
+            "clueId": "in1-clue-1",
+            "text": "'Vacate by the end of the month?'",
+            "isClue": true
+          },
+          {
+            "text": " and remains completely silent. Mr. Reddy uncrosses his arms and explains: 'Look, building maintenance went up, and my son's college fees are due.' Siddharth applies an emotional label: "
+          },
+          {
+            "clueId": "in1-clue-2",
+            "text": "'It sounds like you are carrying severe unexpected expenses, and you feel underpaid compared to what other landlords brag about.'",
+            "isClue": true
+          },
+          {
+            "text": " Mr. Reddy exhales deeply and replies: "
+          },
+          {
+            "clueId": "in1-clue-3",
+            "text": "'Exactly! That's right! Everyone acts like landlords are printing money.'",
+            "isClue": true
+          },
+          {
+            "text": " Siddharth then offers: 'What if we do ₹39,000, paid 6 months upfront right now, saving you brokerage and zero vacancy gap?' Mr. Reddy "
+          },
+          {
+            "clueId": "in1-clue-4",
+            "text": "agrees immediately with a warm handshake",
+            "isClue": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      }
+    ],
+    "clues": [
+      {
+        "id": "in1-clue-1",
+        "phrase": "Vacate by end of the month?",
+        "strength": "Strong",
+        "category": "Mirroring Prompt",
+        "explanation": "Mirroring the ultimatum forced the landlord to elaborate on the underlying personal motivation (maintenance & college fees)."
+      },
+      {
+        "id": "in1-clue-2",
+        "phrase": "It sounds like you are carrying unexpected expenses",
+        "strength": "Strong",
+        "category": "Affective Labeling",
+        "explanation": "Validating the landlord's financial anxiety removed his adversarial hostility."
+      },
+      {
+        "id": "in1-clue-3",
+        "phrase": "'That's right! Everyone acts like landlords are printing money'",
+        "strength": "Strong",
+        "category": "Breakthrough Confirmation",
+        "explanation": "Achieving 'That's right' unlocked the collaborative problem-solving phase."
+      },
+      {
+        "id": "in1-clue-4",
+        "phrase": "Agrees immediately with upfront payment compromise",
+        "strength": "Medium",
+        "category": "Asymmetrical Resolution",
+        "explanation": "Trading cash certainty (6 months upfront) for a lower rent increase (₹39k vs ₹45k)."
+      }
+    ]
+  },
+  "try": {
+    "title": "Scenario Practice: Tactical Empathy Drills",
+    "description": "Analyze the counterpart's statement, apply the mirror or label, and select the master move.",
+    "cases": [
+      {
+        "id": "in1-case-1",
+        "caseNumber": 1,
+        "scenario": "A freelance client messages you on Saturday morning: 'This landing page copy is completely off-brand and doesn't capture our vision at all. We are wasting our time.'",
+        "context": "You spent 25 hours interviewing their team and conducting research.",
+        "steps": [
+          {
+            "id": "in1-c1-s1",
+            "stepType": "emotion",
+            "title": "Diagnosing the Adversarial Spike",
+            "question": "You feel defensive and want to list all 25 hours of work you did. Why is defending your effort a tactical blunder?",
+            "options": [
+              "Clients don't care how hard you worked; defending your effort ignores their acute anxiety and frames you as arrogant and uncollaborative",
+              "You should always apologize and give a 100% refund immediately",
+              "Landing page copy is completely useless anyway",
+              "Saturday emails are legally invalid"
+            ],
+            "correctIndex": 0,
+            "explanation": "Clients judge outcomes and emotional security, not your input hours. Defending effort makes you look self-absorbed.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "in1-c1-s2",
+            "stepType": "intent",
+            "title": "Selecting the Label",
+            "question": "Which emotional label disarms the client's panic most effectively?",
+            "options": [
+              "'You are being completely irrational and emotional.'",
+              "'It sounds like this draft made you feel like we missed your core brand ethos, and you're worried about your launch deadline.'",
+              "'I am sorry you don't understand good marketing copy.'",
+              "'Why don't you write it yourself if you know so much?'"
+            ],
+            "correctIndex": 1,
+            "explanation": "Labeling their fear of missing their vision and deadline validates their anxiety without conceding technical failure.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "in1-c1-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "How do you direct their feedback constructively?",
+            "options": [
+              "Send them 5 new drafts immediately",
+              "Say: 'Let's get on a 15-minute screen share on Monday. Walk me through the single paragraph that felt most dissonant, and we will tune it live.'",
+              "Delete their project repository and block them",
+              "Ask for more money"
+            ],
+            "correctIndex": 1,
+            "explanation": "Narrowing the critique to one concrete paragraph on a synchronous call transitions from vague outrage to collaborative tuning.",
+            "clueStrength": "Medium"
+          }
+        ]
+      },
+      {
+        "id": "in1-case-2",
+        "caseNumber": 2,
+        "scenario": "In an executive compensation review, the VP of Engineering says: 'We simply do not have the compensation band to offer equity to your role at this stage.'",
+        "context": "You are the lead architect and competitors have approached you.",
+        "steps": [
+          {
+            "id": "in1-c2-s1",
+            "stepType": "emotion",
+            "title": "Deploying the Mirror",
+            "question": "What is the perfect 3-word mirror to unpack the VP's statement?",
+            "options": [
+              "'You are cheap?'",
+              "In a gentle, inquisitive tone: 'No compensation band?' (then silence)",
+              "'I will quit tomorrow?'",
+              "'Why are other startups offering equity then?'"
+            ],
+            "correctIndex": 1,
+            "explanation": "Mirroring 'No compensation band?' with a question inflection prompts the VP to reveal board rules or unwritten exceptions.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "in1-c2-s2",
+            "stepType": "intent",
+            "title": "Interpreting the Response",
+            "question": "The VP replies: 'Well, standard bands don't allow it, unless there is a critical retention retention pool approved by the board for flight-risk architects.' What did the mirror uncover?",
+            "options": [
+              "That equity is strictly forbidden by Indian law",
+              "The existence of an executive 'retention pool' mechanism that bypasses standard compensation bands",
+              "That the VP is quitting himself",
+              "That the company is bankrupt"
+            ],
+            "correctIndex": 1,
+            "explanation": "The mirror uncovered the 'Black Swan': an existing discretionary retention pool that HR never advertises.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "in1-c2-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "How do you frame your request for that pool?",
+            "options": [
+              "Threaten to join Google on Monday unless they give you the pool",
+              "Use a calibrated question: 'How would we structure my milestone deliverables over the next 12 months so accessing that pool is a no-brainer for the board?'",
+              "Ask for a cash bonus instead",
+              "Send an email to all board members"
+            ],
+            "correctIndex": 1,
+            "explanation": "A 'How' question invites the VP to co-design the proposal that satisfies board criteria.",
+            "clueStrength": "Medium"
+          }
+        ]
+      },
+      {
+        "id": "in1-case-3",
+        "caseNumber": 3,
+        "scenario": "A prospective software client tells you: 'Your ₹15 Lakh quote is completely unreasonable. A software house in Ahmedabad offered to build the identical platform for ₹4 Lakhs.'",
+        "context": "The client is a manufacturing conglomerate with legacy systems.",
+        "steps": [
+          {
+            "id": "in1-c3-s1",
+            "stepType": "emotion",
+            "title": "Diagnosing the Attack",
+            "question": "Why should you never criticize or insult the ₹4 Lakh competitor?",
+            "options": [
+              "Because cheap competitors are always better",
+              "Attacking the competitor insults the client's shopping judgment and makes you look insecure and bitter",
+              "Ahmedabad companies have legal immunity",
+              "You should match the ₹4 Lakh price immediately"
+            ],
+            "correctIndex": 1,
+            "explanation": "Trashing low-cost competitors provokes a defensive reaction. Validate their desire for cost-efficiency instead.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "in1-c3-s2",
+            "stepType": "intent",
+            "title": "Deploying Empathy & Disqualification",
+            "question": "What calibrated probe reframes the value disparity?",
+            "options": [
+              "'Ahmedabad coders write terrible spaghetti code.'",
+              "'It sounds like keeping initial capital expenditure low is critical for your board. Why not go with the Ahmedabad team?'",
+              "'We are 10x smarter than them.'",
+              "'Our developers have MacBook Pros.'"
+            ],
+            "correctIndex": 1,
+            "explanation": "Genuinely encouraging them to hire the cheap option forces them to articulate why they haven't done so (fear of bugs, security, delays).",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "in1-c3-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "The client admits: 'Well, they don't have experience integrating with SAP ECC6, and if that fails, our factories shut down.' How do you close?",
+            "options": [
+              "Laugh at their fear",
+              "State evenly: 'That is exactly why our retainer is ₹15 Lakhs: you are not paying for lines of code, you are paying for guaranteed zero-downtime SAP factory integration.'",
+              "Drop your price to ₹5 Lakhs",
+              "Refuse to work with them"
+            ],
+            "correctIndex": 1,
+            "explanation": "Anchoring your price directly to the client's primary catastrophic risk turns your fee into cheap insurance.",
+            "clueStrength": "Strong"
+          }
+        ]
+      }
+    ]
+  },
+  "prove": {
+    "title": "Mastery Check: Tactical Empathy & Mirroring",
+    "subtitle": "Score 80%+ (7 of 8 correct) to master this unit.",
+    "passingScorePercent": 80,
+    "totalQuestions": 8,
+    "questions": [
+      {
+        "id": "in1-q1",
+        "number": 1,
+        "conceptId": "tactical-empathy",
+        "scenario": "How does tactical empathy differ from emotional sympathy?",
+        "options": [
+          "Tactical empathy requires agreeing with whatever the adversary demands",
+          "Tactical empathy is emotional intelligence applied strategically: articulating the other party's perspective, fears, and constraints without agreeing or conceding",
+          "Tactical empathy is used exclusively in military operations",
+          "Sympathy is always more effective than empathy"
+        ],
+        "correctIndex": 1,
+        "explanation": "Empathy understands and vocalizes the other side's worldview; sympathy feels sorry or concedes."
+      },
+      {
+        "id": "in1-q2",
+        "number": 2,
+        "conceptId": "mirroring-syntax",
+        "scenario": "What is the technical syntax of a Chris Voss negotiation mirror?",
+        "options": [
+          "Repeating everything the person says for 10 minutes",
+          "Repeating the last 1 to 3 words with an inquisitive upward question inflection, followed by deliberate silence",
+          "Copying their handwriting on contracts",
+          "Looking at yourself in an actual bathroom mirror"
+        ],
+        "correctIndex": 1,
+        "explanation": "Repeating key words as an open question stimulates conversational elaboration and data disclosure."
+      },
+      {
+        "id": "in1-q3",
+        "number": 3,
+        "conceptId": "labeling-prefix",
+        "scenario": "Why should emotional labels always begin with 'It seems like...' or 'It sounds like...' rather than 'I hear you'?",
+        "options": [
+          "English grammar rules require it",
+          "'I hear you' centers yourself and sounds condescending, whereas 'It sounds like...' invites the other person to confirm or clarify without triggering defensiveness",
+          "Because FBI agents are forbidden from using the word 'I'",
+          "To make sentences longer"
+        ],
+        "correctIndex": 1,
+        "explanation": "Hypothetical labels ('It sounds like...') give psychological distance and prevent defensiveness."
+      },
+      {
+        "id": "in1-q4",
+        "number": 4,
+        "conceptId": "thats-right-vs-youre-right",
+        "scenario": "Why is 'That's right' vastly superior to 'You're right' in a negotiation?",
+        "options": [
+          "'You're right' is bad English",
+          "'You're right' is a conversational exit strategy used to make you stop talking; 'That's right' signals they feel completely understood at a core level",
+          "'That's right' means they signed the contract",
+          "'You're right' always precedes a lawsuit"
+        ],
+        "correctIndex": 1,
+        "explanation": "'You're right' placates you so you leave; 'That's right' represents genuine internal breakthrough."
+      },
+      {
+        "id": "in1-q5",
+        "number": 5,
+        "conceptId": "dj-voice-acoustics",
+        "scenario": "What physical effect does the late-night FM DJ voice have on an adversary's nervous system?",
+        "options": [
+          "It puts them into a deep hypnotic trance",
+          "Lower pitch and downward inflection project calmness and authority, triggering involuntary parasympathetic de-escalation",
+          "It makes them angry and aggressive",
+          "It forces them to agree to any financial terms"
+        ],
+        "correctIndex": 1,
+        "explanation": "Low, measured acoustic frequencies signal non-threatening authority, calming the listener's autonomic arousal."
+      },
+      {
+        "id": "in1-q6",
+        "number": 6,
+        "conceptId": "black-swan-discovery",
+        "scenario": "In negotiation theory, what is a 'Black Swan'?",
+        "options": [
+          "An illegal payment under the table",
+          "A piece of hidden, game-changing information that neither side openly discusses, but which fundamentally alters leverage when uncovered",
+          "A contract that has zero terms",
+          "A negotiator from New Zealand"
+        ],
+        "correctIndex": 1,
+        "explanation": "Black Swans are unknown unknowns—hidden motivations or constraints that completely transform the deal dynamic."
+      },
+      {
+        "id": "in1-q7",
+        "number": 7,
+        "conceptId": "accusation-audit",
+        "scenario": "What is the strategic purpose of an 'Accusation Audit' before delivering bad news to a client?",
+        "options": [
+          "To accuse the client of being a terrible human being",
+          "To list every terrible thing the other side could possibly think or say about you before they have a chance to say it, defusing the emotional bomb",
+          "To audit their tax returns",
+          "To delay the meeting by 30 minutes"
+        ],
+        "correctIndex": 1,
+        "explanation": "Vocalizing their worst accusations in advance steals their thunder and makes your actual news feel manageable."
+      },
+      {
+        "id": "in1-q8",
+        "number": 8,
+        "conceptId": "calibrated-how",
+        "scenario": "Why are 'How' and 'What' questions (e.g. 'How am I supposed to do that?') superior to 'Why' questions?",
+        "options": [
+          "'Why' questions sound accusatory and trigger defensive rationalization, whereas 'How' questions recruit the counterpart into solving your problem",
+          "Because 'Why' is a shorter word",
+          "Because 'How' is always polite",
+          "Because lawyers only use 'What'"
+        ],
+        "correctIndex": 0,
+        "explanation": "'Why' feels like an interrogation; calibrated 'How' questions politely transfer problem-solving pressure back onto the counterpart."
+      }
+    ]
+  },
+  "apply": {
+    "title": "Field Mission: The Mirror & Label Challenge",
+    "missionCodename": "OPERATION TACTICAL ECHO",
+    "difficulty": "Beginner",
+    "timeRequired": "10 minutes",
+    "briefing": "In any normal conversational interaction today (ordering food, discussing plans with a friend, or talking to a coworker), deploy one 3-word mirror and one emotional label.",
+    "actionSteps": [
+      "Wait for the other person to state an opinion, complaint, or preference.",
+      "Execute a 3-word mirror: repeat the final 3 words with a curious upward inflection.",
+      "Follow up with 4 seconds of complete silence and observe how they expand.",
+      "Deploy one affective label: 'It sounds like [their underlying emotion]...' and listen for 'That's right.'"
+    ],
+    "reflectionPrompt": "What were the 3 words you mirrored, what label did you use, and did you achieve the 'That's right' breakthrough?",
+    "rubric": [
+      {
+        "criterion": "Clean Mirror Syntax",
+        "target": "Used exact last 1-3 words with upward inflection"
+      },
+      {
+        "criterion": "Disciplined Silence",
+        "target": "Maintained at least 3 seconds of pause after the mirror"
+      },
+      {
+        "criterion": "Label Construction",
+        "target": "Used neutral prefix ('It sounds like...') without saying 'I think'"
+      }
+    ]
+  }
+}

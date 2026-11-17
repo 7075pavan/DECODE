@@ -15,6 +15,7 @@ import {
   getStoredResumeState,
   subscribeToCrossDeviceSync,
 } from "@/lib/sync/syncEngine";
+import { DailyChallengeCard } from "@/components/home/DailyChallengeCard";
 
 export default function HomePage() {
   const router = useRouter();
@@ -169,6 +170,9 @@ export default function HomePage() {
           <span>{resumeState ? "Resume lesson" : "Start lesson (8 min)"}</span>
         </Button>
       </Card>
+
+      {/* Daily Challenge Card */}
+      <DailyChallengeCard />
 
       {/* Today's Goal Ring Card & Streak Freeze */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">

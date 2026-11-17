@@ -1,0 +1,471 @@
+{
+  "unitId": "reading-people-unit-3",
+  "pathId": "reading-people",
+  "unitNumber": 3,
+  "title": "Kinetic Leaks & Voice Dynamics",
+  "subtitle": "Reading People · Unit 3",
+  "estimatedMinutes": 8,
+  "xpReward": 60,
+  "description": "Detect the most honest parts of the human body: feet orientation, gravity-defying gestures, respiratory rates, and vocal frequency modulation.",
+  "rulesSummary": [
+    "Feet are the most honest limb: they point in the direction the mind wishes to go.",
+    "Gravity reveals confidence: high status lifts the chin, chest, and toes; anxiety collapses posture.",
+    "Voice pitch reflects larynx constriction: autonomic stress involuntarily elevates vocal frequency.",
+    "Respiratory shifts precede words: shallow thoracic breathing indicates sympathetic arousal.",
+    "Verify exit vectors before assuming disinterest or hostility."
+  ],
+  "learn": {
+    "title": "Kinetic Leaks & Autonomic Voice Dynamics",
+    "cards": [
+      {
+        "id": "rp3-learn-1",
+        "step": "01 / 05",
+        "title": "The Honesty of Feet",
+        "subtitle": "Evolutionary flight channels",
+        "icon": "directions_walk",
+        "isKeyRule": false,
+        "content": "Humans spend their entire lives training their facial muscles to mask emotion. Almost no one trains their feet. During a conversation, if someone's torso is turned toward you but one or both feet are pointed toward the door, their subconscious mind is already executing an escape vector.",
+        "takeaway": "Check the feet: where they point reveals where the person subconsciously desires to be."
+      },
+      {
+        "id": "rp3-learn-2",
+        "step": "02 / 05",
+        "title": "Gravity-Defying Gestures",
+        "subtitle": "The biomechanics of conviction",
+        "icon": "north",
+        "isKeyRule": false,
+        "content": "True positive excitement and absolute conviction trigger anti-gravity behaviors: thumbs pointing upward, elbows lifting away from the ribs, toes rising onto balls of feet, and heads tilting upward. Under sudden distress, posture sinks, shoulders slump, and elbows pin inward.",
+        "takeaway": "Anti-gravity behaviors (thumbs up, lifted posture) signal true belief; collapsing posture signals internal doubt."
+      },
+      {
+        "id": "rp3-learn-3",
+        "step": "03 / 05",
+        "title": "Vocal Frequency Jumps",
+        "subtitle": "The larynx micro-squeeze",
+        "icon": "mic",
+        "isKeyRule": false,
+        "content": "When adrenaline surges, the cricothyroid muscles surrounding the vocal cords contract. This tightens the vocal cords, naturally raising vocal pitch by 10 to 30 Hertz. Sudden squeaks, pitch inflections at sentence ends, or sudden clearing of phlegm are vocal stress markers.",
+        "takeaway": "Listen for the pitch spike: larynx constriction under stress produces involuntary pitch elevation."
+      },
+      {
+        "id": "rp3-learn-4",
+        "step": "04 / 05",
+        "title": "Respiratory Cadence",
+        "subtitle": "Breathing as a polygraph",
+        "icon": "air",
+        "isKeyRule": false,
+        "content": "In calm states, breathing is diaphragmatic—smooth, deep, and centered in the abdomen. Under psychological pressure or sudden panic, respiration shifts immediately to shallow, rapid thoracic breathing visible at the clavicles and shoulders.",
+        "takeaway": "Watch the collarbones: rapid shallow breathing indicates acute sympathetic nervous arousal."
+      },
+      {
+        "id": "rp3-learn-5",
+        "step": "05 / 05",
+        "title": "The Kinetic Exit Law",
+        "subtitle": "Master kinetic principle",
+        "icon": "bolt",
+        "isKeyRule": true,
+        "content": "When physical posture, foot orientation, or vocal cadence contradicts polite verbal agreement, the physical kinetics represent the genuine psychological reality. You cannot build a durable agreement with someone whose body language is actively fleeing the room.",
+        "takeaway": "Words deceive; feet, breathing, and pitch reveal the true psychological balance of power."
+      }
+    ]
+  },
+  "see": {
+    "title": "Worked Example: The Salary Renegotiation",
+    "scenarioTitle": "Tech Campus HR Boardroom, Electronic City, Bengaluru",
+    "scenarioDescription": "Aditi (Lead Product Designer) meets with Deepak (VP of People Operations) to discuss her promotion and compensation revision after delivering a critical platform overhaul.",
+    "imageUrl": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&auto=format&fit=crop&q=80",
+    "story": [
+      {
+        "type": "paragraph",
+        "text": "Deepak greeted Aditi with a broad smile and congratulated her warmly on the release. He gestured generously with open palms while seated at the head of the conference table."
+      },
+      {
+        "type": "paragraph",
+        "text": "Aditi laid out market benchmarks and requested a ₹32 LPA revision to match competing offers."
+      },
+      {
+        "type": "interactive_paragraph",
+        "segments": [
+          {
+            "text": "Deepak nodded and smiled, saying 'You are indispensable to this organization.' However, his right foot "
+          },
+          {
+            "clueId": "rp3-clue-1",
+            "text": "pivoted 90 degrees outward toward the exit door",
+            "isClue": true
+          },
+          {
+            "text": ". As he spoke about budget cycles, his shoulders slumped and his thumbs, which had been raised upright, "
+          },
+          {
+            "clueId": "rp3-clue-2",
+            "text": "tucked completely inside his trouser pockets",
+            "isClue": true
+          },
+          {
+            "text": ". When he stated 'Management has frozen off-cycle appraisals', his vocal pitch "
+          },
+          {
+            "clueId": "rp3-clue-3",
+            "text": "jumped sharply into an unnatural thin register",
+            "isClue": true
+          },
+          {
+            "text": ", and his breathing became "
+          },
+          {
+            "clueId": "rp3-clue-4",
+            "text": "audibly rapid and shallow in the upper chest",
+            "isClue": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      }
+    ],
+    "clues": [
+      {
+        "id": "rp3-clue-1",
+        "phrase": "Foot pivoted 90 degrees toward exit door",
+        "strength": "Strong",
+        "category": "Exit Vector",
+        "explanation": "Pivoting the lead foot toward an exit while verbally nodding is a definitive subconscious flight preparation."
+      },
+      {
+        "id": "rp3-clue-2",
+        "phrase": "Thumbs tucked inside pockets",
+        "strength": "Medium",
+        "category": "Status Deflation",
+        "explanation": "Tucking thumbs while hiding fingers reflects sudden low confidence, self-doubt, or lack of authority to make commitments."
+      },
+      {
+        "id": "rp3-clue-3",
+        "phrase": "Pitch jumped into an unnatural thin register",
+        "strength": "Strong",
+        "category": "Vocal Constriction",
+        "explanation": "Laryngeal tightening occurs when stating an alibi or enforcing an uncomfortable corporate mandate."
+      },
+      {
+        "id": "rp3-clue-4",
+        "phrase": "Audibly rapid and shallow upper chest breathing",
+        "strength": "Medium",
+        "category": "Respiratory Arousal",
+        "explanation": "Thoracic breathing indicates sympathetic arousal triggered by confrontation or personal discomfort."
+      }
+    ]
+  },
+  "try": {
+    "title": "Scenario Practice: Kinetic Leaks & Voice Signals",
+    "description": "Read the physical and vocal cues, assess the underlying truth, and select the optimal response.",
+    "cases": [
+      {
+        "id": "rp3-case-1",
+        "caseNumber": 1,
+        "scenario": "You are pitching an angel investor in Mumbai. He sits back, smiles warmly, and says: 'I love this concept, send me your deck and I will review it with my partners this weekend.'",
+        "context": "The investor has met 6 startups today and your 15-minute slot just ended.",
+        "steps": [
+          {
+            "id": "rp3-c1-s1",
+            "stepType": "emotion",
+            "title": "Hidden Emotion",
+            "question": "While smiling, his chair is swiveled away from the table, both feet are planted toward his assistant, and his hands are patting his coat pocket for his phone. What is his real attitude?",
+            "options": [
+              "Urgent enthusiasm to wire funds today",
+              "Polite conversational dismissal and eagerness to exit the interaction",
+              "Deep curiosity about your tech stack",
+              "Anger that you spoke too fast"
+            ],
+            "correctIndex": 1,
+            "explanation": "Swiveled chair, feet pointed at exit/assistant, and checking phone pockets are unmistakable departure indicators masking polite refusal.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "rp3-c1-s2",
+            "stepType": "intent",
+            "title": "Likely Intent",
+            "question": "What is his operational goal when asking you to 'send the deck'?",
+            "options": [
+              "Conducting a deep due diligence audit over the weekend",
+              "A low-friction brush-off to avoid awkward face-to-face rejection",
+              "Forwarding it to a syndicate lead for immediate term sheet",
+              "Stealing the idea for himself"
+            ],
+            "correctIndex": 1,
+            "explanation": "'Send me your deck' is the universal polite dismissal in early-stage investing to conclude the meeting without friction.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "rp3-c1-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "How should you pivot before he leaves the room?",
+            "options": [
+              "Keep talking for another 10 minutes ignoring his body language",
+              "Respect his departure cue but ask one crisp disqualifier: 'Before I send the deck, what is the single biggest question your partners will ask about our unit economics?'",
+              "Demand a signed NDA before leaving",
+              "Argue that he didn't listen carefully"
+            ],
+            "correctIndex": 1,
+            "explanation": "Respecting their physical exit while asking a single high-value disqualifier cuts through polite fluff without being aggressive.",
+            "clueStrength": "Medium"
+          }
+        ]
+      },
+      {
+        "id": "rp3-case-2",
+        "caseNumber": 2,
+        "scenario": "In an engineering sync, a developer promises that the automated CI/CD pipeline migration will be completed without downtime by Friday night.",
+        "context": "The project has suffered two previous delayed releases.",
+        "steps": [
+          {
+            "id": "rp3-c2-s1",
+            "stepType": "emotion",
+            "title": "Hidden Emotion",
+            "question": "As he gives the Friday timeline, his voice drops to an inaudible mumble, his shoulders roll forward, and his hands pull inside his jacket sleeves. What state is he in?",
+            "options": [
+              "Extreme confidence in his test coverage",
+              "Internal dread, postural collapse, and severe lack of conviction",
+              "Deep intellectual meditation",
+              "Frustration with the team's coffee brand"
+            ],
+            "correctIndex": 1,
+            "explanation": "Hiding hands inside sleeves, downward vocal mumble, and collapsing shoulders are classic somatic markers of dread and lack of belief in one's own promise.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "rp3-c2-s2",
+            "stepType": "intent",
+            "title": "Likely Intent",
+            "question": "Why did he commit to Friday despite clearly knowing the timeline is unrealistic?",
+            "options": [
+              "To maliciously sabotage the company",
+              "To please leadership and avoid conflict in the current meeting, deferring the fallout to Friday",
+              "Because he plans to quit on Thursday",
+              "Because he loves working on weekends"
+            ],
+            "correctIndex": 1,
+            "explanation": "People frequently offer unrealistic deadlines to relieve acute social pressure in the room, trading present peace for future crisis.",
+            "clueStrength": "Medium"
+          },
+          {
+            "id": "rp3-c2-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "How should the engineering manager handle this commitment?",
+            "options": [
+              "Threaten him with penalties if it fails on Friday",
+              "De-escalate the social pressure and invite realism: 'If Friday is 100% success, what is the 20% risk that could blow up the pipeline, and how do we de-scope to ensure zero downtime?'",
+              "Celebrate the Friday timeline in the company Slack",
+              "Reassign the entire project to another junior engineer immediately"
+            ],
+            "correctIndex": 1,
+            "explanation": "De-escalating the performance pressure and giving psychological safety to discuss risks prevents a catastrophic deployment outage.",
+            "clueStrength": "Strong"
+          }
+        ]
+      },
+      {
+        "id": "rp3-case-3",
+        "caseNumber": 3,
+        "scenario": "Your hostel roommate claims he did not borrow your expensive noise-canceling headphones without asking.",
+        "context": "The headphones were found on his desk with a scratched casing.",
+        "steps": [
+          {
+            "id": "rp3-c3-s1",
+            "stepType": "emotion",
+            "title": "Hidden Emotion",
+            "question": "When asked about it, he laughs loudly, slaps his knee, and looks around the room. His vocal pitch is an octave higher than normal. What is this reaction?",
+            "options": [
+              "Genuine joy at a humorous misunderstanding",
+              "Forced theatrical levity designed to mask embarrassment and guilt",
+              "Complete innocence and unbothered calm",
+              "Clinical hearing loss"
+            ],
+            "correctIndex": 1,
+            "explanation": "Over-the-top laughter, knee-slapping, and pitch spikes upon serious inquiry are theatrical deflections common in defensive guilt.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "rp3-c3-s2",
+            "stepType": "intent",
+            "title": "Likely Intent",
+            "question": "What is his social objective?",
+            "options": [
+              "Make you feel irrational for asking about a 'trivial' matter",
+              "Offer to buy you a brand new pair immediately",
+              "Invite all hostel mates to a party",
+              "Test the battery life of the headphones"
+            ],
+            "correctIndex": 0,
+            "explanation": "Treating a legitimate grievance as a hilarious overreaction attempts to make the investigator feel foolish and drop the inquiry.",
+            "clueStrength": "Medium"
+          },
+          {
+            "id": "rp3-c3-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "How do you establish accountability without causing an explosive hostel brawl?",
+            "options": [
+              "Smash his laptop in retaliation",
+              "Maintain calm silence, ignore the theatrical laughter, and state evenly: 'I don't mind you borrowing them, but the casing is scratched. Help me get it repaired.'",
+              "Scream at him until he confesses",
+              "Move out of the hostel that night"
+            ],
+            "correctIndex": 1,
+            "explanation": "Calm silence kills theatrical deflections. Stating the objective physical fact (scratched casing) offers a face-saving repair path.",
+            "clueStrength": "Strong"
+          }
+        ]
+      }
+    ]
+  },
+  "prove": {
+    "title": "Mastery Check: Kinetic Leaks & Vocal Dynamics",
+    "subtitle": "Score 80%+ (7 of 8 correct) to master this unit.",
+    "passingScorePercent": 80,
+    "totalQuestions": 8,
+    "questions": [
+      {
+        "id": "rp3-q1",
+        "number": 1,
+        "conceptId": "feet-vector",
+        "scenario": "Why are the feet considered the most biologically honest non-verbal indicator?",
+        "options": [
+          "Feet have larger nerve bundles than the face",
+          "From childhood, social training focuses entirely on facial control and eye contact, leaving lower extremities governed by primal survival instincts",
+          "Feet have no connection to the autonomic nervous system",
+          "Because shoes prevent subconscious movement"
+        ],
+        "correctIndex": 1,
+        "explanation": "Conditioning focuses on facial masks; our feet remain wired directly to evolutionary approach-avoidance neural networks."
+      },
+      {
+        "id": "rp3-q2",
+        "number": 2,
+        "conceptId": "anti-gravity",
+        "scenario": "What does an anti-gravity gesture (such as rising onto the balls of feet or pointing thumbs straight up) convey?",
+        "options": [
+          "Severe physical exhaustion",
+          "Genuine positive optimism, high status, and psychological conviction",
+          "Submissive obedience",
+          "Deceptive evasion"
+        ],
+        "correctIndex": 1,
+        "explanation": "Anti-gravity kinetics reflect elevated dopamine, confidence, and internal conviction."
+      },
+      {
+        "id": "rp3-q3",
+        "number": 3,
+        "conceptId": "larynx-compression",
+        "scenario": "What physiological mechanism causes a person's voice to spike in pitch during high-stakes friction?",
+        "options": [
+          "The lungs expand with more oxygen",
+          "Adrenaline triggers tension in the cricothyroid and laryngeal muscles, constricting vocal cord vibration",
+          "The tongue swells under emotional pressure",
+          "The jaw unlocks completely"
+        ],
+        "correctIndex": 1,
+        "explanation": "Autonomic arousal tightens the laryngeal framework, causing higher frequency oscillation of the vocal folds."
+      },
+      {
+        "id": "rp3-q4",
+        "number": 4,
+        "conceptId": "respiratory-shift",
+        "scenario": "How can you distinguish diaphragmatic calm from sympathetic stress in seated subjects?",
+        "options": [
+          "By checking if their eyes are open",
+          "Calm exhibits lower abdominal expansion; stress shifts to rapid, shallow clavicular and upper-chest lifting",
+          "Calm individuals never breathe through the nose",
+          "Stress causes the heart to stop beating"
+        ],
+        "correctIndex": 1,
+        "explanation": "Thoracic clavicular breathing is a hallmark of sympathetic arousal and fight-or-flight priming."
+      },
+      {
+        "id": "rp3-q5",
+        "number": 5,
+        "conceptId": "thumb-display",
+        "scenario": "A presenter stands with hands in their front pockets, but their thumbs are sticking upright outside the pockets. What does this thumb display communicate?",
+        "options": [
+          "High confidence and dominance",
+          "Severe social anxiety",
+          "Desire to go to sleep",
+          "Physical hypothermia"
+        ],
+        "correctIndex": 0,
+        "explanation": "Upright thumbs protruding from pockets signify high self-assurance and authority."
+      },
+      {
+        "id": "rp3-q6",
+        "number": 6,
+        "conceptId": "pigeon-toed",
+        "scenario": "If a person's feet turn inward (pigeon-toed posture) during a tough negotiation, what psychological state is reflected?",
+        "options": [
+          "Aggressive readiness to strike",
+          "Feelings of insecurity, introversion, or psychological defensiveness",
+          "Total physical comfort",
+          "Readiness to close the deal"
+        ],
+        "correctIndex": 1,
+        "explanation": "Inward-turned toes represent an evolutionary protective reflex to guard vulnerable groin and abdominal areas under threat."
+      },
+      {
+        "id": "rp3-q7",
+        "number": 7,
+        "conceptId": "cadence-drop",
+        "scenario": "When a fast-talking speaker suddenly slows down their cadence by 50% and drops into a resonant lower octave, what are they doing?",
+        "options": [
+          "Falling unconscious",
+          "Actively executing status control and commanding psychological authority",
+          "Forgetting their native language",
+          "Attempting to make you fall asleep"
+        ],
+        "correctIndex": 1,
+        "explanation": "Deliberate slowing of cadence and downward pitch modulation signals composure, frame control, and high authority."
+      },
+      {
+        "id": "rp3-q8",
+        "number": 8,
+        "conceptId": "kinetic-exit",
+        "scenario": "You are speaking with a client whose torso faces you, but both knees and shoes are angled 45 degrees toward the hallway. What is the smartest interpretation?",
+        "options": [
+          "They are fascinated by your pitch and want more details",
+          "Their conscious social etiquette is keeping them listening, but their subconscious is ready to terminate the conversation",
+          "Their chair is permanently broken in that direction",
+          "They have superior hearing in their left ear"
+        ],
+        "correctIndex": 1,
+        "explanation": "The kinetic exit vector shows subconscious readiness to leave, even when social courtesy keeps the torso oriented toward you."
+      }
+    ]
+  },
+  "apply": {
+    "title": "Field Mission: The Kinetic Flight & Vocal Audit",
+    "missionCodename": "OPERATION GROUND WIRE",
+    "difficulty": "Intermediate",
+    "timeRequired": "10 minutes",
+    "briefing": "Conduct an covert audit of vocal pitch and foot placement during an in-person meeting or hallway conversation. Track where the other person's feet point when a commitment is requested.",
+    "actionSteps": [
+      "During normal conversation, note where both of the subject's feet are pointed.",
+      "Ask for a firm commitment, opinion, or deadline.",
+      "Observe if the feet adjust toward an exit or corridor.",
+      "Listen closely to the first five words of their answer: did the pitch rise or stay in their resonant chest baseline?"
+    ],
+    "reflectionPrompt": "Describe the interaction: what was the request, did the feet or vocal pitch shift, and what did that reveal about their genuine level of buy-in?",
+    "rubric": [
+      {
+        "criterion": "Exit Angle Observation",
+        "target": "Documented foot orientation before and after the prompt"
+      },
+      {
+        "criterion": "Acoustic Detection",
+        "target": "Noticed pitch modulation or laryngeal strain"
+      },
+      {
+        "criterion": "Tactical Alignment",
+        "target": "Adjusted conversational pace based on physical readiness"
+      }
+    ]
+  }
+}

@@ -1,0 +1,471 @@
+{
+  "unitId": "mind-and-mindset-unit-1",
+  "pathId": "mind-and-mindset",
+  "unitNumber": 1,
+  "title": "Locus of Control & Agency",
+  "subtitle": "Mind & Mindset · Unit 1",
+  "estimatedMinutes": 8,
+  "xpReward": 60,
+  "description": "Master internal locus of control, distinguish your circle of control from your circle of concern, and transition from victim thinking to radical agency.",
+  "rulesSummary": [
+    "Internal locus of control: you cannot control the wind, but you always control the trim of your sails.",
+    "The Circle of Control is tiny: your thoughts, words, physical actions, and boundaries.",
+    "Learned helplessness is an acquired neurological loop that can be systematically broken.",
+    "Stimulus and response have a gap: in that gap lies your freedom and psychological power.",
+    "Never complain about what you have the power to alter or the duty to accept."
+  ],
+  "learn": {
+    "title": "Agency, Sovereignty & Locus Calibration",
+    "cards": [
+      {
+        "id": "mm1-learn-1",
+        "step": "01 / 05",
+        "title": "The Locus Spectrum",
+        "subtitle": "Internal vs external gravity",
+        "icon": "adjust",
+        "isKeyRule": false,
+        "content": "Julian Rotter's locus of control spectrum measures whether you believe outcomes are determined by your choices (Internal) or by luck, fate, and other people (External). Those with an internal locus view setbacks as feedback loops on execution; those with an external locus view setbacks as persecution.",
+        "takeaway": "An internal locus treats reality as responsive to effort, discipline, and strategic calibration."
+      },
+      {
+        "id": "mm1-learn-2",
+        "step": "02 / 05",
+        "title": "The Two Circles",
+        "subtitle": "Control vs Concern",
+        "icon": "donut_large",
+        "isKeyRule": false,
+        "content": "Stephen Covey and the Stoics divide reality into two domains: the Circle of Concern (politics, macroeconomic shifts, opinions of strangers, traffic) and the Circle of Control (your preparation, your physiological breathing, your work ethic, your integrity). Expanding focus on Concern breeds anxiety; pouring energy into Control expands your actual influence.",
+        "takeaway": "Pour 95% of your mental RAM into things within your direct physical and cognitive control."
+      },
+      {
+        "id": "mm1-learn-3",
+        "step": "03 / 05",
+        "title": "Breaking Learned Helplessness",
+        "subtitle": "The agency protocol",
+        "icon": "lock_open",
+        "isKeyRule": false,
+        "content": "Martin Seligman discovered that when organisms face unavoidable pain, they eventually stop trying even when escape routes open. In humans, repeated failures in exams, dating, or job searches install a toxic script: 'Nothing I do matters.' The antidote is intentional micro-victories: small, verifiable tasks that restore neurochemical agency.",
+        "takeaway": "Restore agency through verifiable micro-victories that prove your actions produce real results."
+      },
+      {
+        "id": "mm1-learn-4",
+        "step": "04 / 05",
+        "title": "The Sacred Gap",
+        "subtitle": "Viktor Frankl's insight",
+        "icon": "hourglass_empty",
+        "isKeyRule": false,
+        "content": "Between stimulus and response there is a space. In that space is our power to choose our response. In our response lies our growth and our freedom. Reactive minds let external stimuli immediately dictate their emotional pulse. Sovereign minds inhabit the gap and choose their posture deliberately.",
+        "takeaway": "Insert a conscious 3-second breath between what happens to you and how you respond."
+      },
+      {
+        "id": "mm1-learn-5",
+        "step": "05 / 05",
+        "title": "The Radical Agency Axiom",
+        "subtitle": "Master mindset rule",
+        "icon": "bolt",
+        "isKeyRule": true,
+        "content": "You are not responsible for everything that happens to you, but you are 100% responsible for how you respond. Blaming parents, bosses, or the economy may feel satisfying, but it surrenders your sovereignty. True agency begins the exact second you accept total responsibility for your next move.",
+        "takeaway": "Blame surrenders power; extreme responsibility creates immediate personal leverage."
+      }
+    ]
+  },
+  "see": {
+    "title": "Worked Example: The Series-A Rejection Spree",
+    "scenarioTitle": "Coffee Day, Koramangala 4th Block, Bengaluru",
+    "scenarioDescription": "Arjun's logistics SaaS startup is down to 45 days of cash runway after receiving 14 consecutive VC rejections in a brutal tech market downturn.",
+    "imageUrl": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&auto=format&fit=crop&q=80",
+    "story": [
+      {
+        "type": "paragraph",
+        "text": "Arjun sits with his co-founder Meera. Arjun is spiraling: 'VCs are completely blind, the Indian macro climate is dead, and Sequoia is only funding AI hype.'"
+      },
+      {
+        "type": "paragraph",
+        "text": "Meera opens a whiteboard and forces an internal locus audit of the last 14 pitch transcripts."
+      },
+      {
+        "type": "interactive_paragraph",
+        "segments": [
+          {
+            "text": "Meera highlights that while macro funding is down 60%, "
+          },
+          {
+            "clueId": "mm1-clue-1",
+            "text": "their sales conversion funnel showed 7 enterprise pilots stalled due to lack of SOC-2 compliance",
+            "isClue": true
+          },
+          {
+            "text": ". She points out that Arjun spent 80% of his daily hours "
+          },
+          {
+            "clueId": "mm1-clue-2",
+            "text": "checking VC Twitter feeds and doom-scrolling macro headlines",
+            "isClue": true
+          },
+          {
+            "text": " rather than talking to customers. Shifting into internal agency, they "
+          },
+          {
+            "clueId": "mm1-clue-3",
+            "text": "pivoted from chasing VCs to closing 3 annual upfront prepayments with a 20% discount",
+            "isClue": true
+          },
+          {
+            "text": ", generating "
+          },
+          {
+            "clueId": "mm1-clue-4",
+            "text": "₹42 Lakhs in non-dilutive customer cash that extended runway by 9 months",
+            "isClue": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      }
+    ],
+    "clues": [
+      {
+        "id": "mm1-clue-1",
+        "phrase": "7 enterprise pilots stalled on SOC-2",
+        "strength": "Strong",
+        "category": "Actionable Bottleneck",
+        "explanation": "SOC-2 compliance was completely within the team's engineering control, unlike macroeconomic VC sentiment."
+      },
+      {
+        "id": "mm1-clue-2",
+        "phrase": "Checking VC Twitter and doom-scrolling",
+        "strength": "Medium",
+        "category": "Circle of Concern Trap",
+        "explanation": "Consuming uncontrollable macro drama gives an illusion of productivity while draining emotional bandwidth."
+      },
+      {
+        "id": "mm1-clue-3",
+        "phrase": "Closing annual upfront prepayments",
+        "strength": "Strong",
+        "category": "Radical Agency Shift",
+        "explanation": "Focusing on customer cash flow replaces helpless begging with commercial self-determination."
+      },
+      {
+        "id": "mm1-clue-4",
+        "phrase": "₹42 Lakhs non-dilutive cash extending runway 9 months",
+        "strength": "Strong",
+        "category": "Sovereign Outcome",
+        "explanation": "Proves that taking extreme ownership over controllable levers creates real-world survival."
+      }
+    ]
+  },
+  "try": {
+    "title": "Scenario Practice: Calibrating Agency",
+    "description": "Identify the victim script, shift the locus of control, and select the sovereign action.",
+    "cases": [
+      {
+        "id": "mm1-case-1",
+        "caseNumber": 1,
+        "scenario": "Your university exam paper was leaked by a corrupt administrator, forcing the state board to cancel the exam and reschedule it in the middle of summer.",
+        "context": "Your classmates are organizing protests, venting in WhatsApp groups, and refusing to study.",
+        "steps": [
+          {
+            "id": "mm1-c1-s1",
+            "stepType": "emotion",
+            "title": "Emotional Calibration",
+            "question": "You feel acute anger at the corrupt administration. How does a sovereign mind process this reaction?",
+            "options": [
+              "Acknowledge the anger as natural, but immediately recognize that the leak and state reschedule are outside your Circle of Control",
+              "Scream at your family because it's unfair",
+              "Pretend you don't care at all and play video games for 2 weeks",
+              "Drop out of college immediately"
+            ],
+            "correctIndex": 0,
+            "explanation": "Accepting that external institutional incompetence is outside your control protects your cognitive energy from pointless rage.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mm1-c1-s2",
+            "stepType": "intent",
+            "title": "Reframing the Advantage",
+            "question": "While 90% of students spend the next 30 days venting and losing their study baseline, what is your strategic opportunity?",
+            "options": [
+              "Join every strike and yell on the street",
+              "Treat the extra 30 days as a gift of bonus preparation time to master the hardest 20% of the syllabus while the competition slumps",
+              "Sell your textbooks",
+              "Complain to the local newspaper"
+            ],
+            "correctIndex": 1,
+            "explanation": "Inversion of adversity: when chaos paralyzes the herd, the disciplined student uses the unexpected buffer to build an insurmountable lead.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mm1-c1-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "What is your immediate daily schedule?",
+            "options": [
+              "Spend 6 hours daily forwarding news articles about the leak",
+              "Mute the outrage WhatsApp groups, build a 4-hour daily revision block, and solve past year question banks",
+              "Demand the education minister resign",
+              "Sleep until noon every day"
+            ],
+            "correctIndex": 1,
+            "explanation": "Information hygiene and disciplined execution are the physical embodiments of high internal agency.",
+            "clueStrength": "Medium"
+          }
+        ]
+      },
+      {
+        "id": "mm1-case-2",
+        "caseNumber": 2,
+        "scenario": "Your corporate manager takes credit for a major automation script you wrote that saved the department 20 hours a week.",
+        "context": "The VP congratulates your manager in the departmental quarterly email.",
+        "steps": [
+          {
+            "id": "mm1-c2-s1",
+            "stepType": "emotion",
+            "title": "Emotional Calibration",
+            "question": "What victim script threatens to drain your productivity?",
+            "options": [
+              "'Corporate politics is hopelessly corrupt, my work will never be valued, so I will do the bare minimum and quietly quit'",
+              "I should be happy my manager looks good",
+              "I am glad someone else took the credit",
+              "My code wasn't actually that good"
+            ],
+            "correctIndex": 0,
+            "explanation": "Quiet quitting and bitterness are classic learned helplessness scripts that harm your long-term career capital far more than your manager's.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mm1-c2-s2",
+            "stepType": "intent",
+            "title": "Analyzing Leverage",
+            "question": "What asset do you possess that your manager cannot steal?",
+            "options": [
+              "His job title",
+              "The underlying technical skill, architectural insight, and ability to build 10 more high-impact systems at will",
+              "His salary",
+              "His parking spot"
+            ],
+            "correctIndex": 1,
+            "explanation": "Credit can be stolen once; the generative capacity to produce value cannot be expropriated.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mm1-c2-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "How do you strategically protect your future credit without triggering open warfare?",
+            "options": [
+              "Delete the script from production so everything crashes",
+              "Host public knowledge-sharing demo sessions, post technical walkthroughs on internal wikis with your name as author, and cc the VP on technical updates",
+              "Cry in the restroom",
+              "Write an anonymous attack letter to HR"
+            ],
+            "correctIndex": 1,
+            "explanation": "Radical visibility: demo your work publicly and document architecture on shared channels so authorship is undeniable.",
+            "clueStrength": "Medium"
+          }
+        ]
+      },
+      {
+        "id": "mm1-case-3",
+        "caseNumber": 3,
+        "scenario": "You have applied to 80 software developer roles on LinkedIn over 4 months and received 75 rejections and 5 automated ghostings.",
+        "context": "You are beginning to believe you are fundamentally unhireable.",
+        "steps": [
+          {
+            "id": "mm1-c3-s1",
+            "stepType": "emotion",
+            "title": "Emotional Calibration",
+            "question": "What is the cognitive error in believing 'I am fundamentally unhireable'?",
+            "options": [
+              "You are applying to too few jobs",
+              "Overgeneralization and permanent attribution: turning a flawed application strategy (1-click LinkedIn spam) into an immutable identity defect",
+              "Software engineering is an obsolete profession",
+              "Everyone in the world is unlucky"
+            ],
+            "correctIndex": 1,
+            "explanation": "Pessimistic explanatory style views setbacks as Personal, Pervasive, and Permanent. It is the strategy that failed, not your worth.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mm1-c3-s2",
+            "stepType": "intent",
+            "title": "First-Principle Funnel Audit",
+            "question": "If 1-click apply has a 0.5% conversion rate across the industry, what does agency dictate?",
+            "options": [
+              "Apply to 10,000 more jobs using a bot",
+              "Discard the low-leverage 1-click funnel and switch to building public open-source projects, writing technical teardowns, and networking directly with engineering leads",
+              "Give up on technology forever",
+              "Pay a shady consultant ₹50,000 to write a fake resume"
+            ],
+            "correctIndex": 1,
+            "explanation": "High agency adapts the mechanism when the channel is proven low-yield. Proof of work beats resume spam.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mm1-c3-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "What is your high-agency sprint this week?",
+            "options": [
+              "Complain on Reddit about the job market",
+              "Pick one open-source repo of a company you admire, fix 2 open GitHub issues, submit clean pull requests, and tag the lead maintainer with a Loom breakdown",
+              "Apply to 50 more jobs in your pajamas",
+              "Wait for someone to reach out to you"
+            ],
+            "correctIndex": 1,
+            "explanation": "Direct proof of work bypassing HR gates creates irresistible commercial proof of competency.",
+            "clueStrength": "Medium"
+          }
+        ]
+      }
+    ]
+  },
+  "prove": {
+    "title": "Mastery Check: Locus of Control & Agency",
+    "subtitle": "Score 80%+ (7 of 8 correct) to master this unit.",
+    "passingScorePercent": 80,
+    "totalQuestions": 8,
+    "questions": [
+      {
+        "id": "mm1-q1",
+        "number": 1,
+        "conceptId": "internal-locus",
+        "scenario": "What characterizes an individual with a strong internal locus of control?",
+        "options": [
+          "They believe they are infallible gods who can control the weather",
+          "They view their outcomes as the direct consequence of their own decisions, effort, and strategic adaptability",
+          "They blame external bad luck for all minor mistakes",
+          "They never ask anyone for assistance"
+        ],
+        "correctIndex": 1,
+        "explanation": "Internal locus individuals focus on the causal link between their personal choices and real-world outcomes."
+      },
+      {
+        "id": "mm1-q2",
+        "number": 2,
+        "conceptId": "circle-of-control",
+        "scenario": "Which of the following belongs strictly inside your Circle of Control?",
+        "options": [
+          "Whether an employer gives you a job offer",
+          "The daily stock market movements",
+          "Your preparation, the quality of your code, your punctuality, and your emotional composure",
+          "The opinion your extended family holds of you"
+        ],
+        "correctIndex": 2,
+        "explanation": "Only your own internal choices, physical actions, and emotional responses are under your direct control."
+      },
+      {
+        "id": "mm1-q3",
+        "number": 3,
+        "conceptId": "learned-helplessness",
+        "scenario": "How does learned helplessness manifest in professional careers?",
+        "options": [
+          "People learn so fast they become CEOs at 20",
+          "After experiencing a few setbacks or unfair rejections, an individual ceases all proactive initiative, believing no effort will ever succeed",
+          "People refuse to take help from colleagues",
+          "Engineers write too many automated tests"
+        ],
+        "correctIndex": 1,
+        "explanation": "Learned helplessness extinguishes exploratory behavior and initiative due to past unconditioned negative reinforcement."
+      },
+      {
+        "id": "mm1-q4",
+        "number": 4,
+        "conceptId": "stimulus-response-gap",
+        "scenario": "What does Viktor Frankl identify as the foundation of human freedom?",
+        "options": [
+          "Having unlimited money in a Swiss bank",
+          "The cognitive pause between stimulus and response where conscious choice replaces animal reaction",
+          "Never experiencing physical pain",
+          "Living on an uninhabited tropical island"
+        ],
+        "correctIndex": 1,
+        "explanation": "Frankl observed that even in concentration camps, the ultimate freedom is choosing one's internal attitude toward circumstances."
+      },
+      {
+        "id": "mm1-q5",
+        "number": 5,
+        "conceptId": "explanatory-style",
+        "scenario": "According to Martin Seligman, which explanatory style fosters resilience and agency?",
+        "options": [
+          "Pessimistic style: viewing failure as Personal, Pervasive, and Permanent",
+          "Optimistic style: viewing failure as External/Strategic, Specific to the task, and Temporary",
+          "Denial style: pretending failure never happened",
+          "Paranoid style: assuming everyone is a conspirator"
+        ],
+        "correctIndex": 1,
+        "explanation": "Viewing setbacks as temporary, specific, and actionable preserves emotional drive and problem-solving focus."
+      },
+      {
+        "id": "mm1-q6",
+        "number": 6,
+        "conceptId": "amor-fati",
+        "scenario": "What is the Stoic/Nietzschean concept of 'Amor Fati'?",
+        "options": [
+          "Hating your destiny and fighting it bitterly",
+          "Not merely tolerating what is necessary, but actively loving your fate and using every obstacle as fuel for growth",
+          "Giving all your possessions away",
+          "Believing in astrology"
+        ],
+        "correctIndex": 1,
+        "explanation": "Amor Fati transforms unavoidable adversity into active creative material and fuel for personal mastery."
+      },
+      {
+        "id": "mm1-q7",
+        "number": 7,
+        "conceptId": "extreme-ownership",
+        "scenario": "What is the strategic advantage of practicing 'Extreme Ownership' when a team project fails?",
+        "options": [
+          "You get fired immediately by the CEO",
+          "It cuts through excuses, disarms defensive finger-pointing, and focuses immediate team intelligence on fixing the root operational defect",
+          "It makes your team members feel guilty forever",
+          "It proves you are the smartest person in the room"
+        ],
+        "correctIndex": 1,
+        "explanation": "Taking complete ownership removes defensive posturing and unites team bandwidth on the architectural solution."
+      },
+      {
+        "id": "mm1-q8",
+        "number": 8,
+        "conceptId": "micro-victories",
+        "scenario": "Why do structured micro-victories reverse severe burnout and apathy?",
+        "options": [
+          "They trigger a dopamine reward cascade, re-establishing neural evidence that your physical actions produce predictable positive change",
+          "They take 20 hours to complete",
+          "They allow you to brag on social media",
+          "They require no physical effort"
+        ],
+        "correctIndex": 0,
+        "explanation": "Small, reliable wins rebuild self-efficacy and rewire the brain's expectation of positive agency."
+      }
+    ]
+  },
+  "apply": {
+    "title": "Field Mission: The Circle of Control Dissection",
+    "missionCodename": "OPERATION SOVEREIGN MATRIX",
+    "difficulty": "Beginner",
+    "timeRequired": "15 minutes",
+    "briefing": "Identify the single biggest source of acute anxiety, frustration, or dread in your life right now. Put it under the sovereign microscope and extract your agency.",
+    "actionSteps": [
+      "Write down the anxiety in raw detail without censoring yourself.",
+      "Draw two columns: 'Outside My Control' vs 'Within My Control'.",
+      "Ruthlessly transfer macroeconomic factors, other people's choices, and past events to 'Outside My Control' and strike them out.",
+      "In 'Within My Control', write down exactly 3 physical actions you will take within the next 24 hours."
+    ],
+    "reflectionPrompt": "What was the worry, what did you strike out as uncontrollable, and what are your 3 non-negotiable agency actions for today?",
+    "rubric": [
+      {
+        "criterion": "Sovereign Separation",
+        "target": "Clear demarcation between concern and actionable control"
+      },
+      {
+        "criterion": "Zero Blame",
+        "target": "Action items focus exclusively on personal execution"
+      },
+      {
+        "criterion": "24-Hour Velocity",
+        "target": "At least one micro-victory scheduled for immediate execution"
+      }
+    ]
+  }
+}

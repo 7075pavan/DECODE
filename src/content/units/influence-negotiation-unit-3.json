@@ -1,0 +1,471 @@
+{
+  "unitId": "influence-negotiation-unit-3",
+  "pathId": "influence-negotiation",
+  "unitNumber": 3,
+  "title": "BATNA & Concession Architecture",
+  "subtitle": "Influence & Negotiation · Unit 3",
+  "estimatedMinutes": 8,
+  "xpReward": 60,
+  "description": "Master BATNA (Best Alternative to a Negotiated Agreement), reservation price calculus, trade asymmetry, and the discipline of walking away.",
+  "rulesSummary": [
+    "Your power in negotiation is strictly determined by your willingness and ability to walk away.",
+    "BATNA: never enter a high-stakes negotiation without cultivating your alternative in advance.",
+    "Reservation Price: determine your walk-away number before stepping into the room, not during emotional heat.",
+    "Concession Architecture: taper your concessions (e.g. ₹10k, then ₹5k, then ₹2k) to signal your limit.",
+    "Trade Asymmetry: give things that are cheap for you to provide but valuable for them to receive."
+  ],
+  "learn": {
+    "title": "BATNA Calibration & Concession Architecture",
+    "cards": [
+      {
+        "id": "in3-learn-1",
+        "step": "01 / 05",
+        "title": "The BATNA Doctrine",
+        "subtitle": "Fisher & Ury's Harvard negotiation principle",
+        "icon": "alt_route",
+        "isKeyRule": false,
+        "content": "BATNA stands for Best Alternative to a Negotiated Agreement. It is not what you hope will happen; it is the concrete, actionable alternative you will execute if talks collapse today. The party with the stronger BATNA holds all real leverage. If you cannot walk away, you are not negotiating; you are begging.",
+        "takeaway": "Your leverage is determined by your BATNA. Spend 50% of your prep time strengthening your walk-away alternative."
+      },
+      {
+        "id": "in3-learn-2",
+        "step": "02 / 05",
+        "title": "The Reservation Price",
+        "subtitle": "The non-negotiable floor",
+        "icon": "security",
+        "isKeyRule": false,
+        "content": "Your reservation price is the exact threshold beyond which a deal becomes worse than your BATNA. It must be calculated mathematically before the meeting. In the heat of negotiation, dopamine and sunk-cost fallacy tempt people to make catastrophic concessions. A pre-committed reservation price protects you from yourself.",
+        "takeaway": "Calculate your walk-away reservation price before entering the room and never cross it."
+      },
+      {
+        "id": "in3-learn-3",
+        "step": "03 / 05",
+        "title": "Concession Tapering",
+        "subtitle": "The mathematics of limits",
+        "icon": "trending_down",
+        "isKeyRule": false,
+        "content": "How you make concessions signals how much remains. If you concede ₹10,000, then another ₹10,000, and another ₹10,000, the counterpart assumes you have infinite margin and will keep pushing. Instead, use tapering: concede ₹10,000, then ₹4,000, then ₹1,000. Diminishing concessions communicate non-verbally that you are hitting granite.",
+        "takeaway": "Taper your concessions (large, medium, tiny) to signal that you have reached your absolute ceiling."
+      },
+      {
+        "id": "in3-learn-4",
+        "step": "04 / 05",
+        "title": "Asymmetric Trades",
+        "subtitle": "Low cost to you, high value to them",
+        "icon": "compare_arrows",
+        "isKeyRule": false,
+        "content": "Negotiations stall when parties fixate on a single zero-sum variable (like price). Break deadlocks by introducing asymmetric trades: terms that cost you very little to give, but provide massive value to the counterpart (e.g. payment terms, logo rights, extended warranties, case study permissions, deferred start dates).",
+        "takeaway": "Trade variables where value is high to them but cost is negligible to you."
+      },
+      {
+        "id": "in3-learn-5",
+        "step": "05 / 05",
+        "title": "The Walk-Away Discipline",
+        "subtitle": "Master leverage rule",
+        "icon": "bolt",
+        "isKeyRule": true,
+        "content": "A bad deal is far worse than no deal. A toxic client, an underpriced contract, or an unfair partnership will drain your resources, demoralize your team, and block you from taking on profitable opportunities. The ultimate power move is standing up, smiling warmly, thanking them for their time, and walking out the door.",
+        "takeaway": "No deal is always superior to a toxic deal. Walk away with dignity when your terms are breached."
+      }
+    ]
+  },
+  "see": {
+    "title": "Worked Example: The Hardware Distribution Standoff",
+    "scenarioTitle": "Distributor Boardroom, Nariman Point, Mumbai",
+    "scenarioDescription": "A consumer IoT hardware founder, Varun, negotiates an exclusive national retail distribution agreement with a dominant retail chain.",
+    "imageUrl": "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=800&auto=format&fit=crop&q=80",
+    "story": [
+      {
+        "type": "paragraph",
+        "text": "The distributor's procurement head demands 55% margins and 90-day payment terms, threatening: 'Without our 400 stores, your hardware brand is dead in India.'"
+      },
+      {
+        "type": "paragraph",
+        "text": "Varun has spent the prior two months building a strong BATNA: a thriving direct-to-consumer online store doing ₹25 Lakhs/month with 62% gross margins and zero credit risk."
+      },
+      {
+        "type": "interactive_paragraph",
+        "segments": [
+          {
+            "text": "Because his D2C BATNA is robust, Varun states evenly: "
+          },
+          {
+            "clueId": "in3-clue-1",
+            "text": "'Our reservation margin is 42% on 30-day terms. Beyond that, our capital is far more profitably deployed in our own online distribution.'",
+            "isClue": true
+          },
+          {
+            "text": " When the distributor insists on 50%, Varun executes concession tapering: "
+          },
+          {
+            "clueId": "in3-clue-2",
+            "text": "he concedes 1.5% to 43.5%, then 0.5% to 44%, stating 'that is our absolute physical limit.'",
+            "isClue": true
+          },
+          {
+            "text": " He then unlocks the deal with an asymmetric trade: "
+          },
+          {
+            "clueId": "in3-clue-3",
+            "text": "'We will give your flagship Mumbai stores exclusive 30-day early launch rights for our Gen-2 device in exchange for 30-day payment cycles and prime eye-level shelf placement.'",
+            "isClue": true
+          },
+          {
+            "text": " Recognizing Varun is genuinely willing to walk away, the distributor "
+          },
+          {
+            "clueId": "in3-clue-4",
+            "text": "signs the agreement at 44% margin on 30-day terms",
+            "isClue": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      }
+    ],
+    "clues": [
+      {
+        "id": "in3-clue-1",
+        "phrase": "Our capital is far more profitably deployed in D2C",
+        "strength": "Strong",
+        "category": "BATNA Deployment",
+        "explanation": "Having an existing, cash-generative alternative neutralized the distributor's monopoly threat."
+      },
+      {
+        "id": "in3-clue-2",
+        "phrase": "Concedes 1.5% then 0.5% to hit 44% limit",
+        "strength": "Strong",
+        "category": "Concession Tapering",
+        "explanation": "Rapidly shrinking concessions signaled that the founder had reached his structural cost ceiling."
+      },
+      {
+        "id": "in3-clue-3",
+        "phrase": "Exclusive early launch rights for 30-day payment terms",
+        "strength": "Strong",
+        "category": "Asymmetric Trade",
+        "explanation": "Early launch marketing cost the startup zero, but delivered massive prestige to the retailer while protecting cash flow."
+      },
+      {
+        "id": "in3-clue-4",
+        "phrase": "Signs agreement at 44% on 30-day terms",
+        "strength": "Medium",
+        "category": "Successful Agreement",
+        "explanation": "Closed well above the startup's 42% reservation price while avoiding 90-day cash flow strangulation."
+      }
+    ]
+  },
+  "try": {
+    "title": "Scenario Practice: BATNA & Concession Trades",
+    "description": "Evaluate the alternatives, structure asymmetric trades, and enforce walk-away discipline.",
+    "cases": [
+      {
+        "id": "in3-case-1",
+        "caseNumber": 1,
+        "scenario": "You are negotiating an offer for a Senior Software Engineer position at a Series B startup in Bengaluru. You want ₹32 LPA base.",
+        "context": "The startup offers ₹26 LPA base + ESOPs, saying it is their standard band. You already have a signed offer from an enterprise firm for ₹29 LPA.",
+        "steps": [
+          {
+            "id": "in3-c1-s1",
+            "stepType": "emotion",
+            "title": "BATNA Leverage Assessment",
+            "question": "What does your existing ₹29 LPA offer represent in this negotiation?",
+            "options": [
+              "A minor detail to keep secret forever",
+              "Your BATNA: your bulletproof psychological floor that guarantees you cannot be forced below ₹29 LPA",
+              "Proof that you are greedy",
+              "An illegal conflict of interest"
+            ],
+            "correctIndex": 1,
+            "explanation": "Your validated alternative sets your real-world power and prevents you from accepting an underpriced offer out of fear.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "in3-c1-s2",
+            "stepType": "intent",
+            "title": "Structuring the Counter",
+            "question": "How do you leverage your BATNA politely?",
+            "options": [
+              "Say: 'Pay me ₹35 LPA or I will take the other offer and laugh at you.'",
+              "State warmly: 'I am deeply excited about your product mission and prefer your team. However, I have a competing offer at ₹29 LPA. If you can bridge to ₹30.5 LPA base, I am prepared to sign with you today.'",
+              "Decline the startup offer without speaking",
+              "Accept ₹26 LPA because startups are fun"
+            ],
+            "correctIndex": 1,
+            "explanation": "Expressing genuine preference while citing the competing anchor gives the hiring manager justification to request an exception.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "in3-c1-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "The startup says: 'The absolute maximum cash we can do is ₹28 LPA.' What asymmetric trade can bridge the gap?",
+            "options": [
+              "Refuse to talk to them",
+              "Trade for non-cash variables: request an additional ₹4 Lakhs in equity grants with accelerated vesting, a ₹2.5 Lakh joining bonus, and 2 days remote work per week",
+              "Accept ₹28 LPA and complain on Twitter",
+              "Quit the tech industry"
+            ],
+            "correctIndex": 1,
+            "explanation": "Trading cash caps for equity upside, one-time bonuses, and autonomy creates high total compensation without violating salary bands.",
+            "clueStrength": "Medium"
+          }
+        ]
+      },
+      {
+        "id": "in3-case-2",
+        "caseNumber": 2,
+        "scenario": "You run a web agency. A prospective enterprise client demands 120-day payment credit terms for a ₹20 Lakh project.",
+        "context": "Your agency has 3 months of payroll reserves in the bank.",
+        "steps": [
+          {
+            "id": "in3-c2-s1",
+            "stepType": "emotion",
+            "title": "Reservation Price Calculus",
+            "question": "Why are 120-day payment terms an existential violation of your reservation constraints?",
+            "options": [
+              "Because 120 days is too long to wait",
+              "A 120-day payment lag on a large project will completely drain your 90-day payroll reserve, forcing you into bankruptcy before payment arrives",
+              "Banks don't allow invoices over 60 days",
+              "Because enterprise clients never pay"
+            ],
+            "correctIndex": 1,
+            "explanation": "Cash flow timing kills more businesses than lack of profit. Financing a client's project beyond your reserves is suicidal.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "in3-c2-s2",
+            "stepType": "intent",
+            "title": "Structuring the Trade",
+            "question": "What trade architecture can solve their credit policy without killing your cash flow?",
+            "options": [
+              "Take out a high-interest personal loan to fund the client",
+              "Propose milestone milestone billing: 30% upfront on signing, 30% on staging delivery, and 40% on production go-live (net-30)",
+              "Work for free to build goodwill",
+              "Sue the client for unfair trade practices"
+            ],
+            "correctIndex": 1,
+            "explanation": "Milestone-based progress payments ensure the client never owes more than your current working capital can float.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "in3-c2-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "The client procurement head states: 'Our global policy is strictly 120 days, non-negotiable. Take it or we go elsewhere.' How do you respond?",
+            "options": [
+              "Accept the terms and pray they pay early",
+              "Exercise walk-away discipline: 'I respect your policy, but our working capital cannot support 120-day financing. If the policy ever adapts to milestone terms, we would love to partner. Wishing you the best with the rollout.'",
+              "Cry in front of the procurement team",
+              "Offer a 50% discount if they pay in 120 days"
+            ],
+            "correctIndex": 1,
+            "explanation": "Walking away from fatal terms with dignity preserves your agency's solvency and often prompts clients to find budget exceptions.",
+            "clueStrength": "Strong"
+          }
+        ]
+      },
+      {
+        "id": "in3-case-3",
+        "caseNumber": 3,
+        "scenario": "You are negotiating an amicable equity buyout of a non-performing co-founder who owns 25% of your early-stage startup.",
+        "context": "The co-founder demands ₹30 Lakhs in cash upfront to sign the transfer, but the company only has ₹15 Lakhs in the bank.",
+        "steps": [
+          {
+            "id": "in3-c3-s1",
+            "stepType": "emotion",
+            "title": "Diagnosing the Impasse",
+            "question": "Why is paying ₹30 Lakhs cash impossible?",
+            "options": [
+              "The co-founder deserves nothing",
+              "Paying ₹30 Lakhs when the company has ₹15 Lakhs causes instant insolvency and company death, destroying the equity value for everyone",
+              "Cash transfers between founders are illegal in India",
+              "The bank manager will not approve it"
+            ],
+            "correctIndex": 1,
+            "explanation": "Physical liquidity is an absolute constraint. Promising cash that doesn't exist dissolves the entire venture.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "in3-c3-s2",
+            "stepType": "intent",
+            "title": "Analyzing Asymmetric Trades",
+            "question": "What non-cash value does the exiting co-founder truly desire?",
+            "options": [
+              "To see the company fail",
+              "Downside financial protection, recognition for past effort, and participation in eventual company success without daily operational stress",
+              "To steal the office furniture",
+              "To work 80 hours a week"
+            ],
+            "correctIndex": 1,
+            "explanation": "Unbundling emotional and financial needs reveals alternatives to upfront cash drain.",
+            "clueStrength": "Medium"
+          },
+          {
+            "id": "in3-c3-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "How should the buyout be structured?",
+            "options": [
+              "Dissolve the company and start over tomorrow",
+              "Structure a tiered deal: ₹5 Lakhs upfront, ₹10 Lakhs paid across 12 monthly installments, and retain a non-voting 3% advisory equity stake or royalty on future revenue",
+              "Refuse to talk and engage in 3 years of court litigation",
+              "Give them 50% of the company"
+            ],
+            "correctIndex": 1,
+            "explanation": "Tranche payments protect working capital while advisory upside satisfies their desire for long-term equity participation.",
+            "clueStrength": "Strong"
+          }
+        ]
+      }
+    ]
+  },
+  "prove": {
+    "title": "Mastery Check: BATNA & Concession Architecture",
+    "subtitle": "Score 80%+ (7 of 8 correct) to master this unit.",
+    "passingScorePercent": 80,
+    "totalQuestions": 8,
+    "questions": [
+      {
+        "id": "in3-q1",
+        "number": 1,
+        "conceptId": "batna-definition",
+        "scenario": "What does BATNA stand for, and what role does it play in negotiation power?",
+        "options": [
+          "Best Approach To New Agreements; it is a communication script",
+          "Best Alternative To a Negotiated Agreement; it is your concrete walk-away alternative that establishes your real bargaining power",
+          "Basic Asset Transfer Negotiated Amount; it is the price of goods",
+          "Business Action Target Non-Aligned; it is a corporate policy"
+        ],
+        "correctIndex": 1,
+        "explanation": "BATNA is your outside walk-away alternative; having a strong alternative gives you the confidence to hold firm."
+      },
+      {
+        "id": "in3-q2",
+        "number": 2,
+        "conceptId": "reservation-price",
+        "scenario": "When should an individual determine their reservation price in a negotiation?",
+        "options": [
+          "During the middle of the argument when emotions are high",
+          "Prior to entering the negotiation, calculated rationally based on cold financial and strategic constraints",
+          "After the contract has already been signed",
+          "Never; you should be completely flexible"
+        ],
+        "correctIndex": 1,
+        "explanation": "Pre-committing to a reservation price prevents emotional concessions driven by deal heat and adrenaline."
+      },
+      {
+        "id": "in3-q3",
+        "number": 3,
+        "conceptId": "concession-tapering-signal",
+        "scenario": "What does an offer sequence of decreasing concessions (e.g. ₹50k cut, then ₹20k cut, then ₹5k cut) communicate to the counterpart?",
+        "options": [
+          "That you are disorganized at math",
+          "That they are approaching your firm bottom line and further aggressive demands will break talks",
+          "That you have another ₹500k to give away",
+          "That you are eager to give up everything"
+        ],
+        "correctIndex": 1,
+        "explanation": "Diminishing concession sizes non-verbally telegraph that resistance is stiffening and limits are reached."
+      },
+      {
+        "id": "in3-q4",
+        "number": 4,
+        "conceptId": "asymmetric-trade-definition",
+        "scenario": "In concession architecture, what defines an 'asymmetric trade'?",
+        "options": [
+          "A trade where both parties lose money",
+          "Trading a variable that has low cost or effort for you to provide, but delivers high utility or value to the counterpart",
+          "An illegal stock trading strategy",
+          "Trading different currencies"
+        ],
+        "correctIndex": 1,
+        "explanation": "Asymmetric trades exploit differences in priorities and valuations to create positive-sum value."
+      },
+      {
+        "id": "in3-q5",
+        "number": 5,
+        "conceptId": "walk-away-power",
+        "scenario": "Why is a bad deal considered mathematically worse than walking away with no deal?",
+        "options": [
+          "Because bad deals are illegal",
+          "A bad deal binds your limited time, working capital, and attention to an unprofitable or toxic commitment, locking out better opportunities",
+          "Because walking away earns you bonus points",
+          "Because no deals exist in business"
+        ],
+        "correctIndex": 1,
+        "explanation": "Opportunity cost and downside drag: a toxic contract consumes bandwidth that could generate compounding returns elsewhere."
+      },
+      {
+        "id": "in3-q6",
+        "number": 6,
+        "conceptId": "zopa-concept",
+        "scenario": "What does ZOPA represent in negotiation analysis?",
+        "options": [
+          "Zone Of Possible Agreement: the overlap between the buyer's maximum price and the seller's minimum reservation price",
+          "Zero Operating Profit Accounting",
+          "Zone Of Personal Anger",
+          "Zonal Organization Police Authority"
+        ],
+        "correctIndex": 0,
+        "explanation": "ZOPA is the bargaining range where mutually beneficial trade is mathematically viable."
+      },
+      {
+        "id": "in3-q7",
+        "number": 7,
+        "conceptId": "sunk-cost-negotiation",
+        "scenario": "How does the Sunk Cost Fallacy trap negotiators into signing terrible agreements?",
+        "options": [
+          "By making them forget their name",
+          "Because they have invested weeks of meetings and legal fees, they feel compelled to sign anything rather than 'waste' their prior effort",
+          "By making them sign in gold ink",
+          "By making lawyers work for free"
+        ],
+        "correctIndex": 1,
+        "explanation": "Sunk costs cause people to throw good money after bad to justify past expenditures of time and capital."
+      },
+      {
+        "id": "in3-q8",
+        "number": 8,
+        "conceptId": "strengthening-batna",
+        "scenario": "What is the single best way to prepare for an upcoming high-stakes salary or contract negotiation?",
+        "options": [
+          "Buy a very expensive suit",
+          "Actively solicit 2 other competing offers or clients so you enter the room with genuine walk-away power",
+          "Practice yelling in front of a mirror",
+          "Post your salary demands on LinkedIn"
+        ],
+        "correctIndex": 1,
+        "explanation": "Tangible competing alternatives build real, unshakeable leverage that no psychological trick can substitute for."
+      }
+    ]
+  },
+  "apply": {
+    "title": "Field Mission: The BATNA & Walk-Away Blueprint",
+    "missionCodename": "OPERATION LEVERAGE SHIELD",
+    "difficulty": "Advanced",
+    "timeRequired": "15 minutes",
+    "briefing": "Select an upcoming negotiation, contract renewal, purchase, or salary review. Before speaking to the counterpart, formally construct your BATNA and reservation boundary.",
+    "actionSteps": [
+      "Calculate your Reservation Price: What is the exact numerical or contractual floor where you will walk away?",
+      "Define your BATNA: What concrete, specific action will you take if the other side says 'No'?",
+      "Take one tangible action today to strengthen that BATNA (e.g. submit an application elsewhere, reach out to an alternate supplier).",
+      "List 3 Asymmetric Trade variables you can introduce if negotiations hit a pricing deadlock."
+    ],
+    "reflectionPrompt": "What is your reservation price, what is your strengthened BATNA, and what 3 asymmetric variables will you bring to the table?",
+    "rubric": [
+      {
+        "criterion": "Rigid Reservation Boundary",
+        "target": "Explicit non-negotiable walk-away threshold defined"
+      },
+      {
+        "criterion": "Actionable BATNA",
+        "target": "Identified a viable, executable alternative path"
+      },
+      {
+        "criterion": "Asymmetric Inventory",
+        "target": "Documented 3 non-monetary trade variables"
+      }
+    ]
+  }
+}

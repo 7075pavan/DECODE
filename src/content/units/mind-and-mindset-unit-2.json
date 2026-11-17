@@ -1,0 +1,471 @@
+{
+  "unitId": "mind-and-mindset-unit-2",
+  "pathId": "mind-and-mindset",
+  "unitNumber": 2,
+  "title": "Emotional Regulation Under Fire",
+  "subtitle": "Mind & Mindset · Unit 2",
+  "estimatedMinutes": 8,
+  "xpReward": 60,
+  "description": "Master physiological state control, de-escalate amygdala hijacks with the physiological sigh, and reframe acute pressure as high readiness.",
+  "rulesSummary": [
+    "The Amygdala Hijack occurs in 80 milliseconds: conscious logic is offline until physiological arousal cools.",
+    "The Physiological Sigh (two inhales through the nose, long exhale through mouth) is the fastest biological brake on heart rate.",
+    "Arousal and readiness are identical neurochemistry: reframe 'I am terrified' to 'My body is gearing up for peak performance.'",
+    "Physical grounding restores prefrontal cortex perfusion: feel feet flat on floor and unclamp jaw.",
+    "Never send an email or make a life commitment while heart rate is above 100 BPM."
+  ],
+  "learn": {
+    "title": "Somatic Regulation & High-Pressure Composure",
+    "cards": [
+      {
+        "id": "mm2-learn-1",
+        "step": "01 / 05",
+        "title": "The Neurobiology of the Hijack",
+        "subtitle": "When the prefrontal cortex goes dark",
+        "icon": "electric_bolt",
+        "isKeyRule": false,
+        "content": "When an aggressive insult, threat of termination, or public humiliation occurs, the amygdala fires an emergency alarm across the sympathetic nervous system before the logical prefrontal cortex can process the syntax. Blood leaves the neocortex and floods the large muscle groups. In this state, you are neurochemically incapable of nuanced diplomacy.",
+        "takeaway": "Under acute threat, your logical brain shuts down. Do not attempt complex debate during an amygdala hijack."
+      },
+      {
+        "id": "mm2-learn-2",
+        "step": "02 / 05",
+        "title": "The Physiological Sigh",
+        "subtitle": "The biological emergency brake",
+        "icon": "air",
+        "isKeyRule": false,
+        "content": "Discovered by Dr. Jack Feldman and popularized by neurobiologist Andrew Huberman, the physiological sigh is the fastest way to drop autonomic arousal in real time: take two rapid inhales through the nose (the second to re-inflate collapsed alveoli in the lungs), followed by a slow, extended exhale through the mouth. Two cycles immediately drop heart rate.",
+        "takeaway": "Double inhale through the nose, long extended sigh through the mouth to instantly reset your nervous system."
+      },
+      {
+        "id": "mm2-learn-3",
+        "step": "03 / 05",
+        "title": "Cognitive Reappraisal",
+        "subtitle": "Fear is excitement without breath",
+        "icon": "sync_alt",
+        "isKeyRule": false,
+        "content": "The physiological sensations of acute fear and intense excitement are identical: elevated heart rate, heightened sensory acuity, dilated pupils, and adrenaline release. Harvard research shows that telling yourself 'I am calm' rarely works because your body is clearly not calm. But telling yourself 'I am excited' aligns with the high arousal and converts anxiety into peak focus.",
+        "takeaway": "Never try to force calm during a crisis. Reframe high adrenaline as high readiness and excitement."
+      },
+      {
+        "id": "mm2-learn-4",
+        "step": "04 / 05",
+        "title": "Somatic Grounding Anchors",
+        "subtitle": "The 3-point physical audit",
+        "icon": "accessibility_new",
+        "isKeyRule": false,
+        "content": "When panic strikes in a boardroom, your awareness gets trapped in spinning cognitive loops. Break the loop with the 3-point somatic audit: 1) Press both heels firmly into the floor; 2) Release your tongue from the roof of your mouth and drop your jaw; 3) Lower your shoulders 2 inches away from your ears. Physical relaxation forces the brain to dial down threat alarms.",
+        "takeaway": "Ground your heels, unclamp your jaw, and drop your shoulders to break mental panic spirals."
+      },
+      {
+        "id": "mm2-learn-5",
+        "step": "05 / 05",
+        "title": "The 24-Hour Cooling Law",
+        "subtitle": "Master emotional regulation rule",
+        "icon": "bolt",
+        "isKeyRule": true,
+        "content": "Never reply to an inflammatory accusation, submit a resignation, or execute a retaliatory move while in an emotionally elevated state. The half-life of circulating cortisol and adrenaline is approximately 20 to 60 minutes, but cognitive distortion persists for hours. Impose an ironclad 24-hour quarantine on all critical crisis communications.",
+        "takeaway": "Enforce a mandatory 24-hour quarantine before responding to any high-friction provocation."
+      }
+    ]
+  },
+  "see": {
+    "title": "Worked Example: The Live Enterprise Outage",
+    "scenarioTitle": "Tier-1 Bank Boardroom, BKC, Mumbai",
+    "scenarioDescription": "During a live product demonstration to the CTO and 12 senior executives of a major private bank, the core transaction API throws 500 server errors, crashing the live demo.",
+    "imageUrl": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&auto=format&fit=crop&q=80",
+    "story": [
+      {
+        "type": "paragraph",
+        "text": "The bank's Chief Information Security Officer leans forward and barks: 'Is this the fragile garbage you expect our 40 million retail customers to rely on?'"
+      },
+      {
+        "type": "paragraph",
+        "text": "The startup founder, Sameer, feels his heart hammer at 130 BPM and a wave of heat surge up his neck."
+      },
+      {
+        "type": "interactive_paragraph",
+        "segments": [
+          {
+            "text": "Instead of defending defensively, Sameer executes a "
+          },
+          {
+            "clueId": "mm2-clue-1",
+            "text": "subtle double-nasal inhale and long slow exhale while planting his feet flat on the carpet",
+            "isClue": true
+          },
+          {
+            "text": ". He pauses in silence for "
+          },
+          {
+            "clueId": "mm2-clue-2",
+            "text": "four full seconds without averting eye contact",
+            "isClue": true
+          },
+          {
+            "text": ". In a deliberate, resonant lower-register voice, he states: 'That is exactly why you run a sandbox stress-test. Our automated failover circuit breaker tripped on a simulated database choke.' He then "
+          },
+          {
+            "clueId": "mm2-clue-3",
+            "text": "calmly switches to the redundant backup cluster on screen within 30 seconds",
+            "isClue": true
+          },
+          {
+            "text": ", demonstrating "
+          },
+          {
+            "clueId": "mm2-clue-4",
+            "text": "unflappable tactical poise that impressed the bank CTO more than a flawless canned demo",
+            "isClue": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      }
+    ],
+    "clues": [
+      {
+        "id": "mm2-clue-1",
+        "phrase": "Subtle double-nasal inhale and long slow exhale",
+        "strength": "Strong",
+        "category": "Physiological Regulation",
+        "explanation": "Deploying the physiological sigh prevented an adrenaline-fueled stutter and lowered heart rate."
+      },
+      {
+        "id": "mm2-clue-2",
+        "phrase": "Four full seconds of silence without averting eye contact",
+        "strength": "Strong",
+        "category": "Status Control",
+        "explanation": "Comfort with high-pressure silence signals supreme emotional security and authority."
+      },
+      {
+        "id": "mm2-clue-3",
+        "phrase": "Switches to backup cluster within 30 seconds",
+        "strength": "Medium",
+        "category": "Technical Poise",
+        "explanation": "Action-oriented execution replaces verbal defensiveness with tangible proof of resilience."
+      },
+      {
+        "id": "mm2-clue-4",
+        "phrase": "Unflappable tactical poise that impressed the CTO",
+        "strength": "Strong",
+        "category": "High-Status Framing",
+        "explanation": "Reframing a bug as a real-time failover showcase turns a potential catastrophe into a masterclass."
+      }
+    ]
+  },
+  "try": {
+    "title": "Scenario Practice: Regulation Under Fire",
+    "description": "Detect the physiological trap, deploy somatic intervention, and select the composed response.",
+    "cases": [
+      {
+        "id": "mm2-case-1",
+        "caseNumber": 1,
+        "scenario": "During an all-hands Zoom call with 80 coworkers, your team director points out a bug and sarcastically asks: 'Did an intern write this code, or were you asleep at the keyboard?'",
+        "context": "Your camera is on and your video feed is pinned on the shared screen.",
+        "steps": [
+          {
+            "id": "mm2-c1-s1",
+            "stepType": "emotion",
+            "title": "Somatic Alarm Detection",
+            "question": "Your chest tightens, your face burns with heat, and you feel an impulse to snap back with an aggressive retort. What is your biological priority?",
+            "options": [
+              "Shout an insult back to defend your honor immediately",
+              "Execute a double nasal inhale, exhale slowly, release your jaw, and let 3 seconds of calm silence absorb the director's toxicity",
+              "Turn off your camera and leave the meeting",
+              "Burst into tears on camera"
+            ],
+            "correctIndex": 1,
+            "explanation": "Somatic regulation breaks the hijack; reacting immediately will validate his attack and undermine your professional dignity.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mm2-c1-s2",
+            "stepType": "intent",
+            "title": "Diagnosing the Director's Frame",
+            "question": "What did the director's sarcastic personal attack reveal to the 80 coworkers?",
+            "options": [
+              "That he is a genius engineering leader",
+              "His own profound lack of leadership maturity and emotional self-control, which everyone in the call noticed",
+              "That you are the worst coder in company history",
+              "That Zoom has audio problems"
+            ],
+            "correctIndex": 1,
+            "explanation": "Unprovoked public cruelty reflects the perpetrator's internal rot; composed silence allows the audience to see his unprofessionalism clearly.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mm2-c1-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "How do you respond with supreme frame control?",
+            "options": [
+              "Say: 'I wrote it, and I take full responsibility for the edge case. The patch is staged in PR #402 and will be deployed in 20 minutes.'",
+              "Tell him his management style violates HR policy and threaten a lawsuit",
+              "Say: 'You are an intern yourself'",
+              "Blame the QA team for missing it"
+            ],
+            "correctIndex": 0,
+            "explanation": "Calm, objective accountability combined with an immediate solution highlights your high status while exposing his petty petulance.",
+            "clueStrength": "Medium"
+          }
+        ]
+      },
+      {
+        "id": "mm2-case-2",
+        "caseNumber": 2,
+        "scenario": "You receive an enraged email at 11:30 PM from an important client accusing you of breach of contract and threatening to destroy your reputation in the industry.",
+        "context": "You are alone in your room and reading the email on your phone in bed.",
+        "steps": [
+          {
+            "id": "mm2-c2-s1",
+            "stepType": "emotion",
+            "title": "Somatic Alarm Detection",
+            "question": "You feel an adrenaline surge that makes sleep impossible. What is the cardinal rule of midnight crisis communications?",
+            "options": [
+              "Draft a 10-page furious rebuttal and hit send at 11:45 PM",
+              "Never send high-stakes crisis emails at night when cortisol is spiking; enforce a mandatory quarantine until morning",
+              "Call the client immediately and yell at them",
+              "Post the email on LinkedIn to crowdsource sympathy"
+            ],
+            "correctIndex": 1,
+            "explanation": "Late-night emails sent during acute emotional distress almost always escalate conflict and provide written ammunition against you.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mm2-c2-s2",
+            "stepType": "intent",
+            "title": "Diagnosing the Client's State",
+            "question": "Why did the client send an explosive email at 11:30 PM?",
+            "options": [
+              "They are a calm, rational legal robot",
+              "They are likely experiencing their own panic (e.g. pressure from their board/investors) and lashing out to discharge their acute anxiety onto you",
+              "They are having fun testing your resilience",
+              "Their lawyer forced them to do it"
+            ],
+            "correctIndex": 1,
+            "explanation": "Explosive late-night messages reflect the sender's acute panic and pressure, not a measured legal reality.",
+            "clueStrength": "Medium"
+          },
+          {
+            "id": "mm2-c2-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "What is your measured protocol the next morning at 9:00 AM?",
+            "options": [
+              "Ignore the email for 3 weeks",
+              "Send an even-toned acknowledgment: 'Received your note, Rajesh. I hear your frustration. Let's get on a 15-minute call at 10:30 AM to walk through the deliverables line by line.'",
+              "Hire a hitman",
+              "Apologize profusely and refund all money immediately"
+            ],
+            "correctIndex": 1,
+            "explanation": "A morning response acknowledging emotion and offering a structured synchronous call de-escalates hostility into operational dialogue.",
+            "clueStrength": "Strong"
+          }
+        ]
+      },
+      {
+        "id": "mm2-case-3",
+        "caseNumber": 3,
+        "scenario": "You are 5 minutes before stepping onto a stage to pitch your startup to 500 investors at TechSparks Bengaluru. Your palms are sweating, hands are shaking, and stomach is in knots.",
+        "context": "You have rehearsed the 3-minute pitch 50 times.",
+        "steps": [
+          {
+            "id": "mm2-c3-s1",
+            "stepType": "emotion",
+            "title": "Cognitive Reappraisal",
+            "question": "You catch yourself thinking: 'I am terrified, I am going to choke on stage.' How do you reappraise this somatic arousal?",
+            "options": [
+              "Tell yourself 'I am calm, I am asleep' repeatedly",
+              "Reframe: 'My heart is pumping oxygen to my brain and my senses are razor-sharp. My body is preparing to execute at an elite level. I am excited.'",
+              "Drink 3 Red Bulls to overpower the fear",
+              "Flee the auditorium through the fire exit"
+            ],
+            "correctIndex": 1,
+            "explanation": "Cognitive reappraisal aligns with sympathetic arousal, channeling adrenaline into dynamic presence and stage energy.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mm2-c3-s2",
+            "stepType": "intent",
+            "title": "Micro-Somatic Reset",
+            "question": "What physical adjustment should you perform backstage during the 60 seconds before your name is called?",
+            "options": [
+              "Curl into a fetal ball on the floor",
+              "Two physiological sighs, shake out the hands to release adrenaline tremor, and stand with feet wide in an expansive posture",
+              "Bite your fingernails until they bleed",
+              "Hold your breath until you pass out"
+            ],
+            "correctIndex": 1,
+            "explanation": "Shaking out extremities dispels tremors; physiological sighs reset oxygen-CO2 balance in the blood.",
+            "clueStrength": "Medium"
+          },
+          {
+            "id": "mm2-c3-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "What is your opening sequence when you step up to the microphone?",
+            "options": [
+              "Start speaking at 200 words per minute before reaching the center mark",
+              "Walk deliberately to center stage, plant both feet, make eye contact with 3 sections of the audience, take one calm breath, and begin in a resonant lower octave",
+              "Apologize to the audience for being nervous",
+              "Read every word off your iPhone screen"
+            ],
+            "correctIndex": 1,
+            "explanation": "Deliberate movement, grounding, and pausing before the first word establishes commanding stage authority.",
+            "clueStrength": "Strong"
+          }
+        ]
+      }
+    ]
+  },
+  "prove": {
+    "title": "Mastery Check: Emotional Regulation Under Fire",
+    "subtitle": "Score 80%+ (7 of 8 correct) to master this unit.",
+    "passingScorePercent": 80,
+    "totalQuestions": 8,
+    "questions": [
+      {
+        "id": "mm2-q1",
+        "number": 1,
+        "conceptId": "amygdala-latency",
+        "scenario": "Why does an amygdala hijack bypass rational conscious thought during acute provocation?",
+        "options": [
+          "Because the prefrontal cortex does not exist in adults",
+          "Sensory data travels to the amygdala via the fast subcortical thalamic pathway in ~80ms, well before the slower neocortex can deliberate",
+          "Because cortisol destroys all brain cells instantly",
+          "Because blood stops flowing through the neck"
+        ],
+        "correctIndex": 1,
+        "explanation": "The fast-track evolutionary circuit alerts the amygdala milliseconds before conscious cortical evaluation occurs."
+      },
+      {
+        "id": "mm2-q2",
+        "number": 2,
+        "conceptId": "physiological-sigh",
+        "scenario": "What unique pulmonary mechanism makes the physiological sigh effective at rapid heart rate reduction?",
+        "options": [
+          "It freezes the lungs with cold air",
+          "The second nasal inhale reinflates collapsed pulmonary alveoli, increasing surface area for oxygen uptake, while the long exhale slows the sinoatrial node via the vagus nerve",
+          "It forces you to yawn for 10 minutes",
+          "It shuts down digestion permanently"
+        ],
+        "correctIndex": 1,
+        "explanation": "Re-inflating alveoli maximizes gas exchange; prolonging the exhale triggers parasympathetic vagal stimulation of the heart."
+      },
+      {
+        "id": "mm2-q3",
+        "number": 3,
+        "conceptId": "cognitive-reappraisal",
+        "scenario": "Why is reappraising anxiety as 'excitement' more effective than telling yourself 'I am calm'?",
+        "options": [
+          "Because calm is an impossible state",
+          "High arousal (adrenaline/heart rate) is neurochemically congruent with excitement, requiring only a cognitive reframing rather than a massive physiological drop",
+          "Because excitement is always fun",
+          "Because Harvard professors said so"
+        ],
+        "correctIndex": 1,
+        "explanation": "Cognitive reframing alters meaning while respecting existing autonomic arousal, avoiding cognitive dissonance."
+      },
+      {
+        "id": "mm2-q4",
+        "number": 4,
+        "conceptId": "24-hour-rule",
+        "scenario": "What physiological reality justifies enforcing a 24-hour quarantine on hostile communications?",
+        "options": [
+          "Computers take 24 hours to deliver emails",
+          "Adrenaline and cortisol impair executive judgment and risk assessment for hours, creating tunnel vision and heightened aggression",
+          "The law requires a 24-hour delay on all arguments",
+          "To make the other person suffer in silence"
+        ],
+        "correctIndex": 1,
+        "explanation": "Endocrine stress hormones distort cognitive risk appraisal, making retaliatory messages catastrophic."
+      },
+      {
+        "id": "mm2-q5",
+        "number": 5,
+        "conceptId": "somatic-grounding",
+        "scenario": "How does releasing jaw tension and lowering shoulders influence brain activity?",
+        "options": [
+          "It makes you look taller",
+          "Biofeedback: trigeminal nerve and muscle spindle relaxation signals to the insula and brainstem that physical threat has abated",
+          "It has no biological effect on the brain",
+          "It cures all headaches immediately"
+        ],
+        "correctIndex": 1,
+        "explanation": "Bidirectional somatic feedback: relaxing tense facial and neck muscles reduces central autonomic threat signaling."
+      },
+      {
+        "id": "mm2-q6",
+        "number": 6,
+        "conceptId": "vocal-resonance",
+        "scenario": "Why is speaking in a lower, deliberate vocal register essential during an escalating conflict?",
+        "options": [
+          "To imitate movie villains",
+          "Slowing cadence and engaging diaphragmatic resonance lowers heart rate while communicating psychological stability and authority to the adversary",
+          "Because high pitch is illegal in boardrooms",
+          "To make everyone fall asleep"
+        ],
+        "correctIndex": 1,
+        "explanation": "A resonant lower register stimulates self-soothing vagal tone and commands subconscious authority."
+      },
+      {
+        "id": "mm2-q7",
+        "number": 7,
+        "conceptId": "reframing-silence",
+        "scenario": "In an aggressive verbal cross-examination, what does maintaining 3–4 seconds of quiet silence before speaking achieve?",
+        "options": [
+          "It proves you don't know the answer",
+          "It breaks the adversary's conversational tempo, gives your prefrontal cortex time to engage, and demonstrates immense composure",
+          "It gives you time to look at your watch",
+          "It forces the judge to dismiss the case"
+        ],
+        "correctIndex": 1,
+        "explanation": "Deliberate silence halts runaway emotional escalation and restores executive control over syntax."
+      },
+      {
+        "id": "mm2-q8",
+        "number": 8,
+        "conceptId": "cortisol-metabolism",
+        "scenario": "What physical activity accelerates the clearance of circulating adrenaline and cortisol after an acute confrontation?",
+        "options": [
+          "Drinking 3 glasses of whiskey",
+          "A 20-minute brisk walk or light cardiovascular movement, which metabolizes stress chemicals through their intended evolutionary muscular pathways",
+          "Lying completely motionless in a dark closet for 10 hours",
+          "Eating a large box of donuts"
+        ],
+        "correctIndex": 1,
+        "explanation": "Physical ambulation completes the biological stress loop, using muscles to clear circulating adrenaline."
+      }
+    ]
+  },
+  "apply": {
+    "title": "Field Mission: The Physiological Reset Drill",
+    "missionCodename": "OPERATION VAGAL BRAKE",
+    "difficulty": "Beginner",
+    "timeRequired": "5 minutes",
+    "briefing": "Identify your next moment of acute daily micro-stress (e.g. traffic jam, annoying notification, pre-meeting anxiety). Instead of your default reaction, deploy the physiological sigh protocol.",
+    "actionSteps": [
+      "Notice the somatic trigger: jaw tightening, shallow breathing, or chest knot.",
+      "Execute 3 consecutive Physiological Sighs: double inhale through the nose, long extended sigh through the mouth.",
+      "Unclamp your jaw and drop your shoulders 2 inches.",
+      "Observe the tangible sensation of your pulse slowing and executive clarity returning."
+    ],
+    "reflectionPrompt": "What was the micro-stressor, what physical shifts did you feel during the 3 sighs, and how did your subsequent decision change?",
+    "rubric": [
+      {
+        "criterion": "Somatic Awareness",
+        "target": "Identified acute biological trigger before reacting"
+      },
+      {
+        "criterion": "Protocol Precision",
+        "target": "Executed 3 correct double-inhale/long-exhale cycles"
+      },
+      {
+        "criterion": "Cognitive Pivot",
+        "target": "Responded with composure rather than impulsive reaction"
+      }
+    ]
+  }
+}

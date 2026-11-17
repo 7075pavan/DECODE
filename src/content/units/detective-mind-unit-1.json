@@ -1,0 +1,467 @@
+{
+  "unitId": "detective-mind-unit-1",
+  "pathId": "detective-mind",
+  "unitNumber": 1,
+  "title": "Observation vs Deduction",
+  "subtitle": "Detective Mind · Unit 1",
+  "estimatedMinutes": 8,
+  "xpReward": 60,
+  "description": "Learn to separate raw sensory facts from seductive narratives, decode physical wear patterns, and reconstruct events chronologically.",
+  "rulesSummary": [
+    "Seeing is passive; observing is active hypothesis testing.",
+    "Never confuse a fact with an inference: 'The chair is tipped over' is a fact; 'there was a fight' is an inference.",
+    "Physical wear patterns reveal repeated habit: friction points never lie.",
+    "Chronological reconstruction: anchor known timestamps first, then place uncertain events between them.",
+    "Deduction must be falsifiable: if no evidence could prove you wrong, you are guessing."
+  ],
+  "learn": {
+    "title": "The Architecture of Forensic Observation",
+    "cards": [
+      {
+        "id": "dm1-learn-1",
+        "step": "01 / 05",
+        "title": "The Fact-Inference Boundary",
+        "subtitle": "The golden rule of deduction",
+        "icon": "visibility",
+        "isKeyRule": false,
+        "content": "Untrained minds jump straight from sensory input to an emotional story. If you see someone running toward a train station looking at their watch, you assume 'they are late for a train'. That is an inference. The only fact is: an individual is running in the direction of the station while glancing at their wrist. Always draw a strict line between raw data and cognitive assumptions.",
+        "takeaway": "Separate raw sensory facts from your brain's irresistible urge to tell a story."
+      },
+      {
+        "id": "dm1-learn-2",
+        "step": "02 / 05",
+        "title": "Friction & Wear Patterns",
+        "subtitle": "The forensic memory of objects",
+        "icon": "texture",
+        "isKeyRule": false,
+        "content": "Objects remember human behavior through friction. A laptop keyboard with heavy shine on the spacebar and 'J/K/L' keys reveals a vim-power user. A phone screen with thumb smudges only on the bottom right corner indicates single-handed right-handed scrolling. Scuffs, indentations, and patina reveal weeks of habitual physical reality.",
+        "takeaway": "Wear patterns and friction points reveal habitual behavior that cannot be faked in the moment."
+      },
+      {
+        "id": "dm1-learn-3",
+        "step": "03 / 05",
+        "title": "Chronological Bracketing",
+        "subtitle": "Locking the timeline",
+        "icon": "timeline",
+        "isKeyRule": false,
+        "content": "When reconstructing an incident—whether a server crash, a theft, or an office dispute—identify immutable time anchors first: logged keycard entries, sent emails, CCTV timestamps. Once the bracket (e.g., between 2:14 PM and 2:22 PM) is fixed, possible explanations collapse from infinite to a few.",
+        "takeaway": "Establish hard immutable timestamp anchors to shrink the window of uncertainty."
+      },
+      {
+        "id": "dm1-learn-4",
+        "step": "04 / 05",
+        "title": "The Absence of the Expected",
+        "subtitle": "Sherlock's dog that didn't bark",
+        "icon": "help_outline",
+        "isKeyRule": false,
+        "content": "Great detectives notice what is missing just as keenly as what is present. If a room was allegedly broken into through a window, but there is no shattered glass on the interior floor, the narrative collapses. Always ask: 'If this story were true, what physical evidence MUST be present?'",
+        "takeaway": "Ask what evidence should be here if the story were true. The dog that did not bark is the biggest clue."
+      },
+      {
+        "id": "dm1-learn-5",
+        "step": "05 / 05",
+        "title": "The Deductive Triad",
+        "subtitle": "Master detective principle",
+        "icon": "bolt",
+        "isKeyRule": true,
+        "content": "Valid deduction requires three steps: 1) Verify primary physical facts; 2) Eliminate impossible hypotheses using laws of physics and hard constraints; 3) Whatever remains, however improbable, must be tested against falsifying evidence.",
+        "takeaway": "Eliminate the physically impossible, verify the primary facts, and test what remains."
+      }
+    ]
+  },
+  "see": {
+    "title": "Worked Example: The Abandoned Coworking Desk",
+    "scenarioTitle": "WeWork Galaxy, Residency Road, Bengaluru",
+    "scenarioDescription": "At 9:30 PM, community manager Priya finds Desk 42 abandoned with the Mac monitor asleep, a lukewarm cup of Darjeeling tea, two visitor passes, and an open spiral notebook with torn corners.",
+    "imageUrl": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&auto=format&fit=crop&q=80",
+    "story": [
+      {
+        "type": "paragraph",
+        "text": "Priya examines the scene to determine whether the occupant stepped out for dinner or departed under emergency circumstances."
+      },
+      {
+        "type": "interactive_paragraph",
+        "segments": [
+          {
+            "text": "On the desk, the MacBook charger is "
+          },
+          {
+            "clueId": "dm1-clue-1",
+            "text": "plugged into the wall with the laptop cable neatly coiled but unattached to any machine",
+            "isClue": true
+          },
+          {
+            "text": ". The Darjeeling tea in the ceramic mug is "
+          },
+          {
+            "clueId": "dm1-clue-2",
+            "text": "at room temperature (24°C) with no film formed on top",
+            "isClue": true
+          },
+          {
+            "text": ". Next to the keyboard lies a blue lanyard with "
+          },
+          {
+            "clueId": "dm1-clue-3",
+            "text": "two distinct visitor badges issued at 6:45 PM stamped 'Alpha Ventures'",
+            "isClue": true
+          },
+          {
+            "text": ", and under the chair, a "
+          },
+          {
+            "clueId": "dm1-clue-4",
+            "text": "crumpled boarding pass for an 11:15 PM flight to Mumbai with boarding time 10:35 PM",
+            "isClue": true
+          },
+          {
+            "text": "."
+          }
+        ]
+      }
+    ],
+    "clues": [
+      {
+        "id": "dm1-clue-1",
+        "phrase": "Charger coiled but unattached",
+        "strength": "Medium",
+        "category": "Habitual Deliberation",
+        "explanation": "Coiling the cable demonstrates conscious, deliberate packing of the laptop rather than an emergency sprint from the building."
+      },
+      {
+        "id": "dm1-clue-2",
+        "phrase": "Tea at 24°C with no film",
+        "strength": "Strong",
+        "category": "Thermal Chronology",
+        "explanation": "Hot tea in a ceramic mug reaches room temperature without milk skin formation within 35 to 45 minutes, fixing departure between 8:45 PM and 9:00 PM."
+      },
+      {
+        "id": "dm1-clue-3",
+        "phrase": "Two visitor passes stamped 'Alpha Ventures'",
+        "strength": "Medium",
+        "category": "Social Artifact",
+        "explanation": "Indicates an in-person meeting with two outside venture investors took place at the desk starting around 6:45 PM."
+      },
+      {
+        "id": "dm1-clue-4",
+        "phrase": "Boarding pass for 11:15 PM flight to Mumbai",
+        "strength": "Strong",
+        "category": "Chronological Anchor",
+        "explanation": "Residency Road to Kempegowda Airport requires 70 minutes in night traffic. To make a 10:35 PM boarding, departure before 9:00 PM was mandatory."
+      }
+    ]
+  },
+  "try": {
+    "title": "Scenario Practice: Deductive Forensics",
+    "description": "Inspect the evidence, identify the false assumption, determine the mechanism, and select the forensic deduction.",
+    "cases": [
+      {
+        "id": "dm1-case-1",
+        "caseNumber": 1,
+        "scenario": "At 2:15 AM, the automated production database of an Indian e-commerce platform was wiped. The DevOps team suspects an external cyberattack from an overseas IP.",
+        "context": "The wipe script used standard root credentials and completed in 4 seconds.",
+        "steps": [
+          {
+            "id": "dm1-c1-s1",
+            "stepType": "emotion",
+            "title": "Core Flaw in Narrative",
+            "question": "Audit logs reveal the database wipe command was initiated from an internal VPN IP associated with a senior backend lead's laptop. Why is blaming an overseas hacker premature?",
+            "options": [
+              "Foreign hackers never attack Indian companies",
+              "The immediate internal IP anchor directly challenges the external narrative and demands investigation of credentials or local script automation",
+              "The wipe took 4 seconds which is too slow for hackers",
+              "Databases cannot be wiped over VPN"
+            ],
+            "correctIndex": 1,
+            "explanation": "Forensic evidence must follow primary technical anchors (internal IP, local credentials) rather than jumping to speculative foreign hacker narratives.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "dm1-c1-s2",
+            "stepType": "intent",
+            "title": "Likely Mechanism",
+            "question": "Further examination shows the senior lead had queued an automated staging cleanup cron job scheduled for 2:15 AM. What is the most probable mechanism?",
+            "options": [
+              "Malicious espionage by a rival startup",
+              "A catastrophic staging-vs-production environment variable misconfiguration in the automated cleanup script",
+              "A hardware short circuit in the AWS datacenter",
+              "An electric power surge in the office"
+            ],
+            "correctIndex": 1,
+            "explanation": "Hanlon's Razor and artifact matching: an automated staging cleanup job firing at the exact minute of the wipe points to misconfigured credentials.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "dm1-c1-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "What is the forensic engineering response?",
+            "options": [
+              "Fire the engineer publicly on Twitter",
+              "Check git commit history for the cron script's target DATABASE_URL, lock write permissions, and initiate point-in-time snapshot recovery",
+              "Ignore the database and go back to sleep",
+              "Pay a ransom to an unknown Bitcoin address"
+            ],
+            "correctIndex": 1,
+            "explanation": "Verify git diff of the cron deployment, halt active execution, and restore the verified immutable snapshot.",
+            "clueStrength": "Medium"
+          }
+        ]
+      },
+      {
+        "id": "dm1-case-2",
+        "caseNumber": 2,
+        "scenario": "A college robotics team discovers their custom CNC motor controller is burned out 12 hours before national finals. The hardware lead accuses a rival college team of sabotage.",
+        "context": "The controller was found inside a locked lab with scorched capacitor traces.",
+        "steps": [
+          {
+            "id": "dm1-c2-s1",
+            "stepType": "emotion",
+            "title": "Core Flaw in Narrative",
+            "question": "Inspection of the bench power supply shows the output dial set to 48V, while the burned motor driver had a maximum rated input of 24V. What does this fact reveal?",
+            "options": [
+              "The rival team hacked the power supply via Bluetooth",
+              "The failure is fully explained by an internal operator overvoltage mistake, eliminating the need for a complex sabotage hypothesis",
+              "Capacitors naturally explode at 24V",
+              "The motor was made of counterfeit metal"
+            ],
+            "correctIndex": 1,
+            "explanation": "Physical evidence (48V dial on a 24V driver) directly accounts for the scorched traces through physical overvoltage.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "dm1-c2-s2",
+            "stepType": "intent",
+            "title": "Likely Mechanism",
+            "question": "Why was the hardware lead so quick to cry sabotage?",
+            "options": [
+              "Psychological ego defense to deflect personal responsibility for failing to check the voltage dial before testing",
+              "He secretly works for the rival college",
+              "He is an undercover police detective",
+              "He wanted to cancel the competition"
+            ],
+            "correctIndex": 0,
+            "explanation": "External attribution bias: humans naturally attribute their own costly mistakes to external malice rather than internal oversight.",
+            "clueStrength": "Medium"
+          },
+          {
+            "id": "dm1-c2-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "What is the rational path forward for the team?",
+            "options": [
+              "File an official complaint accusing the rival team without proof",
+              "Immediately replace the capacitors from the spare bin, install an inline 24V fuse, and retest with the voltage dial verified",
+              "Forfeit the competition and pack up",
+              "Smash the rival team's robot"
+            ],
+            "correctIndex": 1,
+            "explanation": "Focus on rapid hardware repair with a defensive inline fuse and procedural pre-flight checklist.",
+            "clueStrength": "Strong"
+          }
+        ]
+      },
+      {
+        "id": "dm1-case-3",
+        "caseNumber": 3,
+        "scenario": "A high-end design agency loses a ₹40 Lakh corporate branding retainer. The account executive claims the client 'simply had no budget left for marketing.'",
+        "context": "The client announced a ₹150 Crore Series B fundraise two weeks ago.",
+        "steps": [
+          {
+            "id": "dm1-c3-s1",
+            "stepType": "emotion",
+            "title": "Core Flaw in Narrative",
+            "question": "The client announced a ₹150 Cr Series B round and just hired a CMO from Unilever. Why is the 'no budget' claim an illusion?",
+            "options": [
+              "Series B startups never spend money",
+              "The client possesses massive capital liquidity; 'no budget' is a polite rejection code for lack of perceived value or executive trust",
+              "The account executive is telling the literal truth",
+              "Unilever CMOs do not believe in design"
+            ],
+            "correctIndex": 1,
+            "explanation": "Organizations with fresh capital rounds have budget; saying 'no budget' simply means 'we chose not to spend it with you.'",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "dm1-c3-s2",
+            "stepType": "intent",
+            "title": "Likely Intent",
+            "question": "What occurred during the proposal review?",
+            "options": [
+              "The agency submitted a generic template deck that failed to address the incoming CMO's high-growth mandate",
+              "The client's bank account was frozen by RBI",
+              "The client decided to shut down their company",
+              "The branding agency was too cheap"
+            ],
+            "correctIndex": 0,
+            "explanation": "When well-funded clients decline, they do so because the proposal failed to align with leadership's strategic priorities.",
+            "clueStrength": "Medium"
+          },
+          {
+            "id": "dm1-c3-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "How should the agency principal uncover the real reason?",
+            "options": [
+              "Send angry emails to the CEO complaining about wasted time",
+              "Reach out to the new CMO with a radical diagnostic: 'We respect your decision to go another route. As a learning team, where did our deck miss your vision for the post-Series B rollout?'",
+              "Offer a 90% discount immediately",
+              "Post negative reviews on their Glassdoor"
+            ],
+            "correctIndex": 1,
+            "explanation": "A humble, post-decision debrief email unlocks honest executive feedback and maintains the relationship for future RFPs.",
+            "clueStrength": "Strong"
+          }
+        ]
+      }
+    ]
+  },
+  "prove": {
+    "title": "Mastery Check: Observation vs Deduction",
+    "subtitle": "Score 80%+ (7 of 8 correct) to master this unit.",
+    "passingScorePercent": 80,
+    "totalQuestions": 8,
+    "questions": [
+      {
+        "id": "dm1-q1",
+        "number": 1,
+        "conceptId": "fact-vs-inference",
+        "scenario": "You enter an office and see a whiteboard with 'PROJECT CANCELLED' written in red marker. What is the verified primary fact?",
+        "options": [
+          "The company is going bankrupt",
+          "The words 'PROJECT CANCELLED' are inscribed in red ink on the whiteboard",
+          "The engineering team was fired yesterday",
+          "The project failed its security audit"
+        ],
+        "correctIndex": 1,
+        "explanation": "The inscription on the board is the only observable physical fact; anything about bankruptcy or firings is pure inference."
+      },
+      {
+        "id": "dm1-q2",
+        "number": 2,
+        "conceptId": "wear-patterns",
+        "scenario": "Why do forensic investigators examine the soles of a suspect's running shoes?",
+        "options": [
+          "To check the brand's stock price",
+          "Wear distribution on the heel and inner/outer edges reveals permanent gait abnormalities and pronation habits",
+          "To see if they like colorful shoes",
+          "To determine if they own a car"
+        ],
+        "correctIndex": 1,
+        "explanation": "Asymmetrical sole wear patterns provide an indelible biometric record of an individual's biomechanical gait."
+      },
+      {
+        "id": "dm1-q3",
+        "number": 3,
+        "conceptId": "absence-evidence",
+        "scenario": "A warehouse manager reports that valuable copper wire was stolen overnight by burglars breaking through the roof. However, there is zero dust or debris on the floor beneath the hole. What does this suggest?",
+        "options": [
+          "Burglars used an industrial vacuum cleaner in mid-air",
+          "The hole in the roof was created from the inside or staged after the wire was already removed",
+          "The copper wire dissolved spontaneously",
+          "The roof has magical dust-repellent coating"
+        ],
+        "correctIndex": 1,
+        "explanation": "Cutting through a roof creates physical fallout. The absence of dust on the floor indicates staging or internal theft."
+      },
+      {
+        "id": "dm1-q4",
+        "number": 4,
+        "conceptId": "chronological-brackets",
+        "scenario": "How do chronological brackets eliminate erroneous hypotheses?",
+        "options": [
+          "By making the investigation take longer",
+          "By establishing verified timestamps before and after an event, proving that any hypothesis requiring more time is physically impossible",
+          "By guaranteeing the culprit confesses immediately",
+          "By deleting all email records"
+        ],
+        "correctIndex": 1,
+        "explanation": "Time bounds restrict the physical possibility space, ruling out theories that cannot fit into the verified duration."
+      },
+      {
+        "id": "dm1-q5",
+        "number": 5,
+        "conceptId": "falsifiability",
+        "scenario": "What makes a hypothesis scientifically useful in forensic analysis?",
+        "options": [
+          "It sounds clever and dramatic",
+          "It is formulated in a way that specific physical evidence could decisively prove it false",
+          "Everyone in the room agrees with it",
+          "It points to an unknown external enemy"
+        ],
+        "correctIndex": 1,
+        "explanation": "Per Karl Popper, a theory that cannot be tested and potentially falsified by empirical evidence is useless speculation."
+      },
+      {
+        "id": "dm1-q6",
+        "number": 6,
+        "conceptId": "friction-forensics",
+        "scenario": "When analyzing a disputed handwritten contract, what forensic feature proves which line was drawn last when two ink lines intersect?",
+        "options": [
+          "The thickness of the paper edges",
+          "Microscopic examination of ink drag: the continuous stroke on top of the intersection without groove interruption was written last",
+          "The signature's emotional tone",
+          "The color of the binder clip"
+        ],
+        "correctIndex": 1,
+        "explanation": "Under magnification, the ink from the subsequent stroke sits on top of the paper fibers and continuous over the prior indentation."
+      },
+      {
+        "id": "dm1-q7",
+        "number": 7,
+        "conceptId": "narrative-seduction",
+        "scenario": "Why do intelligent investigators often fall for completely false conspiracy theories?",
+        "options": [
+          "Human brains possess an innate narrative bias that prefers complex intentional drama over boring random entropy",
+          "Conspiracies are always true",
+          "High intelligence reduces vision quality",
+          "Because computers are unreliable"
+        ],
+        "correctIndex": 0,
+        "explanation": "Narrative bias causes pattern-seeking brains to knit disparate coincidences into satisfying dramatic conspiracies."
+      },
+      {
+        "id": "dm1-q8",
+        "number": 8,
+        "conceptId": "sherlockian-maxim",
+        "scenario": "What is the core premise of 'When you have eliminated the impossible, whatever remains, however improbable, must be the truth'?",
+        "options": [
+          "Magic is real",
+          "Rigorous systematic falsification of alternative hypotheses until only the constraint-compliant truth survives",
+          "Always pick the most exciting explanation",
+          "Give up if the answer is weird"
+        ],
+        "correctIndex": 1,
+        "explanation": "Systematic elimination of constraint-violating theories leaves the factual solution, regardless of whether it feels intuitive."
+      }
+    ]
+  },
+  "apply": {
+    "title": "Field Mission: The Forensic Desk Audit",
+    "missionCodename": "OPERATION DESK PATINA",
+    "difficulty": "Beginner",
+    "timeRequired": "10 minutes",
+    "briefing": "Find any workstation, office desk, or personal workspace that is currently unoccupied. Do not touch or move anything. Spend 5 continuous minutes observing physical artifacts, wear patterns, and layout.",
+    "actionSteps": [
+      "Record 3 pure physical facts without making any narrative assumptions (e.g. 'Coffee cup with 20ml dried black residue at bottom').",
+      "Identify 1 friction or wear pattern (e.g. mousepad worn on left side, sticker peel angle).",
+      "Formulate 1 deductive conclusion supported by the combination of these facts.",
+      "Identify what evidence would prove your deduction false."
+    ],
+    "reflectionPrompt": "What 3 raw facts did you observe? What was your deduction, and what single piece of counter-evidence would completely disprove it?",
+    "rubric": [
+      {
+        "criterion": "Fact Discipline",
+        "target": "Zero interpretive words in the primary observation log"
+      },
+      {
+        "criterion": "Artifact Connection",
+        "target": "Linked physical wear to habitual behavior"
+      },
+      {
+        "criterion": "Falsification Test",
+        "target": "Specified a clear condition that would prove the deduction wrong"
+      }
+    ]
+  }
+}

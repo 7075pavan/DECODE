@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
-import unitData from "@/content/reading-people-unit-1.json";
+import { getUnitData } from "@/content/registry";
 import { UnitOverview } from "@/components/lesson/UnitOverview";
 import { LearnStep } from "@/components/lesson/LearnStep";
 import { SeeStep } from "@/components/lesson/SeeStep";
@@ -22,6 +22,9 @@ export default function LessonUnitPage() {
   const router = useRouter();
   const { user, addXP, logDailyMinutes } = useAuthStore();
 
+  const unitId = (params?.unitId as string) || "reading-people-unit-1";
+  const unitData = getUnitData(unitId);
+
   const [currentStage, setCurrentStage] = useState<Stage>("overview");
 
   // Resume state on initial load: URL query params take precedence, then stored sync state
@@ -33,13 +36,13 @@ export default function LessonUnitPage() {
     }
 
     const stored = getStoredResumeState();
-    if (stored && stored.unitId === "reading-people-unit-1") {
+    if (stored && stored.unitId === unitId) {
       setCurrentStage(stored.step);
     }
-  }, [searchParams]);
+  }, [searchParams, unitId]);
 
   const handleExit = () => {
-    router.push("/home");
+    router.push(`/paths/${unitData.pathId || "reading-people"}`);
   };
 
   const handleStartLearn = () => {
@@ -47,10 +50,10 @@ export default function LessonUnitPage() {
     if (user?.uid) {
       saveStepProgress({
         userId: user.uid,
-        unitId: "reading-people-unit-1",
+        unitId: unitId,
         step: "learn",
         stepIndex: 1,
-        previewLabel: "Step 1 of 6 · Core Concept Dossier",
+        previewLabel: `Step 1 of 6 · Core Concept Dossier`,
         totalXP: user.totalXP,
         streak: user.streak.current,
       });
@@ -62,10 +65,10 @@ export default function LessonUnitPage() {
     if (user?.uid) {
       saveStepProgress({
         userId: user.uid,
-        unitId: "reading-people-unit-1",
+        unitId: unitId,
         step: "see",
         stepIndex: 2,
-        previewLabel: "Step 2 of 6 · Bangalore Pitch Worked Example",
+        previewLabel: `Step 2 of 6 · ${unitData.title} Worked Example`,
         totalXP: user.totalXP,
         streak: user.streak.current,
       });
@@ -77,11 +80,11 @@ export default function LessonUnitPage() {
     if (user?.uid) {
       saveStepProgress({
         userId: user.uid,
-        unitId: "reading-people-unit-1",
+        unitId: unitId,
         step: "try",
         stepIndex: 1,
         scenarioIndex: 0,
-        previewLabel: "Step 3 of 6 · Question 1: Hidden emotion",
+        previewLabel: "Step 3 of 6 · Practice Cases",
         totalXP: user.totalXP,
         streak: user.streak.current,
       });
@@ -98,10 +101,10 @@ export default function LessonUnitPage() {
     if (user?.uid) {
       saveStepProgress({
         userId: user.uid,
-        unitId: "reading-people-unit-1",
+        unitId: unitId,
         step: "prove",
         stepIndex: 1,
-        previewLabel: "Step 5 of 6 · 8-Question Mastery Check",
+        previewLabel: `Step 5 of 6 · 8-Question Mastery Check`,
         xpEarnedDelta: stats.totalXPEarned,
         totalXP: user.totalXP + stats.totalXPEarned,
         streak: user.streak.current,
@@ -117,15 +120,15 @@ export default function LessonUnitPage() {
     if (user?.uid) {
       saveStepProgress({
         userId: user.uid,
-        unitId: "reading-people-unit-1",
+        unitId: unitId,
         step: "apply",
         stepIndex: 6,
-        previewLabel: "Step 6 of 6 · Real-World Field Mission",
+        previewLabel: `Step 6 of 6 · Real-World Field Mission`,
         totalXP: user.totalXP + 20,
         streak: user.streak.current,
         badgeAwarded: {
-          id: "badge-baseline-decoder",
-          title: "Baseline Decryption Badge",
+          id: `badge-${unitId}`,
+          title: `${unitData.title} Mastery Badge`,
           icon: "military_tech",
         },
       });
@@ -137,12 +140,12 @@ export default function LessonUnitPage() {
     if (user?.uid) {
       saveStepProgress({
         userId: user.uid,
-        unitId: "reading-people-unit-1",
+        unitId: unitId,
         step: "apply",
         stepIndex: 6,
-        previewLabel: "Unit 1 Completed",
+        previewLabel: `${unitData.title} Completed`,
         missionReflection: reflectionText,
-        totalXP: user.totalXP + 60,
+        totalXP: user.totalXP + (unitData.xpReward || 60),
         streak: (user.streak.current || 1) + 1,
       });
     }

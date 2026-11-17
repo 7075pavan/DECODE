@@ -1,0 +1,471 @@
+{
+  "unitId": "mind-and-mindset-unit-3",
+  "pathId": "mind-and-mindset",
+  "unitNumber": 3,
+  "title": "Mental Models & Antifragility",
+  "subtitle": "Mind & Mindset · Unit 3",
+  "estimatedMinutes": 8,
+  "xpReward": 60,
+  "description": "Master Nassim Taleb's antifragility, inversion thinking, the barbell strategy, and second-order decision architecture.",
+  "rulesSummary": [
+    "Fragile breaks under volatility; Robust resists shock; Antifragile grows stronger from chaos.",
+    "Inversion: to solve a hard problem, figure out how to guarantee failure, then avoid those things.",
+    "The Barbell Strategy: pair extreme safety with high-upside speculative bets; avoid the mushy middle.",
+    "Second-order thinking: 'And then what?' Always forecast the reaction to your initial solution.",
+    "Optionality is wealth: keep the upside uncapped while strictly bounding downside risk."
+  ],
+  "learn": {
+    "title": "Antifragility & High-Order Mental Models",
+    "cards": [
+      {
+        "id": "mm3-learn-1",
+        "step": "01 / 05",
+        "title": "The Triad: Fragile, Robust, Antifragile",
+        "subtitle": "Nassim Taleb's taxonomy",
+        "icon": "shield",
+        "isKeyRule": false,
+        "content": "A porcelain teacup is fragile: stress and drops destroy it. A solid titanium bar is robust: drops leave it unchanged. The human immune system or muscle tissue is antifragile: stressors, micro-tears, and pathogens make it stronger, more resilient, and more adaptive than before. Design your career and mindset to gain from chaos.",
+        "takeaway": "Don't just survive shocks; architect your life so volatility and setbacks make you stronger."
+      },
+      {
+        "id": "mm3-learn-2",
+        "step": "02 / 05",
+        "title": "The Power of Inversion",
+        "subtitle": "Carl Jacobi's 'Invert, always invert'",
+        "icon": "swap_vert",
+        "isKeyRule": false,
+        "content": "Charlie Munger taught that complex problems are best solved in reverse. Instead of asking 'How do I build a wildly successful career?', ask 'How could I guarantee miserable failure and poverty?' (Procrastinate, spend more than you earn, isolate yourself, develop addictions). Once you have the recipe for disaster, systematically avoid it.",
+        "takeaway": "Invert the problem: avoid stupidity consistently rather than attempting to be brilliant."
+      },
+      {
+        "id": "mm3-learn-3",
+        "step": "03 / 05",
+        "title": "The Barbell Strategy",
+        "subtitle": "Bimodal risk allocation",
+        "icon": "fitness_center",
+        "isKeyRule": false,
+        "content": "Never take 'moderate' risks where downside is hidden and upside is capped. A barbell combines 85-90% hyper-safe assets (cash reserves, stable skills, zero debt) with 10-15% aggressive, highly asymmetric speculative bets (equity in a startup, intellectual property, high-upside learning). The safe side guarantees survival; the aggressive side captures exponential upside.",
+        "takeaway": "Pair extreme conservative safety with uncapped upside bets; reject the mediocre middle."
+      },
+      {
+        "id": "mm3-learn-4",
+        "step": "04 / 05",
+        "title": "Second-Order Thinking",
+        "subtitle": "And then what?",
+        "icon": "alt_route",
+        "isKeyRule": false,
+        "content": "First-order thinking is simple and immediate: 'I am hungry, I will eat this chocolate cake' (outcome: pleasure). Second-order thinking asks: 'And then what?' (outcome: sugar crash, insulin spike, habit reinforcement). In policy, introducing rent control helps tenants in month 1 (first-order), but causes housing supply to collapse in year 3 (second-order).",
+        "takeaway": "Always ask: 'And then what happens next?' Trace the secondary consequences of every move."
+      },
+      {
+        "id": "mm3-learn-5",
+        "step": "05 / 05",
+        "title": "The Convexity Axiom",
+        "subtitle": "Master mental model rule",
+        "icon": "bolt",
+        "isKeyRule": true,
+        "content": "Convexity means your potential upside is mathematically much larger than your bounded downside. When trial costs are cheap and payoffs are exponential (e.g. cold emailing mentors, launching software tools, publishing essays), trial-and-error beats theoretical planning. Seek convex payoffs in everything you do.",
+        "takeaway": "Bias toward convex bets where failure costs pennies and success yields uncapped asymmetric returns."
+      }
+    ]
+  },
+  "see": {
+    "title": "Worked Example: The Dual-Track Career Barbell",
+    "scenarioTitle": "HSR Layout Startup Incubator, Bengaluru",
+    "scenarioDescription": "Kunal wants to transition out of IT services into full-time tech entrepreneurship, but has an aging family to support and cannot afford zero income for two years.",
+    "imageUrl": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&auto=format&fit=crop&q=80",
+    "story": [
+      {
+        "type": "paragraph",
+        "text": "Kunal's friends advise him to 'take the leap, quit your job, and burn the boats' to show passion."
+      },
+      {
+        "type": "paragraph",
+        "text": "Recognizing this as fragile bravado, Kunal designs an antifragile barbell strategy."
+      },
+      {
+        "type": "interactive_paragraph",
+        "segments": [
+          {
+            "text": "On the hyper-conservative side of the barbell, Kunal secures a "
+          },
+          {
+            "clueId": "mm3-clue-1",
+            "text": "25-hour-per-week remote consulting retainer covering 100% of his family expenses",
+            "isClue": true
+          },
+          {
+            "text": ". On the hyper-aggressive convex side, he dedicates 20 hours each week to "
+          },
+          {
+            "clueId": "mm3-clue-2",
+            "text": "shipping micro-SaaS developer tools with zero marginal distribution cost",
+            "isClue": true
+          },
+          {
+            "text": ". By applying inversion, he lists what would kill him: "
+          },
+          {
+            "clueId": "mm3-clue-3",
+            "text": "taking high-interest personal debt and running out of food cash",
+            "isClue": true
+          },
+          {
+            "text": ", which his consulting anchor completely prevents. In month 8, his third micro-tool hits "
+          },
+          {
+            "clueId": "mm3-clue-4",
+            "text": "$4,500 monthly recurring revenue with 92% profit margins",
+            "isClue": true
+          },
+          {
+            "text": ", achieving sustainable independence without risking family ruin."
+          }
+        ]
+      }
+    ],
+    "clues": [
+      {
+        "id": "mm3-clue-1",
+        "phrase": "25-hour remote consulting retainer covering 100% expenses",
+        "strength": "Strong",
+        "category": "Extreme Safe Anchor",
+        "explanation": "Securing guaranteed baseline cash flow eliminates existential panic and desperate compromises."
+      },
+      {
+        "id": "mm3-clue-2",
+        "phrase": "Shipping micro-SaaS with zero marginal cost",
+        "strength": "Strong",
+        "category": "Convex Upside Bet",
+        "explanation": "Digital software provides infinite leverage and uncapped upside with bounded time cost."
+      },
+      {
+        "id": "mm3-clue-3",
+        "phrase": "Avoiding high-interest debt and cash exhaustion",
+        "strength": "Medium",
+        "category": "Inversion Armor",
+        "explanation": "Identifying the catastrophic failure condition and neutralizing it in advance."
+      },
+      {
+        "id": "mm3-clue-4",
+        "phrase": "$4,500 MRR with 92% profit margins",
+        "strength": "Strong",
+        "category": "Asymmetric Payoff",
+        "explanation": "The convex bet materialized, allowing safe migration to the new path."
+      }
+    ]
+  },
+  "try": {
+    "title": "Scenario Practice: Antifragile Mental Models",
+    "description": "Identify the fragile flaw, apply the mental model, and execute the robust solution.",
+    "cases": [
+      {
+        "id": "mm3-case-1",
+        "caseNumber": 1,
+        "scenario": "A D2C healthy snack brand sources 100% of its key ingredient (organic vacuum-dried makhana) from a single boutique farm in Bihar because the price is 15% cheaper.",
+        "context": "The business is growing at 30% month-over-month.",
+        "steps": [
+          {
+            "id": "mm3-c1-s1",
+            "stepType": "emotion",
+            "title": "Diagnosing Fragility",
+            "question": "Why is saving 15% on a single-source supplier a fragile trap?",
+            "options": [
+              "Makhana is an illegal crop",
+              "A single supply point has catastrophic fragility: a flood, strike, or fire halts 100% of production, destroying the entire brand overnight",
+              "15% is too small to calculate",
+              "Bihar farms never deliver"
+            ],
+            "correctIndex": 1,
+            "explanation": "Optimizing for micro-efficiency at the expense of redundancy creates catastrophic vulnerability to tail risk.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mm3-c1-s2",
+            "stepType": "intent",
+            "title": "Applying Second-Order Thinking",
+            "question": "What is the second-order effect of onboarding two additional suppliers at a slightly higher cost?",
+            "options": [
+              "The company immediately loses all customers",
+              "Gross margin drops by 2%, but system resilience increases 10x, providing bargaining leverage and business continuity during regional crises",
+              "The founders get arrested",
+              "The snacks taste worse"
+            ],
+            "correctIndex": 1,
+            "explanation": "Paying a small redundancy premium purchases insurance against total existential shutdown.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mm3-c1-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "What is the antifragile supply architecture?",
+            "options": [
+              "Keep the single farm and pray it never rains",
+              "Contract 60% of volume to Primary, 25% to Secondary, and 15% to a Tertiary cooperative in a different geographic state",
+              "Stop selling snacks and sell shoes",
+              "Buy the farm with 100% bank debt"
+            ],
+            "correctIndex": 1,
+            "explanation": "Geographic and operational diversification builds robust, shock-absorbing supply infrastructure.",
+            "clueStrength": "Medium"
+          }
+        ]
+      },
+      {
+        "id": "mm3-case-2",
+        "caseNumber": 2,
+        "scenario": "You have ₹5 Lakhs in savings and are deciding how to invest to achieve financial freedom.",
+        "context": "A crypto telegram group promises 50% guaranteed monthly returns on a new altcoin algorithmic staking pool.",
+        "steps": [
+          {
+            "id": "mm3-c2-s1",
+            "stepType": "emotion",
+            "title": "Diagnosing Fragility",
+            "question": "How does the Barbell Strategy evaluate this crypto scheme?",
+            "options": [
+              "Invest all ₹5 Lakhs because crypto always goes up",
+              "Recognize it as concave catastrophic risk: 'guaranteed 50%' is mathematically a Ponzi scheme with 100% downside probability",
+              "Invest ₹4 Lakhs and keep ₹1 Lakh in cash",
+              "Borrow ₹10 Lakhs to invest more"
+            ],
+            "correctIndex": 1,
+            "explanation": "High guaranteed returns in unregulated vehicles represent hidden catastrophic ruin, the exact opposite of convex optionality.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mm3-c2-s2",
+            "stepType": "intent",
+            "title": "Applying Inversion",
+            "question": "Inverting the problem: how do you guarantee you lose all your wealth?",
+            "options": [
+              "Put money in a bank fixed deposit",
+              "Chasing opaque get-rich-quick schemes, using leverage, and trusting unverified anonymous syndicates",
+              "Learning how to code",
+              "Reading books on economics"
+            ],
+            "correctIndex": 1,
+            "explanation": "Inverting wealth preservation highlights that greed and leverage are the universal destroyers of capital.",
+            "clueStrength": "Medium"
+          },
+          {
+            "id": "mm3-c2-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "How should the ₹5 Lakhs be allocated using a true barbell?",
+            "options": [
+              "Put 100% into lottery tickets",
+              "Put ₹4.5 Lakhs (90%) into an emergency liquid fund / broad market index, and allocate ₹50,000 (10%) to upskilling or building your own side product",
+              "Give it all to an uncle to invest in real estate",
+              "Spend it on a luxury watch"
+            ],
+            "correctIndex": 1,
+            "explanation": "90% hyper-safe capital guarantees survival; 10% invested in personal agency skills yields compounding convex returns.",
+            "clueStrength": "Strong"
+          }
+        ]
+      },
+      {
+        "id": "mm3-case-3",
+        "caseNumber": 3,
+        "scenario": "A startup founder wants to launch an AI copywriting tool. They want to spend 9 months in stealth mode building a complete platform before talking to any customers.",
+        "context": "The market for AI tools is evolving every 3 weeks.",
+        "steps": [
+          {
+            "id": "mm3-c3-s1",
+            "stepType": "emotion",
+            "title": "Diagnosing Fragility",
+            "question": "Why is a 9-month stealth build hyper-fragile in a volatile market?",
+            "options": [
+              "Founders need 5 years in stealth",
+              "High feedback latency: building for 9 months with zero market contact concentrates massive risk on untested assumptions that may be obsolete by launch",
+              "AI tools cannot be built in India",
+              "Stealth mode is illegal"
+            ],
+            "correctIndex": 1,
+            "explanation": "Long development without feedback is fragile. Fast, cheap iterations in the wild are antifragile.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mm3-c3-s2",
+            "stepType": "intent",
+            "title": "Applying Convexity",
+            "question": "How do you restructure the launch for convex optionality?",
+            "options": [
+              "Spend 18 months instead",
+              "Build a functional clickable prototype in 48 hours, run a ₹2,000 ad test, and manually fulfill customer requests to validate real willingness to pay",
+              "Raise $10M from venture capitalists",
+              "Give the product away for free forever"
+            ],
+            "correctIndex": 1,
+            "explanation": "Cheap, fast validation provides high optionality: test 10 hypotheses for the cost of one failed stealth launch.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "mm3-c3-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "What is the day-1 operational rule?",
+            "options": [
+              "File 10 patents immediately",
+              "Talk to 5 target customers every day and let their explicit payment commitments drive the roadmap",
+              "Hire 15 junior developers",
+              "Design a fancy logo"
+            ],
+            "correctIndex": 1,
+            "explanation": "Direct contact with paying customers provides the biological feedback loop that shapes robust products.",
+            "clueStrength": "Medium"
+          }
+        ]
+      }
+    ]
+  },
+  "prove": {
+    "title": "Mastery Check: Mental Models & Antifragility",
+    "subtitle": "Score 80%+ (7 of 8 correct) to master this unit.",
+    "passingScorePercent": 80,
+    "totalQuestions": 8,
+    "questions": [
+      {
+        "id": "mm3-q1",
+        "number": 1,
+        "conceptId": "antifragility-definition",
+        "scenario": "How does Taleb distinguish the Antifragile from the merely Robust?",
+        "options": [
+          "The robust is heavier than the antifragile",
+          "The robust simply withstands shocks and remains unchanged; the antifragile requires disorder and volatility to grow and improve",
+          "The antifragile never experiences any stress",
+          "The robust is made of biological tissue"
+        ],
+        "correctIndex": 1,
+        "explanation": "Antifragility describes systems (like muscles, immune systems, or startups) that actively improve when exposed to stressors."
+      },
+      {
+        "id": "mm3-q2",
+        "number": 2,
+        "conceptId": "inversion-principle",
+        "scenario": "How does Charlie Munger's technique of 'Inversion' prevent catastrophic failure?",
+        "options": [
+          "By doing handstands while reading financial statements",
+          "By defining what causes total ruin and methodically eliminating those factors, simplifying the path to success",
+          "By copying everything your competitors do",
+          "By assuming you will always get lucky"
+        ],
+        "correctIndex": 1,
+        "explanation": "Inversion focuses on avoiding stupidity and ruin, which is far easier than manufacturing brilliant foresight."
+      },
+      {
+        "id": "mm3-q3",
+        "number": 3,
+        "conceptId": "barbell-allocation",
+        "scenario": "Why does the Barbell Strategy avoid 'medium-risk' investments or career paths?",
+        "options": [
+          "Medium risk does not exist in mathematics",
+          "Medium-risk bets often carry hidden catastrophic tail risk with capped, uninspiring upside—the worst of both worlds",
+          "Barbells are only for weightlifters",
+          "Because banks don't allow medium accounts"
+        ],
+        "correctIndex": 1,
+        "explanation": "The mushy middle offers vulnerability without exponential upside; barbells combine bulletproof security with asymmetric bets."
+      },
+      {
+        "id": "mm3-q4",
+        "number": 4,
+        "conceptId": "second-order-thinking",
+        "scenario": "What question fundamentally distinguishes a second-order thinker from a first-order thinker?",
+        "options": [
+          "'How much does it cost right now?'",
+          "'And then what happens?' (Tracing downstream consequences and human behavioral adaptations over time)",
+          "'Who can I blame for this?'",
+          "'Can we finish this meeting in 5 minutes?'"
+        ],
+        "correctIndex": 1,
+        "explanation": "Second-order thinking maps how people adapt to interventions, anticipating feedback loops and unintended consequences."
+      },
+      {
+        "id": "mm3-q5",
+        "number": 5,
+        "conceptId": "convexity",
+        "scenario": "In decision theory, what constitutes a 'convex payoff'?",
+        "options": [
+          "A situation where potential losses are infinite and gains are tiny",
+          "A situation where downside is strictly capped and small, while upside is open-ended and asymmetric",
+          "Any coin flip bet",
+          "A guaranteed fixed salary"
+        ],
+        "correctIndex": 1,
+        "explanation": "Convexity grants massive positive asymmetry: you win big when right, and lose very little when wrong."
+      },
+      {
+        "id": "mm3-q6",
+        "number": 6,
+        "conceptId": "redundancy",
+        "scenario": "Why do aerospace engineers and resilient founders intentionally build 'wasteful' redundancy into their systems?",
+        "options": [
+          "They don't know how to optimize software",
+          "Redundancy prevents single-point-of-failure collapses when unpredictable tail-risk shocks strike",
+          "To spend their entire budget before year-end",
+          "Because airplanes are too light"
+        ],
+        "correctIndex": 1,
+        "explanation": "Redundancy is insurance: in normal times it looks inefficient, but in systemic shocks it is the sole reason you survive."
+      },
+      {
+        "id": "mm3-q7",
+        "number": 7,
+        "conceptId": "via-negativa",
+        "scenario": "What is the philosophical principle of 'Via Negativa' in self-improvement?",
+        "options": [
+          "Being cynical and negative about everything in life",
+          "Improvement achieved by subtraction (removing bad habits, toxic associations, debt, distractions) rather than addition",
+          "Exercising until you pass out",
+          "Reading negative reviews of books"
+        ],
+        "correctIndex": 1,
+        "explanation": "Via Negativa achieves greatness by systematically eliminating harmful habits, debts, and errors."
+      },
+      {
+        "id": "mm3-q8",
+        "number": 8,
+        "conceptId": "skin-in-the-game",
+        "scenario": "Why is 'Skin in the Game' the ultimate filter for evaluating professional advice?",
+        "options": [
+          "People with tattoos are smarter",
+          "Advisors without personal downside from bad advice suffer zero penalty when their theories ruin you, whereas those with skin in the game are naturally calibrated by reality",
+          "It guarantees 100% stock returns",
+          "It prevents people from speaking"
+        ],
+        "correctIndex": 1,
+        "explanation": "Skin in the game aligns incentives: when someone pays a personal penalty for failure, their advice is grounded in survival."
+      }
+    ]
+  },
+  "apply": {
+    "title": "Field Mission: The Antifragile Barbell Audit",
+    "missionCodename": "OPERATION ASYMMETRIC LEVER",
+    "difficulty": "Advanced",
+    "timeRequired": "15 minutes",
+    "briefing": "Conduct an honest audit of your career, finances, or learning portfolio. Eliminate the mushy middle and structure an explicit Barbell.",
+    "actionSteps": [
+      "Identify the 85-90% Conservative Pillar: What delivers baseline survival, cash flow, or foundational skills with zero risk of ruin?",
+      "Identify the 10-15% Convex Speculative Bets: What projects, experiments, or asymmetric skills could yield 10x upside if successful?",
+      "Audit your routine for 'Fragile Middle' activities (moderate effort with capped upside and hidden downside) and mark one for elimination.",
+      "Apply Inversion: Write down 3 stupid mistakes that would guarantee you go broke in 12 months, and verify you are doing none of them."
+    ],
+    "reflectionPrompt": "What is your safe anchor, what is your convex asymmetric bet, and what fragile habit did you eliminate via inversion?",
+    "rubric": [
+      {
+        "criterion": "Bimodal Precision",
+        "target": "Clear demarcation between the safe anchor and speculative upside"
+      },
+      {
+        "criterion": "Via Negativa Subtraction",
+        "target": "Identified and terminated one fragile time or money drain"
+      },
+      {
+        "criterion": "Asymmetric Upside",
+        "target": "Selected a project with capped downside and uncapped upside"
+      }
+    ]
+  }
+}

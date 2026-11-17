@@ -1,0 +1,471 @@
+{
+  "unitId": "reading-people-unit-2",
+  "pathId": "reading-people",
+  "unitNumber": 2,
+  "title": "Deception & Cluster Analysis",
+  "subtitle": "Reading People · Unit 2",
+  "estimatedMinutes": 8,
+  "xpReward": 60,
+  "description": "Learn how cognitive load, pacifying behaviors, and non-verbal clusters expose deception without relying on single Hollywood 'tells'.",
+  "rulesSummary": [
+    "Cognitive load is the tell: lying demands immense mental effort, causing secondary channel stalls.",
+    "Pacifying behaviors soothe the vagus nerve: neck touching, collar pulls, and finger wringing indicate acute distress.",
+    "Asymmetry reveals fabrication: genuine emotional expressions are almost always symmetrical.",
+    "Timing matters: true emotions flash within 200 milliseconds of stimulus before conscious masking.",
+    "Always require a cluster of 3 shifts across voice, posture, and micro-expressions."
+  ],
+  "learn": {
+    "title": "Cognitive Load & Cluster Diagnostics",
+    "cards": [
+      {
+        "id": "rp2-learn-1",
+        "step": "01 / 05",
+        "title": "The Cognitive Load Tax",
+        "subtitle": "Why lying is exhausting",
+        "icon": "psychology",
+        "isKeyRule": false,
+        "content": "Telling the truth is effortless memory retrieval. Fabricating a deception requires maintaining internal consistency, predicting listener reactions, suppressing truthful impulses, and monitoring facial feedback. This massive cognitive load causes spontaneous pauses, delayed answers, and fixed gazes.",
+        "takeaway": "Deception taxes working memory. Look for sudden speech hesitation and stalled natural body movement."
+      },
+      {
+        "id": "rp2-learn-2",
+        "step": "02 / 05",
+        "title": "Pacifying Behaviors",
+        "subtitle": "The vagus nerve cooling mechanism",
+        "icon": "self_improvement",
+        "isKeyRule": false,
+        "content": "When stress spikes, blood rushes from extremities and heart rate soars. The brain instinctively seeks to cool down via the vagus nerve. People touch the suprasternal notch (neck dimple), pull their collar, wring fingers, or rub thighs. These are involuntary pacifiers.",
+        "takeaway": "Neck touching and collar adjustment are pacifiers indicating an acute spike in internal panic."
+      },
+      {
+        "id": "rp2-learn-3",
+        "step": "03 / 05",
+        "title": "The Mask of Asymmetry",
+        "subtitle": "Facial micro-physics",
+        "icon": "face",
+        "isKeyRule": false,
+        "content": "Genuine emotions trigger involuntary cranial nerves, activating muscle groups across both sides of the face simultaneously. Conscious, forced smiles and fake remorse rely on the motor cortex, frequently producing asymmetric smirks or smiles that do not engage the orbicularis oculi (eye crinkles).",
+        "takeaway": "Symmetry signals authentic neural emotion; asymmetric half-smirks reveal conscious emotional performance."
+      },
+      {
+        "id": "rp2-learn-4",
+        "step": "04 / 05",
+        "title": "The Temporal Window",
+        "subtitle": "Reaction latency forensics",
+        "icon": "timer",
+        "isKeyRule": false,
+        "content": "In natural communication, an emotional reaction precedes or synchronizes with words. If someone says 'I am so furious about this mistake' and only frowns two seconds later, the emotion is manufactured. True micro-expressions flash between 1/25th and 1/5th of a second.",
+        "takeaway": "If the facial expression appears after the words are spoken, the emotion is staged."
+      },
+      {
+        "id": "rp2-learn-5",
+        "step": "05 / 05",
+        "title": "The Multi-Channel Triad",
+        "subtitle": "Master deception rule",
+        "icon": "bolt",
+        "isKeyRule": true,
+        "content": "A single pacifier is not proof of deceit. A professional investigator demands a cluster across at least three distinct biometric channels: one vocal shift (pitch or speed), one kinetic shift (pacifying touch or freeze), and one facial shift (gaze diversion or asymmetric expression) within 5 seconds.",
+        "takeaway": "Never conclude deception on one cue. Require a triad of shifts across voice, kinetics, and face."
+      }
+    ]
+  },
+  "see": {
+    "title": "Worked Example: The Co-founder Equity Dispute",
+    "scenarioTitle": "Hauzkhas Co-working Mediation, New Delhi",
+    "scenarioDescription": "Aditya confronts his co-founder Kabir about rumors that Kabir has been secretly interviewing with an AI unicorn in Bengaluru while negotiating a larger equity allocation.",
+    "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=80",
+    "story": [
+      {
+        "type": "paragraph",
+        "text": "During the first ten minutes, Kabir spoke passionately about their product roadmap. He used expansive hand gestures, leaned forward against the table, and made continuous eye contact with Aditya."
+      },
+      {
+        "type": "paragraph",
+        "text": "Then Aditya asked: 'Kabir, did you speak with PeakXV's talent partner regarding an advisory role or full-time offer last Thursday?'"
+      },
+      {
+        "type": "interactive_paragraph",
+        "segments": [
+          {
+            "text": "Kabir's hands instantly "
+          },
+          {
+            "clueId": "rp2-clue-1",
+            "text": "retracted under the table and gripped his knees",
+            "isClue": true
+          },
+          {
+            "text": ". A full four seconds of silence elapsed before he cleared his throat. His right index finger reached up and "
+          },
+          {
+            "clueId": "rp2-clue-2",
+            "text": "vigorously massaged the side of his neck above the collar",
+            "isClue": true
+          },
+          {
+            "text": ". When he replied 'I haven't accepted any role anywhere', his voice had a "
+          },
+          {
+            "clueId": "rp2-clue-3",
+            "text": "dry, strained rasp with elevated pitch",
+            "isClue": true
+          },
+          {
+            "text": ", and the left corner of his mouth curled into an "
+          },
+          {
+            "clueId": "rp2-clue-4",
+            "text": "isolated asymmetric half-smirk",
+            "isClue": true
+          },
+          {
+            "text": " while his forehead remained completely smooth."
+          }
+        ]
+      }
+    ],
+    "clues": [
+      {
+        "id": "rp2-clue-1",
+        "phrase": "Hands retracted under table and gripped knees",
+        "strength": "Medium",
+        "category": "Kinetic Withdrawal",
+        "explanation": "Concealing the palms and pulling hands below table level is an instinctive defensive withdrawal when caught off-guard."
+      },
+      {
+        "id": "rp2-clue-2",
+        "phrase": "Massaged neck above collar",
+        "strength": "Strong",
+        "category": "Vagus Nerve Pacifier",
+        "explanation": "Stimulating the carotid sinus and vagus nerve in the neck is a biological reflex to reduce an acute heart rate surge."
+      },
+      {
+        "id": "rp2-clue-3",
+        "phrase": "Dry strained rasp with elevated pitch",
+        "strength": "Strong",
+        "category": "Vocal Constriction",
+        "explanation": "Stress causes acute dry mouth and vocal cord tension, resulting in an unnatural pitch jump and vocal rasp."
+      },
+      {
+        "id": "rp2-clue-4",
+        "phrase": "Isolated asymmetric half-smirk",
+        "strength": "Medium",
+        "category": "Facial Incongruence",
+        "explanation": "A unilateral smirk while asserting innocence suggests contempt or conscious emotional shielding rather than genuine surprise."
+      }
+    ]
+  },
+  "try": {
+    "title": "Scenario Practice: Multi-Channel Clusters",
+    "description": "Analyze the suspects' responses, identify the cognitive shift, diagnose the likely intent, and select the master move.",
+    "cases": [
+      {
+        "id": "rp2-case-1",
+        "caseNumber": 1,
+        "scenario": "During an audit interview, an operations manager is asked why ₹4.5 Lakhs in vendor invoices were disbursed without purchase order signatures.",
+        "context": "The manager has worked at the company for 3 years and is usually jovial and loud.",
+        "steps": [
+          {
+            "id": "rp2-c1-s1",
+            "stepType": "emotion",
+            "title": "Hidden Emotion",
+            "question": "When the invoice numbers are projected on the screen, he presses his palms flat against his thighs, blinks rapidly 18 times in 10 seconds, and presses his lips thin. What is his primary emotional state?",
+            "options": [
+              "Deep irritation and contempt at being questioned",
+              "Acute panic and sensory overload being pacified",
+              "Relaxed indifference waiting for the slide to change",
+              "Mild boredom because the invoices are trivial"
+            ],
+            "correctIndex": 1,
+            "explanation": "Leg cleansing (sliding palms on thighs) combined with high blink rate bursts and lip compression is a classic acute stress/panic cluster.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "rp2-c1-s2",
+            "stepType": "intent",
+            "title": "Likely Intent",
+            "question": "He pauses, drinks water, and states: 'Our policy allows expedited payments for critical cloud vendors.' What is his likely tactical objective?",
+            "options": [
+              "Admitting complete guilt on the spot",
+              "Buying cognitive processing time while retroactively framing an unauthorized action as standard policy",
+              "Attempting to threaten the auditor with cloud shutdown",
+              "Complaining about the conference room temperature"
+            ],
+            "correctIndex": 1,
+            "explanation": "Drinking water soothes dry mouth while the delayed policy defense attempts to reframe non-compliance into routine operation.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "rp2-c1-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "How should the forensic auditor respond to maintain investigative leverage?",
+            "options": [
+              "Accuse him of theft and threaten immediate termination",
+              "Accept his explanation and close the review file",
+              "Ask a neutral calibrated question: 'Help me understand which specific emergency clause in section 4.2 applied to these three vendors?'",
+              "Demand that he hand over his mobile phone right now"
+            ],
+            "correctIndex": 2,
+            "explanation": "Calibrated neutral questions avoid defensive shutdown while forcing the subject to provide granular procedural facts.",
+            "clueStrength": "Medium"
+          }
+        ]
+      },
+      {
+        "id": "rp2-case-2",
+        "caseNumber": 2,
+        "scenario": "You are interviewing a freelance senior engineer who claims they built the entire backend architecture of a high-traffic fintech app from scratch.",
+        "context": "Video call interview with camera positioned at eye level.",
+        "steps": [
+          {
+            "id": "rp2-c2-s1",
+            "stepType": "emotion",
+            "title": "Hidden Emotion",
+            "question": "When asked to explain the database sharding strategy, the candidate looks directly into the lens without blinking for 8 seconds, then clears his throat twice. What is his state?",
+            "options": [
+              "Overcompensating eye contact due to conscious deception effort",
+              "Natural confidence showing technical mastery",
+              "Sleep deprivation from late night coding",
+              "Total confusion about what sharding means"
+            ],
+            "correctIndex": 0,
+            "explanation": "Liars frequently overcompensate eye contact because they believe looking away is an obvious tell. Unnatural unbroken staring is a red flag.",
+            "clueStrength": "Medium"
+          },
+          {
+            "id": "rp2-c2-s2",
+            "stepType": "intent",
+            "title": "Likely Intent",
+            "question": "He responds: 'We used a standard high-availability distributed Redis cluster, basically whatever AWS recommends.' What is he doing?",
+            "options": [
+              "Offering a precise deep technical breakdown",
+              "Using buzzword evasion to mask superficial personal contribution",
+              "Proving he wrote the Redis engine source code",
+              "Declining to answer for intellectual property reasons"
+            ],
+            "correctIndex": 1,
+            "explanation": "Vague architectural generalities combined with buzzwords indicate he was an observer or junior contributor, not the architect.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "rp2-c2-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "What probe reveals whether he truly authored the architecture?",
+            "options": [
+              "End the interview immediately",
+              "Ask him to solve an unrelated LeetCode algorithmic puzzle",
+              "Drill down on failure modes: 'Walk me through the exact outage you experienced when that Redis cluster hit peak write traffic, and what failed first?'",
+              "Ask him if he has certifications in AWS"
+            ],
+            "correctIndex": 2,
+            "explanation": "People who actually build systems intimately remember the pain of failure modes and edge cases. Impostors cannot fabricate granular crisis memories on the fly.",
+            "clueStrength": "Strong"
+          }
+        ]
+      },
+      {
+        "id": "rp2-case-3",
+        "caseNumber": 3,
+        "scenario": "A prospective tenant in Indiranagar is negotiating the security deposit and claims they have never missed a rent payment in 6 years.",
+        "context": "Coffee shop meeting with the flat owner.",
+        "steps": [
+          {
+            "id": "rp2-c3-s1",
+            "stepType": "emotion",
+            "title": "Hidden Emotion",
+            "question": "When the landlord mentions contacting previous landlords for reference checks, the tenant's smile freezes, his chest stops expanding for 3 seconds, and his foot pulls back under the chair. What is happening?",
+            "options": [
+              "He is experiencing cold air from the AC vent",
+              "Involuntary acute freeze response triggered by a high-risk verification vector",
+              "Enthusiasm about getting the apartment",
+              "Annoyance at the price of coffee"
+            ],
+            "correctIndex": 1,
+            "explanation": "The Freeze-Flight-Fight sequence always begins with freeze: respiratory pause, frozen smile, and limb withdrawal.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "rp2-c3-s2",
+            "stepType": "intent",
+            "title": "Likely Intent",
+            "question": "He quickly says: 'My last landlord is in the US right now and doesn't answer unknown calls, but I can show you my payslip.' What is his intent?",
+            "options": [
+              "Directing scrutiny away from landlord references toward a document he controls",
+              "Demonstrating high technological literacy",
+              "Helping the landlord save on international phone bills",
+              "Complaining about US time zones"
+            ],
+            "correctIndex": 0,
+            "explanation": "Deflecting verification toward a curated asset (payslip) while blocking access to third-party verification is an evasion maneuver.",
+            "clueStrength": "Strong"
+          },
+          {
+            "id": "rp2-c3-s3",
+            "stepType": "move",
+            "title": "Best Next Move",
+            "question": "What is the landlord's safest protocol?",
+            "options": [
+              "Waive the reference check since the payslip is good",
+              "Require the landlord's verified email and message them through WhatsApp before collecting the token",
+              "Demand a 20-month advance cash payment",
+              "File a police complaint immediately"
+            ],
+            "correctIndex": 1,
+            "explanation": "Independent third-party verification must be completed asynchronously before entering a binding tenancy agreement.",
+            "clueStrength": "Medium"
+          }
+        ]
+      }
+    ]
+  },
+  "prove": {
+    "title": "Mastery Check: Deception & Cluster Diagnostics",
+    "subtitle": "Score 80%+ (7 of 8 correct) to master this unit.",
+    "passingScorePercent": 80,
+    "totalQuestions": 8,
+    "questions": [
+      {
+        "id": "rp2-q1",
+        "number": 1,
+        "conceptId": "cognitive-load",
+        "scenario": "Why does spontaneous storytelling become noticeably flatter and more rigid when someone is fabricating an alibi?",
+        "options": [
+          "They are too relaxed to use adjectives",
+          "Working memory is consumed by tracking internal consistency, leaving few cognitive resources for vivid sensory details",
+          "Fabricated stories naturally contain more sensory metaphors",
+          "The vocal cords expand and become louder"
+        ],
+        "correctIndex": 1,
+        "explanation": "Cognitive load strips sensory bandwidth. True memories contain accidental details and sensory color; lies are lean and chronological."
+      },
+      {
+        "id": "rp2-q2",
+        "number": 2,
+        "conceptId": "pacifiers",
+        "scenario": "A business partner clutches the base of their throat (suprasternal notch) right after you propose an audit of shared marketing expenses. What does this signal?",
+        "options": [
+          "They are feeling physical affection toward you",
+          "They are experiencing an acute spike in vulnerability or fear and instinctively guarding the airway",
+          "They have an itch on their collar",
+          "They are preparing to shout loudly"
+        ],
+        "correctIndex": 1,
+        "explanation": "Covering or clutching the suprasternal notch protects the most vulnerable anatomical point and pacifies acute anxiety."
+      },
+      {
+        "id": "rp2-q3",
+        "number": 3,
+        "conceptId": "asymmetry",
+        "scenario": "When observing a person's smile during congratulations, how do you verify if the joy is authentic?",
+        "options": [
+          "Look at whether their teeth are completely visible",
+          "Check for symmetrical bilateral engagement of the zygomatic major and orbicularis oculi (crinkling at the outer eye corners)",
+          "Measure if the smile lasts longer than 10 seconds",
+          "Check if they lean forward towards you"
+        ],
+        "correctIndex": 1,
+        "explanation": "A Duchenne smile involves involuntary eye crinkles and symmetrical cheek elevation. Fake smiles only pull mouth corners back."
+      },
+      {
+        "id": "rp2-q4",
+        "number": 4,
+        "conceptId": "temporal-latency",
+        "scenario": "If someone displays an expression of shock 3 seconds AFTER being told shocking news, what does the delay indicate?",
+        "options": [
+          "Extreme emotional intensity",
+          "A calculated, theatrical performance rather than genuine surprise",
+          "Impaired auditory hearing",
+          "High non-verbal intelligence"
+        ],
+        "correctIndex": 1,
+        "explanation": "Genuine surprise is instantaneous (under 200ms) and brief (under 1 second). Delayed shock is an act."
+      },
+      {
+        "id": "rp2-q5",
+        "number": 5,
+        "conceptId": "cluster-triad",
+        "scenario": "What constitutes a valid diagnostic cluster in behavioral analysis?",
+        "options": [
+          "One person crossing their legs twice in an hour",
+          "Three separate people looking at their phone at the same time",
+          "At least three concurrent deviations across voice, kinetics, and facial channels within 5 seconds of a specific stimulus",
+          "A person clearing their throat while smiling"
+        ],
+        "correctIndex": 2,
+        "explanation": "A true cluster requires multi-channel concurrent shifts (voice, kinetics, face) locked in close temporal proximity to a stimulus."
+      },
+      {
+        "id": "rp2-q6",
+        "number": 6,
+        "conceptId": "eye-gaze",
+        "scenario": "Why is the common myth 'liars always look up and to the left' scientifically unreliable?",
+        "options": [
+          "Because nobody ever looks to the left",
+          "Because cognitive search directions vary widely across individuals, and liars often force unnatural unbroken eye contact to appear honest",
+          "Because eye movements only relate to physical vision, not brain memory",
+          "Because looking left is exclusively an artistic reflex"
+        ],
+        "correctIndex": 1,
+        "explanation": "Eye gaze patterns are idiosyncratic and easily manipulated. Staged eye contact is more common in deceptive speech than aversion."
+      },
+      {
+        "id": "rp2-q7",
+        "number": 7,
+        "conceptId": "calibrated-questions",
+        "scenario": "When you suspect deception in a vendor's delivery date estimate, what is the best conversational maneuver?",
+        "options": [
+          "Confront them directly with 'I know you are lying to me'",
+          "Walk away and hire a competitor without speaking",
+          "Ask a calibrated question that tests constraints: 'What sequence of events needs to happen between today and Tuesday for that timeline to hold?'",
+          "Tell them you will sue them if they are late"
+        ],
+        "correctIndex": 2,
+        "explanation": "Calibrated constraint questions test the mechanical feasibility of an alibi without triggering an emotional defensive wall."
+      },
+      {
+        "id": "rp2-q8",
+        "number": 8,
+        "conceptId": "freeze-reflex",
+        "scenario": "In an unexpected hostile audit, why does a subject suddenly exhibit sudden postural stillness (the freeze response)?",
+        "options": [
+          "To conserve muscular energy for digestion",
+          "An evolutionary survival reflex to minimize visual detection and prioritize auditory listening under acute threat",
+          "Because they are falling asleep",
+          "To show respect to the senior auditor"
+        ],
+        "correctIndex": 1,
+        "explanation": "The evolutionary freeze reflex halts spontaneous motor activity to scan threats and assess survival options."
+      }
+    ]
+  },
+  "apply": {
+    "title": "Field Mission: The Multi-Channel Cluster Audit",
+    "missionCodename": "OPERATION TRIPLE THREAD",
+    "difficulty": "Intermediate",
+    "timeRequired": "15 minutes",
+    "briefing": "Select a high-stakes conversation, group presentation, or challenging negotiation this week. Do not accuse or interrupt. Quietly observe one person when an uncomfortable topic or challenging question is introduced.",
+    "actionSteps": [
+      "Observe their baseline for 2 minutes during neutral opening banter.",
+      "Identify the exact moment a high-stakes question, price, or deadline is mentioned.",
+      "Scan for three channels: Vocal (pitch/speed/pauses), Kinetic (pacifying touches, limb withdrawal), and Facial (asymmetric smiles, blink bursts).",
+      "Document whether a multi-channel cluster occurred within 5 seconds of the stimulus."
+    ],
+    "reflectionPrompt": "What was the stimulus question? What three biometric shifts occurred concurrently, and what follow-up question confirmed or clarified the shift?",
+    "rubric": [
+      {
+        "criterion": "Baseline Anchor",
+        "target": "Documented 2+ resting cues before the pressure question"
+      },
+      {
+        "criterion": "Triad Identification",
+        "target": "Identified shifts across at least two distinct biological channels"
+      },
+      {
+        "criterion": "Neutral Follow-up",
+        "target": "Used a non-accusatory inquiry to verify reality"
+      }
+    ]
+  }
+}
